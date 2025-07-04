@@ -46,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/meshtastic-es-community/meshtastic-es-community.github.io',
+            'https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -57,7 +57,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/meshtastic-es-community/meshtastic-es-community.github.io',
+            'https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -80,18 +80,16 @@ const config: Config = {
         src: 'img/favicon.svg',
       },
       items: [
-        {to: '/docs/introduccion', label: 'Introducción', position: 'left'},
-        {to: '/docs/primeros_pasos', label: 'Primeros Pasos', position: 'left'},
-        {to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Documentación',
         },
+        {to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/meshtastic-es-community/meshtastic-es-community.github.io',
+          href: 'https://github.com/meshtastic-es-community',
           label: 'GitHub',
           position: 'right',
         },
@@ -130,7 +128,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/meshtastic-es-community/meshtastic-es-community.github.io',
+              href: 'https://github.com/meshtastic-es-community',
             },
             {
               label: 'Ko-Fi',
