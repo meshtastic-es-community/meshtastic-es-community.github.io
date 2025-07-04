@@ -33,13 +33,13 @@ Meshtastic utiliza LoRa, un protocolo de radio de largo alcance ampliamente acce
 - **Usos**: Meshtastic es ideal para excursionistas, equipos de emergencia o comunidades en áreas sin Internet.
 - **Limitaciones**: El alcance depende totalmente de la cantidad de nodos y del terreno (linea de visión directa u obstáculos). Además, es bastante susceptible a la saturación. No se debe considerar como un sistema fiable y robusto sino como un apoyo. Las mallas grandes y saturadas fallan de forma consistente.
 
-:::warning
+:::danger
 Meshtastic no es perfecto. Es un sistema lento, con poco ancho de banda, y es menos fiable que otros métodos como las redes convencionales o soluciones de mensajería por satélite de un iPhone o un Garmin InReach.
 
 **NUNCA confíes tu vida en Meshtastic para temas críticos**. Puede servir de apoyo, pero no dependas de ello.
 :::
 
-:::tip
+:::info
 Te recomendamos que no modifiques las configuraciones sin saber exactamente las implicaciones. En la documentación tenemos una guía de [buenas prácticas](buenas_practicas). Meshtastic es muy vulnerable a malas configuraciones de cualquier usuario y es responsabilidad de todos hacer las cosas bien.
 :::
 
