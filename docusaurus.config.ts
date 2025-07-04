@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Meshtastic Spain',
-  tagline: 'Meshtastic Spanish Community',
+  title: 'Comunidad Meshtastic España',
+  tagline: 'Sitio web y documentación para la comunidad de Meshtastic en España',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -74,10 +74,10 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Meshtastic Spanish Community',
+      title: 'Comunidad Meshtastic España',
       logo: {
-        alt: 'Meshstastic Powered Logo',
-        src: 'img/logo_png.png',
+        alt: 'Logo Meshstastic España',
+        src: 'img/favicon.svg',
       },
       items: [
         {
@@ -98,38 +98,71 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentación',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Primeros pasos',
               to: '/docs/intro',
+            },
+            {
+              label: 'Buenas prácticas',
+              to: '/docs/buenas_practicas',
+            },
+            {
+              label: 'Configuración',
+              to: '/docs/config',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Communidad',
           items: [
             {
               label: 'Telegram',
               href: 'https://t.me/meshtastic_esp',
             },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/meshtastic-es-community/meshtastic-es-community.github.io',
             },
+            {
+              label: 'Ko-Fi',
+              href: 'https://ko-fi.com/quixotesystems',
+            },
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+          ],
+        },
+        {
+          title: 'Herramientas',
+          items: [
+            {
+              label: 'Mapa',
+              href: 'https://mapa.meshtastic.es',
+            },
+            {
+              label: 'Meshview',
+              href: 'https://meshview.meshtastic.es',
+            },
+            {
+              label: 'Malla',
+              href: 'https://malla.meshtastic.es',
+            },
+            {
+              label: 'Status',
+              href: 'https://status.meshtastic.es',
+            },
           ],
         },
       ],
-      copyright: `Meshtastic Spanish Community. Built with Docusaurus.`,
+      copyright: `Comunidad Meshtastic España. Hecho con Docusaurus.`,
+      logo: {
+        alt: 'Logo Meshtastic Powered',
+        src: 'img/m_pwrd.png',
+        href: 'https://meshtastic.org/',
+      },
     },
     prism: {
       theme: prismThemes.github,
