@@ -80,11 +80,14 @@ const config: Config = {
         src: 'img/favicon.svg',
       },
       items: [
+        {to: '/docs/introduccion', label: 'Introducción', position: 'left'},
+        {to: '/docs/primeros_pasos', label: 'Primeros Pasos', position: 'left'},
+        {to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left'},
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentación',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
