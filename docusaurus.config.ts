@@ -104,8 +104,12 @@ const config: Config = {
           title: 'Documentación',
           items: [
             {
+              label: 'Introducción',
+              to: '/docs/introduccion',
+            },
+            {
               label: 'Primeros pasos',
-              to: '/docs/intro',
+              to: '/docs/primeros_pasos',
             },
             {
               label: 'Buenas prácticas',
@@ -113,7 +117,7 @@ const config: Config = {
             },
             {
               label: 'Configuración',
-              to: '/docs/config',
+              to: '/docs/category/configuración-avanzada',
             },
           ],
         },
