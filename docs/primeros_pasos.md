@@ -82,11 +82,11 @@ Si la energía de la radio no tiene "por donde salir", rebotará y te quemará l
 :::
 
 :::warning
-**No cambies configuraciones avanzadas sin entenderlas**
+**No cambies configuraciones sin entenderlas**
 
 Si lo haces, **empeorarás el rendimiento de la red para todos.** Las principales opciones que **perjudican** a la malla, y que por tanto debes **EVITAR**:
 
-- **Configurar más de 3-4 saltos (hops)**
+- **Configurar más de 3-4 saltos (hops).** No son necesarios y provocan bucles en las rutas.
 - **Usar el modo Router sin planificarlo antes con la comunidad.** Ante la duda utiliza CLIENT o CLIENT_MUTE.
 - **Reducir los intervalos de telemetría.** Es la mayor fuente de tráfico innecesario que satura la malla.
 - **Usar el modo RangeTest.** Molesta a los demás y satura enormemente la red.
