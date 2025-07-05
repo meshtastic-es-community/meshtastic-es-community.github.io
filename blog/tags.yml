@@ -1,4 +1,20 @@
 hola:
   label: Hola
   permalink: /hola
-  description: Hola tag description
+  description: Tag de bienvenida
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Contenido relacionado con Docusaurus
+Configuración:
+  label: Configuración
+  permalink: /configuracion
+  description: Contenido relacionado con configuraciones
+Madrid:
+  label: Madrid
+  permalink: /madrid
+  description: Contenido relacionado con Madrid
+MediumSlow:
+  label: MediumSlow
+  permalink: /mediumslow
+  description: Contenido relacionado con MediumSlow

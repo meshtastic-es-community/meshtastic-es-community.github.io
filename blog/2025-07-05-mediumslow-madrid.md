@@ -1,6 +1,6 @@
 ---
 slug: mediumslow-madrid
-title: 👉 Madrid se pasa de LongFast a MediumSlow.
+title: 👉 Madrid se pasa de LongFast a MediumSlow
 authors: []
 tags: [Madrid, configuración, MediumSlow]
 ---
