@@ -12,3 +12,21 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 
 :::
 
+# Flashear dispositivo
+
+- Conecta tu dispositivo
+- Visita [flasher.meshtastic.org](https://flasher.meshtastic.org) _*requiere navegador Chrome o Edge*_
+- Selecciona tu tipo de dispositivo:
+
+
+ ![Imagen del proceso de flasheo](/docs/flasher1.png)
+
+
+ - Selecciona la última versión estable:
+
+
+
+<img src="/docs/flasher2.png" alt="Imagen del proceso de flasheo" width="300" style="display: block; margin-top: 30px; margin-bottom: 30px;" />
+
+
+
