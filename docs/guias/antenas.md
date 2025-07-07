@@ -9,7 +9,8 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 
 ---
 
-## ✅ Antenas recomendadas
+## ✅ Antenas para nodos portátiles:
+
 
 - **Gizont 17 CM**  
   [Ver en AliExpress](https://es.aliexpress.com/item/1005004607615001.html)
@@ -20,12 +21,14 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 - **GrandWisdom (USAR SIN DOBLAR)**  
   [Ver en AliExpress](https://es.aliexpress.com/item/32979875502.html)
 
-- **Yagi**  
+## ✅ Antenas para nodos fijos:
+
+- **Yagi direccional**  
   Se recomienda comprobar con VNA (Analizador de Redes Vectorial).  
   Puede que sea necesario ajustarla para obtener mejor rendimiento.  
   [Ver en AliExpress](https://a.aliexpress.com/_Eu7alUU)
 
-- **Ziisor Fibra**  
+- **Ziisor Fibra 40cm, 50cm**  
   [Ver en AliExpress](https://a.aliexpress.com/_EjIfcmE)
 
 ---
