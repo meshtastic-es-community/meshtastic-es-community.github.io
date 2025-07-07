@@ -19,14 +19,14 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 - Selecciona tu tipo de dispositivo:
 
 
- ![Imagen del proceso de flasheo](/static/flasher1.png)
+ ![Imagen del proceso de flasheo](flasher1.png)
 
 
  - Selecciona la última versión estable:
 
 
 
-<img src="/static/flasher2.png" alt="Imagen del proceso de flasheo" width="300" style="display: block; margin-top: 30px; margin-bottom: 30px;" />
+<img src="flasher2.png" alt="Imagen del proceso de flasheo" width="300" style="display: block; margin-top: 30px; margin-bottom: 30px;" />
 
 
 
