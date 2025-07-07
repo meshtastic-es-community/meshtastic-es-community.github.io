@@ -28,3 +28,14 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+.button:hover,
+.button:focus,
+.cta--button:hover,
+.cta--button:focus {
+  color: #35c467 !important;         /* Texto en verde brillante */
+  background-color: transparent;     /* Fondo transparente para que no tape nada */
+  text-decoration: underline;        /* Opcional, para dar feedback visual */
+  transition: color 0.3s ease;
+}
