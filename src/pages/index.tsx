@@ -26,6 +26,12 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--secondary button--lg"
+            to="/docs/primeros_pasos"
+            style={{ margin: '10px' }}>
+            Primeros Pasos
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
             to="/docs/buenas_practicas"
             style={{ margin: '10px' }}>
             Buenas prácticas
