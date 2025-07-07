@@ -19,19 +19,16 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 - Selecciona tu tipo de dispositivo:
 
 
- ![Imagen del proceso de flasheo](/flasher1.png)
+ ![Imagen del proceso de flasheo](/static/flasher1.png)
+
 
 
  - Selecciona la última versión estable:
 
 
 
-<img
-  src="/flasher2.png"
-  alt="Flasher Meshtastic"
-  width="300"
-  style={{ marginTop: '30px', marginBottom: '30px', display: 'block' }}
-/>
+ ![Imagen del proceso de flasheo](/static/flasher2.png)
+
 
 
 
