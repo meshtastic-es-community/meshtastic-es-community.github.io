@@ -36,6 +36,12 @@ function HomepageHeader() {
             style={{ margin: '10px' }}>
             Buenas prácticas
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/category/guías"
+            style={{ margin: '10px' }}>
+            Guias
+          </Link>
         </div>
       </div>
     </header>
