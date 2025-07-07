@@ -1,8 +1,14 @@
 ---
+id: configuracion-inicial
+title: Configuración Inicial
+sidebar_label: Configuración Inicial
 sidebar_position: 1
 ---
 
+import Link from "@docusaurus/Link"
+
 <!-- Falta añadir enlaces a otros post con los drivers y mas detalles de ambos tipos de dispositivos -->
+
 
 
 # Configuracíon inicial
