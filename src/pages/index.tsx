@@ -40,7 +40,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/category/guías"
             style={{ margin: '10px' }}>
-            Guias
+            Guías
           </Link>
         </div>
       </div>
