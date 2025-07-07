@@ -19,7 +19,7 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 - Selecciona tu tipo de dispositivo:
 
 
- ![Imagen del proceso de flasheo](/static/flasher1.png)
+ ![Imagen del proceso de flasheo](/flasher1.png)
 
 
 
@@ -27,7 +27,7 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 
 
 
- ![Imagen del proceso de flasheo](/static/flasher2.png)
+ ![Imagen del proceso de flasheo](/flasher2.png)
 
 
 
