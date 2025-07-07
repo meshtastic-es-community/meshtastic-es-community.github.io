@@ -109,7 +109,7 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
     <div className="split-item">
       <Link
         className="button button--outline button--lg cta--button"
-        to="/docs/guias/flashear_firmware"
+        to="/docs/guias/flashear_firmware#nrf52"
       >
         Flashear Firmware NRF52
       </Link>
