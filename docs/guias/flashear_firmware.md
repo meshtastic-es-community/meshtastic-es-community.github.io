@@ -30,5 +30,18 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
  ![Imagen del proceso de flasheo](/flasher2.png)
 
 
+- Pulsa en el botón de Flash y sigue las instrucciones. Si tu dispositivo es un ESP32-S3, puede que necesites apagarlo, luego mantener pulsado el botón BOOT / USR mientras conectas el cable USB.
+También puedes probar el método de reinicio a 1200bps para poner el dispositivo en modo adecuado.
+- Si es la primera vez que instalas debes pulsar el botón de borrado completo.
+- Pulsa el botón de instalar y verás un cuadro donde saldrá el proceso.
+- Ya tienes tu dispositivo flasheado y puedas pasar a la [configuración básica]
+
+:::danger 
+Recuerda que no debes encender tu dispositivo sin una antena conectada
+:::
 
 
+## NRF52
+:::info
+Para estos dispositivos no hace falta instalar drivers. (En caso de Windows)
+:::
