@@ -53,7 +53,7 @@ El primer paso para usar tu dispositivo es instalar el firmware de Meshtastic. S
    - Una vez flasheado, el dispositivo se reiniciará y estará ejecutando Meshtastic. No te preocupes, flashear no elimina configuraciones personalizadas como el nombre o la región, a menos que elijas borrar todos los datos.
 
 :::tip 
-Hay disponible una guía mas extensa sobre cómo flashear tu dispositivo. Si te está costando la tienes disponible aquí: [Guia Flasheo de Firmware](docs/guias/flashear_firmware) 
+Hay disponible una guía mas extensa sobre cómo flashear tu dispositivo. Si te está costando la tienes disponible aquí: [Guia Flasheo de Firmware](/docs/guias/flashear_firmware) 
 :::
 
 :::note
