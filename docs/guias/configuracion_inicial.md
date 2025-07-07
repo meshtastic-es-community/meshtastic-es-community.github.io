@@ -100,7 +100,7 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
     <div className="split-item">
       <Link
         className="button button--outline button--lg cta--button"
-        to="/docs/guias/flashear_firmware"
+        to="/docs/guias/flashear_firmware#esp32"
       >
         Flashear Firmware ESP32 
       </Link>
