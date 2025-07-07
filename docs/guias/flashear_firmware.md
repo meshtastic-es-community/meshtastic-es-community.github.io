@@ -34,7 +34,7 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 También puedes probar el método de reinicio a 1200bps para poner el dispositivo en modo adecuado.
 - Si es la primera vez que instalas debes pulsar el botón de borrado completo.
 - Pulsa el botón de instalar y verás un cuadro donde saldrá el proceso.
-- Ya tienes tu dispositivo flasheado y puedas pasar a la [configuración básica]
+- Ya tienes tu dispositivo flasheado y puedas pasar a la [[configuración inicial]](https://meshtastic-es-community.github.io/docs/guias/configuracion-inicial#conectar-y-configurar-el-dispositivo)
 
 :::danger 
 Recuerda que no debes encender tu dispositivo sin una antena conectada
@@ -45,3 +45,8 @@ Recuerda que no debes encender tu dispositivo sin una antena conectada
 :::info
 Para estos dispositivos no hace falta instalar drivers. (En caso de Windows)
 :::
+
+
+
+
+- Ya tienes tu dispositivo flasheado y puedas pasar a la [[configuración inicial]](https://meshtastic-es-community.github.io/docs/guias/configuracion-inicial#conectar-y-configurar-el-dispositivo)
