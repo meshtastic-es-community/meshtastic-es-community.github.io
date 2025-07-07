@@ -11,7 +11,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Segura y encriptada',
     Svg: require('@site/static/img/undraw_security_0ubl.svg').default,
     description: (
       <>
@@ -20,7 +20,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Red descentralizada',
     Svg: require('@site/static/img/undraw_broadcast_gyxl.svg').default,
     description: (
       <>
@@ -29,7 +29,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Libre de uso',
     Svg: require('@site/static/img/undraw_order-coffee_pw24.svg').default,
     description: (
       <>
