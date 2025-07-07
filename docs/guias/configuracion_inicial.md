@@ -9,7 +9,7 @@ import Link from "@docusaurus/Link";
 
 :::note
 
-Esta guía asume que ya has comprado los dispositivos que vas a utilizar con Meshtastic. Si no es así, puedes consultar la lista de [hardware compatible](/docs/hardware/devices/index.mdx)
+Esta guía asume que ya has comprado los dispositivos que vas a utilizar con Meshtastic. Si no es así, puedes consultar la lista de [hardware compatible]
 para ver tus opciones.
 :::
 
@@ -45,7 +45,7 @@ El RP2040 es un chip ARM de doble núcleo desarrollado por Raspberry Pi. Disposi
 
 :::info
 
-Si tu dispositivo no está en la lista anterior, consulta nuestros [dispositivos compatibles](/docs/hardware/devices/index.mdx) para saber qué MCU tiene, o contáctanos por [Discord](https://discord.gg/ktMAKGBnBs) si tienes dudas.
+Si tu dispositivo no está en la lista anterior, consulta nuestros [dispositivos compatibles] para saber qué MCU tiene, o contáctanos por [Discord](https://discord.gg/ktMAKGBnBs) si tienes dudas.
 
 :::
 
@@ -76,7 +76,7 @@ Si necesitas instalar controladores seriales en tu ordenador, elige una de las s
     <div className="split-item">
       <Link
         className={'button button--outline button--lg cta--button'}
-        to={'/docs/getting-started/serial-drivers/esp32'}
+        to={''}
       >
         Instalar controladores ESP32
       </Link>
@@ -102,7 +102,7 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
     <div className="split-item">
       <Link
         className={"button button--outline button--lg cta--button"}
-        to={"/docs/getting-started/flashing-firmware/esp32/"}
+        to={""}
       >
         Flashear Firmware ESP32
       </Link>
@@ -126,7 +126,7 @@ Después de flashear el firmware de Meshtastic en tu dispositivo, puedes continu
 <div className="indexCtasBody">
   <Link
     className={"button button--outline button--lg cta--button"}
-    to={"/docs/getting-started/initial-config"}
+    to={""}
   >
     Conectar y Configurar Dispositivo
   </Link>
