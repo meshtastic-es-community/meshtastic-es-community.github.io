@@ -83,11 +83,14 @@ Si necesitas instalar controladores seriales en tu ordenador, elige una de las s
   <div className="split-container">
     <div className="split-item">
       <Link
-        className={'button button--outline button--lg cta--button'}
-        to={'[http://www.wch-ic.com/downloads/CH341SER_EXE.html](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)'}
-      >
-        Instalar controladores ESP32
-      </Link>
+  className="button button--outline button--lg cta--button"
+  to="http://www.wch-ic.com/downloads/CH341SER_EXE.html"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Instalar controladores ESP32
+</Link>
+
     </div>
 
   </div>
@@ -102,7 +105,7 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
     <div className="split-item">
       <Link
         className={"button button--outline button--lg cta--button"}
-        to={"/docs/guias/flashear_firmware.md"}
+        to={"/docs/guias/flashear_firmware"}
       >
         Flashear Firmware ESP32 
       </Link>
