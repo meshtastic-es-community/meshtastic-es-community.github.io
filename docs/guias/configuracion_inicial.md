@@ -85,7 +85,7 @@ Si necesitas instalar controladores seriales en tu ordenador, elige una de las s
     <div className="split-item">
       <Link
         className={'button button--outline button--lg cta--button'}
-        to={'/docs/getting-started/serial-drivers/nrf52'}
+        to={''}
       >
         Instalar controladores nRF52/RP2040
       </Link>
@@ -111,7 +111,7 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
     <div className="split-item">
       <Link
         className={"button button--outline button--lg cta--button"}
-        to={"/docs/getting-started/flashing-firmware/nrf52/"}
+        to={""}
       >
         Flashear Firmware nRF52/RP2040
       </Link>
