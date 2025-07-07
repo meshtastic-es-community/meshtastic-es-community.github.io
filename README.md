@@ -1,41 +1,22 @@
-# Website
+# Web de la Comunidad Meshtastic en Español
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+🌐 Sitio web temporal disponible en: **[https://meshtastic-es-community.github.io/](https://meshtastic-es-community.github.io/)**
 
-## Installation
+Este repositorio contiene el código fuente de la página web oficial de la comunidad Meshtastic en español, construida con [Docusaurus 3](https://docusaurus.io/).
 
-```bash
-yarn
-```
+El objetivo es ofrecer documentación, guías y recursos accesibles en nuestro idioma para ayudar a nuevos y veteranos usuarios de Meshtastic.
 
-## Local Development
+## 🚀 ¿Cómo contribuir?
 
-```bash
-yarn start
-```
+Puedes colaborar enviando *pull requests* para:
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+- Corregir errores ortográficos o de formato  
+- Traducir contenidos  
+- Añadir nuevas secciones o tutoriales  
+- Mejorar el diseño o estructura del sitio  
 
-## Build
+Toda contribución es bienvenida. Si no estás seguro por dónde empezar, revisa los [issues](https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/issues) o abre uno nuevo.
 
-```bash
-yarn build
-```
+## 📬 ¿Tienes dudas o sugerencias?
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+👉 Únete al grupo de [Telegram](t.me/meshtastic_es)
