@@ -1,9 +1,14 @@
+<!-- Falta añadir enlaces a otros post con los drivers y mas detalles de ambos tipos de dispositivos -->
+
+
+
 ---
 sidebar_position: 1
 ---
 
 import Link from "@docusaurus/Link";
 
+# Configuracíon inicial
 
 ## Identificar el Hardware
 
