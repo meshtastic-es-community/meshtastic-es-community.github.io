@@ -72,7 +72,7 @@ Para estos dispositivos no hace falta instalar drivers. (En caso de Windows)
 
 :::info
 
-Antes de flashear, confirma que tienes un [RAK4631](https://docs.rakwireless.com/product-categories/wisblock/rak4631/overview) y no un [RAK4631-R](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/overview). Si no es así, no te preocupes. El hardware es idéntico pero requiere cambiar el bootloader. Las instrucciones para hacerlo están [aquí](/docs/getting-started/flashing-firmware/nrf52/convert-rak4631r).
+Antes de flashear, confirma que tienes un [RAK4631](https://docs.rakwireless.com/product-categories/wisblock/rak4631/overview) y no un [RAK4631-R](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/overview). Si no es así, no te preocupes. El hardware es idéntico pero requiere cambiar el bootloader. Las instrucciones para hacerlo están [aquí](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/convert-rak4631r/).
 
 :::
 
