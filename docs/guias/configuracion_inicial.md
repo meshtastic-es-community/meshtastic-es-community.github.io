@@ -40,9 +40,9 @@ El chip nRF52 es mucho más eficiente energéticamente que el ESP32 y más fáci
 
 - Módulo central RAK4631 para placas modulares RAK WisBlock
 - LILYGO® TTGO T-Echo
-- Sensecap t1000E
+- Sensecap T1000E
 - Faketec DIY
-- Heltec t114
+- Heltec T114
 
 ### RP2040
 
@@ -84,20 +84,12 @@ Si necesitas instalar controladores seriales en tu ordenador, elige una de las s
     <div className="split-item">
       <Link
         className={'button button--outline button--lg cta--button'}
-        to={''}
+        to={'[http://www.wch-ic.com/downloads/CH341SER_EXE.html](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)'}
       >
         Instalar controladores ESP32
       </Link>
     </div>
 
-    <div className="split-item">
-      <Link
-        className={'button button--outline button--lg cta--button'}
-        to={''}
-      >
-        Instalar controladores nRF52/RP2040
-      </Link>
-    </div>
   </div>
 </div>
 
@@ -110,22 +102,23 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
     <div className="split-item">
       <Link
         className={"button button--outline button--lg cta--button"}
-        to={""}
+        to={"/docs/guias/flashear_firmware.md"}
       >
-        Flashear Firmware ESP32
+        Flashear Firmware ESP32 
       </Link>
     </div>
 
-    <div className="split-item">
+  <div className="split-item">
       <Link
         className={"button button--outline button--lg cta--button"}
-        to={""}
+        to={"/docs/guias/flashear_firmware.md"}
       >
-        Flashear Firmware nRF52/RP2040
+        Flashear Firmware NRF52
       </Link>
     </div>
   </div>
 </div>
+
 
 ### Conectar y Configurar el Dispositivo
 
