@@ -5,7 +5,7 @@ description: Guía con recomendaciones y experiencias sobre antenas para disposi
 
 # Antenas recomendadas para Meshtastic
 
-A continuación te presentamos una lista de antenas recomendadas y no recomendadas para usar con tus dispositivos Meshtastic, basada en las experiencias y consejos compartidos en el grupo oficial de Telegram Meshtastic España: [https://t.me/meshtastic_esp/1](https://t.me/meshtastic_esp/1)
+A continuación te presentamos una lista de antenas recomendadas y no recomendadas para usar con tus dispositivos Meshtastic, basada en las experiencias y consejos compartidos en el grupo oficial de Telegram Meshtastic España: [https://t.me/meshtastic_esp](https://t.me/meshtastic_esp)
 
 ---
 
@@ -28,8 +28,11 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
   Puede que sea necesario ajustarla para obtener mejor rendimiento.  
   [Ver en AliExpress](https://a.aliexpress.com/_Eu7alUU)
 
-- **Ziisor Fibra 40cm, 50cm**  
+- **Ziisor Fibra 40cm**
   [Ver en AliExpress](https://a.aliexpress.com/_EjIfcmE)
+
+- **Ziisor Fibra 55cm**
+  [Ver en AliExpress](https://es.aliexpress.com/item/1005007463706065.html)
 
 ---
 
@@ -46,4 +49,4 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 ---
 
 **Nota:** Toda esta información se basa en recomendaciones y experiencias obtenidas en el grupo de Telegram de Meshtastic España. Para más detalles, dudas o consultas, te invitamos a unirte:  
-[https://t.me/meshtastic_esp/1](https://t.me/meshtastic_esp/1)
+[https://t.me/meshtastic_esp](https://t.me/meshtastic_esp)

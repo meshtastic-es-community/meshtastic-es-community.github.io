@@ -19,4 +19,4 @@ Toda contribución es bienvenida. Si no estás seguro por dónde empezar, revisa
 
 ## 📬 ¿Tienes dudas o sugerencias?
 
-👉 Únete al grupo de [Telegram](t.me/meshtastic_es)
+👉 Únete al grupo de [Telegram](https://t.me/meshtastic_esp)
