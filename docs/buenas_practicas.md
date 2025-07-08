@@ -6,6 +6,12 @@ sidebar_position: 3
 
 En este artículo te damos algunos consejos para que entre todos mantengamos la red funcionando a pleno rendimiento. Como es una tecnología descentralizada, es responsabilidad de todos hacer bien las cosas.
 
+Hay unos aspectos clave en cuanto a la red que es importante destacar, para que entiendas estas buenas prácticas:
+
+- Un nodo **NO** puede enviar y recibir mensajes a la vez. Si está oyendo, no está hablando, y viceversa.
+- Un nodo sólo puede recibir **UN** mensaje a la vez. Como la vida misma, si varios hablan a la vez, no te enteras de nada.
+- Si un nodo detecta a otro nodo emitiendo, este **NO** emitirá mensajes (para evitar colisiones). Esperará a que la red esté libre.
+
 ## Cantidad de saltos máxima
 
 Para evitar saturar la malla, es importante **no sobrepasar** el número de saltos máximo recomendado.
@@ -26,6 +32,36 @@ Los mensajes se moverán de forma mucho más ágil si entre todos usamos solamen
 :::warning
 Muchos usuarios creen erróneamente que poner 7 hops (el más alto) es mejor, pero es totalmente contraproducente para todos. Vienen configurados 3 de fábrica por algo.
 :::
+
+## Utilizar el rol adecuado
+
+Antes de decidir qué rol tendrá tu nodo, es importante que entiendas los mismos. Nada como la [documentación oficial](https://meshtastic.org/docs/configuration/radio/device/#roles) y esta [entrada del blog](https://meshtastic.org/blog/choosing-the-right-device-role/) para ello. En líneas generales, esta es nuestra recomendación:
+
+**CLIENT_MUTE** para la mayoría de nodos. Permite enviar y recibir mensajes, sin reenviar los mensajes de otros (y sin saturar la malla). Ideal para nodos personales, en movimiento, que están en interiores, o que no tienen buena conexión con otros nodos.
+
+**CLIENT** para nodos exteriores, con buena ubicación (tipo una azotea o una terraza despejada) que ayudan a una parte de la malla, reenviando los mensajes de otros. Tiene conexión directa con varios nodos.
+
+**ROUTER** para nodos ubicados en zonas muy estratégicas. Este rol requiere planificación y coordinación con otros miembros de la malla. No lo utilices a lo loco.
+
+Con esos roles es más que suficiente. Obviamente puedes usar otros, pero no los recomendamos si no lo tienes claro, ya que puede ser contraproducente para todos (tanto para ti como para el resto de la malla).
+
+:::tip
+Esto es una red colaborativa. No hace falta que todos aportemos. De verdad, no te sientas mal por tener únicamente nodos CLIENT_MUTE y no "ayudar" a expandir la malla. Ya estás ayundando al no generar más tráfico reenviando mensajes de otros. Redes como Madrid o Cataluña ya están muy bien cubiertas y probablemente ya puedas comunicarte con otros nodos sin problemas.
+:::
+
+:::note
+Los roles no son definitivos, se pueden cambiar en cualquier momento. Quizás un día tu nodo CLIENT_MUTE se convierte en CLIENT porque te lo llevas a una azotea o empiezas a tener buenas conexiones.
+:::
+
+<details>
+  <summary>Ejemplos de roles incorrectos</summary>
+
+  Un nodo REPEATER viene a ser lo mismo que un ROUTER, pero no aparece en la lista de nodos. Va oculto por la vida. Esto es una malla colaborativa, no es necesario estar en la sombra.
+
+  Asignar a un nodo CLIENT cuando no tiene buenas conexiones con otros nodos. Lo único que consigues es entorpecer a los pocos nodos que te oigan. Por ejemplo un nodo CLIENT bien ubicado en una azotea, con visión y conexión directa a un ROUTER, pero que no sirve a otros nodos. Este nodo, reenviando los mensajes que reciba del ROUTER, hace que ese ROUTER no escuche otros mensajes y no pueda enviar mensajes.
+
+  Un ROUTER en el tejado de casa (o en ubicaciones aún peores).
+</details>
 
 ## Intervalos de broadcast automáticos
 
