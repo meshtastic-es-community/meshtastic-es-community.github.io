@@ -11,21 +11,20 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 
 ## ✅ Antenas para nodos portátiles:
 
-
-- **Gizont 17 CM**  
+- **Gizont 17 CM**
   [Ver en AliExpress](https://es.aliexpress.com/item/1005004607615001.html)
 
-- **Gizont 20 CM**  
+- **Gizont 20 CM**
   [Ver en AliExpress](https://es.aliexpress.com/item/1005006359246399.html)
 
-- **GrandWisdom (USAR SIN DOBLAR)**  
+- **GrandWisdom (USAR SIN DOBLAR)**
   [Ver en AliExpress](https://es.aliexpress.com/item/32979875502.html)
 
 ## ✅ Antenas para nodos fijos:
 
-- **Yagi direccional**  
-  Se recomienda comprobar con VNA (Analizador de Redes Vectorial).  
-  Puede que sea necesario ajustarla para obtener mejor rendimiento.  
+- **Yagi direccional**
+  Se recomienda comprobar con VNA (Analizador de Redes Vectorial).
+  Puede que sea necesario ajustarla para obtener mejor rendimiento.
   [Ver en AliExpress](https://a.aliexpress.com/_Eu7alUU)
 
 - **Ziisor Fibra 40cm**
@@ -38,15 +37,15 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 
 ## 🛑 Antenas no recomendadas
 
-- **Gizont Mala**  
-  Si tienes suerte, podrías ajustarla, pero ¿realmente vale la pena?  
+- **Gizont Mala**
+  Si tienes suerte, podrías ajustarla, pero ¿realmente vale la pena?
   [Ver en AliExpress](https://a.aliexpress.com/_Ew2bKoq)
 
-- **fakeAlpha**  
-  No la compres si no tienes un NanoVNA para comprobarla.  
+- **fakeAlpha**
+  No la compres si no tienes un NanoVNA para comprobarla.
   Algunas unidades no están bien calibradas o funcionan mal.
 
 ---
 
-**Nota:** Toda esta información se basa en recomendaciones y experiencias obtenidas en el grupo de Telegram de Meshtastic España. Para más detalles, dudas o consultas, te invitamos a unirte:  
+**Nota:** Toda esta información se basa en recomendaciones y experiencias obtenidas en el grupo de Telegram de Meshtastic España. Para más detalles, dudas o consultas, te invitamos a unirte:
 [https://t.me/meshtastic_esp](https://t.me/meshtastic_esp)
