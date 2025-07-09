@@ -71,7 +71,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/preview.jpg',
+    image: 'img/meshtastic-es-social-card.jpg',
     metadata: [
       { name: 'description', content: 'Sitio web y documentación para la comunidad de Meshtastic en España' },
       { property: 'og:title', content: 'Comunidad Meshtastic España' },
