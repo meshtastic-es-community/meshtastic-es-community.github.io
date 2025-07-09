@@ -71,8 +71,17 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/preview.jpg',
+    metadata: [
+      { name: 'description', content: 'Sitio web y documentación para la comunidad de Meshtastic en España' },
+      { property: 'og:title', content: 'Comunidad Meshtastic España' },
+      { property: 'og:description', content: 'Sitio web y documentación para la comunidad de Meshtastic en España' },
+      { property: 'og:image:alt', content: 'Logo Comunidad Meshtastic España' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Comunidad Meshtastic España' },
+      { name: 'twitter:description', content: 'Sitio web y documentación para la comunidad de Meshtastic en España' },
+      { name: 'twitter:image:alt', content: 'Logo Comunidad Meshtastic España' },
+    ],
     navbar: {
       title: 'Comunidad Meshtastic España',
       logo: {
@@ -86,8 +95,8 @@ const config: Config = {
           position: 'left',
           label: 'Documentación',
         },
-        {to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left'},
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left' },
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/meshtastic-es-community',
           label: 'GitHub',
@@ -173,7 +182,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  } satisfies Preset.ThemeConfig,
+  }   satisfies Preset.ThemeConfig,
 };
 
 export default config;
