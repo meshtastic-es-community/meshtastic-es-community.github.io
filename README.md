@@ -8,12 +8,12 @@ El objetivo es ofrecer documentación, guías y recursos accesibles en nuestro i
 
 ## 🚀 ¿Cómo contribuir?
 
-Puedes colaborar enviando *pull requests* para:
+Puedes colaborar enviando _pull requests_ para:
 
-- Corregir errores ortográficos o de formato  
-- Traducir contenidos  
-- Añadir nuevas secciones o tutoriales  
-- Mejorar el diseño o estructura del sitio  
+- Corregir errores ortográficos o de formato
+- Traducir contenidos
+- Añadir nuevas secciones o tutoriales
+- Mejorar el diseño o estructura del sitio
 
 Toda contribución es bienvenida. Si no estás seguro por dónde empezar, revisa los [issues](https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/issues) o abre uno nuevo.
 

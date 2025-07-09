@@ -7,7 +7,7 @@ sidebar_position: 1
 
 import Link from "@docusaurus/Link"
 
-<!-- Falta añadir enlaces a otros post con los drivers y mas detalles de ambos tipos de dispositivos -->
+<!-- Falta añadir enlaces a otros post con los drivers y más detalles de ambos tipos de dispositivos -->
 
 # Configuracíon inicial
 
@@ -102,7 +102,7 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
         className="button button--outline button--lg cta--button"
         to="/docs/guias/flashear_firmware#esp32"
       >
-        Flashear Firmware ESP32 
+        Flashear Firmware ESP32
       </Link>
     </div>
 
@@ -114,6 +114,7 @@ Después de completar los pasos anteriores, ya puedes flashear el firmware de Me
         Flashear Firmware NRF52
       </Link>
     </div>
+
   </div>
 </div>
 

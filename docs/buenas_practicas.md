@@ -20,9 +20,10 @@ Este ajuste viene en **3 saltos** por defecto, que es más que suficiente según
 Con 3 o 4 hops se llega bien a todas las partes de la malla.
 :::
 
-Si **realmente** necesitas subirlos, este ajuste se encuentra en ```Configuración -> Radio -> LoRa -> Hop limit```
+Si **realmente** necesitas subirlos, este ajuste se encuentra en `Configuración -> Radio -> LoRa -> Hop limit`
 
 ### Los saltos MÁXIMOS que recomendamos son:
+
 - 4 - Para nodos bien conectados (CLIENT en exterior)
 - 5 - **Solamente** si estamos en los extremos de la malla o para un nodo CLIENT_MUTE en interior.
 
@@ -56,11 +57,12 @@ Los roles no son definitivos, se pueden cambiar en cualquier momento. Quizás un
 <details>
   <summary>Ejemplos de roles incorrectos</summary>
 
-  Un nodo REPEATER viene a ser lo mismo que un ROUTER, pero no aparece en la lista de nodos. Va oculto por la vida. Esto es una malla colaborativa, no es necesario estar en la sombra.
+Un nodo REPEATER viene a ser lo mismo que un ROUTER, pero no aparece en la lista de nodos. Va oculto por la vida. Esto es una malla colaborativa, no es necesario estar en la sombra.
 
-  Asignar a un nodo CLIENT cuando no tiene buenas conexiones con otros nodos. Lo único que consigues es entorpecer a los pocos nodos que te oigan. Por ejemplo un nodo CLIENT bien ubicado en una azotea, con visión y conexión directa a un ROUTER, pero que no sirve a otros nodos. Este nodo, reenviando los mensajes que reciba del ROUTER, hace que ese ROUTER no escuche otros mensajes y no pueda enviar mensajes.
+Asignar a un nodo CLIENT cuando no tiene buenas conexiones con otros nodos. Lo único que consigues es entorpecer a los pocos nodos que te oigan. Por ejemplo un nodo CLIENT bien ubicado en una azotea, con visión y conexión directa a un ROUTER, pero que no sirve a otros nodos. Este nodo, reenviando los mensajes que reciba del ROUTER, hace que ese ROUTER no escuche otros mensajes y no pueda enviar mensajes.
 
-  Un ROUTER en el tejado de casa (o en ubicaciones aún peores).
+Un ROUTER en el tejado de casa (o en ubicaciones aún peores).
+
 </details>
 
 ## Intervalos de broadcast automáticos
@@ -76,36 +78,38 @@ Los intervalos propuestos son **MÍNIMOS**, puedes aumentarlos todavía más par
 
 Son los datos de "salud" del nodo. Por ejemplo: nivel de batería, voltaje, % de utilización del canal... Es la información más interesante de esta lista y además va cambiando con el tiempo, por lo que interesa ver sus actualizaciones.
 
-El valor recomendado es ```3600``` segundos, es decir 1h.
+El valor recomendado es `3600` segundos, es decir 1h.
 
-Configurable en ```Configuracion -> Telemetry -> Device metrics update interval -> 3600 (1h)```
+Configurable en `Configuracion -> Telemetry -> Device metrics update interval -> 3600 (1h)`
 
 ### Identificación del nodo
+
 Se envían en más detalle los datos identificativos del nodo: nombre, claves, ID...
 
 Aunque todos los mensajes llevan tu identificador, estos mensajes complementan la información del "perfil" de tu nodo. Estos datos son fijos y no cambian nunca, a no ser que los cambies tú. Sirve para que te descubran e identifiquen correctamente **por primera vez.**
 
-El valor recomendado es ```10800``` segundos, es decir 3h.
+El valor recomendado es `10800` segundos, es decir 3h.
 
-Configurable en ```Configuracion -> Device -> NodeInfo broadcast interval -> 10800 (3h)```
+Configurable en `Configuracion -> Device -> NodeInfo broadcast interval -> 10800 (3h)`
 
 ### Posición
+
 La información de ubicación del nodo. En nodos fijos no cambia nunca por lo que no tiene sentido enviarla a menudo, además es la información menos urgente.
 
-En nodos móviles o con GPS, puede interesar enviarla mas frecuente pero sin abusar de ello porque provoca la mayoría de la congestión en la malla. Es recomendable deshabilitar el ajuste ```Smart Position```.
+En nodos móviles o con GPS, puede interesar enviarla más frecuente pero sin abusar de ello porque provoca la mayoría de la congestión en la malla. Es recomendable deshabilitar el ajuste `Smart Position`.
 
-**Para nodos fijos:** el valor recomendado es ```10800``` segundos, es decir 3h.
+**Para nodos fijos:** el valor recomendado es `10800` segundos, es decir 3h.
 
-**Para nodos móviles:** no es aconsejable bajar de ```1800``` segundos, es decir 30 minutos.
+**Para nodos móviles:** no es aconsejable bajar de `1800` segundos, es decir 30 minutos.
 
-Configurable en ```Configuracion -> Position -> Position broadcast interval -> 10800 (3h)```
+Configurable en `Configuracion -> Position -> Position broadcast interval -> 10800 (3h)`
 
 ### Métricas del entorno
+
 Meshtastic permite enviar información de sensores conectados a los nodos. De temperatura, presión, humedad...
 
 Es información "chula" pero poco importante para la malla. La mayoría de nodos ni siquiera tienen estos sensores.
 
 Recomendamos desactivarlo o poner un valor muy alto.
 
-Configurable en ```Configuracion -> Telemetry -> Environment metrics```
-
+Configurable en `Configuracion -> Telemetry -> Environment metrics`
