@@ -97,8 +97,6 @@ const config: Config = {
         },
         { to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
-        { to: 'docs/category/guías', label: 'Guías', position: 'left' },
-        { to: '/docs/mapas', label: 'Mapa de Nodos', position: 'left' },
         {
           href: 'https://github.com/meshtastic-es-community',
           label: 'GitHub',
@@ -168,7 +166,7 @@ const config: Config = {
             },
             {
               label: 'Status',
-              href: 'https://status.meshtastic.es',
+              href: 'https://status.meshtastic.es/status/servicios/',
             },
           ],
         },
