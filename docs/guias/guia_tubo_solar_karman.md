@@ -13,9 +13,13 @@ slug: guia-tubo-solar-karman
 
 ## Introducción
 
-Esta guía te ayudará a montar un nodo solar autónomo de guerrilla con antena omnidireccional y sellado climatológicamente, con un coste total de unos **25€** (a junio de 2025) por nodo.
+Esta guía te ayudará a montar un nodo solar autónomo de guerrilla con antena omnidireccional y sellado
+climatológicamente con un coste total de unos **25€** (aproximadamente, a Junio de 2025) cada nodo.  
+Este nodo ha sido diseñado para ser lo mas simple posible de modo que sea económico y sencillo de
+ensamblar con la idea de instalarlo en ubicaciones altas para extender la red LoRa de Meshtastic. Por este
+motivo carece de otras comodidades como pantalla, botones externos, GPS o avisadores.
 
-El nodo ha sido diseñado para ser lo más simple posible, económico y fácil de ensamblar, para instalarlo en ubicaciones altas y extender la red LoRa de **Meshtastic**. Carece de pantalla, botones externos, GPS o avisadores.
+
 
 ### Contenido de la guía
 
@@ -53,7 +57,12 @@ El nodo ha sido diseñado para ser lo más simple posible, económico y fácil d
 
 ## Diseño del nodo
 
-Se basa en el diseño **Faketec v4**, que conecta el módulo de radio con el microcontrolador (MCU) y lleva un divisor de tensión para medir batería y botones de usuario/reset.
+El diseño de nodo se basa en el conocido y mas que probado diseño ***Faketec v4***. La Faketec es una plaquita
+económica y sencilla de pedir (mas abajo se indica como) que sirve para interconectar el módulo de radio con
+el microcontrolador (MCU).  
+Por conveniencia la placa incorpora un divisor de tensión (dos resistencias) para
+medir la batería y los botones de usuario y reset. Aquí no vamos a usar el botón de usuario, pero el reset es
+conveniente para poner la MCU en modo de actualización (DFU) y cargarle el firmware de Meshtastic.
 
 ### Esquema simple:
 
@@ -165,9 +174,16 @@ Consejos:
 - Orden recomendado: resistencias, módulo de radio y ProMicro 
 - Resistencias: R1 = 1MΩ, R2 = 680kΩ, ADC = 1.713  
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-025.jpg)
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-026.jpg)
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-027.jpg)
+
+<p align="center">
+  ![Esquema](/img/guias/KarmansTubeSolar.pdf-image-025.jpg)
+</p>
+
+| <img src="/img/guias/KarmansTubeSolar.pdf-image-026.jpg" width="500"/> | <img src="/img/guias/KarmansTubeSolar.pdf-image-027.jpg" width="500"/> |
+|-------------------------------------------------------------------------|-------------------------------------------------------------------------|
+
+|
+
 
 
 ---
@@ -191,7 +207,7 @@ será lo ultimo que conectemos antes de sellar el tubo.
 :::
 ---
 
-## Antena (J-Pole casera)
+## Fabricación de la Antena (J-Pole casera)
 
 Para minimizar el coste por nodo me fabrico la antena de manera casera. Y para poder maximizar el rendimiento
 de la misma uso un NanoVNA de modo que pueda observar su comportamiento y poder ajustarla
@@ -202,53 +218,45 @@ esta es la frecuencia sobre la que trabaja LoRa en la UE.
 ![Esquema](/img/guias/KarmansTubeSolar.pdf-image-033.jpg)
 ![Esquema](/img/guias/KarmansTubeSolar.pdf-image-032.jpg)
 
-Cortamos un trozo de cobre de unos 40
-cm y lo estirarmos hasta que quede
-recto. Cortamos los extremos que
-hemos usado para sujetarlo mientras
-estirábamos.
-Desde un extremo, medimos 250mm,
-doblamos 90º, medimos 6mm y
-volvemos a doblar 90º. Nos sobrará
-mas de los 83 mm.
-Soldamos el cable en transversal como
-se muestra en el diagrama de la
-derecha. No es necesario mas de 4 o 5
-cm de cable. ¡Ojo! Es importante que el
-cable quede transversal. De hacerlo
-cruzando por el centro de la parte
-inferior se alterará la recepción.
-Si no tenemos NanoVNA, cortamos la
-sección de la derecha a 83mm. Si
-tenemos NanoVNA cortamos a 85mm.
-Luego iremos recortando de aquí para
-afinar la antena.
-Instalamos los dos discos de cartón de
-24mm que servirán para mantener el
-dipolo centrado y que no toque el PVC
-ya que si toca el PVC se verá muy
-afectada la resonancia.
+Cortamos un trozo de cobre de unos 40cm y lo estirarmos hasta que quede recto. 
+Cortamos los extremos que hemos usado para sujetarlo mientras estirábamos.  
+Desde un extremo, medimos 250mm, doblamos 90º, medimos 6mm y volvemos a doblar 90º.  
+Nos sobrará mas de los 83 mm.
+Soldamos el cable en transversal como se muestra en el diagrama de la derecha. No es necesario mas de 4 o 5
+cm de cable. 
+
+:::danger
+¡Ojo! Es importante que el cable quede transversal. De hacerlo cruzando por el centro de la parte inferior se alterará la recepción.
+:::
+
+Si no tenemos NanoVNA, cortamos la sección de la derecha a 83mm. Si tenemos NanoVNA cortamos a 85mm.  
+Luego iremos recortando de aquí para afinar la antena.  
+Instalamos los dos discos de cartón de 24mm que servirán para mantener el dipolo centrado y que no toque el PVC ya que si toca el PVC se verá muy afectada la resonancia.
+
+:::info
 ¡Muy importante! En caso de tener
 NanoVNA las mediciones han de
 hacerse con el resto de componentes
 que afectan a la atena. Esto es, los discos de cartón instalados y la antena introducida en el tubo.
+:::
+
 Para afinar la antena conectaremos el NanoVNA e iremos recortando del trozo de cobre de la derecha por la
-parte superior reduciendo los 85mm poco a poco. El proceso es el siguiente: se monta dentro del tubo, se mide
-con NanoVNA, y si la frecuencia está por debajo, se saca antena, se corta un pelín (menos de 1mm a ser posible),
-se introduce nuevamente y se mide de nuevo. Repetir hasta que esté en 869.500Mhz.
-Si nos pasamos cortando y la frecuencia queda por encima de lo deseado, ¡Don’t Panic! Podemos soldar un
+parte superior reduciendo los 85mm poco a poco.  
+El proceso es el siguiente: se monta dentro del tubo, se mide con NanoVNA, y si la frecuencia está por debajo, se saca antena, se corta un pelín (menos de 1mm a ser posible), se introduce nuevamente y se mide de nuevo. Repetir hasta que esté en 869.500Mhz.
+
+Si nos pasamos cortando y la frecuencia queda por encima de lo deseado, ¡Don’t Panic! 😩 Podemos soldar un
 trozo de cobre para alargarlo nuevamente (bajando así la frecuencia) y volver a repetir el proceso de prueba y
 error.
 
 A continuación comparto dos capturas del NanoVNA para ilustrar la diferencia y cuanto afecta al
 funcionamiento de la antena. Ambas imágenes están midiendo exactamente la misma antena sin cambiarle
-nada. La diferencia es que la foto de la primera es con el tubo y la de la segunda es sin el tubo de PVC:
+nada.  
+La diferencia es que la foto de la primera es con el tubo y la de la segunda es sin el tubo de PVC:
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-036.jpg)
 ![Esquema](/img/guias/KarmansTubeSolar.pdf-image-035.jpg)
+![Esquema](/img/guias/KarmansTubeSolar.pdf-image-036.jpg)
 
-Como se puede observar, en la imagen de la izquierda la frecuencia está centrada en 869 mientras en la de la
-derecha se ha subido sobre los 880Mhz.
+Como se puede observar, en la imagen de arriba, la frecuencia está centrada en 869 mientras en la de abajo, se ha subido sobre los 880Mhz.  
 Las medidas están calculadas con la siguiente calculadora para J-Pole:
 https://m0ukd.com/calculators/slim-jim-and-j-pole-calculator/
 
@@ -327,7 +335,7 @@ Se puede actualizar rompiendo el sello, sacando la electrónica y conectando un 
 en la página 8 de este manual, o se pueden realizar actualizaciones mediante Bluetooth sin necesidad de
 desmontar la antena. 
 A continuación vamos a describir como hacerlo mediante Bluetooth (iOS).
--Necesitamos descargar desde la AppStore una aplicación llamada nRF Connect. Esta aplicación nos permitirá
+- Necesitamos descargar desde la AppStore una aplicación llamada nRF Connect. Esta aplicación nos permitirá
 conectarnos al bluetooth de la Faketec, meterlo en modo DFU y lanzar la actualización a través del bluetooth.
 - También necesitamos descargarnos la versión -ota.zip (Over The Air) correspondiente desde la página github de
 Meshtastic, sección Releases (https://github.com/meshtastic/firmware/releases), archivo con la versión que

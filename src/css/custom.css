@@ -38,3 +38,7 @@
   text-decoration: underline; /* Opcional, para dar feedback visual */
   transition: color 0.3s ease;
 }
+
+.hero {
+  background-image: url("/static/img/background.png");
+}
