@@ -7,7 +7,7 @@ sidebar_position: 2
 Para comenzar con Meshtastic, necesitarás al menos un dispositivo compatible con LoRa. Aquí tienes algunas opciones populares para principiantes, con precios aproximados (pueden variar según el proveedor, aunque lo más típico es comprar en AliExpress):
 
 | Dispositivo                      | Descripción                                                                                                  | Precio aproximado |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------- |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------|
 | Heltec V3                        | Económico y fácil de usar, ideal para conectarlo con tu teléfono.                                            | 20-30 euros       |
 | LILYGO T-Beam                    | Incluye GPS, recomendado para quienes buscan compartir su ubicación.                                         | 30-40 euros       |
 | LILYGO T-Echo                    | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play».                                     | 50-60 euros       |
@@ -100,7 +100,7 @@ Si lo haces, **empeorarás el rendimiento de la red para todos.** Las principale
   :::
 
 :::tip
-Revisa nuestra guía de [buenas prácticas](buenas_practicas) para asegurarte de que tienes una configuración que no va a perjudicar al resto de la red.
+Revisa nuestra guía de [buenas prácticas](buenas_practicas.md) para asegurarte de que tienes una configuración que no va a perjudicar al resto de la red.
 :::
 
 1. **Prueba con dispositivos simples primero**:

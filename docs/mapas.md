@@ -4,7 +4,6 @@ sidebar_position: 6
 
 # Mapa de Nodos
 
-
 # 🗺️ Mapas Meshtastic España
 
 Aquí encontrarás enlaces útiles para visualizar la red y herramientas de la comunidad:
@@ -13,7 +12,7 @@ Aquí encontrarás enlaces útiles para visualizar la red y herramientas de la c
 
 ## 🌐 Mapa principal
 
-🔗 [mapa.meshtastic.es](https://mapa.meshtastic.es)
+🔗 https://mapa.meshtastic.es
 
 Visualiza todos los nodos activos, su ubicación aproximada y su alcance. Ideal para comprobar la cobertura de la red Meshtastic en tiempo real.
 
@@ -21,7 +20,7 @@ Visualiza todos los nodos activos, su ubicación aproximada y su alcance. Ideal 
 
 ## 🧠 Meshview
 
-🔗 [meshview.meshtastic.es](https://meshview.meshtastic.es)
+🔗 https://meshview.meshtastic.es
 
 Visualización técnica y avanzada de las conexiones de malla entre nodos. Muy útil para analizar el rendimiento y el enrutamiento de paquetes.
 
@@ -29,21 +28,19 @@ Visualización técnica y avanzada de las conexiones de malla entre nodos. Muy �
 
 ## 📡 Malla (nodos activos y telemetría)
 
-🔗 [malla.meshtastic.es](https://malla.meshtastic.es)
+🔗 https://malla.meshtastic.es
 
 Panel con información detallada sobre los nodos conectados: ubicación, batería, temperatura, velocidad del viento, y mucho más.
 
-Desarrollado por [Alejandro Martínez
-](https://github.com/zenitraM) para la comunidad Meshtastic España.
+Desarrollado por [Alejandro Martínez](https://github.com/zenitraM) para la comunidad Meshtastic España.
 
 ---
 
 ## 📊 Status
 
-🔗 [status.meshtastic.es](https://status.meshtastic.es)
+🔗 https://status.meshtastic.es
 
 Estado en tiempo real de los servicios comunitarios (mapa, meshview, malla, backend, etc.)
-
 
 ---
 
@@ -58,7 +55,7 @@ Estos son los pasos a seguir:
     - En caso de nodos con Internet y conectados al servidor MQTT, **habilita _map reporting_** en la configuración de MQTT, al final del todo.
     - Si no, no te preocupes. Cuando otro nodo (con Internet y conectado a MQTT) escuche tu posición, la enviará al servidor.
 
-Tal vez tengas que esperar unas horas hasta que el nodo envíe su posición. Paciencia &#129496;
+Tal vez tengas que esperar unas horas hasta que el nodo envíe su posición. Paciencia 🧘
 
 ---
 

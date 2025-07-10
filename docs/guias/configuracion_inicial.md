@@ -76,57 +76,18 @@ Los dispositivos nRF52/RP2040 normalmente no requieren controladores seriales. U
 
 Si necesitas instalar controladores seriales en tu ordenador, elige una de las siguientes opciones e instálala antes de continuar.
 
-<div className="indexCtasBody">
-  <div className="split-container">
-    <div className="split-item">
-      <a
-        className="button button--outline button--lg cta--button"
-        href="http://www.wch-ic.com/downloads/CH341SER_EXE.html"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Instalar controladores ESP32
-      </a>
-    </div>
-  </div>
-</div>
+[Instalar controladores ESP32](https://www.wch-ic.com/downloads/CH341SER_EXE.html)
 
 ### Flashear el Firmware
 
 Después de completar los pasos anteriores, ya puedes flashear el firmware de Meshtastic en tu dispositivo. Para continuar, selecciona el tipo de dispositivo correspondiente.
 
-<div className="indexCtasBody">
-  <div className="split-container">
-    <div className="split-item">
-      <Link
-        className="button button--outline button--lg cta--button"
-        to="/docs/guias/flashear_firmware#esp32"
-      >
-        Flashear Firmware ESP32
-      </Link>
-    </div>
+[Flashear Firmware ESP32](flashear_firmware.md#esp32)
 
-    <div className="split-item">
-      <Link
-        className="button button--outline button--lg cta--button"
-        to="/docs/guias/flashear_firmware#nrf52"
-      >
-        Flashear Firmware NRF52
-      </Link>
-    </div>
-
-  </div>
-</div>
+[Flashear Firmware NRF52](flashear_firmware.md#nrf52)
 
 ### Conectar y Configurar el Dispositivo
 
 Después de flashear el firmware de Meshtastic en tu dispositivo, puedes continuar con la configuración inicial.
 
-<div className="indexCtasBody">
-  <Link
-    className="button button--outline button--lg cta--button"
-    to=""
-  >
-    Conectar y Configurar Dispositivo
-  </Link>
-</div>
+‹!-- Enlazar con toda la configuración del nodo, cuando esté --›

@@ -9,7 +9,7 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 
 ---
 
-## 📟 Antenas para nodos portátiles:
+## 📟 Antenas para nodos portátiles
 
 - **Gizont 17 CM**
   [Ver en AliExpress](https://es.aliexpress.com/item/1005004607615001.html)
@@ -20,10 +20,10 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 - **GrandWisdom (USAR SIN DOBLAR)**
   [Ver en AliExpress](https://es.aliexpress.com/item/32979875502.html)
 
-## 🗼 Antenas para nodos fijos:
+## 🗼 Antenas para nodos fijos
 
 - **Yagi direccional:**
-Se recomienda comprobar con VNA (Analizador de Redes Vectorial).
+  Se recomienda comprobar con VNA (Analizador de Redes Vectorial).
   Puede que sea necesario ajustarla para obtener mejor rendimiento.
   [Ver en AliExpress](https://a.aliexpress.com/_Eu7alUU)
 
@@ -46,15 +46,17 @@ La mayoría de antenas para estación fija llevan conector de tipo N. Revisa si 
 ## 🛑 Antenas no recomendadas
 
 - **Antena original**
-Las antenas originales que vienen con dispositivos como el Heltec V3 no valen para el uso con Meshtastic ya que son de muy mala calidad o están ajustadas a frecuencias que no son útiles.
+
+    Las antenas originales que vienen con dispositivos como el Heltec V3 no valen para el uso con Meshtastic ya que son de muy mala calidad o están ajustadas a frecuencias que no son útiles.
 
 - **Gizont Mala**
-  Si tienes suerte, podrías ajustarla, pero ¿realmente vale la pena?
+  
+    Si tienes suerte, podrías ajustarla, pero ¿realmente vale la pena?
   [Ver en AliExpress](https://a.aliexpress.com/_Ew2bKoq)
 
 - **fakeAlpha**
-  No la compres si no tienes un NanoVNA para comprobarla.
-  Algunas unidades no están bien calibradas o funcionan mal.
+  
+    No la compres si no tienes un NanoVNA para comprobarla. Algunas unidades no están bien calibradas o funcionan mal.
 
 ---
 

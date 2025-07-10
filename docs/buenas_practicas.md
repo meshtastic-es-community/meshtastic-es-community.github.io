@@ -55,7 +55,7 @@ Los roles no son definitivos, se pueden cambiar en cualquier momento. Quizás un
 :::
 
 <details>
-  <summary>Ejemplos de roles incorrectos</summary>
+<summary>Ejemplos de roles incorrectos</summary>
 
 Un nodo REPEATER viene a ser lo mismo que un ROUTER, pero no aparece en la lista de nodos. Va oculto por la vida. Esto es una malla colaborativa, no es necesario estar en la sombra.
 
