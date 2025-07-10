@@ -97,6 +97,7 @@ const config: Config = {
         },
         { to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/docs/mapas', label: 'Mapa de Nodos', position: 'left' },
         {
           href: 'https://github.com/meshtastic-es-community',
           label: 'GitHub',

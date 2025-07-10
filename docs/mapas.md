@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Mapa de nodos
+# Mapa de Nodos
 
 
 # 🗺️ Mapas Meshtastic España

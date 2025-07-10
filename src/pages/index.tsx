@@ -42,6 +42,12 @@ function HomepageHeader() {
             style={{ margin: '10px' }}>
             Guías
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/mapas"
+            style={{ margin: '10px' }}>
+            Mapa de Nodos
+          </Link>
         </div>
       </div>
     </header>
