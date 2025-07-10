@@ -19,11 +19,11 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 - Visita [flasher.meshtastic.org](https://flasher.meshtastic.org) _*requiere navegador Chrome o Edge*_
 - Selecciona tu tipo de dispositivo:
 
-![Imagen del proceso de flasheo](/flasher1.png)
+![Imagen del proceso de flasheo](/img/guias/flasher1.png)
 
 - Selecciona la última versión estable:
 
-![Imagen del proceso de flasheo](/flasher2.png)
+![Imagen del proceso de flasheo](/img/guias/flasher2.png)
 
 - Pulsa en el botón de Flash y sigue las instrucciones. Si tu dispositivo es un ESP32-S3, puede que necesites apagarlo, luego mantener pulsado el botón BOOT / USR mientras conectas el cable USB.
   También puedes probar el método de reinicio a 1200bps para poner el dispositivo en modo adecuado.

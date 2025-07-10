@@ -50,8 +50,8 @@ motivo carece de otras comodidades como pantalla, botones externos, GPS o avisad
 
 | Versión | Fecha       | Comentario                              |
 |--------:|-------------|------------------------------------------|
-| v0.1    | 2025/06/11  | Versión inicial                          |
-| v0.2    | 2025/06/22  | Añadida sección de actualización OTA Bluetooth |
+| v0.1    | 11/06/2025  | Versión inicial                          |
+| v0.2    | 22/06/2025  | Añadida sección de actualización OTA Bluetooth |
 
 ---
 
@@ -83,11 +83,33 @@ conveniente para poner la MCU en modo de actualización (DFU) y cargarle el firm
 
 ## ¿Por qué este diseño?
 
-- **Faketec v4**: sencilla y compatible con FETs  
-- **No usar Faketec v5/v6**: el BMS va en la batería y el MPPT es externo  
-- **No INA3221**: suficiente con el divisor de tensión  
-- **Batería pequeña**: 1500mAh da hasta 8 días  
-- **Tubo PVC vs caja**: barato, sencillo y sellado
+Además de los componentes descritos emplearemos un tubo de PVC para introducir y sellar los componentes
+y emplearemos un soporte para la placa solar que se puede imprimir en impresora 3D que nos servirá tanto para
+poner el panel solar en ángulo y aprovechar mejor el sol como para sujetar todo el montaje prácticamente a
+cualquier superficie.
+
+### Hay muchas versiones de Faketec, ¿Por qué la v4?
+Para este nodo se van a emplear los FETs por lo que se puede usar una v1, una v2 o una v3, o la v4 sin soldar los
+FETs. Yo he usado la v4 y las imágenes que se ven mas abajo de montaje corresponden a la v4.
+Tambien las hay mas modernas, ¿Por qué no emplear una v5 o una v6?
+Por simplicidad del diseño y adquisición de componentes, el BMS irá integrado en la batería, descartando la
+necesidad del v5. Por otro lado se opta por un cargador solar MPPT externo fácil de cablear, descartando también
+la Faketec v6.
+### ¿Por qué no monitorizar la batería con un INA3221 o similares?
+En mi opinión ver los amperios mediante un SHUNT no aporta información útil, hay que sumar el gasto
+económico del sensor y el gasto energético del mismo. Con ver el ‘porcentaje’ de batería basándose en el divisor
+de tensión incorporado en el Faketec v4 es suficiente para hacerse una idea del consumo y recarga de la batería.
+### La batería parece pequeña. ¿Y si ponemos una mas grande?
+La MCU NRF52 consume poco. Realmente poco. 5mA en standby/recepción y unos 64mA en emisión. 1500mA
+en caso de oscuridad total es mas que suficiente para 5 a 8 días, en función de la carga de transmisión. Sin
+embargo el MPPT hace milagros cargando en condiciones de luz pobres por lo que no espero que llegue a
+apagarse el nodo.
+### Hay cajas disponibles y también se pueden imprimir, ¿Por qué un tubo?
+Es lo mas barato de conseguir para sellar tanto la electrónica como la antena, todo junto, con solamente un par
+de tapones y un agujero por donde entre el cable del panel solar. Si bien es cierto que no está expuesto el USB
+y actualizarlo es un dolor en el culo, es poco probable que una actualización a estas alturas sea tan importante
+que requiera actualizar forzosamente el nodo. En cualquier caso el método recomendado es preparar otro nodo
+solar bien configurado y actualizado y reemplazar en el sitio el viejo por el actualizado.
 
 ---
 
@@ -105,6 +127,30 @@ conveniente para poner la MCU en modo de actualización (DFU) y cargarle el firm
 - Tubo PVC 32mm OD + 10 tapones (~7€, Leroy Merlin)  
 - PCB Faketec (30 unidades por 10€ en JLCPCB)  
 - Cable de cobre rígido
+
+:::info
+Estos enlaces no son afiliados, no me pagan por ellos y
+no gano nada por ponerlos. Los comparto por que mis nodos están todos construidos con los enlaces de arriba
+y funcionando, de modo que es material probado.  
+:::
+
+:::warning
+Asegurate de que compras el material correcto: Es normal entrar en aliexpress, buscar los componentes mas
+baratos y comprarlos ignorando los enlaces de arriba. 
+:::
+
+:::warning
+Asegurate que funciona la MCU antes de soldar: Se que algunos módulos de imitación del nice!nano vienen
+con un bootloader malo o sin bootloader y que hay que usar un ESP32 para reprograrmarlos ANTES de soldarlos
+a la Faketec. Al soldarlos a la Faketec se quedan escondidos los pads de programación del NRF52 y se hace muy
+difícil, si no imposible, recuperar la plaquita. Personalmente no me ha pasado nunca tener que recuperar una
+MCU de esta manera y por lo tanto no tengo experiencia.  
+:::
+:::warning
+Comprueba las medidas del tubo: El soporte 3D que he diseñado y que está enlazado arriba ha sido diseñado
+para la placa solar que he comentado y para el diámetro exterior del tubo de 32,5mm, por lo que es
+recomendable respetar esos componentes para no descuadrar la medidas.
+:::
 
 ---
 
@@ -126,6 +172,9 @@ conveniente para poner la MCU en modo de actualización (DFU) y cargarle el firm
 ![Esquema](/img/guias/KarmansTubeSolar.pdf-image-020.jpg)
 
 
+:::tip
+Toda la información y versiones del proyecto *Faketec* están en GitHub: https://github.com/gargomoma/fakeTec_pcb
+:::
 
 
 ---
@@ -174,6 +223,7 @@ Consejos:
 - Orden recomendado: resistencias, módulo de radio y ProMicro 
 - Resistencias: R1 = 1MΩ, R2 = 680kΩ, ADC = 1.713  
 
+### Imagenes de la placa terminada:
 
 <p align="center">
   ![Esquema](/img/guias/KarmansTubeSolar.pdf-image-025.jpg)
@@ -182,9 +232,11 @@ Consejos:
 | <img src="/img/guias/KarmansTubeSolar.pdf-image-026.jpg" width="500"/> | <img src="/img/guias/KarmansTubeSolar.pdf-image-027.jpg" width="500"/> |
 |-------------------------------------------------------------------------|-------------------------------------------------------------------------|
 
-|
 
 
+:::tip
+Recuerda que toda la información y versiones del proyecto *Faketec* están en GitHub: https://github.com/gargomoma/fakeTec_pcb
+:::
 
 ---
 
