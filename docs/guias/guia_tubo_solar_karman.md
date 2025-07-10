@@ -406,10 +406,10 @@ Recomendamos probar primero en una unidad de prueba para aprender a realizar el 
 
 ### Capturas de pantalla
 
-<img src={require('../../static/img/guias/KarmansTubeSolar.pdf-image-041.jpg').default} alt="Captura 1" width="49%" />
-<img src={require('../../static/img/guias/KarmansTubeSolar.pdf-image-043.jpg').default} alt="Captura 2" width="49%" />
-<img src={require('../../static/img/guias/KarmansTubeSolar.pdf-image-044.jpg').default} alt="Captura 3" width="49%" />
-<img src={require('../../static/img/guias/KarmansTubeSolar.pdf-image-042.jpg').default} alt="Captura 4" width="49%" />
+![Captura 1](../../static/img/guias/KarmansTubeSolar.pdf-image-041.jpg)
+![Captura 2](../../static/img/guias/KarmansTubeSolar.pdf-image-043.jpg)
+![Captura 3](../../static/img/guias/KarmansTubeSolar.pdf-image-044.jpg)
+![Captura 4](../../static/img/guias/KarmansTubeSolar.pdf-image-042.jpg)
 
 ***Resumen***
 
