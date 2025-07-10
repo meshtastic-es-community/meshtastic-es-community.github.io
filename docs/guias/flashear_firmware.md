@@ -35,6 +35,7 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace
 Recuerda que no debes encender tu dispositivo sin una antena conectada
 :::
 
+
 ## NRF52 y RP2040
 
 :::info

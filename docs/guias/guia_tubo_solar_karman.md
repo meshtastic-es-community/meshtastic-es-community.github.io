@@ -146,7 +146,6 @@ a la Faketec. Al soldarlos a la Faketec se quedan escondidos los pads de program
 difícil, si no imposible, recuperar la plaquita. Personalmente no me ha pasado nunca tener que recuperar una
 MCU de esta manera y por lo tanto no tengo experiencia.  
 :::
-:::warning
 Comprueba las medidas del tubo: El soporte 3D que he diseñado y que está enlazado arriba ha sido diseñado
 para la placa solar que he comentado y para el diámetro exterior del tubo de 32,5mm, por lo que es
 recomendable respetar esos componentes para no descuadrar la medidas.
