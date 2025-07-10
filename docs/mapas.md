@@ -49,9 +49,16 @@ Estado en tiempo real de los servicios comunitarios (mapa, meshview, malla, back
 
 ## 🛠️ ¿Tienes un nodo y quieres que aparezca?
 
-(Falta redactar)
+Estos son los pasos a seguir:
 
+1. **Configura la posición**. En caso de nodos estáticos, puedes configurar una posición fija. No te olvides de echarle un vistazo a las [buenas prácticas de intervalos de posición](buenas_practicas.md#posición).
+2. **Comparte la ubicación**. En la configuración del canal principal (LongFast, MediumSlow...) activa la posición y configura la precisión al gusto.
+3. **Permite enviar datos a MQTT**. En la configuración de LoRa, activa _Ok to MQTT_ para poder enviar datos al servidor.
+4. Dependiendo de qué nodo tengas:
+    - En caso de nodos con Internet y conectados al servidor MQTT, **habilita _map reporting_** en la configuración de MQTT, al final del todo.
+    - Si no, no te preocupes. Cuando otro nodo (con Internet y conectado a MQTT) escuche tu posición, la enviará al servidor.
 
+Tal vez tengas que esperar unas horas hasta que el nodo envíe su posición. Paciencia &#129496;
 
 ---
 
