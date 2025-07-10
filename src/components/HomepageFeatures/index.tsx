@@ -29,7 +29,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Libre de uso',
+    title: 'De uso libre',
     Svg: require('@site/static/img/undraw_order-coffee_pw24.svg').default,
     description: (
       <>
