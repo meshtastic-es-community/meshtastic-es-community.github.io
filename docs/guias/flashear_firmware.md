@@ -9,27 +9,26 @@ Dependiendo de que dispositivo tengas tendrás que seguir los pasos para ESP32 o
 ## ESP32
 
 :::info
-Antes de empezar debes tener los drivers instalados para tu dispositivo: [Enlace](/docs/guias/configuracion-inicial)
-
+Antes de empezar debes tener los drivers instalados para tu dispositivo: [Instalar los Controladores Seriales](configuracion_inicial.md#instalar-los-controladores-seriales)
 :::
 
 # Flashear dispositivo
 
 - Conecta tu dispositivo
-- Visita [flasher.meshtastic.org](https://flasher.meshtastic.org) _*requiere navegador Chrome o Edge*_
+- Visita [flasher.meshtastic.org](https://flasher.meshtastic.org). **Requiere navegador Chrome o Edge**.
 - Selecciona tu tipo de dispositivo:
 
-![Imagen del proceso de flasheo](/img/guias/flasher1.png)
+    ![Imagen del proceso de flasheo](../../static/img/guias/flasher1.png)
 
 - Selecciona la última versión estable:
 
-![Imagen del proceso de flasheo](/img/guias/flasher2.png)
+    ![Imagen del proceso de flasheo](../../static/img/guias/flasher2.png)
 
 - Pulsa en el botón de Flash y sigue las instrucciones. Si tu dispositivo es un ESP32-S3, puede que necesites apagarlo, luego mantener pulsado el botón BOOT / USR mientras conectas el cable USB.
   También puedes probar el método de reinicio a 1200bps para poner el dispositivo en modo adecuado.
 - Si es la primera vez que instalas debes pulsar el botón de borrado completo.
 - Pulsa el botón de instalar y verás un cuadro donde saldrá el proceso.
-- Ya tienes tu dispositivo flasheado y puedas pasar a [Conectar y Configurar el Dispositivo](https://meshtastic-es-community.github.io/docs/guias/configuracion-inicial#conectar-y-configurar-el-dispositivo)
+- Ya tienes tu dispositivo flasheado y puedas pasar a [Conectar y Configurar el Dispositivo](configuracion_inicial.md#conectar-y-configurar-el-dispositivo).
 
 :::danger
 Recuerda que no debes encender tu dispositivo sin una antena conectada
@@ -61,8 +60,6 @@ Para estos dispositivos no hace falta instalar drivers. (En caso de Windows)
 5. Copia el archivo de firmware apropiado (`firmware-DEVICE_NAME-X.X.X-xxxxxxx.uf2`) desde la versión descargada a esta unidad.
 6. Una vez que el archivo haya terminado de copiarse, el dispositivo se reiniciará e instalará el firmware de Meshtastic.
 
-## Conectar y Configurar Dispositivo
-
 ### Casos especiales posibles al flashear
 
 :::info
@@ -75,8 +72,10 @@ Antes de flashear, confirma que tienes un [RAK4631](https://docs.rakwireless.com
 
 Versiones anteriores del firmware de Meshtastic pueden guardar datos obsoletos, causando que los dispositivos se queden en un bucle de bloqueo al arrancar. Si tienes problemas al actualizar tu dispositivo nRF52 desde una versión previa, puede que necesites realizar un reinicio de fábrica completo de la memoria flash interna.
 
-Sigue la guía para <a href="https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/nrf52-erase/" target="_blank" rel="noopener noreferrer">borrar de fábrica tu dispositivo nRF52</a> antes de continuar para <a href="#flash-firmware">flashear el firmware</a>.
+Sigue la guía para [borrar de fábrica tu dispositivo nRF52](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/nrf52-erase/) antes de continuar para flashear el firmware.
 
 :::
 
-- Ya tienes tu dispositivo flasheado y puedas pasar a la [[configuración inicial]](https://meshtastic-es-community.github.io/docs/guias/configuracion-inicial#conectar-y-configurar-el-dispositivo)
+---
+
+Ya tienes tu dispositivo flasheado y puedas pasar a [Conectar y Configurar el Dispositivo](configuracion_inicial.md#conectar-y-configurar-el-dispositivo).

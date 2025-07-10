@@ -6,8 +6,7 @@ slug: guia-tubo-solar-karman
 
 # Guía de montaje del Karman’s Tube Solar
 
-![Portada](/img/guias/KarmansTubeSolar_page-0001.jpg)
-
+![Portada](../../static/img/guias/KarmansTubeSolar_page-0001.jpg)
 
 ---
 
@@ -48,10 +47,10 @@ motivo carece de otras comodidades como pantalla, botones externos, GPS o avisad
 
 ## Change Log
 
-| Versión | Fecha       | Comentario                              |
-|--------:|-------------|------------------------------------------|
-| v0.1    | 11/06/2025  | Versión inicial                          |
-| v0.2    | 22/06/2025  | Añadida sección de actualización OTA Bluetooth |
+| Versión | Fecha      | Comentario                                     |
+|--------:|------------|------------------------------------------------|
+|    v0.1 | 11/06/2025 | Versión inicial                                |
+|    v0.2 | 22/06/2025 | Añadida sección de actualización OTA Bluetooth |
 
 ---
 
@@ -66,8 +65,7 @@ conveniente para poner la MCU en modo de actualización (DFU) y cargarle el firm
 
 ### Esquema simple:
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-014.jpg)
-
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-014.jpg)
 
 ### Componentes
 
@@ -125,7 +123,7 @@ solar bien configurado y actualizado y reemplazar en el sitio el viejo por el ac
 - [Pigtails J-Pole](https://es.aliexpress.com/item/1005006962068226.html)  
 - [Soporte 3D](https://www.printables.com/model/1316317-meshtastic-solar-tube-node-diy-pvc-od325mm)  
 - Tubo PVC 32mm OD + 10 tapones (~7€, Leroy Merlin)  
-- PCB Faketec (30 unidades por 10€ en JLCPCB)  
+- PCB Faketec (30 unidades por 10€ en [JLCPCB](https://jlcpcb.com/es/))  
 - Cable de cobre rígido
 
 :::info
@@ -157,26 +155,23 @@ recomendable respetar esos componentes para no descuadrar la medidas.
 
 ## Pedido de placas Faketec
 
-1. Descargar los gerbers:  
-   [fakeTec_pcb_v4_GERBER.zip](https://github.com/user-attachments/files/18377935/fakeTec_pcb_v4_GERBER.zip)
-2. Subir a [JLCPCB](https://jlcpcb.com/es/)
+1. Descargar los gerbers: [fakeTec_pcb_v4_GERBER.zip](https://github.com/user-attachments/files/18377935/fakeTec_pcb_v4_GERBER.zip)
+2. Subir a [JLCPCB](https://jlcpcb.com/es/).
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-017.jpg)
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-018.jpg)
+    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-017.jpg)
+    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-018.jpg)
 
 3. Seleccionar: 10 unidades, método IOSS
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-019.jpg)
+    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-019.jpg)
 
 4. Revisa envío para evitar sorpresas en aduanas
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-020.jpg)
-
+    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-020.jpg)
 
 :::tip
 Toda la información y versiones del proyecto *Faketec* están en GitHub: https://github.com/gargomoma/fakeTec_pcb
 :::
-
 
 ---
 
@@ -188,12 +183,12 @@ Toda la información y versiones del proyecto *Faketec* están en GitHub: https:
 4. Si necesario, borrar y actualizar bootloader:  
    - [Borrar memoria](https://flasher.meshtastic.org/uf2/nrf_erase2.uf2)  
    - [Bootloader v0.9.2](https://github.com/adafruit/Adafruit_nRF52_Bootloader/releases/download/0.9.2/update-nice_nano_bootloader-0.9.2_nosd.uf2)  
-5. Flashear Meshtastic:  
-   [https://flasher.meshtastic.org/](https://flasher.meshtastic.org/)
+5. Flashear Meshtastic: https://flasher.meshtastic.org/
 
 ---
 
 ## Montaje del Faketec
+
 No voy a hacer un tutorial sobre como soldar en SMD porque entonces este manual no termina nunca. Pero si
 que vamos a pasar a comentar algunas indicaciones:
 - Soldador de punta fina. Si es de temperatura regulable, mejor. A 300ºC le cuestan algunos contactos que
@@ -224,16 +219,9 @@ Consejos:
 - Orden recomendado: resistencias, módulo de radio y ProMicro 
 - Resistencias: R1 = 1MΩ, R2 = 680kΩ, ADC = 1.713  
 
-### Imagenes de la placa terminada:
-
-<p align="center">
-  ![Esquema](/img/guias/KarmansTubeSolar.pdf-image-025.jpg)
-</p>
-
-| <img src="/img/guias/KarmansTubeSolar.pdf-image-026.jpg" width="500"/> | <img src="/img/guias/KarmansTubeSolar.pdf-image-027.jpg" width="500"/> |
-|-------------------------------------------------------------------------|-------------------------------------------------------------------------|
-
-
+    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-025.jpg)
+    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-026.jpg)
+    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-027.jpg)
 
 :::tip
 Recuerda que toda la información y versiones del proyecto *Faketec* están en GitHub: https://github.com/gargomoma/fakeTec_pcb
@@ -247,12 +235,12 @@ Recuerda que toda la información y versiones del proyecto *Faketec* están en G
 Nunca enciendas el dispositivo sin conectar la antena. Hacer esto puede provocar que se queme el módulo de radio. Asegurate siempre de tener una antena conectada.
 :::
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-029.jpg)
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-029.jpg)
 
 A mi me gusta usar la batería LiPo como base para sujetar la electrónica. La encinto con cinta capton y dado que
 la batería tiene el mismo diámetro que el diámetro interior del tubo, el conjunto queda encajado perfectamente.
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-030.jpg)
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-030.jpg)
 
 :::note 
 Por el momento vamos a dejar el cable del Faketec conectado al MPPT pero sin conectar la batería. La batería
@@ -267,9 +255,9 @@ de la misma uso un NanoVNA de modo que pueda observar su comportamiento y poder 
 adecuadamente. La frecuencia de resonancia de la antena debe de estar centrada sobre los 869.500 Mhz ya que
 esta es la frecuencia sobre la que trabaja LoRa en la UE.
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-034.jpg)
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-033.jpg)
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-032.jpg)
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-034.jpg)
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-033.jpg)
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-032.jpg)
 
 Cortamos un trozo de cobre de unos 40cm y lo estirarmos hasta que quede recto. 
 Cortamos los extremos que hemos usado para sujetarlo mientras estirábamos.  
@@ -306,8 +294,8 @@ funcionamiento de la antena. Ambas imágenes están midiendo exactamente la mism
 nada.  
 La diferencia es que la foto de la primera es con el tubo y la de la segunda es sin el tubo de PVC:
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-035.jpg)
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-036.jpg)
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-035.jpg)
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-036.jpg)
 
 Como se puede observar, en la imagen de arriba, la frecuencia está centrada en 869 mientras en la de abajo, se ha subido sobre los 880Mhz.  
 Las medidas están calculadas con la siguiente calculadora para J-Pole:
@@ -328,8 +316,7 @@ Alternativamente se puede emplear en su lugar cualquier antena palo y un latigui
 
 ## Montaje final
 
-![Esquema](/img/guias/KarmansTubeSolar.pdf-image-038.jpg)
-
+![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-038.jpg)
 
 Empezamos con un trozo de tubo de unos 40cm. Realizamos un agujero a unos 4 cm de lo que será el extremo
 inferior e introducimos el soporte impreso en 3D con el panel mirando hacia lo que será la parte superior y
@@ -348,8 +335,7 @@ ya que también estaremos empujando la antena por el interior del tubo.
 Por ultimo conectaremos la batería al MPPT y cerraremos ambos extremos con los tapones. Es conveniente
 sellar el tapón inferior también con silicona.
 
-Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](configuracion-inicial)**
-
+Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](configuracion_inicial.md)**
 
 ***Resumen:***
 
@@ -419,13 +405,12 @@ Si algo falla a mitad del proceso el nodo se quedara en modo DFU y requerira acc
 Recomendamos probar primero en una unidad de prueba para aprender a realizar el proceso antes de hacerlo con un nodo poco accesible.
 :::
 
-# Capturas de pantalla:
+### Capturas de pantalla
 
-| <img src="/img/guias/KarmansTubeSolar.pdf-image-041.jpg" width="500"/> | <img src="/img/guias/KarmansTubeSolar.pdf-image-043.jpg" width="500"/> |
-|-------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| <img src="/img/guias/KarmansTubeSolar.pdf-image-044.jpg" width="500"/> | <img src="/img/guias/KarmansTubeSolar.pdf-image-042.jpg" width="500"/> |
-
-
+![Captura 1](../../static/img/guias/KarmansTubeSolar.pdf-image-041.jpg)
+![Captura 2](../../static/img/guias/KarmansTubeSolar.pdf-image-043.jpg)
+![Captura 3](../../static/img/guias/KarmansTubeSolar.pdf-image-044.jpg)
+![Captura 4](../../static/img/guias/KarmansTubeSolar.pdf-image-042.jpg)
 
 ***Resumen***
 

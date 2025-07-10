@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Meshtastic© es un proyecto que permite crear redes de comunicación, malladas y descentralizadas al margen de Internet. Está diseñado para operar via radio bajo el protocolo LoRa, usando dispositivos pequeños y económicos. Es perfecto para hablar con otras personas en lugares donde no hay cobertura de móvil, como en excursiones, campamentos o emergencias. Esta guía te ayudará a empezar de forma sencilla, incluso si no eres una persona técnica.
 
-![Topología mesh](/img/lora-topology-2-c80684f1eafdf2a71fbaf26e494fb26d.webp)
+![Topología mesh](../static/img/lora-topology-2-c80684f1eafdf2a71fbaf26e494fb26d.webp)
 
 ## Características de Meshtastic
 
@@ -40,7 +40,7 @@ Meshtastic no es perfecto. Es un sistema lento, con poco ancho de banda, y es me
 :::
 
 :::info
-Te recomendamos que no modifiques las configuraciones sin saber exactamente las implicaciones. En la documentación tenemos una guía de [buenas prácticas](buenas_practicas). Meshtastic es muy vulnerable a malas configuraciones de cualquier usuario y es responsabilidad de todos hacer las cosas bien.
+Te recomendamos que no modifiques las configuraciones sin saber exactamente las implicaciones. En la documentación tenemos una guía de [buenas prácticas](buenas_practicas.md). Meshtastic es muy vulnerable a malas configuraciones de cualquier usuario y es responsabilidad de todos hacer las cosas bien.
 :::
 
 ## ¿Para qué puedes usar Meshtastic?
