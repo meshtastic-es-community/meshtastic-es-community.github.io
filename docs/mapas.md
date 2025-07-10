@@ -40,7 +40,7 @@ Desarrollado por [Alejandro Martínez
 
 ## 📊 Status
 
-🔗 [status.meshtastic.es](https://status.meshtastic.es)
+🔗 [status.meshtastic.es](https://status.meshtastic.es/status/servicios/)
 
 Estado en tiempo real de los servicios comunitarios (mapa, meshview, malla, backend, etc.)
 

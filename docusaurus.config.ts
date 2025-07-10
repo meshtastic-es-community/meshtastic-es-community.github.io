@@ -166,7 +166,7 @@ const config: Config = {
             },
             {
               label: 'Status',
-              href: 'https://status.meshtastic.es',
+              href: 'https://status.meshtastic.es/status/servicios/',
             },
           ],
         },
