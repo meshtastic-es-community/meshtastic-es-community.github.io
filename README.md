@@ -19,7 +19,7 @@ Toda contribución es bienvenida. Si no estás seguro por dónde empezar, revisa
 
 ## 🤝 Pasos contribuir al repositorio
 
-Échale un vistazo a la [guía de contribuciones](CONTRIBUTING.md) para conocer las mejores prácticas y cómo hacer un _pull request_.
+Échale un vistazo tanto a la [guía de contribuciones](CONTRIBUTING.md) como al [código de conducta](CODE_OF_CONDUCT.md) para conocer las mejores prácticas y cómo hacer un _pull request_.
 
 ## 📬 Contacto y comunidad
 
