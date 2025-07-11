@@ -4,6 +4,7 @@
 [![GitHub Actions Workflow Status][github-workflow-status-deploy-shield]][github-workflow-status-deploy]
 [![GitHub commit activity][commit-activity-shield]][commit-activity]
 [![GitHub contributors][github-contributors-shield]][github-contributors]
+[![Ko-fi][ko-fi-shield]][ko-fi-quixote]
 
 🌐 Sitio web temporal disponible en: **[https://meshtastic-es-community.github.io/](https://meshtastic-es-community.github.io/)**
 
@@ -55,3 +56,5 @@ Esta obra está bajo una
 [github-contributors]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/graphs/contributors
 [commit-activity-shield]: https://img.shields.io/github/commit-activity/w/meshtastic-es-community/meshtastic-es-community.github.io
 [commit-activity]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/pulse
+[ko-fi-shield]: https://img.shields.io/badge/donate-ko--fi-%23FF6433?logo=kofi
+[ko-fi-quixote]: https://ko-fi.com/quixotesystems
