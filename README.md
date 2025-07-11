@@ -114,6 +114,3 @@ Y visitar la web en construcción:
 
 ---
 
-¡Gracias por colaborar con Meshtastic en español! 🇪🇸
-
-````
