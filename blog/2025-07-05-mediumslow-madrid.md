@@ -2,7 +2,7 @@
 slug: mediumslow-madrid
 title: 👉 Madrid se pasa de LongFast a MediumSlow
 authors: []
-tags: [Madrid, configuración, MediumSlow]
+tags: [Madrid, Configuración, MediumSlow]
 ---
 
 ### ¿Cuándo?
@@ -22,6 +22,8 @@ tags: [Madrid, configuración, MediumSlow]
 ### ¿Por qué?
 
 - LongFast no da más de sí, queremos probar si con MediumSlow la red de Madrid se satura menos.
+
+<!-- truncate -->
 
 A tener en cuenta:
 
