@@ -1,6 +1,9 @@
 # Web de la Comunidad Meshtastic en Español
 
-[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+[![GitHub License][github-license-shield]](LICENSE)
+[![GitHub Actions Workflow Status][github-workflow-status-deploy-shield]][github-workflow-status-deploy]
+[![GitHub commit activity][commit-activity-shield]][commit-activity]
+[![GitHub contributors][github-contributors-shield]][github-contributors]
 
 🌐 Sitio web temporal disponible en: **[https://meshtastic-es-community.github.io/](https://meshtastic-es-community.github.io/)**
 
@@ -45,3 +48,10 @@ Esta obra está bajo una
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/deed.es
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[github-license-shield]: https://img.shields.io/github/license/meshtastic-es-community/meshtastic-es-community.github.io
+[github-workflow-status-deploy-shield]: https://img.shields.io/github/actions/workflow/status/meshtastic-es-community/meshtastic-es-community.github.io/deploy.yml
+[github-workflow-status-deploy]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/actions/workflows/deploy.yml
+[github-contributors-shield]: https://img.shields.io/github/contributors/meshtastic-es-community/meshtastic-es-community.github.io
+[github-contributors]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/graphs/contributors
+[commit-activity-shield]: https://img.shields.io/github/commit-activity/w/meshtastic-es-community/meshtastic-es-community.github.io
+[commit-activity]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/pulse
