@@ -126,7 +126,7 @@ const config: Config = {
             },
             {
               label: 'Configuración',
-              to: '/docs/category/configuración-avanzada',
+              to: '/docs/configuración-avanzada',
             },
           ],
         },
