@@ -2,6 +2,7 @@
   "label": "Guías",
   "position": 4,
   "link": {
+    "slug": "guias",
     "type": "generated-index",
     "description": "Aquí encontrarás guías sobre diversos temas."
   }
