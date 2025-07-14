@@ -42,3 +42,9 @@
 .hero {
   background-image: url("/static/img/background.png");
 }
+
+/* To align the icon with the text in the same line. */
+svg.iconify {
+  font-size: 1.5rem;
+  vertical-align: -0.25rem;
+}
