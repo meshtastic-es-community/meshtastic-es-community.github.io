@@ -97,7 +97,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentación',
         },
-        { to: '/docs/buenas_practicas', label: 'Buenas Prácticas', position: 'left' },
+        { to: '/docs/buenas-practicas', label: 'Buenas Prácticas', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/meshtastic-es-community',
@@ -118,15 +118,15 @@ const config: Config = {
             },
             {
               label: 'Primeros pasos',
-              to: '/docs/primeros_pasos',
+              to: '/docs/primeros-pasos',
+            },
+            {
+              label: 'Configuración inicial',
+              to: '/docs/guias-basicas/configuracion-inicial',
             },
             {
               label: 'Buenas prácticas',
-              to: '/docs/buenas_practicas',
-            },
-            {
-              label: 'Configuración',
-              to: '/docs/configuración-avanzada',
+              to: '/docs/buenas-practicas',
             },
           ],
         },

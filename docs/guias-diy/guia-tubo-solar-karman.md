@@ -335,7 +335,7 @@ ya que también estaremos empujando la antena por el interior del tubo.
 Por ultimo conectaremos la batería al MPPT y cerraremos ambos extremos con los tapones. Es conveniente
 sellar el tapón inferior también con silicona.
 
-Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](configuracion_inicial.md)**
+Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](../guias-basicas/puesta-en-marcha.md)**
 
 ***Resumen:***
 

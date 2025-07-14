@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 description: Guía con recomendaciones y experiencias sobre antenas para dispositivos Meshtastic, basadas en el grupo de Telegram Meshtastic España.
 ---
 

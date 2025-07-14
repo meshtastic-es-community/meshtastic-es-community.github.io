@@ -1,21 +1,18 @@
 ---
-id: configuracion-inicial
-title: Configuración Inicial
-sidebar_label: Configuración Inicial
+title: Puesta en marcha
 sidebar_position: 1
 ---
 
-import Link from "@docusaurus/Link"
-
 <!-- Falta añadir enlaces a otros post con los drivers y más detalles de ambos tipos de dispositivos -->
 
-# Configuracíon inicial
+# Puesta en marcha del nodo
 
 ## Identificar el Hardware
 
 :::note
 
 Esta guía asume que ya has comprado los dispositivos que vas a utilizar con Meshtastic. Si no es así, puedes consultar la lista de [hardware compatible] para ver tus opciones.
+
 :::
 
 Antes de empezar, es importante determinar qué tipo de hardware estás utilizando. Meshtastic funciona con dispositivos que tienen estos tipos de Microcontroladores (MCU):
@@ -62,11 +59,11 @@ Nunca enciendas la radio sin conectar una antena, ya que podrías dañar el chip
 
 Antes de conectar tu dispositivo Meshtastic al ordenador, realiza las siguientes comprobaciones básicas:
 
-### Verificar el Cable de Datos
+## Verificar el Cable de Datos
 
 Algunos cables solo sirven para _cargar_. Asegúrate de que tu cable también sea capaz de _transferir datos_ antes de continuar. Para comprobarlo, conéctalo a otro dispositivo (como un móvil) e intenta copiar un archivo. Si puedes transferir el archivo, entonces el cable sirve también para datos y puedes continuar.
 
-### Instalar los Controladores Seriales
+## Instalar los Controladores Seriales
 
 :::caution
 
@@ -78,16 +75,14 @@ Si necesitas instalar controladores seriales en tu ordenador, elige una de las s
 
 [Instalar controladores ESP32](https://www.wch-ic.com/downloads/CH341SER_EXE.html)
 
-### Flashear el Firmware
+## Flashear el _Firmware_
 
 Después de completar los pasos anteriores, ya puedes flashear el firmware de Meshtastic en tu dispositivo. Para continuar, selecciona el tipo de dispositivo correspondiente.
 
-[Flashear Firmware ESP32](flashear_firmware.md#esp32)
+[Flashear Firmware ESP32](flashear-firmware.md#esp32)
 
-[Flashear Firmware NRF52](flashear_firmware.md#nrf52)
+[Flashear Firmware NRF52](flashear-firmware.md#nrf52)
 
-### Conectar y Configurar el Dispositivo
+## Conectar y Configurar el Dispositivo
 
-Después de flashear el firmware de Meshtastic en tu dispositivo, puedes continuar con la configuración inicial.
-
-‹!-- Enlazar con toda la configuración del nodo, cuando esté --›
+Después de flashear el firmware de Meshtastic en tu dispositivo, puedes continuar con la [configuración inicial](configuracion-inicial.mdx).
