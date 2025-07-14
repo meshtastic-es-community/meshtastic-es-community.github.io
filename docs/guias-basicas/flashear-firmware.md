@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Instalar el firmware de Meshtastic en tu dispositivo.
 ---
 
 # Flashear firmware

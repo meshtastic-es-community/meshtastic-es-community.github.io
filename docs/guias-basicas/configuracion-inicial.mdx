@@ -2,23 +2,26 @@
 title: Configuración inicial
 slug: configuracion-inicial
 sidebar_position: 3
+description: Configuraciones mínimas necesarias para tu nodo.
 ---
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import {Icon} from "@iconify/react";
+import {InlineIcon} from "@iconify/react";
+
+export const EnabledIcon = () => <InlineIcon icon="mdi:toggle-switch-outline" style={{ color: "var(--ifm-color-toggle-on)" }} />;
+export const DisabledIcon = () => <InlineIcon icon="mdi:toggle-switch-off-outline" style={{ color: "var(--ifm-color-toggle-off)" }} />;
 
 # Configuración inicial
 
-## Descarga y accede al cliente 📱
+## Descarga y accede al cliente<InlineIcon icon="mdi:tablet-cellphone" />
 
 Hay 4 clientes oficiales de Meshtastic:
 
-- <Icon icon="mdi:android"/> **App de Android**: https://play.google.com/store/apps/details?id=com.geeksville.mesh
-- <Icon icon="mdi:apple"/> **App de iOS**: https://apps.apple.com/es/app/meshtastic/id1586432531
-- <Icon icon="mdi:web"/> **Cliente web**: https://client.meshtastic.org/
-- <Icon icon="mdi:terminal"/> **Línea de comandos**: https://meshtastic.org/docs/software/python/cli/
+- <InlineIcon icon="mdi:android"/> **App de Android**: https://play.google.com/store/apps/details?id=com.geeksville.mesh
+- <InlineIcon icon="mdi:apple"/> **App de iOS**: https://apps.apple.com/es/app/meshtastic/id1586432531
+- <InlineIcon icon="mdi:web"/> **Cliente web**: https://client.meshtastic.org/
+- <InlineIcon icon="mdi:terminal"/> **Línea de comandos**: https://meshtastic.org/docs/software/python/cli/
 
 Aunque no es obligatorio, se recomienda realizar la configuración inicial desde la app de Android o con línea de comandos.
 Son los clientes más completos y permiten realizar todas las configuraciones necesarias.
@@ -32,9 +35,9 @@ consulta la guía oficiales sobre cómo aplicar los cambios de los que hablaremo
 
 :::
 
-## Conectar al dispositivo 📶
+## Conectar al dispositivo<InlineIcon icon="mdi:bluetooth-connect" />
 
-La primera vez que conectes tu dispositivo, ve a los ajustes de tu móvil, entra en el <Icon icon="mdi:bluetooth" /> Bluetooth y empareja un nuevo dispositivo.
+La primera vez que conectes tu dispositivo, ve a los ajustes de tu móvil, entra en el <InlineIcon icon="mdi:bluetooth" /> Bluetooth y empareja un nuevo dispositivo.
 Espera a que aparezca el nodo y conéctate. Se llamará algo como "Meshtastic_XXXX" siendo `XXXX` los 4 últimos caracteres del ID del dispositivo.
 
 Si el nodo tiene pantalla, es muy probable que el PIN de 6 dígitos aparezca ahí.
@@ -62,22 +65,22 @@ Ahora, ve a la aplicación de Meshtastic y conecta con el dispositivo que acabas
 
 Según el estado de conexión del nodo, verás un icono de una nube diferente:
 
-- Desconectado: Nube tachada <Icon icon="mdi:cloud-off-outline" />
-- Conectado: Nube con check <Icon icon="mdi:cloud-check-variant-outline" />
-- Conectado, pero dormido o fuera de rango: Nube con flecha arriba <Icon icon="mdi:cloud-upload-outline" />
+- Desconectado: Nube tachada <InlineIcon icon="mdi:cloud-off-outline" />
+- Conectado: Nube con check <InlineIcon icon="mdi:cloud-check-variant-outline" />
+- Conectado, pero dormido o fuera de rango: Nube con flecha arriba <InlineIcon icon="mdi:cloud-upload-outline" />
 
-## Elige un nombre para el nodo 🖖
+## Elige un nombre para el nodo<InlineIcon icon="mdi:identification-card-outline" />
 
-- Pulsa el botón <Icon icon="mdi:gear" /> _Radio configuration_.
-- Entra en <Icon icon="mdi:account" /> _User_.
+- Pulsa el botón <InlineIcon icon="mdi:gear" /> _Radio configuration_.
+- Entra en <InlineIcon icon="mdi:account" /> _User_.
 - Selecciona el nombre largo (39 caracteres) y el acrónimo / nombre corto (4 caracteres). Puedes poner emoticonos, pero ten en cuenta que estos ocupan 4 caracteres.
 
-## Configura la región y el _preset_ 📡
+## Configura la región y el _preset_<InlineIcon icon="mdi:access-point-network" />
 
 Ahora viene la parte más importante de la configuración, ya que si esto está mal, no podrás comunicarte con otros nodos.
 
-- Pulsa el botón <Icon icon="mdi:gear" /> _Radio configuration_.
-- Entra en <Icon icon="mdi:radio-tower" /> _LoRa_.
+- Pulsa el botón <InlineIcon icon="mdi:gear" /> _Radio configuration_.
+- Entra en <InlineIcon icon="mdi:radio-tower" /> _LoRa_.
 - Selecciona o confirma los siguientes valores:
 
     | Campo                      | Valor                                                                                                            |
@@ -90,7 +93,7 @@ Ahora viene la parte más importante de la configuración, ya que si esto está 
 
     (Hay más opciones, pero no son necesarias para la configuración inicial)
 
-## Canales públicos 🗣️
+## Canales públicos<InlineIcon icon="mdi:speak" />
 
 Por defecto el canal público se llama igual que el _preset_, es decir, **LongFast** o **MediumSlow**.
 Recomendamos dejar ese canal como canal 0 (o primario) ya que es por donde se envían la telemetría, entre otras cosas.
@@ -107,58 +110,14 @@ Los canales acordados en España son los siguientes:
 - **Iberia**, un canal para la península ibérica acordado con nuestros [vecinos portugueses 🇵🇹](https://meshtastic.pt/).
 - Un canal de provincia, como **Madrid**, **Barcelona**, **Valencia**, **Cadiz**, **LaRioja**... sin espacios ni acentos.
 
-    |                    | LongFast<br/>MediumSlow | Iberia | Provincia |
-    |--------------------|-------------------------|--------|-----------|
-    | _Uplink enabled_   | ✅                       | ✅      | ✅         |
-    | _Downlink enabled_ | ❌                       | ✅      | ✅         |
-    | _Position enabled_ | ✅                       | ✅      | ✅         |
-    | _Precise location_ | ❌                       | ❌      | ❌         |
+    |                    | LongFast<br/>MediumSlow | Iberia           | Provincia        |
+    |--------------------|-------------------------|------------------|------------------|
+    | _Uplink enabled_   | <EnabledIcon />         | <EnabledIcon />  | <EnabledIcon />  |
+    | _Downlink enabled_ | <DisabledIcon />        | <EnabledIcon />  | <EnabledIcon />  |
+    | _Position enabled_ | <EnabledIcon />         | <DisabledIcon /> | <DisabledIcon /> |
+    | _Precise location_ | <DisabledIcon />        | <DisabledIcon /> | <DisabledIcon /> |
 
 Puedes crear más canales, tantó públicos como privados, entre los nodos que quieras. Elige una contraseña y compártela con quien sea necesario.
-
-## Posición del nodo 📍
-
-Igual de importante que el nombre del nodo es su posición. Aquí vamos a diferenciar entre nodos fijos y nodos móviles.
-
-- Pulsa el botón <Icon icon="mdi:gear" /> _Radio configuration_.
-- Entra en <Icon icon="mdi:map-marker" /> _Position_.
-
-Configura la posición del nodo según su tipo y uso.
-
-### Nodos fijos 🗼
-
-Si el nodo es fijo, por ejemplo un nodo en la azotea o en el campo, que no se va a mover, puedes configurar la posición de forma manual.
-
-| Campo                         | Valor                                               |
-|-------------------------------|-----------------------------------------------------|
-| _Position broadcast interval_ | **43200** (12 horas)                                |
-| _Smart position enabled_      | **NO** (no se mueve, no es necesario)               |
-| _Use fixed position_          | **SI** (para introducir la posición manualmente)    |
-| _Latitude_                    | Latitud del nodo, por ejemplo **40.4168** (Madrid)  |
-| _Longitude_                   | Longitud del nodo, por ejemplo **-3.7038** (Madrid) |
-| _Altitude_                    | Altitud del nodo, por ejemplo **667** (Madrid)      |
-
-Ya que la posición no cambia, no es necesario que se envíe con frecuencia.
-Pero hay que enviarlo de vez en cuando para que los nodos nuevos reciban esa información.
-
-### Nodos móviles 📟
-
-#### Uso del GPS del móvil 📱
-
-En el listado de dispositivos para conectar con uno, hay una opción al final llamada _Provide phone location to mesh_.
-Márcala. Esto comparte la ubicación del móvil con el nodo.
-El resto de configuración es prácticamente igual que para [Nodos con GPS integrado](#nodos-con-gps-integrado) (justo aquí abajo).
-
-#### Nodos con GPS integrado 🛰️
-
-| Campo                              | Valor                                                                |
-|------------------------------------|----------------------------------------------------------------------|
-| _Position broadcast interval_      | **1800** (30 minutos) o más                                          |
-| _Smart position enabled_           | **SI** (para enviar la posición si nos movemos)                      |
-| _Smart broadcast minimum distance_ | **500** (distancia mínima para enviar una nueva posición)            |
-| _Smart broadcast minimum interval_ | Igual que _Position broadcast interval_ (1800 o más)                 |
-| _GPS mode_                         | **ENABLED** si el nodo tiene GPS<br/>**NOT_PRESENT** si no tiene GPS |
-| _GPS update interval_              | **120** (2 minutos) o más, al gusto                                  |
 
 ---
 

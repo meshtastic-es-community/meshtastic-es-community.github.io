@@ -14,6 +14,8 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+  --ifm-color-toggle-on: var(--ifm-color-success-darker);
+  --ifm-color-toggle-off: var(--ifm-color-danger-darker);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -26,6 +28,8 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-toggle-on: var(--ifm-color-success-lighter);
+  --ifm-color-toggle-off: var(--ifm-color-danger-light);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -43,8 +47,36 @@
   background-image: url("/static/img/background.png");
 }
 
-/* To align the icon with the text in the same line. */
+/* To align the icons with the texts in the same line. */
 svg.iconify {
   font-size: 1.5rem;
-  vertical-align: -0.25rem;
+}
+
+td svg.iconify {
+  font-size: 2rem;
+}
+
+h2 svg.iconify {
+  font-size: 2.5rem;
+  margin: 0 0.75rem 0 0.75rem;
+}
+
+h3 svg.iconify {
+  font-size: 2rem;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+h4 svg.iconify {
+  font-size: 1.5rem;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+h5 svg.iconify {
+  font-size: 1.35rem;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+h6 svg.iconify {
+  font-size: 1.15rem;
+  margin: 0 0.5rem 0 0.5rem;
 }
