@@ -1,6 +1,7 @@
 ---
 title: Puesta en marcha
 sidebar_position: 1
+description: Cómo poner en marcha tu nodo, desde cero.
 ---
 
 <!-- Falta añadir enlaces a otros post con los drivers y más detalles de ambos tipos de dispositivos -->
