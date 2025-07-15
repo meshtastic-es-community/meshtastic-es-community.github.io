@@ -3,14 +3,12 @@ sidebar_position: 5
 description: Configurar la posición de un nodo.
 ---
 
-import {InlineIcon} from "@iconify/react";
-
 # Posición del nodo
 
 Igual de importante que el nombre del nodo es su posición. Aquí vamos a diferenciar entre nodos fijos y nodos móviles.
 
-- Pulsa el botón <InlineIcon icon="mdi:gear" /> _Radio configuration_.
-- Entra en <InlineIcon icon="mdi:map-marker" /> _Position_.
+- Pulsa el botón :mdi-gear: _Radio configuration_.
+- Entra en :mdi-map-marker: _Position_.
 
 Configura la posición del nodo según su tipo y uso.
 

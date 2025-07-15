@@ -43,31 +43,12 @@
   background-image: url("/static/img/background.png");
 }
 
-/* To align the icons with the texts in the same line. */
+/* Make icons a bit bigger. */
 svg.iconify {
-  font-size: 1.5rem;
+  font-size: 1.5em;
+  vertical-align: -0.175em !important;
 }
 
-td svg.iconify {
-  font-size: 2rem;
-}
-
-h2 svg.iconify {
-  font-size: 2.5rem;
-}
-
-h3 svg.iconify {
-  font-size: 2rem;
-}
-
-h4 svg.iconify {
-  font-size: 1.5rem;
-}
-
-h5 svg.iconify {
-  font-size: 1.35rem;
-}
-
-h6 svg.iconify {
-  font-size: 1.15rem;
+h1 svg.iconify, h2 svg.iconify, h3 svg.iconify, h4 svg.iconify, h5 svg.iconify, h6 svg.iconify {
+  font-size: 1.25em;
 }
