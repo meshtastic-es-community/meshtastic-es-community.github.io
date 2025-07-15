@@ -1,8 +1,7 @@
 ---
+sidebar_label: "Mapas de Nodos"
 sidebar_position: 8
 ---
-
-# Mapa de Nodos
 
 # 🗺️ Mapas Meshtastic España
 
@@ -10,7 +9,7 @@ Aquí encontrarás enlaces útiles para visualizar la red y herramientas de la c
 
 ---
 
-## 🌐 Mapa principal
+## 🌐 Mapa principal {#mapa-principal}
 
 🔗 https://mapa.meshtastic.es
 
@@ -18,7 +17,7 @@ Visualiza todos los nodos activos, su ubicación aproximada y su alcance. Ideal 
 
 ---
 
-## 🧠 Meshview
+## 🧠 Meshview {#meshview}
 
 🔗 https://meshview.meshtastic.es
 
@@ -26,7 +25,7 @@ Visualización técnica y avanzada de las conexiones de malla entre nodos. Muy �
 
 ---
 
-## 📡 Malla (nodos activos y telemetría)
+## 📡 Malla (nodos activos y telemetría) {#malla}
 
 🔗 https://malla.meshtastic.es
 
@@ -36,7 +35,7 @@ Desarrollado por [Alejandro Martínez](https://github.com/zenitraM) para la comu
 
 ---
 
-## 📊 Status
+## 📊 Status {#status}
 
 🔗 [status.meshtastic.es](https://status.meshtastic.es/status/servicios/)
 
@@ -44,7 +43,7 @@ Estado en tiempo real de los servicios comunitarios (mapa, meshview, malla, back
 
 ---
 
-## 🛠️ ¿Tienes un nodo y quieres que aparezca?
+## 🛠️ ¿Tienes un nodo y quieres que aparezca? {#como-aparecer-en-mapas}
 
 Estos son los pasos a seguir:
 
@@ -59,6 +58,6 @@ Tal vez tengas que esperar unas horas hasta que el nodo envíe su posición. Pac
 
 ---
 
-## 🇪🇸 Comunidad Meshtastic España
+## 🇪🇸 Comunidad Meshtastic España {#comunidad-meshtastic-españa}
 
 Gracias por formar parte de la red. ¡Juntos mejoramos la cobertura y la resiliencia de las comunicaciones libres!
