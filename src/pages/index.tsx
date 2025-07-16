@@ -26,7 +26,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/buenas_practicas"
+            to="/docs/buenas-practicas"
             style={{ margin: '10px' }}>
             Buenas prácticas
           </Link>

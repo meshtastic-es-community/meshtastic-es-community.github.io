@@ -1,0 +1,9 @@
+{
+  "label": "Guías básicas",
+  "position": 3,
+  "link": {
+    "slug": "guias-basicas",
+    "type": "generated-index",
+    "description": "Aquí encontrarás guías sobre diversos temas básicos en Meshtastic."
+  }
+}

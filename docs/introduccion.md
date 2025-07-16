@@ -40,7 +40,7 @@ Meshtastic no es perfecto. Es un sistema lento, con poco ancho de banda, y es me
 :::
 
 :::info
-Te recomendamos que no modifiques las configuraciones sin saber exactamente las implicaciones. En la documentación tenemos una guía de [buenas prácticas](buenas_practicas.md). Meshtastic es muy vulnerable a malas configuraciones de cualquier usuario y es responsabilidad de todos hacer las cosas bien.
+Te recomendamos que no modifiques las configuraciones sin saber exactamente las implicaciones. En la documentación tenemos una guía de [buenas prácticas](buenas-practicas.md). Meshtastic es muy vulnerable a malas configuraciones de cualquier usuario y es responsabilidad de todos hacer las cosas bien.
 :::
 
 ## ¿Para qué puedes usar Meshtastic?

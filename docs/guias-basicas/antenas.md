@@ -1,9 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_label: Antenas recomendadas
+sidebar_position: 4
 description: Guía con recomendaciones y experiencias sobre antenas para dispositivos Meshtastic, basadas en el grupo de Telegram Meshtastic España.
 ---
 
-# Antenas recomendadas para Meshtastic
+# Antenas recomendadas
 
 A continuación te presentamos una lista de antenas recomendadas y no recomendadas para usar con tus dispositivos Meshtastic.
 

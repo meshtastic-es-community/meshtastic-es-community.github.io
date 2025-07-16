@@ -1,0 +1,8 @@
+{
+  "label": "Guías DIY",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Guías avanzadas y nodos DIY."
+  }
+}

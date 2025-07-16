@@ -6,7 +6,7 @@ slug: guia-tubo-solar-karman
 
 # Guía de montaje del Karman’s Tube Solar
 
-![Portada](../../static/img/guias/KarmansTubeSolar_page-0001.jpg)
+![Portada](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar_page-0001.jpg)
 
 ---
 
@@ -65,7 +65,7 @@ conveniente para poner la MCU en modo de actualización (DFU) y cargarle el firm
 
 ### Esquema simple:
 
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-014.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-014.jpg)
 
 ### Componentes
 
@@ -158,16 +158,16 @@ recomendable respetar esos componentes para no descuadrar la medidas.
 1. Descargar los gerbers: [fakeTec_pcb_v4_GERBER.zip](https://github.com/user-attachments/files/18377935/fakeTec_pcb_v4_GERBER.zip)
 2. Subir a [JLCPCB](https://jlcpcb.com/es/).
 
-    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-017.jpg)
-    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-018.jpg)
+    ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-017.jpg)
+    ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-018.jpg)
 
 3. Seleccionar: 10 unidades, método IOSS
 
-    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-019.jpg)
+    ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-019.jpg)
 
 4. Revisa envío para evitar sorpresas en aduanas
 
-    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-020.jpg)
+    ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-020.jpg)
 
 :::tip
 Toda la información y versiones del proyecto *Faketec* están en GitHub: https://github.com/gargomoma/fakeTec_pcb
@@ -219,9 +219,9 @@ Consejos:
 - Orden recomendado: resistencias, módulo de radio y ProMicro 
 - Resistencias: R1 = 1MΩ, R2 = 680kΩ, ADC = 1.713  
 
-    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-025.jpg)
-    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-026.jpg)
-    ![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-027.jpg)
+    ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-025.jpg)
+    ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-026.jpg)
+    ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-027.jpg)
 
 :::tip
 Recuerda que toda la información y versiones del proyecto *Faketec* están en GitHub: https://github.com/gargomoma/fakeTec_pcb
@@ -235,12 +235,12 @@ Recuerda que toda la información y versiones del proyecto *Faketec* están en G
 Nunca enciendas el dispositivo sin conectar la antena. Hacer esto puede provocar que se queme el módulo de radio. Asegurate siempre de tener una antena conectada.
 :::
 
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-029.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-029.jpg)
 
 A mi me gusta usar la batería LiPo como base para sujetar la electrónica. La encinto con cinta capton y dado que
 la batería tiene el mismo diámetro que el diámetro interior del tubo, el conjunto queda encajado perfectamente.
 
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-030.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-030.jpg)
 
 :::note 
 Por el momento vamos a dejar el cable del Faketec conectado al MPPT pero sin conectar la batería. La batería
@@ -255,9 +255,9 @@ de la misma uso un NanoVNA de modo que pueda observar su comportamiento y poder 
 adecuadamente. La frecuencia de resonancia de la antena debe de estar centrada sobre los 869.500 Mhz ya que
 esta es la frecuencia sobre la que trabaja LoRa en la UE.
 
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-034.jpg)
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-033.jpg)
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-032.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-034.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-033.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-032.jpg)
 
 Cortamos un trozo de cobre de unos 40cm y lo estirarmos hasta que quede recto. 
 Cortamos los extremos que hemos usado para sujetarlo mientras estirábamos.  
@@ -294,8 +294,8 @@ funcionamiento de la antena. Ambas imágenes están midiendo exactamente la mism
 nada.  
 La diferencia es que la foto de la primera es con el tubo y la de la segunda es sin el tubo de PVC:
 
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-035.jpg)
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-036.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-035.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-036.jpg)
 
 Como se puede observar, en la imagen de arriba, la frecuencia está centrada en 869 mientras en la de abajo, se ha subido sobre los 880Mhz.  
 Las medidas están calculadas con la siguiente calculadora para J-Pole:
@@ -316,7 +316,7 @@ Alternativamente se puede emplear en su lugar cualquier antena palo y un latigui
 
 ## Montaje final
 
-![Esquema](../../static/img/guias/KarmansTubeSolar.pdf-image-038.jpg)
+![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-038.jpg)
 
 Empezamos con un trozo de tubo de unos 40cm. Realizamos un agujero a unos 4 cm de lo que será el extremo
 inferior e introducimos el soporte impreso en 3D con el panel mirando hacia lo que será la parte superior y
@@ -335,7 +335,7 @@ ya que también estaremos empujando la antena por el interior del tubo.
 Por ultimo conectaremos la batería al MPPT y cerraremos ambos extremos con los tapones. Es conveniente
 sellar el tapón inferior también con silicona.
 
-Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](configuracion_inicial.md)**
+Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](../guias-basicas/puesta-en-marcha.md)**
 
 ***Resumen:***
 
@@ -407,10 +407,10 @@ Recomendamos probar primero en una unidad de prueba para aprender a realizar el 
 
 ### Capturas de pantalla
 
-![Captura 1](../../static/img/guias/KarmansTubeSolar.pdf-image-041.jpg)
-![Captura 2](../../static/img/guias/KarmansTubeSolar.pdf-image-043.jpg)
-![Captura 3](../../static/img/guias/KarmansTubeSolar.pdf-image-044.jpg)
-![Captura 4](../../static/img/guias/KarmansTubeSolar.pdf-image-042.jpg)
+![Captura 1](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-041.jpg)
+![Captura 2](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-043.jpg)
+![Captura 3](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-044.jpg)
+![Captura 4](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-042.jpg)
 
 ***Resumen***
 
