@@ -1,5 +1,10 @@
 # Web de la Comunidad Meshtastic en Español
 
+[![GitHub Actions Workflow Status][github-workflow-status-deploy-shield]][github-workflow-status-deploy]
+[![GitHub commit activity][commit-activity-shield]][commit-activity]
+[![GitHub contributors][github-contributors-shield]][github-contributors]
+[![Ko-fi][ko-fi-shield]][ko-fi-quixote]
+
 🌐 Sitio web temporal disponible en: **[https://meshtastic-es-community.github.io/](https://meshtastic-es-community.github.io/)**
 
 Este repositorio contiene el código fuente de la página web oficial de la comunidad Meshtastic en español, construida con [Docusaurus 3](https://docusaurus.io/).
@@ -17,92 +22,9 @@ Puedes colaborar enviando _pull requests_ para:
 
 Toda contribución es bienvenida. Si no estás seguro por dónde empezar, revisa los [issues](https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/issues) o abre uno nuevo.
 
+## 🤝 Pasos contribuir al repositorio
 
-
-# 🤝 Pasos contribuir al repositorio
-
-## ⚙️ Requisitos previos
-
-Asegúrate de tener o instalar en tu sistema:
-
-- [Node.js](https://nodejs.org/) (versión 16 o superior recomendada)  
-- [Git](https://git-scm.com/)  
-- Una cuenta de GitHub
-
-## 🚀 Ejecución local del sitio
-
-Para ejecutar el sitio de forma local, sigue estos pasos:
-
-```bash
-git clone https://github.com/tu-usuario/meshtastic-es-community.github.io.git
-cd meshtastic-es-community.github.io
-npm install
-npm install @easyops-cn/docusaurus-search-local
-npm run build && npm run serve
-```
-
-Esto iniciará un servidor local en `http://localhost:3000`.
-
-## 🌿 Flujo para hacer aportaciones
-
-### 1. Haz un fork del repositorio
-
-Ve a [https://github.com/meshtastic-es-community/meshtastic-es-community.github.io](https://github.com/meshtastic-es-community/meshtastic-es-community.github.io) y haz clic en “Fork” para crear una copia en tu cuenta.
-
-### 2. Clona tu fork localmente
-
-```bash
-git clone https://github.com/tu-usuario/meshtastic-es-community.github.io.git
-cd meshtastic-es-community.github.io
-```
-
-### 3. Crea una nueva rama para tus cambios
-
-```bash
-git checkout -b nombre-de-tu-rama
-```
-
-Ejemplo: `traduccion-instalacion`, `mejora-readme`, `fix-link-roto`, etc.
-
-### 4. Realiza los cambios necesarios
-
-Edita o crea archivos en:
-
-- `docs/`: para documentación.  
-- `src/pages/`: para páginas personalizadas.  
-- `static/img/`: para imágenes y archivos estáticos.
-
-### 5. Prueba localmente tu versión
-
-```bash
-npm run build && npm run serve
-```
-
-Revisa en `http://localhost:3000` que todo funcione correctamente.
-
-### 6. Guarda y sube tus cambios
-
-```bash
-git add .
-git commit -m "Descripción clara de los cambios"
-git push origin nombre-de-tu-rama
-```
-
-### 7. Abre un Pull Request
-
-Ve a tu repositorio en GitHub y haz clic en “Compare & pull request”. Añade una descripción detallada explicando qué has hecho y por qué.
-
-### 8. Espera la revisión
-
-Tu propuesta será revisada por los administradores. Podrían solicitarte ajustes antes de aprobar la integración.
-
-## 💡 Consejos
-
-- Asegúrate de que tus cambios no rompen el sitio (`npm run start` o `npm run build`).  
-- Sigue la estructura y el estilo del contenido ya existente.  
-- Usa títulos claros y lenguaje accesible.  
-- Verifica que los enlaces funcionen correctamente.  
-- Si tienes dudas o propuestas, abre una **Issue** antes de comenzar.
+Échale un vistazo tanto a la [guía de contribuciones](CONTRIBUTING.md) como al [código de conducta](CODE_OF_CONDUCT.md) para conocer las mejores prácticas y cómo hacer un _pull request_.
 
 ## 📬 Contacto y comunidad
 
@@ -112,5 +34,21 @@ Puedes unirte al grupo de la comunidad en Telegram:
 Y visitar la web en construcción:  
 🌐 [https://meshtastic-es-community.github.io/](https://meshtastic-es-community.github.io/)
 
+## 📃 Licencia
+
+La documentación e información de la Comunidad Meshtastic España en las carpetas `docs/`, `static/`, `src/` y `blog/` está licenciada bajo una [licencia CC BY-SA](LICENSE).
+
+Todo el resto del código en este repositorio está licenciado bajo la [licencia MIT](LICENSE-CODE).
+
 ---
 
+¡Gracias por colaborar con Meshtastic en español! 🇪🇸
+
+[github-workflow-status-deploy-shield]: https://img.shields.io/github/actions/workflow/status/meshtastic-es-community/meshtastic-es-community.github.io/deploy.yml
+[github-workflow-status-deploy]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/actions/workflows/deploy.yml
+[github-contributors-shield]: https://img.shields.io/github/contributors/meshtastic-es-community/meshtastic-es-community.github.io
+[github-contributors]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/graphs/contributors
+[commit-activity-shield]: https://img.shields.io/github/commit-activity/w/meshtastic-es-community/meshtastic-es-community.github.io
+[commit-activity]: https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/pulse
+[ko-fi-shield]: https://img.shields.io/badge/donate-ko--fi-%23FF6433?logo=kofi
+[ko-fi-quixote]: https://ko-fi.com/quixotesystems

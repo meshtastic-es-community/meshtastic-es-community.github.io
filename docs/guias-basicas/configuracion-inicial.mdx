@@ -1,0 +1,120 @@
+---
+title: Configuración inicial
+slug: configuracion-inicial
+sidebar_position: 3
+description: Configuraciones mínimas necesarias para tu nodo.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Configuración inicial
+
+## Descarga y accede al cliente 📲 {#descarga-cliente}
+
+Hay 4 clientes oficiales de Meshtastic:
+
+- :mdi-android: **App de Android**: https://play.google.com/store/apps/details?id=com.geeksville.mesh
+- :mdi-apple: **App de iOS**: https://apps.apple.com/es/app/meshtastic/id1586432531
+- :mdi-web: **Cliente web**: https://client.meshtastic.org/
+- :mdi-terminal: **Línea de comandos**: https://meshtastic.org/docs/software/python/cli/
+
+Aunque no es obligatorio, se recomienda realizar la configuración inicial desde la app de Android o con línea de comandos.
+Son los clientes más completos y permiten realizar todas las configuraciones necesarias.
+Pero si no tienes, no puedes, o no quieres, la mayoría de las configuraciones también se pueden realizar desde la app de iOS o el cliente web.
+
+:::note
+
+Esta guía asume que vas a hacer la configuración inicial con un móvil Android / iOS.
+Si quieres hacer la configuración inicial con el cliente web o la línea de comandos,
+consulta la guía oficiales sobre cómo aplicar los cambios de los que hablaremos aquí abajo.
+
+:::
+
+## Conectar al dispositivo 📶 {#conectar-dispositivo}
+
+La primera vez que conectes tu dispositivo, ve a los ajustes de tu móvil, entra en el :mdi-bluetooth: Bluetooth y empareja un nuevo dispositivo.
+Espera a que aparezca el nodo y conéctate. Se llamará algo como "Meshtastic_XXXX" siendo `XXXX` los 4 últimos caracteres del ID del dispositivo.
+
+Si el nodo tiene pantalla, es muy probable que el PIN de 6 dígitos aparezca ahí.
+Si no tiene pantalla, el PIN es `123456` por defecto (podrás cambiarlo luego).
+
+<Tabs groupId="operating-system">
+    <TabItem value="android" label="Android">
+        ‹ Estaría bien poner aquí una captura de pantalla de un Android buscando dispositivos Bluetooth ›
+    </TabItem>
+    <TabItem value="ios" label="iOS">
+        ‹ Estaría bien poner aquí una captura de pantalla de un iOS buscando dispositivos Bluetooth ›
+    </TabItem>
+</Tabs>
+
+Ahora, ve a la aplicación de Meshtastic y conecta con el dispositivo que acabas de emparejar.
+
+<Tabs groupId="operating-system">
+    <TabItem value="android" label="Android">
+        ‹ Estaría bien poner aquí una captura de pantalla de la app de Android conectando con el dispositivo ›
+    </TabItem>
+    <TabItem value="ios" label="iOS">
+        ‹ Estaría bien poner aquí una captura de pantalla de la app de iOS conectando con el dispositivo ›
+    </TabItem>
+</Tabs>
+
+Según el estado de conexión del nodo, verás un icono de una nube diferente:
+
+- Desconectado: Nube tachada :mdi-cloud-off-outline:
+- Conectado: Nube con check :mdi-cloud-check-variant-outline:
+- Conectado, pero dormido o fuera de rango: Nube con flecha arriba :mdi-cloud-upload-outline:
+
+## Elige un nombre para el nodo 🪪 {#nombre-nodo}
+
+- Pulsa el botón :mdi-gear: _Radio configuration_.
+- Entra en :mdi-account: _User_.
+- Selecciona el nombre largo (39 caracteres) y el acrónimo / nombre corto (4 caracteres). Puedes poner emoticonos, pero ten en cuenta que estos ocupan 4 caracteres.
+
+## Configura la región y el _preset_ 🌍 {#region-preset}
+
+Ahora viene la parte más importante de la configuración, ya que si esto está mal, no podrás comunicarte con otros nodos.
+
+- Pulsa el botón :mdi-gear: _Radio configuration_.
+- Entra en :mdi-radio-tower: _LoRa_.
+- Selecciona o confirma los siguientes valores:
+
+    | Campo                      | Valor                                                                                                            |
+    |----------------------------|------------------------------------------------------------------------------------------------------------------|
+    | _Model Preset_             | `LONG_FAST` (por defecto, casi toda España)<br/>`MEDIUM_SLOW` (Madrid, [más info aquí](/blog/mediumslow-madrid)) |
+    | _Region (frequency plan)_  | **European Union 868MHz**                                                                                        |
+    | _Hop limit_                | **≤ 5**. Consulta las [buenas prácticas de saltos](../buenas-practicas.md#cantidad-de-saltos-máxima).            |
+    | _Override Duty Cycle_      | **NO** (es ilegal y perjudica a la malla)                                                                        |
+    | _Override frequency (MHz)_ | **869.525**                                                                                                      |
+
+    (Hay más opciones, pero no son necesarias para la configuración inicial)
+
+## Canales públicos 🗣️ {#canales-publicos}
+
+Por defecto el canal público se llama igual que el _preset_, es decir, **LongFast** o **MediumSlow**.
+Recomendamos dejar ese canal como canal 0 (o primario) ya que es por donde se envían la telemetría, entre otras cosas.
+
+:::info
+
+En España, los canales públicos tienen todos la misma clave, que es la clave por defecto: `AQ==`
+
+:::
+
+Los canales acordados en España son los siguientes:
+
+- **LongFast** o **MediumSlow**, el canal por defecto del _preset_.
+- **Iberia**, un canal para la península ibérica acordado con nuestros [vecinos portugueses 🇵🇹](https://meshtastic.pt/).
+- Un canal de provincia, como **Madrid**, **Barcelona**, **Valencia**, **Cadiz**, **LaRioja**... sin espacios ni acentos.
+
+    |                    | LongFast<br/>MediumSlow | Iberia | Provincia |
+    |--------------------|-------------------------|--------|-----------|
+    | _Uplink enabled_   | ✅                       | ✅      | ✅         |
+    | _Downlink enabled_ | ❌                       | ✅      | ✅         |
+    | _Position enabled_ | ✅                       | ❌      | ❌         |
+    | _Precise location_ | ❌                       | ❌      | ❌         |
+
+Puedes crear más canales, tantó públicos como privados, entre los nodos que quieras. Elige una contraseña y compártela con quien sea necesario.
+
+---
+
+Una vez configurado todo esto, ya deberías poder comunicarte con otros nodos por radiofrecuencia.
