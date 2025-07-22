@@ -29,6 +29,25 @@ Para volver a conectar por Bluetooth, conéctate al nodo a través del WiFi medi
 entra en :mdi-settings: _Radio configuration_ › :mdi-wifi: _Network_ y desactiva el _WiFi enabled_. Cuando se reinicie
 el nodo, podrás volver a conectarte por Bluetooth.
 
+### Me sale un aviso de claves comprometidas y hay que regenerarlas {#claves-comprometidas}
+
+También conocido como _Compromised keys detected, select OK to regenerate_. Este mensaje indica que las claves
+pertenecen a un grupo de claves privadas conocidas que también pueden existir en otros nodos, debido a cómo se generaron
+en algunos _firmwares_ (baja entropía). Tienes más información en la
+[_release_ 2.6.11](https://github.com/meshtastic/firmware/releases/tag/v2.6.11.60ec05e).
+
+Para solucionarlo, debes generar una nueva clave privada. Tienes varias formas de hacerlo:
+- Entrando en :mdi-settings: _Radio configuration_ › :mdi-shield-half-full: _Security_ y pulsando en
+:mdi-warning-outline: _Regenerate Private Key_.
+- Flasheando de nuevo el firmware, marcando la opción de _Full Erase and Install_.
+
+:::warning
+
+Cuando regeneres las claves, **perderás el acceso remoto** (mediante _Remote administration_) ya que la clave pública
+cambia. Haz una copia de tus claves, por si tuvieras que volver a utilizarlas.
+
+:::
+
 ### ¿Por qué aparece un candado amarillo en un canal? <span style={{color:"yellow"}}>:mdi-unlocked-variant-outline:</span> {#candado-amarillo-canal}
 
 El candado amarillo indica que el canal tiene una clave de baja entropía. Es normal en los canales públicos (LongFast,
