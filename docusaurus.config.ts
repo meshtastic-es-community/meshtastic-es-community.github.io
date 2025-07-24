@@ -99,6 +99,7 @@ const config: Config = {
           label: 'Documentación',
         },
         { to: '/docs/buenas-practicas', label: 'Buenas Prácticas', position: 'left' },
+        { to: '/docs/preguntas-frecuentes', label: 'Preguntas Frecuentes', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/meshtastic-es-community',
@@ -129,6 +130,10 @@ const config: Config = {
               label: 'Buenas prácticas',
               to: '/docs/buenas-practicas',
             },
+            {
+              label: 'Preguntas frecuentes',
+              to: '/docs/preguntas-frecuentes',
+            }
           ],
         },
         {
