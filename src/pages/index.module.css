@@ -34,11 +34,6 @@
   align-items: center;
   font-weight: bold;
   font-size: 16px;
-  position: fixed;      
-  top: 50;               
-  left: 0;
-  right: 0;
-  z-index: 1000;
 }
 
 .banner span {
