@@ -24,3 +24,33 @@
   align-items: center;
   margin-top: 2rem;
 }
+
+.banner {
+  background-color: #67EA94;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  position: fixed;      
+  top: 50;               
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.banner span {
+  flex: 1;              
+  text-align: center;   
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px;
+}
