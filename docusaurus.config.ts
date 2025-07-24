@@ -100,6 +100,7 @@ const config: Config = {
         },
         { to: '/docs/buenas-practicas', label: 'Buenas Prácticas', position: 'left' },
         { to: '/docs/preguntas-frecuentes', label: 'Preguntas Frecuentes', position: 'left' },
+      //{ to: '/docs/mapas', label: 'Mapa de Nodos', position: 'left' },                  //para añadir si es necesario
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/meshtastic-es-community',
@@ -178,8 +179,16 @@ const config: Config = {
             },
           ],
         },
+
+        {
+          title: 'Web oficial',
+          items: [
+            { label: 'https://meshtastic.org/', href: 'https://meshtastic.org/' },
+          ],
+        },
+
       ],
-      copyright: `Comunidad Meshtastic España. Hecho con Docusaurus.`,
+      copyright: `Sitio web no oficial. Comunidad Meshtastic España. Hecho con Docusaurus.`,
       logo: {
         alt: 'Logo Meshtastic Powered',
         src: 'img/m_pwrd.png',

@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import React, { useState, useEffect } from 'react';
 
 import styles from './index.module.css';
 
@@ -44,10 +45,26 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
+  const [showBanner, setShowBanner] = useState(true);
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
+      
+      {showBanner && (
+        <div className={styles.banner}>
+        <span>
+          📢 ¡Novedad! Nueva web colaborativa.&nbsp;
+          <Link to="https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/blob/main/CONTRIBUTING.md" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          Mas información
+          </Link>
+        </span>
+        <button className={styles.closeButton} onClick={() => setShowBanner(false)}>×</button>
+      </div>
+      
+      )}
+
       <HomepageHeader />
       <main>
         <HomepageFeatures />
