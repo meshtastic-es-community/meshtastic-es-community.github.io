@@ -5,5 +5,6 @@
     "slug": "configuracion-avanzada",
     "type": "generated-index",
     "description": "Aquí encontrarás información más en profundidad sobre las configuraciones."
-  }
+  },
+  "className": "sidebar__hidden"
 }

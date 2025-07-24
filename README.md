@@ -5,7 +5,7 @@
 [![GitHub contributors][github-contributors-shield]][github-contributors]
 [![Ko-fi][ko-fi-shield]][ko-fi-quixote]
 
-🌐 Sitio web temporal disponible en: **[https://meshtastic-es-community.github.io/](https://meshtastic-es-community.github.io/)**
+🌐 Sitio web disponible en: **[https://meshtastic.es/](https://meshtastic.es/)**
 
 Este repositorio contiene el código fuente de la página web oficial de la comunidad Meshtastic en español, construida con [Docusaurus 3](https://docusaurus.io/).
 
@@ -30,9 +30,6 @@ Toda contribución es bienvenida. Si no estás seguro por dónde empezar, revisa
 
 Puedes unirte al grupo de la comunidad en Telegram:  
 👉 [t.me/meshtastic_esp](https://t.me/meshtastic_esp)
-
-Y visitar la web en construcción:  
-🌐 [https://meshtastic-es-community.github.io/](https://meshtastic-es-community.github.io/)
 
 ## 📃 Licencia
 
