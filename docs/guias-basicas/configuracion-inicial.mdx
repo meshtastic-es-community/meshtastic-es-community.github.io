@@ -3,6 +3,7 @@ import TabItem from '@theme/TabItem';
 import React from 'react';
 import QRsProvinciales from "../../src/components/QRsProvinciales";
 import QRCode from "react-qr-code";
+import Link from "@docusaurus/Link";
 
 # Configuración inicial
 
@@ -38,15 +39,15 @@ Si no tiene pantalla, el PIN es `123456` por defecto (podrás cambiarlo luego).
 <Tabs groupId="operating-system">
     <TabItem value="android" label="Android">
 
-<div style={{ textAlign: 'center' }}>
-  <img src="/img/guias/Android1.jpg" alt="Android 1" width="200" />
-</div>
+        <div style={{textAlign: 'center'}}>
+            [<img src="/img/guias/Android1.jpg" alt="Android 1" width="200"/>](../../static/img/guias/Android1.jpg)
+        </div>
 
     </TabItem>
     <TabItem value="ios" label="iOS">
-    
-    <div style={{ textAlign: 'center' }}>
-        <img src="/img/guias/Iphone1.jpg" alt="Iphone 1" width="200" />
+
+        <div style={{textAlign: 'center'}}>
+            [<img src="/img/guias/Iphone1.jpg" alt="Iphone 1" width="200"/>](../../static/img/guias/Iphone1.jpg)
         </div>
 
     </TabItem>
@@ -57,19 +58,22 @@ Ahora, ve a la aplicación de Meshtastic y conecta con el dispositivo que acabas
 <Tabs groupId="operating-system">
     <TabItem value="android" label="Android">
 
-    <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-        <img src="/img/guias/Android2.jpg" alt="Android 2" width="200" />
-        <img src="/img/guias/Android3.jpg" alt="Android 3" width="200" />
-    </div>
+        <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
+            [<img src="/img/guias/Android2.jpg" alt="Android 2" width="200"/>](../../static/img/guias/Android2.jpg)
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            [<img src="/img/guias/Android3.jpg" alt="Android 3" width="200"/>](../../static/img/guias/Android3.jpg)
+        </div>
 
 
     </TabItem>
 
     <TabItem value="ios" label="iOS">
-       <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-        <img src="/img/guias/Iphone2.jpg" alt="Iphone 2" width="200" />
-        <img src="/img/guias/Iphone3.jpg" alt="Iphone 3" width="200" />
-    </div>
+
+        <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
+            [<img src="/img/guias/Iphone2.jpg" alt="Iphone 2" width="200"/>](../../static/img/guias/Iphone2.jpg)
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            [<img src="/img/guias/Iphone3.jpg" alt="Iphone 3" width="200"/>](../../static/img/guias/Iphone3.jpg)
+        </div>
 
     </TabItem>
 </Tabs>
@@ -134,28 +138,48 @@ Puedes crear más canales, tantó públicos como privados, entre los nodos que q
 
 Código QR para añadir los canales principales. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir":
 
-<div className="container">
-    <div className="row">
-        <div className="col col--3">
-            <QRCode value="https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB" size={200} className={`qr-code`} />
+<Tabs>
+    <TabItem value="longfast" label="LongFast (por defecto)">
+        <div className="container">
+            <div className="row">
+                <div className="col" style={{flex: 0}}>
+                    <QRCode value="https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB" size={200} className={`qr-code shadow--lw`} />
+                </div>
+                <div className="col">
+                    Los datos de los canales son:
+
+                    **Nombre**: `LongFast`<br/>**Clave / PSK**: `AQ==`
+
+                    ---
+
+                    **Nombre**: `Iberia`<br/>**Clave / PSK**: `AQ==` (En Android lo puedes dejar vacío)
+                </div>
+            </div>
         </div>
-        <div className="col">
-            Los datos de los canales son:
+        Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB
+    </TabItem>
+    <TabItem value="mediumslow" label="MediumSlow (en Madrid)">
+        <div className="container">
+            <div className="row">
+                <div className="col" style={{flex: 0}}>
+                    <QRCode value="https://meshtastic.org/e/#Cg0SAQEaACgBMAE6AggPChMSAQEaBkliZXJpYSgBMAE6AggPEhAIARADOANABFAbwAYByAYB" size={200} className={`qr-code shadow--lw`} />
+                </div>
+                <div className="col">
+                    Los datos de los canales son:
 
-            **Nombre**: `LongFast`
+                    **Nombre**: `MediumSlow`<br/>**Clave / PSK**: `AQ==`
 
-            **PSK**: `AQ==` (En Android lo puedes dejar vacío)
+                    ---
 
-            --
-
-            **Nombre**: `Iberia`
-
-            **PSK**: `AQ==` (En Android lo puedes dejar vacío)
-
-            Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB
+                    **Nombre**: `Iberia`<br/>**Clave / PSK**: `AQ==` (En Android lo puedes dejar vacío)
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        Enlace directo: https://meshtastic.org/e/#Cg0SAQEaACgBMAE6AggPChMSAQEaBkliZXJpYSgBMAE6AggPEhAIARADOANABFAbwAYByAYB
+    </TabItem>
+</Tabs>
+
+
 
 ### Canales por provincias 🗺️
 
