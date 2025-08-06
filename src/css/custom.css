@@ -49,6 +49,10 @@ svg.iconify {
   vertical-align: -0.175em !important;
 }
 
+.shadow > svg {
+    filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
 h1 svg.iconify, h2 svg.iconify, h3 svg.iconify, h4 svg.iconify, h5 svg.iconify, h6 svg.iconify {
   font-size: 1.25em;
 }
