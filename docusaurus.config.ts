@@ -40,6 +40,20 @@ const config: Config = {
     locales: ['es'],
   },
 
+  plugins: [
+      [
+        '@docusaurus/plugin-client-redirects',
+        {
+          redirects: [
+            {
+              from: '/primeros-pasos',
+              to: '/docs/primeros-pasos',
+            }
+          ]
+        }
+      ]
+  ],
+
   presets: [
     [
       'classic',
@@ -134,6 +148,10 @@ const config: Config = {
             {
               label: 'Preguntas frecuentes',
               to: '/docs/preguntas-frecuentes',
+            },
+            {
+              label: 'Política de cookies',
+              to: '/politica-de-cookies',
             }
           ],
         },

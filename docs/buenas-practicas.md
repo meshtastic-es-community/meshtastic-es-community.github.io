@@ -78,33 +78,39 @@ Los intervalos propuestos son **MÍNIMOS**, puedes aumentarlos todavía más par
 
 ### Métricas del dispositivo
 
-Son los datos de "salud" del nodo. Por ejemplo: nivel de batería, voltaje, % de utilización del canal... Es la información más interesante de esta lista y además va cambiando con el tiempo, por lo que interesa ver sus actualizaciones.
+Son los datos de "salud" del nodo. Por ejemplo: nivel de batería, voltaje, % de utilización del canal...
 
-El valor recomendado es `3600` segundos, es decir 1h.
+Se puede reducir temporalmente si sabes lo que estás haciendo, para evaluar el funcionamiento de un nodo nuevo por ejemplo. ¡No te olvides de volver a subirlo!
 
-Configurable en `Configuracion -> Telemetry -> Device metrics update interval -> 3600 (1h)`
+El valor recomendado es `43200` segundos, es decir 12h.
+
+Configurable en `Configuracion -> Telemetry -> Device metrics update interval -> 43200`
 
 ### Identificación del nodo
 
-Se envían en más detalle los datos identificativos del nodo: nombre, claves, ID...
+Se envía en más detalle los datos identificativos del nodo: nombre, claves, ID... Se puede solicitar manualmente al nodo siempre que se quiera.
 
-Aunque todos los mensajes llevan tu identificador, estos mensajes complementan la información del "perfil" de tu nodo. Estos datos son fijos y no cambian nunca, a no ser que los cambies tú. Sirve para que te descubran e identifiquen correctamente **por primera vez.**
+Aunque todos los mensajes llevan tu identificador, estos mensajes complementan la información del "perfil" de tu nodo. Estos datos son fijos y no cambian nunca, a no ser que los cambies tú. Sirve para que te identifiquen correctamente **la primera vez.**
 
-El valor recomendado es `10800` segundos, es decir 3h.
+El valor recomendado es `86400` segundos, es decir 24h.
 
-Configurable en `Configuracion -> Device -> NodeInfo broadcast interval -> 10800 (3h)`
+Configurable en `Configuracion -> Device -> NodeInfo broadcast interval -> 86400`
 
 ### Posición
 
-La información de ubicación del nodo. En nodos fijos no cambia nunca por lo que no tiene sentido enviarla a menudo, además es la información menos urgente.
+En nodos fijos no cambia nunca por lo que no tiene sentido enviarla a menudo. Además, se puede solicitar manualmente al nodo siempre que se quiera.
 
 En nodos móviles o con GPS, puede interesar enviarla más frecuente pero sin abusar de ello porque provoca la mayoría de la congestión en la malla. Es recomendable deshabilitar el ajuste `Smart Position`.
 
-**Para nodos fijos:** el valor recomendado es `10800` segundos, es decir 3h.
+**Para nodos fijos:** el valor recomendado es `86400` segundos, es decir 24h.
 
 **Para nodos móviles:** no es aconsejable bajar de `1800` segundos, es decir 30 minutos.
 
-Configurable en `Configuracion -> Position -> Position broadcast interval -> 10800 (3h)`
+Configurable en `Configuracion -> Position -> Position broadcast interval -> 86400`
+
+También recomendamos desactivar casi todos los `Position flags` para dejar los mínimos necesarios y así reducir la cantidad de datos que emitimos. El imprescindible es `DOP`. El resto son información adicional que no es necesaria como tal.
+
+Configurable en `Configuracion -> Position -> Position flags`
 
 ### Métricas del entorno
 
