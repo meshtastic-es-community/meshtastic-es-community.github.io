@@ -148,6 +148,10 @@ const config: Config = {
             {
               label: 'Preguntas frecuentes',
               to: '/docs/preguntas-frecuentes',
+            },
+            {
+              label: 'Política de cookies',
+              to: '/politica-de-cookies',
             }
           ],
         },
