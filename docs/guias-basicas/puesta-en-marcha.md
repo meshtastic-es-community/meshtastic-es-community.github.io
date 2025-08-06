@@ -12,7 +12,7 @@ description: Cómo poner en marcha tu nodo, desde cero.
 
 :::note
 
-Esta guía asume que ya has comprado los dispositivos que vas a utilizar con Meshtastic. Si no es así, puedes consultar la lista de [hardware compatible] para ver tus opciones.
+Esta guía asume que ya has comprado los dispositivos que vas a utilizar con Meshtastic. Si no es así, puedes consultar la lista de [hardware compatible](https://meshtastic.org/docs/hardware/devices/) para ver tus opciones.
 
 :::
 
