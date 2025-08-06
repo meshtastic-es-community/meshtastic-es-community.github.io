@@ -7,6 +7,9 @@ description: Configuraciones mínimas necesarias para tu nodo.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import React, {useState} from 'react';
+import QRCode from "react-qr-code";
+import Link from "@docusaurus/Link";
 
 # Configuración inicial
 
@@ -42,15 +45,15 @@ Si no tiene pantalla, el PIN es `123456` por defecto (podrás cambiarlo luego).
 <Tabs groupId="operating-system">
     <TabItem value="android" label="Android">
 
-<div style={{ textAlign: 'center' }}>
-  <img src="/img/guias/Android1.jpg" alt="Android 1" width="200" />
-</div>
+        <div style={{textAlign: 'center'}}>
+            [<img src="/img/guias/Android1.jpg" alt="Android 1" width="200"/>](../../static/img/guias/Android1.jpg)
+        </div>
 
     </TabItem>
     <TabItem value="ios" label="iOS">
-    
-    <div style={{ textAlign: 'center' }}>
-        <img src="/img/guias/Iphone1.jpg" alt="Iphone 1" width="200" />
+
+        <div style={{textAlign: 'center'}}>
+            [<img src="/img/guias/Iphone1.jpg" alt="Iphone 1" width="200"/>](../../static/img/guias/Iphone1.jpg)
         </div>
 
     </TabItem>
@@ -61,19 +64,22 @@ Ahora, ve a la aplicación de Meshtastic y conecta con el dispositivo que acabas
 <Tabs groupId="operating-system">
     <TabItem value="android" label="Android">
 
-    <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-        <img src="/img/guias/Android2.jpg" alt="Android 2" width="200" />
-        <img src="/img/guias/Android3.jpg" alt="Android 3" width="200" />
-    </div>
+        <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
+            [<img src="/img/guias/Android2.jpg" alt="Android 2" width="200"/>](../../static/img/guias/Android2.jpg)
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            [<img src="/img/guias/Android3.jpg" alt="Android 3" width="200"/>](../../static/img/guias/Android3.jpg)
+        </div>
 
 
     </TabItem>
 
     <TabItem value="ios" label="iOS">
-       <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-        <img src="/img/guias/Iphone2.jpg" alt="Iphone 2" width="200" />
-        <img src="/img/guias/Iphone3.jpg" alt="Iphone 3" width="200" />
-    </div>
+
+        <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
+            [<img src="/img/guias/Iphone2.jpg" alt="Iphone 2" width="200"/>](../../static/img/guias/Iphone2.jpg)
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            [<img src="/img/guias/Iphone3.jpg" alt="Iphone 3" width="200"/>](../../static/img/guias/Iphone3.jpg)
+        </div>
 
     </TabItem>
 </Tabs>
@@ -137,205 +143,102 @@ Puedes crear más canales, tantó públicos como privados, entre los nodos que q
 ## Añade los canales que usamos en España ⚙️
 
 Código QR para añadir los canales principales. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir":
-   
-   
-    <img src="/img/QRs/LongFast-Iberia.jpeg" alt="Android 1" width="400" />
 
-    Los datos de los canales son:  
-
-    **Nombre**: LongFast
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    ---
-
-    **Nombre**: Iberia
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB
-
-
-### Canales por provincias 🗺️
-
-<Tabs groupId="canales-espana">
-
-  <TabItem value="madrid" label="Madrid">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-    
-    <img src="/img/QRs/Madrid.jpg" alt="Madrid" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Madrid
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#CgwaBk1hZHJpZCgBMAESEggBOANABEgBUBtoAcAGAcgGAQ
-  </TabItem>
-
-  <TabItem value="alicante" label="Alicante">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Alicante.jpg" alt="Alicante" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Alicante
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg4aCEFsaWNhbnRlKAEwARISCAE4A0AESAFQG2gBwAYByAYB
-  </TabItem>
-
-  <TabItem value="cadiz" label="Cadiz">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Cadiz.jpg" alt="Cadiz" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Cadiz
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#CgsaBUNhZGl6KAEwARISCAE4A0AESAFQG2gBwAYByAYB
-  </TabItem>
-
-  <TabItem value="cantabria" label="Cantabria">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Cantabria.jpg" alt="Cantabria" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Cantabria
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg8aCUNhbnRhYnJpYSgBMAESEggBOANABEgBUBtoAcAGAcgGAQ
-  </TabItem>
-
-  <TabItem value="toledo" label="Toledo">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Toledo.jpg" alt="Toledo" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Toledo
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#CgwaBlRvbGVkbygBMAESEggBOANABEgBUBtoAcAGAcgGAQ
-  </TabItem>
-
-  <TabItem value="valencia" label="Valencia">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Valencia.jpg" alt="Valencia" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Valencia
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg4aCFZhbGVuY2lhKAEwARISCAE4A0AESAFQG2gBwAYByAYB
-  </TabItem>
-
-  <TabItem value="asturias" label="Asturias">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Asturias.jpg" alt="Asturias" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Asturias
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg4aCEFzdHVyaWFzKAEwARISCAE4A0AESAFQG2gBwAYByAYB
-  </TabItem>
-
-  <TabItem value="salamanca" label="Salamanca">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Salamanca.jpg" alt="Salamanca" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Salamanca
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg8aCVNhbGFtYW5jYSgBMAESEggBOANABEgBUBtoAcAGAcgGAQ
-  </TabItem>
-
-  <TabItem value="zaragoza" label="Zaragoza">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Zaragoza.jpg" alt="Zaragoza" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Zaragoza
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg4aCFphcmFnb3phKAEwARISCAE4A0AESAFQG2gBwAYByAYB
-  </TabItem>
-
-  <TabItem value="euskadi" label="Euskadi">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Euskadi.jpg" alt="Euskadi" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Euskadi
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg0aB0V1c2thZGkoATABEhIIATgDQARIAVAbaAHABgHIBgE
-  </TabItem>
-
-  <TabItem value="navarra" label="Navarra">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/Navarra.jpg" alt="Navarra" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: Navarra
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg0aB05hdmFycmEoATABEhIIATgDQARIAVAbaAHABgHIBgE
-  </TabItem>
-
-  <TabItem value="larioja" label="LaRioja">
-    Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".  
-
-    <img src="/img/QRs/LaRioja.jpg" alt="LaRioja" width="400" />
-
-    Los datos del canal son:  
-
-    **Nombre**: LaRioja
-
-    **PSK**: AQ== (En Android lo puedes dejar vacío)
-
-    Enlace directo: https://meshtastic.org/e/#Cg0aB0xhUmlvamEoATABEhIIATgDQARIAVAbaAHABgHIBgE
-  </TabItem>
+<Tabs groupId="preset">
+    <TabItem value="longfast" label="LongFast (por defecto)">
+        <div className="container">
+            <div className="row">
+                <div className="col" style={{flex: 0}}>
+                    <QRCode value="https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB" size={200} className={`qr-code shadow--lw`} />
+                </div>
+                <div className="col">
+                    Los datos de los canales son:
+
+                    **Nombre**: `LongFast`<br/>**Clave / PSK**: `AQ==`
+
+                    ---
+
+                    **Nombre**: `Iberia`<br/>**Clave / PSK**: `AQ==` (En Android lo puedes dejar vacío)
+                </div>
+            </div>
+        </div>
+        Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB
+    </TabItem>
+    <TabItem value="mediumslow" label="MediumSlow (en Madrid)">
+        <div className="container">
+            <div className="row">
+                <div className="col" style={{flex: 0}}>
+                    <QRCode value="https://meshtastic.org/e/#Cg0SAQEaACgBMAE6AggPChMSAQEaBkliZXJpYSgBMAE6AggPEhAIARADOANABFAbwAYByAYB" size={200} className={`qr-code shadow--lw`} />
+                </div>
+                <div className="col">
+                    Los datos de los canales son:
+
+                    **Nombre**: `MediumSlow`<br/>**Clave / PSK**: `AQ==`
+
+                    ---
+
+                    **Nombre**: `Iberia`<br/>**Clave / PSK**: `AQ==` (En Android lo puedes dejar vacío)
+                </div>
+            </div>
+        </div>
+        Enlace directo: https://meshtastic.org/e/#Cg0SAQEaACgBMAE6AggPChMSAQEaBkliZXJpYSgBMAE6AggPEhAIARADOANABFAbwAYByAYB
+    </TabItem>
 </Tabs>
 
 
 
+### Canales por provincias 🗺️
 
+export const regionConfigs = [
+    {"name": "Madrid", "channel": "Madrid", "base64": "CgwaBk1hZHJpZCgBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
+    {"name": "Alicante", "channel": "Alicante", "base64": "Cg4aCEFsaWNhbnRlKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
+    {"name": "Cádiz", "channel": "Cadiz", "base64": "CgsaBUNhZGl6KAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
+    {"name": "Cantabria", "channel": "Cantabria", "base64": "Cg8aCUNhbnRhYnJpYSgBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
+    {"name": "Toledo", "channel": "Toledo", "base64": "CgwaBlRvbGVkbygBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
+    {"name": "Valencia", "channel": "Valencia", "base64": "Cg4aCFZhbGVuY2lhKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
+    {"name": "Asturias", "channel": "Asturias", "base64": "Cg4aCEFzdHVyaWFzKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
+    {"name": "Salamanca", "channel": "Salamanca", "base64": "Cg8aCVNhbGFtYW5jYSgBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
+    {"name": "Zaragoza", "channel": "Zaragoza", "base64": "Cg4aCFphcmFnb3phKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
+    {"name": "Euskadi", "channel": "Euskadi", "base64": "Cg0aB0V1c2thZGkoATABEhIIATgDQARIAVAbaAHABgHIBgE"},
+    {"name": "Navarra", "channel": "Navarra", "base64": "Cg0aB05hdmFycmEoATABEhIIATgDQARIAVAbaAHABgHIBgE"},
+    {"name": "La Rioja", "channel": "LaRioja", "base64": "Cg0aB0xhUmlvamEoATABEhIIATgDQARIAVAbaAHABgHIBgE"}
+]
 
+export const QRsProvinciales = () => {
+    const [selectedRegion, setSelectedRegion] = useState(regionConfigs[0].channel);
+    const region = regionConfigs.find((region) => region.channel === selectedRegion);
+    const regionLink = "https://meshtastic.org/e/#" + region.base64;
+    return <>
+        <p>Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".</p>
 
+        <p>
+            Selecciona una provincia o región: &nbsp;
+            <select id="selectedRegion" value={selectedRegion}
+                    onChange={(event) => setSelectedRegion(event.target.value)}>
+                {regionConfigs.map((region) => (<option value={region.channel}>{region.name}</option>))}
+            </select>
+        </p>
 
+        <div className="container">
+            <div className="row">
+                <div className="col" style={{flex: 0}}>
+                    <QRCode value={regionLink} size={200} className={`qr-code shadow--lw`}/>
+                </div>
+                <div className="col">
+                    <p>Los datos del canal son:</p>
 
+                    <p><strong>Nombre</strong>: <code>{region.channel}</code> (sin espacios ni caracteres especiales)
+                    </p>
+
+                    <p><strong>Clave / PSK</strong>: <code>AQ==</code> (En Android lo puedes dejar vacío)</p>
+                </div>
+            </div>
+        </div>
+        Enlace directo: <Link to={regionLink}>{regionLink}</Link>
+    </>
+}
+
+<QRsProvinciales />
 
 ---
 
