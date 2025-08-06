@@ -70,14 +70,6 @@ select {
   padding: 0.35em;
 }
 
-.col:first-child {
-    padding-left: 0;
-}
-
-.col:last-child {
-    padding-right: 0;
-}
-
 .cookieBanner__container {
     display: block;
     position: fixed;
