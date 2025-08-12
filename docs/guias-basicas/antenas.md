@@ -38,10 +38,14 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
 
 ## 🗼 Antenas para nodos fijos
 
-- **Yagi direccional:**
+- **Yagi direccional Aliexpress:**
   Se recomienda comprobar con VNA (Analizador de Redes Vectorial).
   Puede que sea necesario ajustarla para obtener mejor rendimiento.
   [Ver en AliExpress](https://a.aliexpress.com/_Eu7alUU)
+
+- **Yagi direccional Amazon:**
+Antena probada que da buen rendimiento aunque algo mas cara.
+[Ver en Amazon](https://www.amazon.es/dp/B0CVGSL7Q4)
 
 - **Mikrotik LoRa Omnidireccional 6.5dbi**: Antena de buena calidad aunque de precio alto.  [Ver en su web](https://www.senetic.es/product/868_Omni_antenna) 
 
