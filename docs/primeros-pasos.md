@@ -36,6 +36,11 @@ Asegúrate de que el dispositivo que compras sea compatible con la frecuencia Lo
 - **Aplicación móvil**: Descarga la app de Meshtastic para iOS o Android para configurar y gestionar tus dispositivos desde tu teléfono.
 - **Controladores**: Dependiendo del dispositivo, podrías necesitar controladores del puerto serie (como para ESP32 o nRF52/RP2040). Consulta las instrucciones en la documentación oficial.
 
+:::tip
+Si estás un poco perdido con tanta información o acabas de llegar te recomendamos este video de EA3GRN:
+<iframe width="800" height="315" src="https://www.youtube.com/embed/qi3clr-u6-4?si=ptsZYemF3QCxuFoa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+:::
+
 ## Flashear el firmware de Meshtastic
 
 :::danger
@@ -146,6 +151,9 @@ Revisa nuestra guía de [buenas prácticas](buenas-practicas.md) para asegurarte
    - **Consejo**: Revisa si hay actualizaciones en [flasher.meshtastic.org](https://flasher.meshtastic.org).
 
 ## Recursos útiles
+
+- Existen canales de YouTube donde aprender mucho sobre Meshtastic. Si estas empezando te recomendamos esto canales: [EA3GRN](https://www.youtube.com/watch?v=qi3clr-u6-4&list=PLLFrLgZ4YFd3nmCHLAl0wxiAJCvSjeWrb&index=8&ab_channel=ea3grn), [Radio Preppers](https://www.youtube.com/watch?v=UoSiZEQkYuA&list=PLRygyI8RBaCUPaxOMyp4G5u4NFpCoPxE2&ab_channel=RadioPrepperSpain) o [Caracolmaker](https://www.youtube.com/@caracolmaker/videos)
+
 
 - Documentación oficial: [Meshtastic.org](https://meshtastic.org)
 - Comunidad en Reddit: [r/meshtastic](https://www.reddit.com/r/meshtastic/)
