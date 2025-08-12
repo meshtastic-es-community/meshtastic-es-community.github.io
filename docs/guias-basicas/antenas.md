@@ -6,6 +6,21 @@ description: Guía con recomendaciones y experiencias sobre antenas para disposi
 
 # Antenas recomendadas
 
+La elección de la antena es tan importante como el propio dispositivo. Elegir el número adecuado de dBi no se trata solo de “cuanto más, mejor”. 
+Un valor de dBi alto concentra la señal en una dirección más estrecha, lo que puede aumentar el alcance, pero reducir la cobertura en otras direcciones. 
+
+<p align="center">
+  <img src="/img/guias/dbi.jpeg" alt="diferencia dBi" width="400" />
+</p>
+
+Por el contrario, una antena con menos dBi ofrece una señal más amplia y uniforme, ideal para zonas con obstáculos o donde se necesita cubrir un área cercana en 360°. Entender este equilibrio es clave para optimizar la conexión y el rendimiento de la red.
+
+<p align="center">
+  <img src="/img/guias/dbi2.jpg" alt="diferencia dBi" width="400" />
+</p>
+
+Por lo tanto, no. Más dBi no significa más potencia, ni garantiza mejor rendimiento; se trata de encontrar el equilibrio para tu entorno y uso.
+
 A continuación te presentamos una lista de antenas recomendadas y no recomendadas para usar con tus dispositivos Meshtastic.
 
 ---
@@ -65,3 +80,9 @@ La mayoría de antenas para estación fija llevan conector de tipo N. Revisa si 
 Toda esta información se basa en recomendaciones y experiencias obtenidas en el grupo de Telegram de Meshtastic España. Para más detalles, dudas o consultas, te invitamos a unirte:
 [https://t.me/meshtastic_esp](https://t.me/meshtastic_esp)
 :::
+
+
+### Fuentes:
+
+https://www.data-alliance.net/es/dbi-db-dbm-dbmw-definido-y-explicado
+https://www.gme.net.au/eu/news/understanding-antenna-gain-and-dbi/
