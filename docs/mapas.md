@@ -54,6 +54,25 @@ Estos son los pasos a seguir:
     - En caso de nodos con Internet y conectados al servidor MQTT, **habilita _map reporting_** en la configuración de MQTT, al final del todo.
     - Si no, no te preocupes. Cuando otro nodo (con Internet y conectado a MQTT) escuche tu posición, la enviará al servidor.
 
+No es necesario estar conectado a Internet, y de hecho no lo recomendamos. Para que tu nodo aparezca en el mapa, basta con que otro nodo conectado escuche tu señal por RF y suba tu posición automáticamente. Sin embargo, si quieres conectarte tú mismo y enviar los datos de otros nodos, esta es la configuración que debes usar:
+
+ **Datos de conexión MQTT:**
+   
+
+| **Parámetro**       | **Valor**                                               |
+|---------------------|---------------------------------------------------------|
+| Address             | mqtt.meshtastic.es                                      |
+| Username            | meshdev                                                 |
+| Password            | large4cats                                              |
+| Encryption          | ✅                                                      |
+| JSON output         | ❌                                                      |
+| TLS                 | ❌                                                      |
+| Root topic          | msh/EU_868                                              |
+| Proxy to client     | ✅ Si tu nodo usa Bluetooth<br />❌ Si tu nodo usa WiFi |
+| Map reporting       | ✅                                                      |
+| Precise location    | A elección                                              |
+
+
 Tal vez tengas que esperar unas horas hasta que el nodo envíe su posición. Paciencia 🧘
 
 ---
