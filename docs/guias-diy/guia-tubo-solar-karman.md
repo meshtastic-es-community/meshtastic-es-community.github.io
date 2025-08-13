@@ -1,7 +1,8 @@
 ---
-title: Nodo solar Meshtastic en tubo PVC (Karman)
+title: Nodo solar Meshtastic en tubo PVC
 description: Guía paso a paso para montar un nodo solar autónomo y sellado con Meshtastic y Faketec v4
 slug: guia-tubo-solar-karman
+sidebar_position: 1
 ---
 
 # Guía de montaje del Karman’s Tube Solar
