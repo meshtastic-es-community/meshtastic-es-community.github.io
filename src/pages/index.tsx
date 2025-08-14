@@ -55,9 +55,9 @@ export default function Home(): ReactNode {
       {showBanner && (
         <div className={styles.banner}>
         <span>
-          📢 ¡Novedad! Nueva web colaborativa.&nbsp;
-          <Link to="https://github.com/meshtastic-es-community/meshtastic-es-community.github.io/blob/main/CONTRIBUTING.md" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
-          Mas información
+          📢 ¡Novedad! Nuevas guias disponibles.&nbsp;
+          <Link to="/docs/category/gu%C3%ADas-diy" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          Click aquí
           </Link>
         </span>
         <button className={styles.closeButton} onClick={() => setShowBanner(false)}>×</button>
