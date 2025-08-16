@@ -38,7 +38,7 @@ Asegúrate de que el dispositivo que compras sea compatible con la frecuencia Lo
 
 :::tip
 Si estás un poco perdido con tanta información o acabas de llegar te recomendamos este video de EA3GRN:
-div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
   <iframe
     src="https://www.youtube.com/embed/qi3clr-u6-4?si=ptsZYemF3QCxuFoa"
     title="YouTube video player"
