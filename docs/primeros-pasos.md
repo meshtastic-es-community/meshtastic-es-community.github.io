@@ -38,7 +38,17 @@ Asegúrate de que el dispositivo que compras sea compatible con la frecuencia Lo
 
 :::tip
 Si estás un poco perdido con tanta información o acabas de llegar te recomendamos este video de EA3GRN:
-<iframe width="800" height="315" src="https://www.youtube.com/embed/qi3clr-u6-4?si=ptsZYemF3QCxuFoa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+  <iframe
+    src="https://www.youtube.com/embed/qi3clr-u6-4?si=ptsZYemF3QCxuFoa"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+  />
+</div>
 :::
 
 ## Flashear el firmware de Meshtastic
