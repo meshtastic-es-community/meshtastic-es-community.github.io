@@ -1,3 +1,6 @@
+---
+title: Política de cookies
+---
 # Política de _cookies_
 
 Este sitio web no utiliza _cookies_ de terceros para almacenar información del usuario. La única cookie que se almacena
