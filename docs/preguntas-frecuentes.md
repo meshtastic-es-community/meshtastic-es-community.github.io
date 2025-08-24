@@ -18,7 +18,7 @@ export const KeyOffIcon = () => (
 ### Mi nodo no aparece en los mapas de la web {#nodo-no-aparece-en-mapas}
 
 Échale un vistazo a [cómo hacer que el nodo aparezca en los mapas](mapas.md#como-aparecer-en-mapas).
-Si aun así no aparece, pregunta en [Telegram](https://t.me/meshtastic_es) para que podamos ayudarte.
+Si aun así no aparece, pregunta en [Telegram](https://t.me/meshtastic_esp) para que podamos ayudarte.
 
 ### He activado el WiFi en mi nodo y ahora no puedo conectar por Bluetooth :mdi-wifi: :mdi-bluetooth: {#wifi-o-bluetooth}
 
