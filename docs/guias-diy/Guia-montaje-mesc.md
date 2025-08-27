@@ -16,10 +16,16 @@ Recomiendo leer primero el documento antes de iniciar el montaje, para comprende
 
 ## 📦 Material necesario
 
-- 1 PCB Faketec (la versión 3 sería suficiente)
+- 1 PCB [Faketec](https://github.com/gargomoma/fakeTec_pcb) (la versión 3 sería suficiente)
 
 <div style={{ textAlign: "center" }}>
   <img src={require("../../static/img/guias-diy/mesc/18.jpg").default} alt="Imagen PCB Faketec" width="300" />
+</div>
+
+- 1 PCB MESC [Descarga aquí](https://t.me/meshtastic_esp/30866/103934)
+
+<div style={{ textAlign: "center" }}>
+  <img src={require("../../static/img/guias-diy/mesc/4.jpg").default} alt="Imagen PCB Faketec" width="300" />
 </div>
 
 - 1 MPPT CN3791 6V (Controlador de carga de la batería y alimentación del Nodo)
