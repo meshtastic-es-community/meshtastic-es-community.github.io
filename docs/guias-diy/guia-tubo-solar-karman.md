@@ -116,7 +116,7 @@ solar bien configurado y actualizado y reemplazar en el sitio el viejo por el ac
 
 - [Microcontrolador](https://es.aliexpress.com/item/1005006446457448.html)  
 - [Módulo de Radio](https://es.aliexpress.com/item/1005008691299351.html)  
-- [Botones](https://es.aliexpress.com/item/4001125532910.html)  
+- [Botones](https://es.aliexpress.com/item/1005004194174696.html)  
 - [Resistencias (680k y 1M)](https://es.aliexpress.com/item/1005002991902748.html)  
 - [Panel Solar](https://es.aliexpress.com/item/1005004580265551.html)  
 - [Cargador MPPT](https://es.aliexpress.com/item/4000235650965.html)  
