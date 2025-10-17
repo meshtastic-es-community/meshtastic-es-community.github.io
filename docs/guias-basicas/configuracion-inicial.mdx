@@ -247,7 +247,7 @@ export const regionConfigs = [
 export const QRsProvinciales = () => {
     const [selectedRegion, setSelectedRegion] = useState(regionConfigs[0].channel);
     const region = regionConfigs.find((region) => region.channel === selectedRegion);
-    const regionLink = "https://meshtastic.org/e/#" + region.base64;
+    const regionLink = "https://meshtastic.org/e/?add=true#" + region.base64;
     return <>
         <p>Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".</p>
 
