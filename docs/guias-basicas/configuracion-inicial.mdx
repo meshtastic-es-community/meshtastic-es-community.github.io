@@ -190,24 +190,64 @@ Código QR para añadir los canales principales. Escanea con la cámara dentro d
 ### Canales por provincias 🗺️
 
 export const regionConfigs = [
-    {"name": "Madrid", "channel": "Madrid", "base64": "CgwaBk1hZHJpZCgBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
-    {"name": "Alicante", "channel": "Alicante", "base64": "Cg4aCEFsaWNhbnRlKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
-    {"name": "Cádiz", "channel": "Cadiz", "base64": "CgsaBUNhZGl6KAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
-    {"name": "Cantabria", "channel": "Cantabria", "base64": "Cg8aCUNhbnRhYnJpYSgBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
-    {"name": "Toledo", "channel": "Toledo", "base64": "CgwaBlRvbGVkbygBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
-    {"name": "Valencia", "channel": "Valencia", "base64": "Cg4aCFZhbGVuY2lhKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
-    {"name": "Asturias", "channel": "Asturias", "base64": "Cg4aCEFzdHVyaWFzKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
-    {"name": "Salamanca", "channel": "Salamanca", "base64": "Cg8aCVNhbGFtYW5jYSgBMAESEggBOANABEgBUBtoAcAGAcgGAQ"},
-    {"name": "Zaragoza", "channel": "Zaragoza", "base64": "Cg4aCFphcmFnb3phKAEwARISCAE4A0AESAFQG2gBwAYByAYB"},
-    {"name": "Euskadi", "channel": "Euskadi", "base64": "Cg0aB0V1c2thZGkoATABEhIIATgDQARIAVAbaAHABgHIBgE"},
-    {"name": "Navarra", "channel": "Navarra", "base64": "Cg0aB05hdmFycmEoATABEhIIATgDQARIAVAbaAHABgHIBgE"},
-    {"name": "La Rioja", "channel": "LaRioja", "base64": "Cg0aB0xhUmlvamEoATABEhIIATgDQARIAVAbaAHABgHIBgE"}
+    {"name": "Álava", "channel": "Alava", "base64": "Cg4SAQEaBUFsYXZhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Albacete", "channel": "Albacete", "base64": "ChESAQEaCEFsYmFjZXRlKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Alicante", "channel": "Alicante", "base64": "ChESAQEaCEFsaWNhbnRlKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Almería", "channel": "Almeria", "base64": "ChASAQEaB0FsbWVyaWEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Ávila", "channel": "Avila", "base64": "Cg4SAQEaBUF2aWxhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Badajoz", "channel": "Badajoz", "base64": "ChASAQEaB0JhZGFqb3ooATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Baleares", "channel": "Baleares", "base64": "ChESAQEaCEJhbGVhcmVzKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Barcelona", "channel": "Barcelona", "base64": "ChISAQEaCUJhcmNlbG9uYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Burgos", "channel": "Burgos", "base64": "Cg8SAQEaBkJ1cmdvcygBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Cáceres", "channel": "Caceres", "base64": "ChASAQEaB0NhY2VyZXMoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Cádiz", "channel": "Cadiz", "base64": "Cg4SAQEaBUNhZGl6KAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Castellón", "channel": "Castellon", "base64": "ChISAQEaCUNhc3RlbGxvbigBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Ciudad Real", "channel": "CiudadReal", "base64": "ChMSAQEaCkNpdWRhZFJlYWwoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Córdoba", "channel": "Cordoba", "base64": "ChASAQEaB0NvcmRvYmEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "A Coruña", "channel": "ACoruña", "base64": "ChESAQEaCEFDb3J1w7FhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Cuenca", "channel": "Cuenca", "base64": "Cg8SAQEaBkN1ZW5jYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Girona", "channel": "Girona", "base64": "Cg8SAQEaBkdpcm9uYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Granada", "channel": "Granada", "base64": "ChASAQEaB0dyYW5hZGEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Guadalajara", "channel": "Guadalajara", "base64": "ChQSAQEaC0d1YWRhbGFqYXJhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Gipuzkoa", "channel": "Gipuzkoa", "base64": "ChESAQEaCEdpcHV6a29hKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Huelva", "channel": "Huelva", "base64": "Cg8SAQEaBkh1ZWx2YSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Huesca", "channel": "Huesca", "base64": "Cg8SAQEaBkh1ZXNjYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Jaén", "channel": "Jaen", "base64": "Cg0SAQEaBEphZW4oATABEgwIAUADSAHABgDIBgE"},
+    {"name": "León", "channel": "Leon", "base64": "Cg0SAQEaBExlb24oATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Lleida", "channel": "Lleida", "base64": "Cg8SAQEaBkxsZWlkYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "La Rioja", "channel": "LaRioja", "base64": "ChASAQEaB0xhUmlvamEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Lugo", "channel": "Lugo", "base64": "Cg0SAQEaBEx1Z28oATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Madrid", "channel": "Madrid", "base64": "Cg8SAQEaBk1hZHJpZCgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Málaga", "channel": "Malaga", "base64": "Cg8SAQEaBk1hbGFnYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Murcia", "channel": "Murcia", "base64": "Cg8SAQEaBk11cmNpYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Navarra", "channel": "Navarra", "base64": "ChASAQEaB05hdmFycmEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Ourense", "channel": "Ourense", "base64": "ChASAQEaB091cmVuc2UoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Asturias", "channel": "Asturias", "base64": "ChESAQEaCEFzdHVyaWFzKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Palencia", "channel": "Palencia", "base64": "ChESAQEaCFBhbGVuY2lhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Las Palmas", "channel": "LasPalmas", "base64": "ChISAQEaCUxhc1BhbG1hcygBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Pontevedra", "channel": "Pontevedra", "base64": "ChMSAQEaClBvbnRldmVkcmEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Salamanca", "channel": "Salamanca", "base64": "ChISAQEaCVNhbGFtYW5jYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Santa Cruz de Tenerife", "channel": "SantaCruzDeTenerife", "base64": "ChwSAQEaE1NhbnRhQ3J1ekRlVGVuZXJpZmUoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Cantabria", "channel": "Cantabria", "base64": "ChISAQEaCUNhbnRhYnJpYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Segovia", "channel": "Segovia", "base64": "ChASAQEaB1NlZ292aWEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Sevilla", "channel": "Sevilla", "base64": "ChASAQEaB1NldmlsbGEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Soria", "channel": "Soria", "base64": "Cg4SAQEaBVNvcmlhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Tarragona", "channel": "Tarragona", "base64": "ChISAQEaCVRhcnJhZ29uYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Teruel", "channel": "Teruel", "base64": "Cg8SAQEaBlRlcnVlbCgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Toledo", "channel": "Toledo", "base64": "Cg8SAQEaBlRvbGVkbygBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Valencia", "channel": "Valencia", "base64": "ChESAQEaCFZhbGVuY2lhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Valladolid", "channel": "Valladolid", "base64": "ChMSAQEaClZhbGxhZG9saWQoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Bizkaia", "channel": "Bizkaia", "base64": "ChASAQEaB0JpemthaWEoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Zamora", "channel": "Zamora", "base64": "Cg8SAQEaBlphbW9yYSgBMAESDAgBQANIAcAGAMgGAQ"},
+    {"name": "Zaragoza", "channel": "Zaragoza", "base64": "ChESAQEaCFphcmFnb3phKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Ceuta", "channel": "Ceuta", "base64": "Cg4SAQEaBUNldXRhKAEwARIMCAFAA0gBwAYAyAYB"},
+    {"name": "Melilla", "channel": "Melilla", "base64": "ChASAQEaB01lbGlsbGEoATABEgwIAUADSAHABgDIBgE"}
 ]
 
 export const QRsProvinciales = () => {
     const [selectedRegion, setSelectedRegion] = useState(regionConfigs[0].channel);
     const region = regionConfigs.find((region) => region.channel === selectedRegion);
-    const regionLink = "https://meshtastic.org/e/#" + region.base64;
+    const regionLink = "https://meshtastic.org/e/?add=true#" + region.base64;
     return <>
         <p>Código QR para añadir el canal. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir".</p>
 
