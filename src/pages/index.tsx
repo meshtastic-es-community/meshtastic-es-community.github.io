@@ -56,7 +56,7 @@ export default function Home(): ReactNode {
         <div className={styles.banner}>
         <span>
           📢 ¡Nueva guia montage MASN! Échale un vistazo.&nbsp;
-          <Link to="/docs/guias-diy/guia-MASN" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          <Link to="/docs/guias-diy/guia-masn" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
           Click aquí
           </Link>
         </span>
