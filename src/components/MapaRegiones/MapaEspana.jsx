@@ -4,17 +4,17 @@ import "./MapaEspana.css";
 
 // AJUSTE DE COLORES: 
 const presetColors = {
-  "ShortTurbo": "#FFB3C6",   
-  "ShortFast": "#FFDAC1",    
+  //"ShortTurbo": "#f71ec0ff",   //ocultado, no es legal en EU
+  "ShortFast": "#ff6600ff",    
   "ShortSlow": "#FFEE93",    
   "MediumFast": "#00c4da",   
   "MediumSlow": "#fda934",   
   "LongFast": "#5cc482",     
-  "LongModerate": "#A9C3F0", 
-  "LongSlow": "#C3A9F0",     
+  //"LongModerate": "#1f6639ff", 
+  //"LongSlow": "#08818aff",
 };
 const DEFAULT_COLOR = "#ccccccff"; 
-const DEFAULT_PRESET = "Long Fast";
+const DEFAULT_PRESET = "MediumFast";
 const NO_DATA_PRESET = "Sin Datos";
 
 
@@ -74,8 +74,9 @@ useEffect(() => {
 
   const handleMouseEnter = (e, nombre) => {
     if (nombre === "Marco") return;
+    if (nombre === "Africa") return;
     
-    const preset = presets[nombre] || DEFAULT_PRESET;
+    var preset = presets[nombre] || NO_DATA_PRESET;
     const content = `${nombre} - ${preset}`;
     
     setTooltip({

@@ -9,14 +9,14 @@ sidebar_position: 9
 
 # Distribución de Presets Meshtastic
 
-Aquí puedes ver la cobertura de los distintos presets a lo largo de las provincias españolas.
+Aquí puedes ver la cobertura de los distintos [presets](https://meshtastic.org/docs/configuration/radio/lora/#use-preset) a lo largo de las provincias españolas.
 
 import MapaEspana from '@site/src/components/MapaRegiones/MapaEspana';
 
 <MapaEspana />
 
 <p>
-**Nota:** Los colores indican el preset de comunicación LoRa asignado a cada provincia según su uso actual.
+**Nota:** La información de este mapa se basa en el preset más común en cada provincia según su uso actual, es recomendable revisar que preset tienen los nodos alrededor de tu zona, para ello puedes usar el [mapa de Meshview](https://meshview.meshtastic.es/map).
 </p>
 
 
