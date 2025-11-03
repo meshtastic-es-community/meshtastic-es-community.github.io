@@ -14,7 +14,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
   <img src="https://raw.githubusercontent.com/gargomoma/fakeTec_pcb/refs/heads/main/pics/front_fakeTec.png" alt="FakeTec PCB" width="150" />
   <div>
     <p><strong>Descripción:</strong> Dispositivo nRF52 de bajo coste con formato Heltec v2/v3 compatible con Meshtastic</p>
-    <p><strong>Características:</strong> ProMicro/SuperMini, LoRa HT-RA62 o RA-01SH, pantalla OLED opcional, detección de batería</p>
+    <p><strong>Características:</strong> Placa ProMicro de bajo coste, LoRa HT-RA62 o RA-01SH, pantalla OLED opcional, detección de batería</p>
     <p><strong>Autor:</strong> @gargomoma</p>
     <p><a href="https://github.com/gargomoma/fakeTec_pcb" target="_blank">🔗 Ver en GitHub</a></p>
   </div>
@@ -41,7 +41,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
   <img src="https://github.com/valzzu/meshtastic-pcbs/raw/main/WashTastic/pics/Assembled.jpg" alt="WashTastic PCB" width="250" />
   <div>
-    <p><strong>Descripción:</strong> Nodo solar con bajo consumo y diseño compacto, disponible en versiones ensambladas</p>
+    <p><strong>Descripción:</strong> Nodo solar con bajo consumo y diseño compacto, disponible en versiones ensambladas. Enfocado a usuarios avanzados.</p>
     <p><strong>Características:</strong> NRF52840 integrado, cargador solar CN3791, INA3221, opción GPS, versión de 4 capas</p>
     <p><strong>Autor:</strong> @valzzu</p>
     <p><a href="https://github.com/valzzu/meshtastic-pcbs/tree/main/WashTastic" target="_blank">🔗 Ver en GitHub</a></p>
