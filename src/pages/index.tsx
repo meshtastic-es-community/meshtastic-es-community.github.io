@@ -55,8 +55,8 @@ export default function Home(): ReactNode {
       {showBanner && (
         <div className={styles.banner}>
         <span>
-          📢 ¡Nueva guia montage MASN! Échale un vistazo.&nbsp;
-          <Link to="/docs/guias-diy/guia-masn" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          📢 ¡Madrid y alrededores se pasan a MediumFast!&nbsp;
+          <Link to="/blog/mediumfast-madrid" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
           Click aquí
           </Link>
         </span>
