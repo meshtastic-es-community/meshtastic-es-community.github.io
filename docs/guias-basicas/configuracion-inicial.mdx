@@ -144,6 +144,10 @@ Puedes crear más canales, tantó públicos como privados, entre los nodos que q
 
 Código QR para añadir los canales principales. Escanea con la cámara dentro de Meshtastic y pulsa "Añadir":
 
+:::info
+Comprueba que preset se usa en tu zona en el [mapa de Presets.](../mapas#mapa-presets)
+:::
+
 <Tabs groupId="preset">
     <TabItem value="longfast" label="LongFast (por defecto)">
         <div className="container">
@@ -164,7 +168,26 @@ Código QR para añadir los canales principales. Escanea con la cámara dentro d
         </div>
         Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoTEgEBGgZJYmVyaWEoATABOgIIDxISCAE4A0AESAFQG2gBwAYByAYB
     </TabItem>
-    <TabItem value="mediumslow" label="MediumSlow (en Madrid, Murcia y Ciudad Real)">
+    <TabItem value="mediumfast" label="MediumFast (en Madrid y Ciudad Real)">
+        <div className="container">
+            <div className="row">
+                <div className="col" style={{flex: 0}}>
+                    <QRCode value="" size={200} className={`qr-code shadow--lw`} />
+                </div>
+                <div className="col">
+                    Los datos de los canales son:
+
+                    **Nombre**: `MediumFast`<br/>**Clave / PSK**: `AQ==`
+
+                    ---
+
+                    **Nombre**: `Iberia`<br/>**Clave / PSK**: `AQ==` (En Android lo puedes dejar vacío)
+                </div>
+            </div>
+        </div>
+        Enlace directo: 
+    </TabItem>
+    <TabItem value="mediumslow" label="MediumSlow (Murcia)">
         <div className="container">
             <div className="row">
                 <div className="col" style={{flex: 0}}>

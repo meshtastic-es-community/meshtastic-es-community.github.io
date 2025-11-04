@@ -43,6 +43,20 @@ Estado en tiempo real de los servicios comunitarios (mapa, meshview, malla, back
 
 ---
 
+## 🚀 Distribución de Presets por Provincia {#mapa-presets}
+
+Aquí puedes ver la cobertura de los distintos [presets](https://meshtastic.org/docs/configuration/radio/lora/#use-preset) a lo largo de las provincias españolas.
+
+import MapaEspana from '@site/src/components/MapaRegiones/MapaEspana';
+
+<MapaEspana />
+
+<p>
+**Nota:** La información de este mapa se basa en el preset más común en cada provincia según su uso actual, es recomendable revisar qué preset tienen los nodos alrededor de tu zona, para ello puedes usar el [mapa de Meshview](https://meshview.meshtastic.es/map).
+</p>
+
+---
+
 ## 🛠️ ¿Tienes un nodo y quieres que aparezca? {#como-aparecer-en-mapas}
 
 Estos son los pasos a seguir:
@@ -59,7 +73,7 @@ No es necesario estar conectado a Internet, y de hecho no lo recomendamos. Para 
  **Datos de conexión MQTT:**
    
 
-| **Parámetro**       | **Valor**                                               |
+| **Parámetro** | **Valor** |
 |---------------------|---------------------------------------------------------|
 | Address             | mqtt.meshtastic.es                                      |
 | Username            | meshdev                                                 |
