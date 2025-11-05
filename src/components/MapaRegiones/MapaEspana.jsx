@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import paths from "./provinciasPaths.json";
 import "./MapaEspana.css"; 
 
-// AJUSTE DE COLORES: 
+import localPresetsData from './mesh_presets.json'; 
+
 const presetColors = {
-  //"ShortTurbo": "#f71ec0ff",   //ocultado, no es legal en EU
+  //"ShortTurbo": "#f71ec0ff",   
   "ShortFast": "#ff6600ff",    
   "ShortSlow": "#FFEE93",    
   "MediumFast": "#00c4da",   
@@ -32,37 +33,22 @@ const MapaEspana = () => {
 
   
 
-// Carga de Datos 
 useEffect(() => {
-  
-    const url = "https://gist.githubusercontent.com/gargomoma/47361d866bde35f2c9146574f4bc29da/raw/8d85c81ad2c2dea540d6a66f0d08ee95cb8628ab/mesh_presets.json";
-    
-    // Proxy CORS que requiere parsing (api.allorigins.win/get)
-    const corsProxy = "https://api.allorigins.win/get?url="; 
-
-    fetch(`${corsProxy}${encodeURIComponent(url)}`)
-      .then((res) => {
-        // Lanza error si hay un problema HTTP (403, 500)
-        if (!res.ok) {
-            throw new Error(`Error de servidor: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        const json = JSON.parse(data.contents); 
+    try {
         const mapping = {};
-        json.forEach((p) => {
-          mapping[p.nombre] = p.preset || DEFAULT_PRESET;
+        
+        localPresetsData.forEach((p) => {
+            mapping[p.nombre] = p.preset || DEFAULT_PRESET;
         });
+
         setPresets(mapping);
+        setLoading(false); 
+      
+    } catch (err) {
+        console.error("No se pudo procesar presets locales:", err);
+        setError(`Fallo al procesar el JSON. Revisa la sintaxis del archivo importado.`);
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error("No se pudo cargar presets:", err);
-        // Si hay un error, lo mostramos.
-        setError(`Fallo de carga. Causa: ${err.message}. El proxy CORS ha fallado.`);
-        setLoading(false);
-      });
+    }
 }, []);
 
 
@@ -101,7 +87,6 @@ useEffect(() => {
     setTooltip({ visible: false, content: "", x: 0, y: 0 });
   };
   
-  // Condición para esperar los datos y pintar el mapa
   if (loading || (Object.keys(presets).length === 0 && !error)) {
      return <div className="contenedor">Cargando datos del mapa...</div>;
   }
@@ -111,7 +96,6 @@ useEffect(() => {
 
   return (
     <div className="contenedor">
-        {/* LEYENDA */}
         <div className="mapa-leyenda">
             <h4>Presets LoRa Meshtastic</h4>
             {Object.entries(presetColors).map(([preset, color]) => (
@@ -148,7 +132,6 @@ useEffect(() => {
         })}
       </svg>
       
-      {/* TOOLTIP */}
       <div 
           className="tooltip" 
           style={{ 
