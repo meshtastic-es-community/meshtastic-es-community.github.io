@@ -53,7 +53,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 ### ✂️ Planchatek
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://github.com/incre77/planchatek/blob/main/image.png" alt="Planchatek PCB" width="250" />
+  <img src="https://raw.githubusercontent.com/incre77/planchatek/refs/heads/main/image.png" alt="Planchatek PCB" width="250" />
   <div>
     <p><strong>Descripción:</strong> Una placa base para imprimir de forma casera en una sola cara y conseguir una base para construir tu pcb.</p>
     <p><strong>Características:</strong> LoRa Ra01sh o ht-ra62 + nice nano v2 promicro nrf52840 + medidor batt% + cn3791 + xb8789d0 + attiny.</p>
