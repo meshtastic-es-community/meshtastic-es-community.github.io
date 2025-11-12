@@ -17,7 +17,7 @@ Lo primero que debes entender es que los nodos ESP32 se flashean inicialmente co
 Al finalizar esta guía, habrás reemplazado ese firmware por uno WiFi OTA, ya que un nodo configurado para usar WiFi no puede utilizar OTA BLE.
 
 Este firmware BLE OTA suele encontrarse en los archivos `.zip` de las versiones de firmware de Meshtastic, con nombres como `bleota.bin`, `bleota-s3.bin` o `bleota-c3.bin`.
-Siempre podrás volver a él descargando el binario correspondiente y siguiendo la sección **“Flasheando el firmware WiFi OTA”** de esta misma guía.
+Siempre podrás volver a él descargando el binario correspondiente y siguiendo la sección [**Flasheando el firmware WiFi OTA**](#2-flasheando-el-firmware-wifi-ota) de esta misma guía.
 
 :::warning
 Haz un backup de la configuración del nodo antes de empezar. Esto evitará perder tus ajustes y claves si algo sale mal.
@@ -29,17 +29,31 @@ El firmware WiFi OTA se encuentra en el repositorio [meshtastic/firmware-ota-wif
 
 Para compilarlo, recomiendo usar Docker para mantener tu sistema limpio, aunque puedes omitir el punto 2 si prefieres hacerlo localmente.
 
-1. `git clone https://github.com/meshtastic/firmware-ota-wifi.git`
-2. `docker run --rm -it -v ./firmware-ota-wifi/:/firmware-ota-wifi python:3.13 bash`
-3. `curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py; python3 get-platformio.py`
-4. `source /root/.platformio/penv/bin/activate`
-5. `cd /firmware-ota-wifi`
-6. `pio run -e TARGET` donde `TARGET` puede ser `esp32`, `esp32s3`, `esp32c3`, etc.
-7. Al finalizar deberías ver un mensaje **SUCCESS** en verde.
-   El binario compilado se encontrará en `firmware-ota-wifi/.pio/build/TARGET/firmware.bin`.
+```sh
+# 1. Clonamos el repositorio de firmware-ota-wifi
+git clone https://github.com/meshtastic/firmware-ota-wifi.git
 
-> 💡 **¿No quieres compilar?**
-> Si confías en mí, puedes descargar mi compilación desde [este enlace](https://t.me/meshtastic_esp/20616/166275) en el grupo de Telegram.
+# 2. Lanzamos un contenedor de docker para compilar el firmware (opcional, puedes hacerlo en tu sistema)
+docker run --rm -it -v ./firmware-ota-wifi/:/firmware-ota-wifi python:3.13 bash
+
+# 3. Instalamos PlatformIO
+curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py && python3 get-platformio.py
+
+# 4. Activamos el entorno virtual de PlatformIO
+source $HOME/.platformio/penv/bin/activate
+
+# 5. Accedemos a la carpeta del firmware
+cd firmware-ota-wifi
+
+# 6. Compilamos el firmware
+pio run -e TARGET # Reemplaza TARGET por el tipo de hardware de tu nodo: esp32, esp32s3, esp32c3, etc.
+```
+
+Al finalizar deberías ver un mensaje **SUCCESS** en verde. El binario compilado se encontrará en `firmware-ota-wifi/.pio/build/TARGET/firmware.bin`.
+
+:::info
+**¿No quieres compilar?** Si confías en mí, puedes descargar mi compilación para `esp32`, `esp32s3` y `esp32c3` desde [**este enlace**](https://t.me/meshtastic_esp/20616/166275) en el grupo de Telegram.
+:::
 
 ## 2. Flasheando el firmware WiFi OTA
 
@@ -51,8 +65,8 @@ A continuación se explica cómo obtener el valor correcto.
 Primero, localiza tu hardware en la carpeta [`variants`](https://github.com/meshtastic/firmware/tree/develop/variants) del firmware de Meshtastic y abre su archivo `platformio.ini`.
 
 Ejemplos:
-- Heltec V4 → [variants/esp32s3/heltec_v4/platformio.ini](https://github.com/meshtastic/firmware/blob/develop/variants/esp32s3/heltec_v4/platformio.ini)
-- RAK3312 → [variants/esp32s3/rak3312/platformio.ini](https://github.com/meshtastic/firmware/blob/develop/variants/esp32s3/rak3312/platformio.ini)
+- Heltec V4: [variants/esp32s3/heltec_v4/platformio.ini](https://github.com/meshtastic/firmware/blob/develop/variants/esp32s3/heltec_v4/platformio.ini)
+- RAK3312: [variants/esp32s3/rak3312/platformio.ini](https://github.com/meshtastic/firmware/blob/develop/variants/esp32s3/rak3312/platformio.ini)
 
 En dicho fichero busca la línea `board_build.partitions`. Si no aparece, significa que utiliza el valor por defecto `partition-table.csv`.
 
@@ -72,7 +86,7 @@ Si prefieres no buscarlo, aquí tienes los valores más comunes:
 
 Para flashear el firmware WiFi OTA, descarga [`esptool`](https://github.com/espressif/esptool/releases) y ejecuta el siguiente comando, sustituyendo `OFFSET` y `path/al/firmware.bin` por los valores correctos:
 
-```bash
+```sh
 esptool -b 115200 write-flash OFFSET path/al/firmware.bin
 # Ejemplo: nodo esp32s3 con partición default_8MB.csv
 esptool -b 115200 write-flash 0x340000 firmware-ota-wifi/.pio/build/esp32s3/firmware.bin
@@ -90,7 +104,7 @@ No será necesario repetir estos pasos a menos que utilices el flasher web de Me
 - Tener instalado el [CLI de `meshtastic`](https://meshtastic.org/docs/software/python/cli/installation/) o `uvx`.
 - Descargar el script `espota.py` desde el repositorio de [`arduino-esp32`](https://github.com/espressif/arduino-esp32/blob/master/tools/espota.py):
 
-  ```bash
+  ```sh
   curl -LO https://raw.githubusercontent.com/espressif/arduino-esp32/refs/heads/master/tools/espota.py && chmod +x espota.py
   ```
 
@@ -105,7 +119,7 @@ Si es una compilación propia, usa `firmware.bin`, **nunca** `firmware.factory.b
 
 Ahora ya puedes ejecutar los siguientes comandos:
 
-```bash
+```sh
 meshtastic --host <ip-de-tu-nodo> --reboot-ota  # Si usas uvx, añádelo al inicio
 # Espera unos 10 segundos (puede tardar algo más en reconectarse a la WiFi)
 espota.py -i <ip-de-tu-nodo> -f firmware-<hardware>-<versión>-update.bin
