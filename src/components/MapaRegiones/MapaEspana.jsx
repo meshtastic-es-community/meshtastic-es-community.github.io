@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import paths from "./provinciasPaths.json";
 import "./MapaEspana.css"; 
 
-import localPresetsData from './mesh_presets.json'; 
+// --- Se elimina la importación local de mesh_presets.json --- 
+// import localPresetsData from './mesh_presets.json'; 
+
+const PRESETS_URL = "https://datos.meshtastic.es/provincias"; 
 
 const presetColors = {
   //"ShortTurbo": "#f71ec0ff",   
@@ -33,23 +36,42 @@ const MapaEspana = () => {
 
   
 
+// --- Lógica para obtener los datos por HTTP ---
 useEffect(() => {
-    try {
-        const mapping = {};
-        
-        localPresetsData.forEach((p) => {
-            mapping[p.nombre] = p.preset || DEFAULT_PRESET;
-        });
+    const fetchData = async () => {
+        try {
+            // 1. Obtener la respuesta de la URL
+            const response = await fetch(PRESETS_URL);
+            
+            if (!response.ok) {
+                // Manejar errores de respuesta HTTP (ej: 404, 500)
+                throw new Error(`Error HTTP: ${response.status} (${response.statusText}).`);
+            }
+            
+            // 2. Parsear el JSON de la respuesta
+            const data = await response.json();
+            
+            // 3. Procesar los datos para crear el mapeo de presets
+            const mapping = {};
+            data.forEach((p) => {
+                // Asumiendo que la estructura es la misma (objeto con 'nombre' y 'preset')
+                mapping[p.nombre] = p.preset || DEFAULT_PRESET;
+            });
 
-        setPresets(mapping);
-        setLoading(false); 
-      
-    } catch (err) {
-        console.error("No se pudo procesar presets locales:", err);
-        setError(`Fallo al procesar el JSON. Revisa la sintaxis del archivo importado.`);
-        setLoading(false);
-    }
-}, []);
+            setPresets(mapping);
+            setLoading(false); 
+          
+        } catch (err) {
+            console.error("Fallo al obtener o procesar datos:", err);
+            // Mostrar un error más descriptivo
+            setError(`Fallo al obtener o procesar los datos: ${err.message}. Revisa la consola para más detalles.`);
+            setLoading(false);
+        }
+    };
+    
+    fetchData();
+}, []); // Se ejecuta una sola vez al montar el componente
+// --- Fin de la lógica para obtener los datos por HTTP ---
 
 
   const getColor = (nombre) => {
@@ -87,7 +109,8 @@ useEffect(() => {
     setTooltip({ visible: false, content: "", x: 0, y: 0 });
   };
   
-  if (loading || (Object.keys(presets).length === 0 && !error)) {
+  // Se añade un mensaje para cuando está cargando o cuando hay un error
+  if (loading) {
      return <div className="contenedor">Cargando datos del mapa...</div>;
   }
   if (error) {
