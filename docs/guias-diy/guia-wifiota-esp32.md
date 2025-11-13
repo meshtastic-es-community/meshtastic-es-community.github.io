@@ -122,6 +122,7 @@ Ahora ya puedes ejecutar los siguientes comandos:
 ```sh
 meshtastic --host <ip-de-tu-nodo> --reboot-ota  # Si usas uvx, añádelo al inicio
 # Espera unos 10 segundos (puede tardar algo más en reconectarse a la WiFi)
-espota.py -i <ip-de-tu-nodo> -f firmware-<hardware>-<versión>-update.bin
+espota.py -r -i <ip-de-tu-nodo> -f firmware-<hardware>-<versión>-update.bin
 ```
-El script mostrará el progreso mediante puntos en la terminal. Si todo ha ido bien, el nodo se reiniciará automáticamente y quedará actualizado.
+
+El script mostrará una barra de progreso en la terminal. Si todo va bien, el nodo se reiniciará automáticamente y quedará actualizado.
