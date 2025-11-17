@@ -64,6 +64,23 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 
 ---
 
+---
+
+### 🌀 xiaoWa_pcb - 小瓦
+
+
+<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
+  <img src="https://raw.githubusercontent.com/gargomoma/xiaoWa_pcb/refs/heads/main/pics/PCB_XiaoWa_2025-11-04_top.png" alt="XiaoWa PCB" width="150" />
+  <div>
+    <p><strong>Descripción:</strong> Esta PCB está diseñada para ocupar el menor espacio posible, ideal para nodos portátiles y ocultos. (Puede instalarse dentro de tubos de PVC de 32 mm).</p>
+    <p><strong>Características:</strong> Compatible con radios E22, E22P y E80. Supervisor de voltaje TLV840, Mosfet para GPS...</p>
+    <p><strong>Autor:</strong> @gargomoma</p>
+    <p><a href="https://github.com/gargomoma/xiaoWa_pcb" target="_blank">🔗 Ver en GitHub</a></p>
+  </div>
+</div>
+
+---
+
 ## 📬 ¿Quieres añadir tu diseño?
 
 Envíanos el enlace a tu repositorio, una imagen del PCB y una breve descripción. ¡Lo añadiremos aquí para que otros puedan usarlo o mejorarlo!
