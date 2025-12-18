@@ -46,14 +46,13 @@ Para estos dispositivos no hace falta instalar drivers. (En caso de Windows)
 Como ayuda aquí te dejamos un video de Quixote Network donde se explica el proceso desde cero y además, también se trata la configuración básica recomendable:
 <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
   <iframe
-    src="https://www.youtube.com/embed/qi3clr-u6-4?si=ptsZYemF3QCxuFoa"
+    src="https://www.youtube.com/embed/97vBRb78pds?si=w2RA_x6kQuXMEj0C"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerPolicy="strict-origin-when-cross-origin"
     allowFullScreen
     style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-  />
 </div>
 :::
 
