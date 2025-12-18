@@ -162,7 +162,7 @@ Revisa nuestra guía de [buenas prácticas](buenas-practicas.md) para asegurarte
 
 ## Recursos útiles
 
-- Existen canales de YouTube donde aprender mucho sobre Meshtastic. Si estas empezando te recomendamos esto canales: [Quixote Network](https://www.youtube.com/watch?v=97vBRb78pds&list=PL9CwkuZm9m_08d8CFcOcm7wj0NujUWdfn)[EA3GRN](https://www.youtube.com/watch?v=qi3clr-u6-4&list=PLLFrLgZ4YFd3nmCHLAl0wxiAJCvSjeWrb&index=8&ab_channel=ea3grn) o [Caracolmaker](https://www.youtube.com/@caracolmaker/videos)
+- Existen canales de YouTube donde aprender mucho sobre Meshtastic. Si estas empezando te recomendamos esto canales: [Quixote Network](https://www.youtube.com/watch?v=97vBRb78pds&list=PL9CwkuZm9m_08d8CFcOcm7wj0NujUWdfn), [EA3GRN](https://www.youtube.com/watch?v=qi3clr-u6-4&list=PLLFrLgZ4YFd3nmCHLAl0wxiAJCvSjeWrb&index=8&ab_channel=ea3grn) o [Caracolmaker](https://www.youtube.com/@caracolmaker/videos)
 
 
 - Documentación oficial: [Meshtastic.org](https://meshtastic.org)
