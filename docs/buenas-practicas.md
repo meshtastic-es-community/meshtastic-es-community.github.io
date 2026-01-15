@@ -46,6 +46,10 @@ Antes de decidir qué rol tendrá tu nodo, es importante que entiendas los mismo
 
 **ROUTER** para nodos ubicados en zonas muy estratégicas. Este rol requiere planificación y coordinación con otros miembros de la malla. No lo utilices a lo loco.
 
+**ROUTER_LATE** funciona igual que el ROUTER pero con un retardo largo, generalmente no esta recomendado utilizarlo puesto que causa problemas a la malla. Tambien requiere planificación y coordinación con los demás igual que ROUTER.
+
+**CLIENT_BASE** rol para nodos de tejados/azoteas (MUY IMPORTANTE: en un nodo CLIENT_BASE solo se deben añadir como favoritos tus propios nodos interiores)
+
 Con esos roles es más que suficiente. Obviamente puedes usar otros, pero no los recomendamos si no lo tienes claro, ya que puede ser contraproducente para todos (tanto para ti como para el resto de la malla).
 
 :::tip
