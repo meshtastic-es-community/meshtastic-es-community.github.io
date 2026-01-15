@@ -9,6 +9,7 @@ Para comenzar con Meshtastic, necesitarás al menos un dispositivo compatible co
 | Dispositivo                      | Descripción                                                                                                  | Precio aproximado |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------|
 | Heltec V3                        | Económico y fácil de usar, ideal para conectarlo con tu teléfono.                                            | 20-30 euros       |
+| Heltec V4                        | Version mas moderna del V3 con amplificador de potencia (Altamente recomendable ponerle filtro)              | 20-30 euros       |
 | LILYGO T-Beam                    | Incluye GPS, recomendado para quienes buscan compartir su ubicación.                                         | 30-40 euros       |
 | LILYGO T-Echo                    | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play».                                     | 50-60 euros       |
 | RAK WisBlock                     | Muy bajo consumo, ideal para nodos solares o larga duración de batería.                                      | 60-80 euros       |
@@ -27,6 +28,7 @@ Asegúrate de que el dispositivo que compras sea compatible con la frecuencia Lo
 ## Accesorios
 
 - **Antena adecuada**: Verifica que la antena sea compatible con la frecuencia de tu dispositivo (por ejemplo, 868 MHz para Europa). Algunos dispositivos, como el T-Beam, pueden incluir una antena de 433 MHz que no es óptima para 868 MHz.
+- **Filtro**: Se conectan entre el nodo y la antena y sirven para reducir el ruido provocado por antenas cercanas como por ejemplo antenas de telefonía.
 - **Batería**: Muchos dispositivos requieren baterías recargables (como celdas 18650 para el T-Beam). Suelen costar 5-10 euros.
 - **Carcasa**: Puedes usar carcasas impresas en 3D para proteger los dispositivos. Hay diseños gratuitos en línea o puedes comprarlas en sitios como Etsy o eBay.
 

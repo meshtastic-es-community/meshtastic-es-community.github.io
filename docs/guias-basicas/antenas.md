@@ -51,9 +51,6 @@ Antena probada que da buen rendimiento aunque algo mas cara.
 
 - **Alfa Network AOA-868-5ACM** Antena de de 5 dbi de buena calidad del fabricante Alfa Networks. Muy utilizada en EEUU. [Ver en su web](https://alfa-network.eu/antennas/aoa-868-5acm)
 
-- **Ziisor Fibra 40cm:** Opción de antena más económica.
-  [Ver en AliExpress](https://a.aliexpress.com/_EjIfcmE)
-
 - **Ziisor Fibra 55cm:** Opción de antena más económica.
   [Ver en AliExpress](https://es.aliexpress.com/item/1005007463706065.html)
 
@@ -73,6 +70,14 @@ La mayoría de antenas para estación fija llevan conector de tipo N. Revisa si 
   
     Si tienes suerte, podrías ajustarla, pero ¿realmente vale la pena?
   [Ver en AliExpress](https://a.aliexpress.com/_Ew2bKoq)
+
+- **Ziisor Fibra 40cm:** En nuestra experiencia funciona peor que las de 20cm, no merece la pena.
+  [Ver en AliExpress](https://a.aliexpress.com/_EjIfcmE)
+
+
+- **Gizont 40 CM** Tiene el mismo problema que la Ziisor.
+  [Ver en AliExpress](https://es.aliexpress.com/item/1005006359246399.html)
+
 
 - **fakeAlpha**
   
