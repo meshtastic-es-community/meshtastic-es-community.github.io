@@ -106,7 +106,7 @@ Ahora viene la parte más importante de la configuración, ya que si esto está 
 
     | Campo                      | Valor                                                                                                            |
     |----------------------------|------------------------------------------------------------------------------------------------------------------|
-    | _Modem Preset_             | `LONG_FAST` (por defecto, casi toda España)<br/>`MEDIUM_SLOW` (Madrid, [más info aquí](/blog/mediumslow-madrid)) |
+    | _Modem Preset_             | `MEDIUM_FAST` (El más utilizado en España)<br/>`LONG_FAST` (El por defecto del firmware)                         |
     | _Region (frequency plan)_  | **European Union 868MHz**                                                                                        |
     | _Hop limit_                | **≤ 4**. Consulta las [buenas prácticas de saltos](../buenas-practicas.md#cantidad-de-saltos-máxima).            |
     | _Override Duty Cycle_      | **NO** (es ilegal y perjudica a la malla)                                                                        |
@@ -116,7 +116,7 @@ Ahora viene la parte más importante de la configuración, ya que si esto está 
 
 ## Canales públicos 🗣️ {#canales-publicos}
 
-Por defecto el canal público se llama igual que el _preset_, es decir, **LongFast** o **MediumSlow**.
+Por defecto el canal público se llama igual que el _preset_, es decir, **MediumFast** o **LongFast**.
 Recomendamos dejar ese canal como canal 0 (o primario) ya que es por donde se envían la telemetría, entre otras cosas.
 
 :::info
@@ -127,11 +127,11 @@ En España, los canales públicos tienen todos la misma clave, que es la clave p
 
 Los canales acordados en España son los siguientes:
 
-- **LongFast** o **MediumSlow**, el canal por defecto del _preset_.
+- **MediumFast** o **LongFast**, el canal por defecto del _preset_.
 - **Iberia**, un canal para la península ibérica acordado con nuestros [vecinos portugueses 🇵🇹](https://meshtastic.pt/).
 - Un canal de provincia, como **Madrid**, **Barcelona**, **Valencia**, **Cadiz**, **LaRioja**... sin espacios ni acentos.
 
-    |                    | LongFast<br/>MediumSlow | Iberia | Provincia |
+    |                    | MediumFast<br/>LongFast | Iberia | Provincia |
     |--------------------|-------------------------|--------|-----------|
     | _Uplink enabled_   | ✅                       | ✅      | ✅         |
     | _Downlink enabled_ | ✅                       | ✅      | ✅         |
@@ -149,25 +149,6 @@ Comprueba que preset se usa en tu zona en el [mapa de Presets.](../mapas#mapa-pr
 :::
 
 <Tabs groupId="preset">
-    <TabItem value="longfast" label="LongFast (por defecto)">
-        <div className="container">
-            <div className="row">
-                <div className="col" style={{flex: 0}}>
-                    <QRCode value="https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoREgEBGgZJYmVyaWEoATABOgASEggBOANAA0gBUBtoAcAGAcgGAQ" size={200} className={`qr-code shadow--lw`} />
-                </div>
-                <div className="col">
-                    Los datos de los canales son:
-
-                    **Nombre**: `LongFast`<br/>**Clave / PSK**: `AQ==`
-
-                    ---
-
-                    **Nombre**: `Iberia`<br/>**Clave / PSK**: `AQ==` (En Android lo puedes dejar vacío)
-                </div>
-            </div>
-        </div>
-        Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoREgEBGgZJYmVyaWEoATABOgASEggBOANAA0gBUBtoAcAGAcgGAQ
-    </TabItem>
     <TabItem value="mediumfast" label="MediumFast">
         <div className="container">
             <div className="row">
@@ -187,16 +168,16 @@ Comprueba que preset se usa en tu zona en el [mapa de Presets.](../mapas#mapa-pr
         </div>
         Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoREgEBGgZJYmVyaWEoATABOgASFAgBEAQ4A0ADSAFQG2gBwAYByAYB
     </TabItem>
-    <TabItem value="mediumslow" label="MediumSlow">
+    <TabItem value="longfast" label="LongFast">
         <div className="container">
             <div className="row">
                 <div className="col" style={{flex: 0}}>
-                    <QRCode value="https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoREgEBGgZJYmVyaWEoATABOgASFAgBEAM4A0ADSAFQG2gBwAYByAYB" size={200} className={`qr-code shadow--lw`} />
+                    <QRCode value="https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoREgEBGgZJYmVyaWEoATABOgASEggBOANAA0gBUBtoAcAGAcgGAQ" size={200} className={`qr-code shadow--lw`} />
                 </div>
                 <div className="col">
                     Los datos de los canales son:
 
-                    **Nombre**: `MediumSlow`<br/>**Clave / PSK**: `AQ==`
+                    **Nombre**: `LongFast`<br/>**Clave / PSK**: `AQ==`
 
                     ---
 
@@ -204,7 +185,7 @@ Comprueba que preset se usa en tu zona en el [mapa de Presets.](../mapas#mapa-pr
                 </div>
             </div>
         </div>
-        Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoREgEBGgZJYmVyaWEoATABOgASFAgBEAM4A0ADSAFQG2gBwAYByAYB
+        Enlace directo: https://meshtastic.org/e/#CgsSAQEoATABOgIIDwoREgEBGgZJYmVyaWEoATABOgASEggBOANAA0gBUBtoAcAGAcgGAQ
     </TabItem>
 </Tabs>
 
