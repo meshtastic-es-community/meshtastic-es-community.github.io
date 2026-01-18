@@ -50,8 +50,8 @@ cambia. Haz una copia de tus claves, por si tuvieras que volver a utilizarlas.
 
 ### ¿Por qué aparece un candado amarillo en un canal? <span style={{color:"yellow"}} class="shadow">:mdi-unlocked-variant-outline:</span> {#candado-amarillo-canal}
 
-El candado amarillo indica que el canal tiene una clave de baja entropía. Es normal en los canales públicos (LongFast,
-MediumSlow, Iberia, canales de provincia...), ya que la clave por defecto tiene pocos bytes.
+El candado amarillo indica que el canal tiene una clave de baja entropía. Es normal en los canales públicos (MediumFast,
+LongFast, Iberia, canales de provincia...), ya que la clave por defecto tiene pocos bytes.
 
 En canales privados, cambia la clave del canal por una de mayor entropía (32 bytes).
 
