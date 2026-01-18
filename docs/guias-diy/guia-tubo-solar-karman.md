@@ -356,7 +356,7 @@ Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](
 2. Conectar por Bluetooth (clave: `123456`)  
 3. Configurar:
    - Región: `EU_868`
-   - Radio preset: `LongFast`
+   - Radio preset: `MediumFast`
    - TX habilitado  
 4. Guardar y reiniciar  
 5. Configurar nombre del nodo  
