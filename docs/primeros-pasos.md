@@ -92,7 +92,7 @@ Una vez que el firmware está instalado, configura tu dispositivo para unirlo a 
    - **Región**: Selecciona tu región (por ejemplo, «Europa» para 868 MHz o «EE.UU.» para 915 MHz). Esto es obligatorio para cumplir con las regulaciones de frecuencia.
    - **Nombre del nodo**: Asigna un nombre único a tu dispositivo para identificarlo en la red (por ejemplo, «Nodo de Juan»).
    - **Canal**: Por defecto, los dispositivos usan un canal público. Puedes crear canales privados con cifrado para comunicarte solo con tu grupo. Comparte la clave de cifrado mediante un código QR o texto. El QR que usamos en España lo puedes encontrar en Telegram: [@meshtastic_esp](https://t.me/meshtastic_esp).
-   - **Preset de LoRa**: El ajuste predeterminado «Long_Fast» es adecuado para la mayoría de los usuarios. Solo cámbialo si necesitas optimizar el alcance o la velocidad, pero ten en cuenta que solo podrás comunicarte con nodos que usen el mismo preset.
+   - **Preset de LoRa**: Aunque el ajuste que viene predeterminado es «Long_Fast», «Medium_Fast» es preferido por más personas debido a que tiene mejor rendimiento. Revisa qué configuración se utiliza en tu zona ya que solo podrás comunicarte con nodos que usen el mismo preset.
 
 3. **Prueba la conexión**:
    - Enciende al menos dos dispositivos y verifica que se detecten mutuamente en la red. Envía un mensaje de prueba desde la app o el cliente web, como «¡Hola, estoy probando!».
