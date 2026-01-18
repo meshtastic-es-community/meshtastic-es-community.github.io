@@ -50,14 +50,14 @@ cambia. Haz una copia de tus claves, por si tuvieras que volver a utilizarlas.
 
 ### ¿Por qué aparece un candado amarillo en un canal? <span style={{color:"yellow"}} class="shadow">:mdi-unlocked-variant-outline:</span> {#candado-amarillo-canal}
 
-El candado amarillo indica que el canal tiene una clave de baja entropía. Es normal en los canales públicos (MediumFast,
-LongFast, Iberia, canales de provincia...), ya que la clave por defecto tiene pocos bytes.
+El candado amarillo indica que el canal está utilizando la clave por defecto. Es normal en los canales públicos (MediumFast,
+LongFast, Iberia, canales de provincia...). No se considera tan segura porque es pública y conocida por todo el mundo.
 
-En canales privados, cambia la clave del canal por una de mayor entropía (32 bytes).
+En canales privados, cambia la clave del canal por una propia para cifrar tus comunicaciones.
 
 ### ¿Por qué aparece un triángulo rojo en un canal? <span style={{color:"red"}} class="shadow">:mdi-warning:</span> {#warning-rojo-canal}
 
-El triángulo rojo indica que estás compartiendo tu ubicación precisa en un canal cuya clave es de baja entropía. Esto se
+El triángulo rojo indica que estás compartiendo tu ubicación precisa en un canal cuya clave se considera de poca seguridad. Esto se
 puede traducir en un problema de privacidad ya que estás compartiendo tu ubicación exacta con cualquiera en ese canal.
 
 Entra en la configuración del canal, desactiva la ubicación precisa y configura un cierto margen de error.
