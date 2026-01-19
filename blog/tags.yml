@@ -15,7 +15,11 @@ Madrid:
   label: Madrid
   permalink: /madrid
   description: Contenido relacionado con Madrid
-MediumSlow:
-  label: MediumSlow
-  permalink: /mediumslow
-  description: Contenido relacionado con MediumSlow
+MediumFast:
+  label: MediumFast
+  permalink: /mediumfast
+  description: Contenido relacionado con MediumFast
+Narrow:
+  label: Narrow
+  permalink: /narrow
+  description: Contenido relacionado con Narrow
