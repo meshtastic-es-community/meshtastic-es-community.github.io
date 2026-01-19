@@ -55,8 +55,8 @@ export default function Home(): ReactNode {
       {showBanner && (
         <div className={styles.banner}>
         <span>
-          📢 ¡Madrid y alrededores se pasan a MediumFast!&nbsp;
-          <Link to="/blog/mediumfast-madrid" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          📢 ¡Prueba de SFNarrow en la Zona Centro!&nbsp;
+          <Link to="/blog/test-sfnarrow-zona-centro" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
           Click aquí
           </Link>
         </span>
