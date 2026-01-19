@@ -15,6 +15,10 @@ Madrid:
   label: Madrid
   permalink: /madrid
   description: Contenido relacionado con Madrid
+Zona Centro:
+  label: Zona Centro
+  permalink: /zona-centro
+  description: Contenido relacionado con la Zona Centro
 MediumFast:
   label: MediumFast
   permalink: /mediumfast

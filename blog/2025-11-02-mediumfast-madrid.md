@@ -2,7 +2,7 @@
 slug: mediumfast-madrid
 title: 👉 Madrid se pasa de MediumSlow a MediumFast
 authors: []
-tags: [Madrid, Configuración, MediumFast]
+tags: [Madrid, Zona Centro, Configuración, MediumFast]
 ---
 
 ### ¿Cuándo?

@@ -48,6 +48,10 @@ const config: Config = {
             {
               from: '/primeros-pasos',
               to: '/docs/primeros-pasos',
+            },
+            {
+              from: '/blog/test-sfnarrow-madrid',
+              to: '/blog/test-sfnarrow-zona-centro',
             }
           ]
         }
