@@ -1,8 +1,8 @@
 ---
-slug: test-sfnarrow-madrid
-title: "🧪 Test SFNarrow en Madrid: Divide y Vencerás"
+slug: test-sfnarrow-zona-centro
+title: "🧪 Test SFNarrow en la Zona Centro: Divide y Vencerás"
 authors: []
-tags: [Madrid, Configuración, Narrow]
+tags: [Madrid, Zona Centro, Configuración, Narrow]
 ---
 
 ### ¿Cuándo?
@@ -17,9 +17,11 @@ tags: [Madrid, Configuración, Narrow]
 
 ### ¿Por qué este cambio?
 
-En nuestra búsqueda constante por mejorar la malla Meshtastic de Madrid y la Zona Centro, estamos realizando una prueba experimental moviéndonos de la configuración habitual de **MediumFast** (que usa un ancho de banda de 250kHz ocupando todo el espectro) a una nueva estrategia de **división de frecuencia**.
+En nuestra búsqueda constante por mejorar la malla Meshtastic de la Zona Centro, estamos realizando una prueba experimental moviéndonos de la configuración habitual de **MediumFast** (que usa un ancho de banda de 250kHz ocupando todo el espectro) a una nueva estrategia de **división de frecuencia**.
 
 La idea es dividir la banda en **4 subcanales (Slots)** de 62.5kHz cada uno. Para este test, utilizaremos el **Slot 3**.
+
+<!-- truncate -->
 
 #### Las ventajas de esta arquitectura:
 
@@ -27,7 +29,6 @@ La idea es dividir la banda en **4 subcanales (Slots)** de 62.5kHz cada uno. Par
 2.  **Menos Ruido (IoT):** Al reducir el ancho de banda, reducimos la probabilidad de colisiones con dispositivos de banda estrecha como alarmas y sensores IoT que colisionan con nuestra malla.
 3.  **Multiplicamos la capacidad (x4):** Aquí viene la magia. En 250kHz tenemos 8 canales ortogonales (SF5 a SF12). Al dividir la banda en 4 slots independientes, pasamos a tener **32 canales ortogonales** que pueden emitir simultáneamente sin pisarse.
 4.  **Reducir saltos intermedios:** Al posibilitar enlaces que en MediumFast no funcionarian se puede reducir el numero de saltos y repeticiones necesarias, reduciendo el uso del canal.
-<!-- truncate -->
 
 ### Detalles Técnicos y Frecuencias
 
@@ -177,4 +178,4 @@ Si administras un nodo al que no tienes acceso físico, **el orden de los factor
 Los nodos en SFNarrow **no se escucharán** con los nodos que sigan en MediumFast. Si haces los cambios en el orden incorrecto durante una administración remota, podrías tener problemas luego para gestionarlo remotamente.
 :::
 
-¡Gracias por colaborar en hacer la red de Madrid más robusta! 📡❤️
+¡Gracias por colaborar en hacer la red de la Zona Centro más robusta! 📡❤️
