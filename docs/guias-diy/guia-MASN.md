@@ -23,7 +23,7 @@ MASN está pensado para simplificar un proceso que, en su versión clásica, res
 
 ---
 
-## 👀 Mejor que lo veas y puedas comparar
+## Mejor que lo veas y puedas comparar
 
 | Antes | Después |
 |-------|---------|
@@ -32,37 +32,28 @@ MASN está pensado para simplificar un proceso que, en su versión clásica, res
 
 ---
 
-## 🔩 Componentes principales
+## Versiones disponibles
 
-| Imagen | Nombre | Descripción |
-|--------|--------|-------------|
-| <img src="/img/guias-diy/masn/bom-masn-pcb.webp" width="80"/> | [PCB MASN](https://danielpcostas.dev/es/masn-nodo-solar-meshtastic-que-cualquiera-puede-montar/) | Placa base que integra todos los módulos |
-| <img src="/img/guias-diy/masn/bom-promico-mcu.webp" width="80"/> | [NiceNano NRF52840](https://www.makerdiary.com/nicenano/) | Microcontrolador con Bluetooth |
-| <img src="/img/guias-diy/masn/bom-waveshare-1262-lora.webp" width="80"/> | [LoRa Core1262 HF](https://www.waveshare.com/core1262-lora.htm) | Módulo LoRa 868 MHz |
-| <img src="/img/guias-diy/masn/bom-cn3791-solar-charger.webp" width="80"/> | [CN3791 MPPT](https://www.aliexpress.com/item/1005001637512644.html) | Cargador solar eficiente |
-| <img src="/img/guias-diy/masn/bom-ina3221-current-sensor.webp" width="80"/> | [INA3221](https://www.aliexpress.com/item/32840303041.html) | Sensor de corriente triple |
-| <img src="/img/guias-diy/masn/bom-bme-250-env-sensor.webp" width="80"/> | [BME280](https://www.aliexpress.com/item/32840303041.html) | Sensor de temperatura y presión |
-| <img src="/img/guias-diy/masn/bom-lipo-battery.webp" width="80"/> | [Batería LiPo](https://www.adafruit.com/product/353) | 4400mAh / 3.7V |
-| <img src="/img/guias-diy/masn/bom-pin.webp" width="80"/> | [Pines rectos](https://www.aliexpress.com/item/1005001773793843.html) | Pines THT estándar |
-| <img src="/img/guias-diy/masn/bom-90-deg-pin.webp" width="80"/> | [Pines 90°](https://www.aliexpress.com/item/1005001773793843.html) | Pines angulados para montaje lateral |
-| <img src="/img/guias-diy/masn/bom-JST-PH2-battery-connector.webp" width="80"/> | [Conector JST PH2.0](https://www.aliexpress.com/item/1005001773793843.html) | Conector para batería LiPo |
+Existen dos versiones de la PCB MASN, cada una diseñada para un módulo de radio LoRa diferente. Esto te permite elegir según disponibilidad o preferencia:
+
+| MASN Core1262 | MASN HT-RA62 |
+|:-------------:|:------------:|
+| ![MASN versión Core1262](/img/guias-diy/masn/MASN-PCB-Core1262.webp) | ![MASN versión HT-RA62](/img/guias-diy/masn/MASN-PCB-HT-RA62.webp) |
+| Compatible con el módulo **Waveshare Core1262** | Compatible con el módulo **Heltec HT-RA62** |
+
+Ambas versiones comparten el mismo diseño base y funcionalidad, solo cambia el footprint del módulo LoRa.
 
 ---
 
-## 🧰 Caja y accesorios
+## Lista de materiales
 
-| Imagen | Nombre | Descripción |
-|--------|--------|-------------|
-| <img src="/img/guias-diy/masn/bom-ip65-box.webp" width="80"/> | [Caja IP65](https://www.aliexpress.com/item/1005002953181182.html) | Caja estanca para exterior |
-| <img src="/img/guias-diy/masn/bom-ip67-vent-plug.webp" width="80"/> | [Tapón ventilación](https://www.aliexpress.com/item/1005002953181182.html) | Evita condensación interna |
-| <img src="/img/guias-diy/masn/bom-cable-gland-ip68.webp" width="80"/> | [Prensaestopas IP68](https://www.aliexpress.com/item/1005002953181182.html) | Paso de cable estanco |
-| <img src="/img/guias-diy/masn/bom-3d-support.webp" width="80"/> | [Soporte impreso](https://danielpcostas.dev/es/masn-nodo-solar-meshtastic-que-cualquiera-puede-montar/) | Soporte para batería y PCB |
-| <img src="/img/guias-diy/masn/bom-m2-5-threaded-insert.webp" width="80"/> | [Insertos M2.5](https://www.aliexpress.com/item/1005002953181182.html) | Rosca para tornillos en plástico |
-| <img src="/img/guias-diy/masn/bom-M2-5-screws.webp" width="80"/> | [Tornillos M2.5x5mm](https://www.aliexpress.com/item/1005002953181182.html) | Fijación interna del soporte |
+Para consultar la lista completa de componentes, caja, accesorios y enlaces de compra actualizados, visita el artículo original:
+
+👉 **[Ver lista de materiales](https://danielpcostas.dev/es/masn-nodo-solar-meshtastic-que-cualquiera-puede-montar/)**
 
 ---
 
-## 🧾 Pedir PCBs MASN
+## Pedir PCBs MASN
 
 Puedes pedir las placas MASN directamente en [**jlcpcb.com**](https://jlcpcb.com).  
 Solo necesitas subir los archivos Gerber (disponibles en la lista de materiales), elegir color, cantidad y listo.
@@ -74,7 +65,7 @@ Vídeo explicativo:
 
 ---
 
-## ⚠️ Advertencias importantes
+## Advertencias importantes
 
 - Nunca enciendas el nodo sin antena conectada.  
 - No alimentes por USB y solar/batería a la vez.  
@@ -84,11 +75,11 @@ Vídeo explicativo:
 
 ---
 
-## 🔌 Instalación del firmware
+## Instalación del firmware
 
 Antes de soldar nada, conviene asegurarse de que el microcontrolador funciona correctamente. Este paso es rápido y evita problemas más adelante.
 
-### 🧠 Comprobar o actualizar el bootloader
+### Comprobar o actualizar el bootloader
 
 1. Conecta la placa por USB.  
 2. Haz dos toques rápidos entre los pines **RESET** y **GND** (usa pinzas metálicas).  
@@ -100,7 +91,7 @@ Antes de soldar nada, conviene asegurarse de que el microcontrolador funciona co
 
 Asegúrate de que la versión del bootloader es 0.8 o superior antes de instalar el firmware.
 
-### 📲 Instalar el firmware Meshtastic
+### Instalar el firmware Meshtastic
 
 1. Entra en modo DFU (ver pasos arriba).  
 2. Abre [**flasher.meshtastic.org**](https://flasher.meshtastic.org).  
@@ -113,27 +104,27 @@ También puedes habilitar la función de administración remota (Remote Admin) p
 
 ---
 
-## 🧱 Construcción paso a paso
+## Construcción paso a paso
 
 El montaje físico es sencillo si sigues un orden. La clave: **preparar los módulos**, **poblar la PCB** y **conectar antena y alimentación**.
 
-### 🔧 Preparar los módulos
+### Preparar los módulos
 
 - Suelda los pines a cada módulo: sensor BMP280, cargador MPPT, INA3221, microcontrolador y LoRa.  
 - En el INA3221, suelda el puente en SDA como en la referencia.
 
-### 🧩 Poblar la PCB
+### Poblar la PCB
 
 - Coloca los módulos. Puedes usar zócalos hembra o soldarlos directamente.  
 - Añade botones, interruptores y conectores en sus posiciones.
 
-### ☀️ Preparar el panel solar
+### Preparar el panel solar
 
 - Retira la electrónica de fábrica (LEDs, reguladores) si es necesario.  
 - Suelda cables en los terminales, identificando positivo y negativo.  
 - Usa colores distintos si puedes.
 
-### 📡 Conectar antena y alimentación
+### Conectar antena y alimentación
 
 :::danger
 ⚠️ **Nunca enciendas el nodo sin antena conectada.**  
@@ -147,7 +138,7 @@ Puedes dañar el módulo LoRa.
 
 ---
 
-## 📲 Configuración Meshtastic
+## Configuración Meshtastic
 
 Una vez montado, toca configurar el firmware Meshtastic:
 
@@ -160,7 +151,7 @@ Una vez montado, toca configurar el firmware Meshtastic:
 
 ---
 
-## 📄 Aviso de atribución
+## Aviso de atribución
 
 > Este artículo ha sido extraído y adaptado desde [danielpcostas.dev](https://danielpcostas.dev/es/masn-nodo-solar-meshtastic-que-cualquiera-puede-montar/), originalmente creado por [@danielpcostas](https://t.me/danielpcostas).  
 > Adaptación web realizada por [@sremylio](https://t.me/sremylio) para la comunidad Meshtastic España.
