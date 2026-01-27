@@ -6,14 +6,38 @@ authors: []
 tags: [Madrid, Zona Centro, Configuración, Narrow]
 ---
 
+## Actualización y Resultados (23/01/2026)
+
+La prueba masiva se da por **terminada**, aunque seguiremos haciendo experimentos a pequeña escala. A continuación, las conclusiones y el futuro de esta configuración.
+
+### Lo que ha ido bien 🙂
+*   **Mejora de Enlaces:** Todos los enlaces han mejorado en general (alcance y estabilidad). Nodos que en MediumFast solo conectaban mediante saltos han conseguido enlaces directos.
+*   **Nodos "Sordos":** Mejoría drástica en nodos con problemas de ruido como los situados en altura en la sierra o nodos sin filtro, en estos dos casos oían mucho mejor en Narrow que en MediumFast.
+*   **Routers Clave:** Routers importantes de la Zona Centro como **Venturada 2**,  **Toledo 1**, **Ciudad Real 1** y **Rigel Aux** han rendido mucho mejor.
+<!-- truncate -->
+
+### Malla Secundaria y Pruebas Locales
+Aunque volvamos a la normalidad, **os animamos a realizar pruebas con vuestros nodos locales**. Sería muy interesante comparar enlaces, alcances y rendimiento entre MediumFast y SFNarrow a pequeña escala.
+
+Para dar soporte a estas pruebas continuas, se mantendrá la **malla secundaria de pruebas** de Madrid en SFNarrow (la que antes estaba en ShortFast):
+*   El nodo **Venturada 2 SF** pasa a operar como **Venturada 2 NF**.
+*   **Rigel Aux** se quedará también fijo en esta configuración experimental (SFNarrow).
+
+#### Consideraciones Técnicas
+*   **Software:** La definición de canales y QRs requiere revisión. La separación en 4 canales sin banda de guarda genera problemas, tales como que enlaces con suficiente señal puedes mandar paquetes en un slot, y que el ruido lateral emitido en el slot contiguo sea recibible como un paquete valido (Generando en casos particulares cruces de paquetes entre los slots).
+*   **Firmware:** En 62.5kHz sería ideal usar SF5/SF6, no incluidos en el firmware oficial actual.
+*   **Futuro (NARROW_868):** Meshtastic está trabajando en una región oficial `NARROW_868` que divide la banda en **3 canales con guarda**. Nuestra división actual de 4 slots (utilizando la region actual EU_868 que en principio se mantendria como está) **no será compatible** con esa futura division oficial de Meshtastic.
+
+Por estas razones se decide retrasar mudar la malla MediumFast a banda estrecha para esperar a solucionar estos temas.
+
 ### ¿Cuándo?
 
 :::info
 **Periodo de pruebas SFNarrow:**
 
-🚀 Inicio: **Hoy Lunes 19 de Enero**
+🚀 Inicio: **Lunes 19 de Enero de 2026**
 
-🏁 Fin: **Viernes** (Vuelta a la normalidad... o no, según los resultados 😉)
+🏁 Fin: **Viernes 23 de Enero de 2026**
 :::
 
 ### ¿Por qué este cambio?
@@ -22,7 +46,6 @@ En nuestra búsqueda constante por mejorar la malla Meshtastic de la Zona Centro
 
 La idea es dividir la banda en **4 subcanales (Slots)** de 62.5kHz cada uno. Para este test, utilizaremos el **Slot 3**.
 
-<!-- truncate -->
 
 #### Las ventajas de esta arquitectura:
 
@@ -179,4 +202,6 @@ Si administras un nodo al que no tienes acceso físico, **el orden de los factor
 Los nodos en SFNarrow **no se escucharán** con los nodos que sigan en MediumFast. Si haces los cambios en el orden incorrecto durante una administración remota, podrías tener problemas luego para gestionarlo remotamente.
 :::
 
-¡Gracias por colaborar en hacer la red de la Zona Centro más robusta! 📡❤️
+---
+
+¡Gracias por colaborar en hacer la malla mas robusta! 📡❤️

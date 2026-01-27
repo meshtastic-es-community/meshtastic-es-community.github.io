@@ -55,7 +55,7 @@ export default function Home(): ReactNode {
       {showBanner && (
         <div className={styles.banner}>
         <span>
-          📢 ¡Prueba de SFNarrow en la Zona Centro!&nbsp;
+          📢 ¡Resultados de la prueba SFNarrow en la Zona Centro!&nbsp;
           <Link to="/blog/test-sfnarrow-zona-centro" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
           Click aquí
           </Link>
