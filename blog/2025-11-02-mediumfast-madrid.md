@@ -1,6 +1,7 @@
 ---
 slug: mediumfast-madrid
-title: 👉 Madrid se pasa de MediumSlow a MediumFast
+title: "👉 Madrid se pasa de MediumSlow a MediumFast"
+description: "El cambio a MediumFast en la red de Madrid comenzará el 1 de noviembre. Descubre por qué este cambio es crucial para mejorar la conectividad y capacidad de nuestra red mesh."
 authors: []
 tags: [Madrid, Zona Centro, Configuración, MediumFast]
 ---

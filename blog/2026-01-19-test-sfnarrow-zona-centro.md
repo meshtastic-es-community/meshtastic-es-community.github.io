@@ -1,6 +1,7 @@
 ---
 slug: test-sfnarrow-zona-centro
 title: "🧪 Test SFNarrow en la Zona Centro: Divide y Vencerás"
+description: "Estamos probando una nueva configuración de frecuencia (SFNarrow) en la malla Meshtastic de la Zona Centro para mejorar el alcance y reducir interferencias. ¡Únete al test!"
 authors: []
 tags: [Madrid, Zona Centro, Configuración, Narrow]
 ---

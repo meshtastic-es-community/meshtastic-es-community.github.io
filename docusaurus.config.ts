@@ -100,14 +100,8 @@ const config: Config = {
   themeConfig: {
     image: 'img/meshtastic-es-social-card.jpg',
     metadata: [
-      { name: 'description', content: 'Sitio web y documentación para la comunidad de Meshtastic en España' },
-      { property: 'og:title', content: 'Comunidad Meshtastic España' },
-      { property: 'og:description', content: 'Sitio web y documentación para la comunidad de Meshtastic en España' },
-      { property: 'og:image:alt', content: 'Logo Comunidad Meshtastic España' },
+      { prefix: 'og: https://ogp.me/ns#' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Comunidad Meshtastic España' },
-      { name: 'twitter:description', content: 'Sitio web y documentación para la comunidad de Meshtastic en España' },
-      { name: 'twitter:image:alt', content: 'Logo Comunidad Meshtastic España' },
     ],
     navbar: {
       title: 'Comunidad Meshtastic España',
