@@ -50,7 +50,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Sitio web y documentación para la comunidad de Meshtastic en España">
       
       {showBanner && (
         <div className={styles.banner}>
