@@ -44,12 +44,12 @@ A continuación te presentamos una lista de antenas recomendadas y no recomendad
   [Ver en AliExpress](https://a.aliexpress.com/_Eu7alUU)
 
 - **Yagi direccional Amazon:**
-Antena probada que da buen rendimiento aunque algo mas cara.
+Antena probada que da buen rendimiento aunque algo más cara.
 [Ver en Amazon](https://www.amazon.es/dp/B0CVGSL7Q4)
 
 - **Mikrotik LoRa Omnidireccional 6.5dbi**: Antena de buena calidad aunque de precio alto.  [Ver en su web](https://www.senetic.es/product/868_Omni_antenna) 
 
-- **Alfa Network AOA-868-5ACM** Antena de de 5 dbi de buena calidad del fabricante Alfa Networks. Muy utilizada en EEUU. [Ver en su web](https://alfa-network.eu/antennas/aoa-868-5acm)
+- **Alfa Network AOA-868-5ACM** Antena de 5 dbi de buena calidad del fabricante Alfa Networks. Muy utilizada en EEUU. [Ver en su web](https://alfa-network.eu/antennas/aoa-868-5acm)
 
 - **Ziisor Fibra 55cm:** Opción de antena más económica.
   [Ver en AliExpress](https://es.aliexpress.com/item/1005007463706065.html)

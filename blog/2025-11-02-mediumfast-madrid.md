@@ -15,17 +15,17 @@ tags: [Madrid, Zona Centro, Configuración, MediumFast]
 
 ### ¿Por qué?
 
-- Viendo lo bueno que fué el cambio de LongFast a MediumSlow cuando la red lo necesitaba, esta vez hemos identificado antes los síntomas y se ve muy bien que MediumSlow ya no da más de sí.
+- Viendo lo bueno que fue el cambio de LongFast a MediumSlow cuando la red lo necesitaba, esta vez hemos identificado antes los síntomas y se ve muy bien que MediumSlow ya no da más de sí.
 
 - Tras pruebas exitosas, **MediumFast** mantiene una conectividad excelente y con mucha más capacidad por lo que nos estamos cambiando a este preset desde ya.
 
-- Nos será a todos de gran ayuda si difundes el cambio para hacerlo lo mas ágil posible.
+- Nos será a todos de gran ayuda si difundes el cambio para hacerlo lo más ágil posible.
 
 <!-- truncate -->
 
 A tener en cuenta:
 
-- La transición durará unos días, no todos estamos siempre disponibles. Es probable que durante este tiempo la red no este 100% operativa.
+- La transición durará unos días, no todos estamos siempre disponibles. Es probable que durante este tiempo la red no esté 100% operativa.
 - Se espera una pérdida de unos 3 o 4 dBm en la intensidad de señal (RSSI).
 - Los nodos en distintos presets no se escuchan entre sí, pero compartimos el mismo canal (slot).
 - Está disponible el canal Madrid que puentea todos los presets

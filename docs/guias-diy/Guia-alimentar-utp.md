@@ -9,7 +9,7 @@ sidebar_position: 4
 En esta guía aprenderás una forma sencilla y útil para alimentar placas **Heltec Wireless Stick Lite V3**, o cualquier otro dispositivo que funcione a través de USB, utilizando un cable **UTP/Ethernet**.
 
 <div style={{ textAlign: "center" }}>
-  <img src={require("../../static/img/guias-diy/utp/upt-adapter.jpg").default} alt="Imagen PCB Faketec" width="300" />
+  <img src={require("../../static/img/guias-diy/utp/utp-adapter.jpg").default} alt="Imagen PCB Faketec" width="300" />
 </div>
 
 Este método es práctico cuando necesitas llevar alimentación a distancias mayores que las de un cable USB típico, ya que el cable Ethernet es más económico, robusto y puede superar fácilmente los 10 metros.

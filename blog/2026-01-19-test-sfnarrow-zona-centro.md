@@ -26,7 +26,7 @@ Para dar soporte a estas pruebas continuas, se mantendrá la **malla secundaria 
 #### Consideraciones Técnicas
 *   **Software:** La definición de canales y QRs requiere revisión. La separación en 4 canales sin banda de guarda genera problemas, tales como que enlaces con suficiente señal puedes mandar paquetes en un slot, y que el ruido lateral emitido en el slot contiguo sea recibible como un paquete valido (Generando en casos particulares cruces de paquetes entre los slots).
 *   **Firmware:** En 62.5kHz sería ideal usar SF5/SF6, no incluidos en el firmware oficial actual.
-*   **Futuro (NARROW_868):** Meshtastic está trabajando en una región oficial `NARROW_868` que divide la banda en **3 canales con guarda**. Nuestra división actual de 4 slots (utilizando la region actual EU_868 que en principio se mantendria como está) **no será compatible** con esa futura division oficial de Meshtastic.
+*   **Futuro (NARROW_868):** Meshtastic está trabajando en una región oficial `NARROW_868` que divide la banda en **3 canales con guarda**. Nuestra división actual de 4 slots (utilizando la región actual EU_868 que en principio se mantendría como está) **no será compatible** con esa futura división oficial de Meshtastic.
 
 Por estas razones se decide retrasar mudar la malla MediumFast a banda estrecha para esperar a solucionar estos temas.
 
@@ -52,7 +52,7 @@ La idea es dividir la banda en **4 subcanales (Slots)** de 62.5kHz cada uno. Par
 1.  **Mayor Alcance:** Al utilizar un ancho de banda más estrecho (62.5kHz vs 250kHz), conseguimos un enlace más robusto y con mayor alcance que en MediumFast.
 2.  **Menos Ruido (IoT):** Al reducir el ancho de banda, reducimos la probabilidad de colisiones con dispositivos de banda estrecha como alarmas y sensores IoT que colisionan con nuestra malla.
 3.  **Multiplicamos la capacidad (x4):** Aquí viene la magia. En 250kHz tenemos 8 canales ortogonales (SF5 a SF12). Al dividir la banda en 4 slots independientes, pasamos a tener **32 canales ortogonales** que pueden emitir simultáneamente sin pisarse.
-4.  **Reducir saltos intermedios:** Al posibilitar enlaces que en MediumFast no funcionarian se puede reducir el numero de saltos y repeticiones necesarias, reduciendo el uso del canal.
+4.  **Reducir saltos intermedios:** Al posibilitar enlaces que en MediumFast no funcionarían se puede reducir el número de saltos y repeticiones necesarias, reduciendo el uso del canal.
 
 ### Detalles Técnicos y Frecuencias
 
@@ -75,9 +75,9 @@ La configuración específica para esta prueba en el **Slot 3** es:
 
 ### Diferencias esperadas
 
-En principio al pasar de 250kHz de ancho de banda a 62.5kHz la mejora teórica sería de 6dB en los SNR, en pruebas iniciales hemos visto que mejora mas incluso, consiguiendo enlaces directos que MediumFast y LongFast no consiguen.
+En principio al pasar de 250kHz de ancho de banda a 62.5kHz la mejora teórica sería de 6dB en los SNR, en pruebas iniciales hemos visto que mejora más incluso, consiguiendo enlaces directos que MediumFast y LongFast no consiguen.
 
-Aquí puedes ver una comparativa de un *traceroute* realizado con la configuración anterior vs la nueva configuración SFNarrow. El objetivo es observar cómo se comportan los enlaces y comparar entre una configuracion y otra.
+Aquí puedes ver una comparativa de un *traceroute* realizado con la configuración anterior vs la nueva configuración SFNarrow. El objetivo es observar cómo se comportan los enlaces y comparar entre una configuración y otra.
 
 
 <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px", marginTop: "20px" }}>
@@ -144,7 +144,7 @@ Hemos preparado un enlace de configuración automática. Puedes abrir este enlac
     <img
       src={require("../static/img/blog/qr-narrow.jpg").default}
       style={{ width: "100%", maxWidth: "300px", height: "auto" }}
-      alt="QR de configuracion SFNarrow"
+      alt="QR de configuración SFNarrow"
     />
  
 
@@ -166,7 +166,7 @@ Ve a `Radio Configuration` -> `LoRa` y establece:
 *   **Spreading Factor:** 7
 *   **Coding Rate:** 5
 
-Y luego en la parte mas abajo pon al menos uno de los dos siguientes (o los dos):
+Y luego en la parte más abajo pon al menos uno de los dos siguientes (o los dos):
 *   **Frequency Slot:** 3
 *   **Frequency Override:** 869.5563 
 
@@ -204,4 +204,4 @@ Los nodos en SFNarrow **no se escucharán** con los nodos que sigan en MediumFas
 
 ---
 
-¡Gracias por colaborar en hacer la malla mas robusta! 📡❤️
+¡Gracias por colaborar en hacer la malla más robusta! 📡❤️

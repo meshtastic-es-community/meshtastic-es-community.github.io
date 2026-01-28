@@ -161,7 +161,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Communidad',
+          title: 'Comunidad',
           items: [
             {
               label: 'Telegram',

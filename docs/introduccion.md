@@ -31,7 +31,7 @@ Meshtastic utiliza LoRa, un protocolo de radio de largo alcance ampliamente acce
 - **Alcance**: En condiciones ideales (sin obstáculos como edificios o montañas), puedes lograr conexiones de 2 a 30 km. ¡El récord está en 331 km con antenas adecuadas!
 - **Cifrado**: Si usas un canal privado, tus mensajes están cifrados para mayor seguridad.
 - **Usos**: Meshtastic es ideal para excursionistas, equipos de emergencia o comunidades en áreas sin Internet.
-- **Limitaciones**: El alcance depende totalmente de la cantidad de nodos y del terreno (linea de visión directa u obstáculos). Además, es bastante susceptible a la saturación. No se debe considerar como un sistema fiable y robusto sino como un apoyo. Las mallas grandes y saturadas fallan de forma consistente.
+- **Limitaciones**: El alcance depende totalmente de la cantidad de nodos y del terreno (línea de visión directa u obstáculos). Además, es bastante susceptible a la saturación. No se debe considerar como un sistema fiable y robusto sino como un apoyo. Las mallas grandes y saturadas fallan de forma consistente.
 
 :::danger
 Meshtastic no es perfecto. Es un sistema lento, con poco ancho de banda, y es menos fiable que otros métodos como las redes convencionales o soluciones de mensajería por satélite de un iPhone o un Garmin InReach.

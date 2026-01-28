@@ -9,7 +9,7 @@ Para comenzar con Meshtastic, necesitarás al menos un dispositivo compatible co
 | Dispositivo                      | Descripción                                                                                                  | Precio aproximado |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------|
 | Heltec V3                        | Económico y fácil de usar, ideal para conectarlo con tu teléfono.                                            | 20-30 euros       |
-| Heltec V4                        | Version mas moderna del V3 con amplificador de potencia (Altamente recomendable ponerle filtro)              | 20-30 euros       |
+| Heltec V4                        | Versión más moderna del V3 con amplificador de potencia (Altamente recomendable ponerle filtro)              | 20-30 euros       |
 | LILYGO T-Beam                    | Incluye GPS, recomendado para quienes buscan compartir su ubicación.                                         | 30-40 euros       |
 | LILYGO T-Echo                    | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play».                                     | 50-60 euros       |
 | RAK WisBlock                     | Muy bajo consumo, ideal para nodos solares o larga duración de batería.                                      | 60-80 euros       |
@@ -159,12 +159,12 @@ Revisa nuestra guía de [buenas prácticas](buenas-practicas.md) para asegurarte
    - **El firmware es el programa que hace funcionar tu dispositivo**. Es importante tener la última versión **estable**:
      - **No utilices la ultimísima versión**, pero tampoco lo dejes sin actualizar nunca. **Recomendamos usar la rama beta.**
      - **Podrías quedarte atrás**: Las actualizaciones arreglan problemas y añaden funciones.
-     - **Si tienes algun problema extraño, podría ser culpa de tu versión.**
+      - **Si tienes algún problema extraño, podría ser culpa de tu versión.**
    - **Consejo**: Revisa si hay actualizaciones en [flasher.meshtastic.org](https://flasher.meshtastic.org).
 
 ## Recursos útiles
 
-- Existen canales de YouTube donde aprender mucho sobre Meshtastic. Si estas empezando te recomendamos esto canales: [Quixote Network](https://www.youtube.com/watch?v=97vBRb78pds&list=PL9CwkuZm9m_08d8CFcOcm7wj0NujUWdfn), [EA3GRN](https://www.youtube.com/watch?v=qi3clr-u6-4&list=PLLFrLgZ4YFd3nmCHLAl0wxiAJCvSjeWrb&index=8&ab_channel=ea3grn) o [Caracolmaker](https://www.youtube.com/@caracolmaker/videos)
+- Existen canales de YouTube donde aprender mucho sobre Meshtastic. Si estas empezando te recomendamos estos canales: [Quixote Network](https://www.youtube.com/watch?v=97vBRb78pds&list=PL9CwkuZm9m_08d8CFcOcm7wj0NujUWdfn), [EA3GRN](https://www.youtube.com/watch?v=qi3clr-u6-4&list=PLLFrLgZ4YFd3nmCHLAl0wxiAJCvSjeWrb&index=8&ab_channel=ea3grn) o [Caracolmaker](https://www.youtube.com/@caracolmaker/videos)
 
 
 - Documentación oficial: [Meshtastic.org](https://meshtastic.org)

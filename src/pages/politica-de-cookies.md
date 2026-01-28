@@ -16,4 +16,4 @@ storage_) para mejorar la experiencia del usuario. Esta información incluye:
 
 Este sitio web es un proyecto de código abierto creado por miembros de la comunidad de Meshtastic España, e intentamos
 ser completamente transparentes. No obstante, si tienes alguna duda sobre esta política, puedes preguntar en el grupo de
-[Telegram](https://t.me/meshtastic_esp) donde interaremos ayudarte.
+[Telegram](https://t.me/meshtastic_esp) donde intentaremos ayudarte.
