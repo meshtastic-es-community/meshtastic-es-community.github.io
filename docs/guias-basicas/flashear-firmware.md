@@ -5,7 +5,7 @@ description: Instalar el firmware de Meshtastic en tu dispositivo.
 
 # Flashear firmware
 
-Dependiendo de que dispositivo tengas tendrás que seguir los pasos para ESP32 o para NRF52:
+Dependiendo de qué dispositivo tengas tendrás que seguir los pasos para ESP32 o para NRF52:
 
 ## ESP32
 
@@ -29,7 +29,7 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Instal
   También puedes probar el método de reinicio a 1200bps para poner el dispositivo en modo adecuado.
 - Si es la primera vez que instalas debes pulsar el botón de borrado completo.
 - Pulsa el botón de instalar y verás un cuadro donde saldrá el proceso.
-- Ya tienes tu dispositivo flasheado y puedas pasar a [Conectar y Configurar el Dispositivo](puesta-en-marcha.md#conectar-y-configurar-el-dispositivo).
+- Ya tienes tu dispositivo flasheado y puedes pasar a [Conectar y Configurar el Dispositivo](puesta-en-marcha.md#conectar-y-configurar-el-dispositivo).
 
 :::danger
 Recuerda que no debes encender tu dispositivo sin una antena conectada
