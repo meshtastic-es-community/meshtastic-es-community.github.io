@@ -35,7 +35,7 @@ Recomiendo leer primero el documento antes de iniciar el montaje, para comprende
 </div>
 
 - 1 INA3221 de 3 canales independientes  
-  ⚠️ Hay una versión con la [**misma referencia que no es compatible**](/docs/guias-diy/guia-montaje-pcb-mesc-3.1#-versi%C3%B3n-erronea-de-la-ina3221). La correcta tiene los extremos de las resistencias **R100** yendo a sus conectores **Chx**.  
+  ⚠️ Hay una versión con la [**misma referencia que no es compatible**](#-versi%C3%B3n-err%C3%B3nea-de-la-ina3221). La correcta tiene los extremos de las resistencias **R100** yendo a sus conectores **Chx**. 
   Antes de montarla, soldar **un puente en la identificación SDA**.
 
 <div style={{ textAlign: "center" }}>
