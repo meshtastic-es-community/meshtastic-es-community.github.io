@@ -15,7 +15,7 @@ sidebar_position: 1
 
 Esta guía te ayudará a montar un nodo solar autónomo de guerrilla con antena omnidireccional y sellado
 climatológicamente con un coste total de unos **25€** (aproximadamente, a Junio de 2025) cada nodo.  
-Este nodo ha sido diseñado para ser lo mas simple posible de modo que sea económico y sencillo de
+Este nodo ha sido diseñado para ser lo más simple posible de modo que sea económico y sencillo de
 ensamblar con la idea de instalarlo en ubicaciones altas para extender la red LoRa de Meshtastic. Por este
 motivo carece de otras comodidades como pantalla, botones externos, GPS o avisadores.
 
@@ -57,8 +57,8 @@ motivo carece de otras comodidades como pantalla, botones externos, GPS o avisad
 
 ## Diseño del nodo
 
-El diseño de nodo se basa en el conocido y mas que probado diseño ***Faketec v4***. La Faketec es una plaquita
-económica y sencilla de pedir (mas abajo se indica como) que sirve para interconectar el módulo de radio con
+El diseño de nodo se basa en el conocido y más que probado diseño ***Faketec v4***. La Faketec es una plaquita
+económica y sencilla de pedir (más abajo se indica como) que sirve para interconectar el módulo de radio con
 el microcontrolador (MCU).  
 Por conveniencia la placa incorpora un divisor de tensión (dos resistencias) para
 medir la batería y los botones de usuario y reset. Aquí no vamos a usar el botón de usuario, pero el reset es
@@ -89,8 +89,8 @@ cualquier superficie.
 
 ### Hay muchas versiones de Faketec, ¿Por qué la v4?
 Para este nodo se van a emplear los FETs por lo que se puede usar una v1, una v2 o una v3, o la v4 sin soldar los
-FETs. Yo he usado la v4 y las imágenes que se ven mas abajo de montaje corresponden a la v4.
-Tambien las hay mas modernas, ¿Por qué no emplear una v5 o una v6?
+FETs. Yo he usado la v4 y las imágenes que se ven más abajo de montaje corresponden a la v4.
+Tambien las hay más modernas, ¿Por qué no emplear una v5 o una v6?
 Por simplicidad del diseño y adquisición de componentes, el BMS irá integrado en la batería, descartando la
 necesidad del v5. Por otro lado se opta por un cargador solar MPPT externo fácil de cablear, descartando también
 la Faketec v6.
@@ -98,13 +98,13 @@ la Faketec v6.
 En mi opinión ver los amperios mediante un SHUNT no aporta información útil, hay que sumar el gasto
 económico del sensor y el gasto energético del mismo. Con ver el ‘porcentaje’ de batería basándose en el divisor
 de tensión incorporado en el Faketec v4 es suficiente para hacerse una idea del consumo y recarga de la batería.
-### La batería parece pequeña. ¿Y si ponemos una mas grande?
+### La batería parece pequeña. ¿Y si ponemos una más grande?
 La MCU NRF52 consume poco. Realmente poco. 5mA en standby/recepción y unos 64mA en emisión. 1500mA
-en caso de oscuridad total es mas que suficiente para 5 a 8 días, en función de la carga de transmisión. Sin
+en caso de oscuridad total es más que suficiente para 5 a 8 días, en función de la carga de transmisión. Sin
 embargo el MPPT hace milagros cargando en condiciones de luz pobres por lo que no espero que llegue a
 apagarse el nodo.
 ### Hay cajas disponibles y también se pueden imprimir, ¿Por qué un tubo?
-Es lo mas barato de conseguir para sellar tanto la electrónica como la antena, todo junto, con solamente un par
+Es lo más barato de conseguir para sellar tanto la electrónica como la antena, todo junto, con solamente un par
 de tapones y un agujero por donde entre el cable del panel solar. Si bien es cierto que no está expuesto el USB
 y actualizarlo es un dolor en el culo, es poco probable que una actualización a estas alturas sea tan importante
 que requiera actualizar forzosamente el nodo. En cualquier caso el método recomendado es preparar otro nodo
@@ -134,13 +134,13 @@ y funcionando, de modo que es material probado.
 :::
 
 :::warning
-Asegurate de que compras el material correcto: Es normal entrar en aliexpress, buscar los componentes mas
+Asegúrate de que compras el material correcto: Es normal entrar en aliexpress, buscar los componentes más
 baratos y comprarlos ignorando los enlaces de arriba. 
 :::
 
 :::warning
-Asegurate que funciona la MCU antes de soldar: Se que algunos módulos de imitación del nice!nano vienen
-con un bootloader malo o sin bootloader y que hay que usar un ESP32 para reprograrmarlos ANTES de soldarlos
+Asegúrate que funciona la MCU antes de soldar: Se que algunos módulos de imitación del nice!nano vienen
+con un bootloader malo o sin bootloader y que hay que usar un ESP32 para reprogramarlos ANTES de soldarlos
 a la Faketec. Al soldarlos a la Faketec se quedan escondidos los pads de programación del NRF52 y se hace muy
 difícil, si no imposible, recuperar la plaquita. Personalmente no me ha pasado nunca tener que recuperar una
 MCU de esta manera y por lo tanto no tengo experiencia.  
@@ -190,7 +190,7 @@ Toda la información y versiones del proyecto *Faketec* están en GitHub: https:
 
 ## Montaje del Faketec
 
-No voy a hacer un tutorial sobre como soldar en SMD porque entonces este manual no termina nunca. Pero si
+No voy a hacer un tutorial sobre como soldar en SMD porque entonces este manual no termina nunca. Pero sí
 que vamos a pasar a comentar algunas indicaciones:
 - Soldador de punta fina. Si es de temperatura regulable, mejor. A 300ºC le cuestan algunos contactos que
 son GND. En mi experiencia 330 o 340ºC es como mejor se trabajan estas placas.
@@ -202,14 +202,14 @@ hacer puentes.
 ejemplo con las resistencias, se estaña un pad, se apoya el extremo de la resistencia sobre dicho pad
 mientras se le aplica calor con el soldador y cuando se licue el estaño se aprieta la resistencia contra el
 PCB. 
-- Por ultimo se suelda el lado opuesto. Para soldar la radio lo mismo, se elige y se estaña un pad de
+- Por último se suelda el lado opuesto. Para soldar la radio lo mismo, se elige y se estaña un pad de
 cualquiera de las esquinas, se alinea manualmente la radio, se calienta el pad estañado y se aplica
 presión. Si no lo vemos bien alineado, podemos volver a calentar ese pad y mover la radio hasta que
 estemos contentos. Una vez contentos se sueldan el resto de contactos.
 - No es necesario soldar las dos esquinas casi flotantes de la radio. Una es masa para antena y la otra
 masa general. Ambas están repetidas a lo largo del resto de pads.
 - Las resistencias van una de 680k en R2 y una de 1M en R1 y configuro el ADC a 1.713.
-- La orientación de las resistencias o la de los botones no es importante, ¡pero la de los módulos sí! Fijate
+- La orientación de las resistencias o la de los botones no es importante, ¡pero la de los módulos sí! Fíjate
 bien.
 
 Consejos:
@@ -263,8 +263,8 @@ esta es la frecuencia sobre la que trabaja LoRa en la UE.
 Cortamos un trozo de cobre de unos 40cm y lo estirarmos hasta que quede recto. 
 Cortamos los extremos que hemos usado para sujetarlo mientras estirábamos.  
 Desde un extremo, medimos 250mm, doblamos 90º, medimos 6mm y volvemos a doblar 90º.  
-Nos sobrará mas de los 83 mm.
-Soldamos el cable en transversal como se muestra en el diagrama de la derecha. No es necesario mas de 4 o 5
+Nos sobrará más de los 83 mm.
+Soldamos el cable en transversal como se muestra en el diagrama de la derecha. No es necesario más de 4 o 5
 cm de cable. 
 
 :::danger
@@ -333,7 +333,7 @@ todo el conjunto.
 Recortamos y soldamos los cables del panel al conector para poder conectarlo al MPPT, o bien lo soldamos
 directamente al MPPT, antes introducir electrónica. Cuando empujemos la electrónica lo haremos suavemente
 ya que también estaremos empujando la antena por el interior del tubo.
-Por ultimo conectaremos la batería al MPPT y cerraremos ambos extremos con los tapones. Es conveniente
+Por último conectaremos la batería al MPPT y cerraremos ambos extremos con los tapones. Es conveniente
 sellar el tapón inferior también con silicona.
 
 Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](../guias-basicas/puesta-en-marcha.md)**
@@ -368,7 +368,7 @@ Más info: [https://meshtastic.es](https://meshtastic.es)
 ## Actualizaciones por Bluetooth (iOS)
 
 :::info
-Las imagenes están capturadas en iPhone pero tambien es posible realizar el proceso en Android.
+Las imagenes están capturadas en iPhone pero también es posible realizar el proceso en Android.
 :::
 
 Se puede actualizar rompiendo el sello, sacando la electrónica y conectando un USB siguiendo lo comentado
@@ -382,24 +382,24 @@ Meshtastic, sección Releases (https://github.com/meshtastic/firmware/releases),
 queramos poner (en este ejemplo 2.6.11, firmware-nrf52840-2.6.11.60ec05e.zip) y al descomprimirlo
 sacaremos el archivo para la faketec: firmware-nrf52_promicro_diy_tcxo-2.6.11.60ec05e-ota.zip y lo
 abriremos con la aplicación nRF Connect.
-- En la aplicación nRF Connect, en la pantalla de Scanner buscamos nuestro Meshtastic (el mio se llama KST4).
+- En la aplicación nRF Connect, en la pantalla de Scanner buscamos nuestro Meshtastic (el mío se llama KST4).
 Para que aparezca en esta pantalla tenemos que estar desconectados del bluetooth de dicho nodo. Una vez
 localizado, le damos a Connect.
-- Nos vamos a la ultima pestaña, seleccionamos el archivo (firmware-nrf52_promicro_diy_tcxo-
+- Nos vamos a la última pestaña, seleccionamos el archivo (firmware-nrf52_promicro_diy_tcxo-
 2.6.11.60ec05e-ota.zip) con el que queremos actualizar y le damos a Start. Nos fallará, es normal y no pasa
-nada. Este paso habrá metido nuestro en modo DFU. Al entrar en DFU cambia la MAC y el nombre del dispositivo
+nada. Este paso habrá metido nuestro nodo en modo DFU. Al entrar en DFU cambia la MAC y el nombre del dispositivo
 Bluetooth.
 - Volvemos a la pantalla de Scanner y buscamos un nuevo dispositivo llamado AdaDFU. Le damos a Connect
 nuevamente y volveremos a seleccionar el archivo de actualización en la última pestaña. ¡Muy Importante! Hay
 que cambiar el valor de configuración PRN(s) a 5. Le damos a Start y esperamos pacientemente.
 - Observaremos como una barra de progreso se va cargando poco a poco.
 - El teléfono puede bloquearse y fastidiar la carga del firmware. Es importante desactivar bloqueo automático o ir
-tocandolo de tanto en tanto para evitar que se bloquee.
+tocándolo de tanto en tanto para evitar que se bloquee.
 - Cuando haya terminado de actualizarse, el nodo se reiniciará automáticamente con la nueva versión de
 firmware.
 
 :::danger
-Si algo falla a mitad del proceso el nodo se quedara en modo DFU y requerira acceder a el fisicamente para realizar un reset.
+Si algo falla a mitad del proceso el nodo se quedara en modo DFU y requerirá acceder a él físicamente para realizar un reset.
 :::
 
 :::tip

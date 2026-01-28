@@ -210,7 +210,7 @@ También puedes **soldar la Faketec directamente** a la MESC con conector macho 
   <img src={require("../../static/img/guias-diy/mesc/11.jpg").default} alt="Imagen I2C Faketec/MESC" width="300" />
 </div>
 
-### ❗ Versión erronea de la INA3221
+### ❗ Versión errónea de la INA3221
  
 Para los que se fijan en los detalles, la INA3221 de este ejemplo tiene unos
 puentes sobre las pistas de circuito impreso. Es debido a que esta INA3221 es la
@@ -232,7 +232,7 @@ modelo de INA3221.
 
 Aquí tenéis el esquema de conexiones del montaje MESC Ver. 3.1. 
 
-Este diagrama muestra cómo se interconectan todos los módulos: la PCB, el controlador MPPT, los sensores térmicos, la batería, el ventilador y los conectores auxiliares. Muy util para diagnosticar problemas.
+Este diagrama muestra cómo se interconectan todos los módulos: la PCB, el controlador MPPT, los sensores térmicos, la batería, el ventilador y los conectores auxiliares. Muy útil para diagnosticar problemas.
 
 <div style={{ textAlign: "center" }}>
   <img src={require("../../static/img/guias-diy/mesc/esquema.jpg").default} alt="Imagen I2C Faketec/MESC" width="1000" />

@@ -92,4 +92,4 @@ cambias. Algunos ejemplos son:
 
 ---
 
-1. Sinceramente no sé qué hace esto, pero hasta que no recibe los metadatos, a mi no se me habilita el botón 🤷
+1. Sinceramente no sé qué hace esto, pero hasta que no recibe los metadatos, a mí no se me habilita el botón 🤷
