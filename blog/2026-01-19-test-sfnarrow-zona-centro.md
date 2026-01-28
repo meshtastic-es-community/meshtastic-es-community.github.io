@@ -166,7 +166,7 @@ Ve a `Radio Configuration` -> `LoRa` y establece:
 *   **Spreading Factor:** 7
 *   **Coding Rate:** 5
 
-Y luego en la parte mas abajo pon al menos uno de los dos siguientes (o los dos):
+Y luego en la parte más abajo pon al menos uno de los dos siguientes (o los dos):
 *   **Frequency Slot:** 3
 *   **Frequency Override:** 869.5563 
 

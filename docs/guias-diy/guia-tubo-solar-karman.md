@@ -238,7 +238,7 @@ Nunca enciendas el dispositivo sin conectar la antena. Hacer esto puede provocar
 
 ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-029.jpg)
 
-A mi me gusta usar la batería LiPo como base para sujetar la electrónica. La encinto con cinta capton y dado que
+A mi me gusta usar la batería LiPo como base para sujetar la electrónica. La encinto con cinta Kapton y dado que
 la batería tiene el mismo diámetro que el diámetro interior del tubo, el conjunto queda encajado perfectamente.
 
 ![Esquema](../../static/img/guias-diy/karman-tube-solar/KarmansTubeSolar.pdf-image-030.jpg)
@@ -328,7 +328,7 @@ para evitar que se cuele agua por ahi. Ponemos también silicona en el borde del
 al soporte.
 Desde el lado inferior comenzamos introduciendo la antena con cuidado del cable del panel solar. Cuando solo
 nos quede el cable de la antena lo conectamos a la electrónica y aseguramos el conector con silicona o punto
-de cola caliente o cinta capton para asegurarnos que no se desconecte accidentamente mientras empujamos
+de cola caliente o cinta Kapton para asegurarnos que no se desconecte accidentalmente mientras empujamos
 todo el conjunto.
 Recortamos y soldamos los cables del panel al conector para poder conectarlo al MPPT, o bien lo soldamos
 directamente al MPPT, antes introducir electrónica. Cuando empujemos la electrónica lo haremos suavemente
@@ -368,7 +368,7 @@ Más info: [https://meshtastic.es](https://meshtastic.es)
 ## Actualizaciones por Bluetooth (iOS)
 
 :::info
-Las imagenes están capturadas en iPhone pero también es posible realizar el proceso en Android.
+Las imágenes están capturadas en iPhone pero también es posible realizar el proceso en Android.
 :::
 
 Se puede actualizar rompiendo el sello, sacando la electrónica y conectando un USB siguiendo lo comentado
