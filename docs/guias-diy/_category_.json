@@ -2,6 +2,7 @@
   "label": "Guías DIY",
   "position": 7,
   "link": {
+    "slug": "guias-diy",
     "type": "generated-index",
     "description": "Guías avanzadas y nodos DIY."
   }
