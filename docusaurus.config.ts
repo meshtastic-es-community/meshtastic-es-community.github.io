@@ -57,6 +57,10 @@ const config: Config = {
             {
               from: '/blog/test-sfnarrow-madrid',
               to: '/blog/test-sfnarrow-zona-centro',
+            },
+            {
+              from: '/docs/category/guías-diy',
+              to: '/docs/guias-diy',
             }
           ]
         }
@@ -117,7 +121,7 @@ const config: Config = {
           label: 'Documentación',
         },
         { to: '/docs/buenas-practicas', label: 'Buenas Prácticas', position: 'left' },
-        { to: '/docs/category/guías-diy', label: 'Guías de la comunidad', position: 'left' },
+        { to: '/docs/guias-diy', label: 'Guías de la comunidad', position: 'left' },
         { to: '/docs/preguntas-frecuentes', label: 'Preguntas Frecuentes', position: 'left' },
       //{ to: '/docs/mapas', label: 'Mapa de Nodos', position: 'left' },                  //para añadir si es necesario
         { to: '/blog', label: 'Blog', position: 'left' },
