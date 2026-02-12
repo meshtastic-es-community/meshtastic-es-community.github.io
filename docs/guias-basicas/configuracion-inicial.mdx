@@ -195,6 +195,36 @@ Al aplicar esta configuración, aceptas utilizar una precisión de ubicación ap
 
 ### Canales por provincias 🗺️
 
+<!--
+Para añadir un nuevo canal, o modificar uno existente, puedes usar lo siguiente:
+- Entra en la web de https://www.protobufpal.com/.
+- Carga los ficheros `*.proto` de meshtastic. https://github.com/meshtastic/protobufs/tree/master/meshtastic
+- Copia el siguiente JSON en la parte derecha de la web:
+    ```
+    {
+      "settings": [
+        {
+          "psk": [1],
+          "name": "Tenerife",
+          "uplink_enabled": true,
+          "downlink_enabled": true
+        }
+      ],
+      "lora_config": {
+        "use_preset": true,
+        "hop_limit": 3,
+        "tx_enabled": true,
+        "ignore_mqtt": false,
+        "config_ok_to_mqtt": true
+      }
+    }
+    ```
+- Cambia el nombre del canal y otras configuraciones que quieras modificar.
+- Selecciona el Proto Message `apponly.proto - ChannelSet` y dale al botón "Encode".
+- Copia el resultado en base64 que aparece en la parte inferior.
+- Actualiza la lista de `regionConfigs` con el nuevo canal, su nombre, y el resultado en base64.
+-->
+
 export const regionConfigs = [
     {"name": "Álava", "channel": "Alava", "base64": "Cg4SAQEaBUFsYXZhKAEwARIMCAFAA0gBwAYAyAYB"},
     {"name": "Albacete", "channel": "Albacete", "base64": "ChESAQEaCEFsYmFjZXRlKAEwARIMCAFAA0gBwAYAyAYB"},
@@ -233,7 +263,7 @@ export const regionConfigs = [
     {"name": "Las Palmas", "channel": "LasPalmas", "base64": "ChISAQEaCUxhc1BhbG1hcygBMAESDAgBQANIAcAGAMgGAQ"},
     {"name": "Pontevedra", "channel": "Pontevedra", "base64": "ChMSAQEaClBvbnRldmVkcmEoATABEgwIAUADSAHABgDIBgE"},
     {"name": "Salamanca", "channel": "Salamanca", "base64": "ChISAQEaCVNhbGFtYW5jYSgBMAESDAgBQANIAcAGAMgGAQ"},
-    {"name": "Santa Cruz de Tenerife", "channel": "SantaCruzDeTenerife", "base64": "ChwSAQEaE1NhbnRhQ3J1ekRlVGVuZXJpZmUoATABEgwIAUADSAHABgDIBgE"},
+    {"name": "Santa Cruz de Tenerife", "channel": "Tenerife", "base64": "ChESAQEaCFRlbmVyaWZlKAEwARIMCAFAA0gBwAYAyAYB"},
     {"name": "Cantabria", "channel": "Cantabria", "base64": "ChISAQEaCUNhbnRhYnJpYSgBMAESDAgBQANIAcAGAMgGAQ"},
     {"name": "Segovia", "channel": "Segovia", "base64": "ChASAQEaB1NlZ292aWEoATABEgwIAUADSAHABgDIBgE"},
     {"name": "Sevilla", "channel": "Sevilla", "base64": "ChASAQEaB1NldmlsbGEoATABEgwIAUADSAHABgDIBgE"},
