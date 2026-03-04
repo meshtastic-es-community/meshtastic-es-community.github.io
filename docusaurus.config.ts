@@ -93,6 +93,7 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          beforeDefaultRemarkPlugins: [mdiIconify],
         },
         theme: {
           customCss: './src/css/custom.css',
