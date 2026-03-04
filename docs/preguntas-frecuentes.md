@@ -85,6 +85,44 @@ la [documentación oficial](https://meshtastic.org/docs/overview/encryption/).
 Para registrar la nueva clave pública, borra el nodo y deja que se vuelva a descubrir. También puedes pedir al dueño del
 nodo que te comparta la URL o el QR de ese nodo.
 
+### ¡Mi nodo con LNA está sordo! ¡Escucha peor que otros nodos!
+
+Tienes un Heltec v4, un Ebyte e22... ¿y escucha peor que otros nodos?
+
+**Es normal, ¡estás ampliando el ruido!**
+
+:::info
+Recomendamos:
+    - **NO USAR** nodos con LNA sin filtro.
+    - Filtros: Taoglass DBP868UA30 o filtros de cavidades.
+    - Usar radios con filtros incorporados. (Ebyte E22-P)
+:::
+
+**¿Quieres entender las razones? Sigue leyendo.**
+
+Imagínate que estás en la calle, al lado de una obra y están con el martillo neumático.
+Tu amigo Juan está a unos metros y te quiere contar algo....
+
+- ruido de fondo: ¡RATATATATÁ!
+- Juan: Psst... oye...
+- Tú: ¿Qué? ¡No te escucho! *[Decides ponerte un audífono]*
+- Ahora escuchas x3 a Juan... ¡pero también escuchas x3 el martillo neumático! *[El ruido es tan fuerte que hasta te da mareos.]*
+
+No sólo sigues sin escuchar *bien*, ¡sino que ha emperado la situación!
+
+Conclusión: Amplificar sin filtro puede ser contraproducente si también amplificas el ruido. Sin filtro, los nodos *están sordos*.
+
+![Comic Ruido](../static/img/comic_ruido.png)
+:::tip
+**RSSI** es qué tan fuerte llega la voz de Juan a tus oídos.
+
+**SNR** es la diferencia entre la voz de Juan y el martillo:
+
+— Si el martillo suena MUCHO MÁS FUERTE que Juan: SNR Negativo.
+
+    — Si Juan hablase MÁS FUERTE que el martillo: SNR Positivo.
+:::
+
 ## Definiciones y nomenclatura
 
 ### Qué es el _channel utilization_ o _ChUtil_{#chutil}
