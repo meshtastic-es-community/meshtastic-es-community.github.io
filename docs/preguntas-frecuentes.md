@@ -13,11 +13,15 @@ export const KeyOffIcon = () => (
 </svg>
 );
 
-## Enviar mensajes por MQTT en el canal de _preset_ o Iberia {#mqtt-downlink}
+## Enviar mensajes por MQTT en el canal principal o Iberia {#mqtt-downlink}
 
-Desde el servidor MQTT hemos deshabilitado el _downlink_ a los canales con nombre de _presets_ (LongFast, MediumFast...)
-e Iberia. Esto se hizo para evitar que los nodos se saturen con paquetes de toda España y probablemente se consuma tu
-[_duty cycle_](#duty-cycle). Únicamente los [canales de provincia](guias-basicas/configuracion-inicial.mdx#canales-por-provincias) tienen habiltado el _downlink_.
+En el servidor MQTT hemos deshabilitado el _downlink_ a los canales con nombre de _presets_ (LongFast, MediumFast...)
+e Iberia. Esto se hizo para evitar que los nodos se saturen con paquetes de toda España y probablemente consuman el
+[_duty cycle_](#duty-cycle).
+
+Sin embargo, <u>es **importante** mantener activado</u> en los nodos tanto _uplink_ como _downlink_ en estos canales, ya
+que nos da más agilidad en el futuro si cambiamos algo en el servidor MQTT. Además, se permite que lleguen mensajes
+directos, telemetrías y otros paquetes cifrados, como por ejemplo la [administración de nodos en remoto](configuracion-avanzada/administracion-remota.md).
 
 La gran mayoría de los nodos en España tienen como canal principal el canal del _preset_ (LongFast, MediumFast...). Al ser
 canal principal, es por donde se envían todos los paquetes de NodeInfo, telemetría variada, ubicación... todos esos datos
