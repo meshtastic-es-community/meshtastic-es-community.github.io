@@ -13,6 +13,16 @@ export const KeyOffIcon = () => (
 </svg>
 );
 
+## Enviar mensajes por MQTT en el canal de _preset_ o Iberia {#mqtt-downlink}
+
+Desde el servidor MQTT hemos deshabilitado el _downlink_ a los canales con nombre de _presets_ (LongFast, MediumFast...)
+e Iberia. Esto se hizo para evitar que los nodos se saturen con paquetes de toda España y probablemente se consuma tu
+[_duty cycle_](#duty-cycle). Únicamente los [canales de provincia](guias-basicas/configuracion-inicial.mdx#canales-por-provincias) tienen habiltado el _downlink_.
+
+La gran mayoría de los nodos en España tienen como canal principal el canal del _preset_ (LongFast, MediumFast...). Al ser
+canal principal, es por donde se envían todos los paquetes de NodeInfo, telemetría variada, ubicación... todos esos datos
+que se mandan a intervalos. Si tu nodo reenviara por radiofrecuencia todo eso, llegaría rápidamente a su [_duty cycle_](#duty-cycle).
+
 ## Problemas comunes {#problemas-comunes}
 
 ### Mi nodo no aparece en los mapas de la web {#nodo-no-aparece-en-mapas}
@@ -70,3 +80,25 @@ la [documentación oficial](https://meshtastic.org/docs/overview/encryption/).
 
 Para registrar la nueva clave pública, borra el nodo y deja que se vuelva a descubrir. También puedes pedir al dueño del
 nodo que te comparta la URL o el QR de ese nodo.
+
+## Definiciones y nomenclatura
+
+### Qué es el _channel utilization_ o _ChUtil_{#chutil}
+
+El _channel utilization_ o _ChUtil_ es el porcentaje de tiempo que el canal de radio está ocupado transmitiendo paquetes.
+Esto incluye tanto los paquetes que transmites tú como los que transmiten otros nodos. Es importante porque si el canal está
+muy ocupado, es posible que tus paquetes no se transmitan, se retrasen, o haya colisiones.
+
+### Qué es el _airtime utilization_ o _AirUtil_{#airutil}
+
+El _airtime utilization_ o _AirUtil_ es el porcentaje de tiempo que tu nodo está transmitiendo paquetes. Es importante
+mantenerlo bajo para no saturar el canal de radio y para no consumir tu [_duty cycle_](#duty-cycle).
+
+### Qué es el _duty cycle_ y por qué es importante {#duty-cycle}
+
+El _duty cycle_ es el porcentaje de tiempo que un dispositivo puede transmitir en un canal de radio. Es importante porque
+está regulado por normativa. En España, el _duty cycle_ máximo permitido es del **10% por hora** en las bandas europeas
+de 433 MHZ y 868 MHz. Si un nodo supera ese límite, el _firmware_ lo detectará y dejará de transmitir paquetes hasta que
+pase esa hora.
+
+Más información en la [documentación oficial](https://meshtastic.org/docs/configuration/radio/lora/#region).
