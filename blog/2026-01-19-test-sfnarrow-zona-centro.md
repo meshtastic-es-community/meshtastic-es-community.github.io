@@ -6,7 +6,7 @@ authors: []
 tags: [Madrid, Zona Centro, Configuración, Narrow]
 ---
 
-## Actualización y Resultados (23/01/2026)
+### Actualización y Resultados (23/01/2026)
 
 La prueba masiva se da por **terminada**, aunque seguiremos haciendo experimentos a pequeña escala. A continuación, las conclusiones y el futuro de esta configuración.
 
