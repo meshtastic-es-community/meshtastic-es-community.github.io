@@ -27,10 +27,8 @@ Para ello, [descarga la última build del firmware ESP32 Unified OTA adecuada a 
 
 - Tener instalado el [CLI de `meshtastic`](https://meshtastic.org/docs/software/python/cli/installation/) o `uvx`.
 
-:::warning
-El soporte para actualizar vía WiFi OTA aún no se ha fusionado en la rama principal de Meshtastic, por lo tanto, es necesario utilizar la versión de la [**PR#898**](https://github.com/meshtastic/python/pull/898).
-
-La forma más sencilla de hacerlo es utilizando `uvx`. De este modo, en lugar de ejecutar `meshtastic ...` o `uvx meshtastic ...`, deberás ejecutar `uvx --from git+https://github.com/meshtastic/python@pull/898/head meshtastic ...` en las instrucciones del comando indicado en la siguiente sección.
+:::tip
+Asegurate de usar la versión 2.7.8 o superior del CLI de `meshtastic`.
 :::
 
 #### Actualizando el nodo vía WiFi OTA
