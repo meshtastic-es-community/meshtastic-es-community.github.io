@@ -85,7 +85,7 @@ la [documentación oficial](https://meshtastic.org/docs/overview/encryption/).
 Para registrar la nueva clave pública, borra el nodo y deja que se vuelva a descubrir. También puedes pedir al dueño del
 nodo que te comparta la URL o el QR de ese nodo.
 
-### ¡Mi nodo con LNA está sordo! ¡Escucha peor que otros nodos!
+### ¡Mi nodo con LNA está sordo! ¡Escucha peor que otros nodos!{#nodo-con-lna-sordo}
 
 Tienes un Heltec v4, un Ebyte e22... ¿y escucha peor que otros nodos?
 
