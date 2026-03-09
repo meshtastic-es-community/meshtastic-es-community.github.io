@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import QRCode from 'react-qr-code';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 import type { ChannelSettings, LoRaConfig, Presets } from './types';
 import { encodeChannelSet, base64UrlEncode, getPresetName } from './protobuf';
@@ -86,6 +87,8 @@ function generateConfigUrl(
 export default function MeshtasticConfigGenerator(): React.ReactElement {
   // Read URL parameters on mount
   useEffect(() => {
+    if (!ExecutionEnvironment.canUseDOM) return;
+    
     const params = new URLSearchParams(window.location.search);
     
     // Parse preset
@@ -127,6 +130,10 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
 
   // Generate shareable URL with current state
   const shareableUrl = useMemo(() => {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return '#'; // Fallback for SSR
+    }
+    
     const params = new URLSearchParams();
     params.set('preset', selectedPreset);
     params.set('iberia', includeIberia.toString());
@@ -144,6 +151,8 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
 
   // Update URL in real-time without page reload
   useEffect(() => {
+    if (!ExecutionEnvironment.canUseDOM) return;
+    
     const params = new URLSearchParams();
     params.set('preset', selectedPreset);
     params.set('iberia', includeIberia.toString());
@@ -337,16 +346,18 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
           <div style={{ marginTop: '15px', textAlign: 'center' }}>
             <button
               onClick={() => {
-                navigator.clipboard.writeText(shareableUrl);
-                // Simple feedback - could be enhanced with toast
-                const btn = event.target as HTMLButtonElement;
-                const originalText = btn.textContent;
-                btn.textContent = '¡Copiado!';
-                btn.style.backgroundColor = 'var(--ifm-color-success)';
-                setTimeout(() => {
-                  btn.textContent = originalText;
-                  btn.style.backgroundColor = '';
-                }, 2000);
+                if (ExecutionEnvironment.canUseDOM && navigator.clipboard) {
+                  navigator.clipboard.writeText(shareableUrl);
+                  // Simple feedback - could be enhanced with toast
+                  const btn = event.target as HTMLButtonElement;
+                  const originalText = btn.textContent;
+                  btn.textContent = '¡Copiado!';
+                  btn.style.backgroundColor = 'var(--ifm-color-success)';
+                  setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                  }, 2000);
+                }
               }}
               style={{
                 padding: '8px 16px',
