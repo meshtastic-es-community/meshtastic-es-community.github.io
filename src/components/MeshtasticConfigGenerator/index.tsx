@@ -241,7 +241,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
             borderLeft: '4px solid var(--ifm-color-warning)'
           }}>
             <p style={{ margin: '0', lineHeight: '1.4' }}>
-              <strong>Nota:</strong> La EIRP máxima permitida en EU_868 es de <strong>27dBm</strong>. 
+              <strong>Nota:</strong> La ERP máxima permitida en EU_868 es de <strong>27dBm</strong>. 
               Algunos modulos de radio incluyen amplificadores de potencia (PAs), por lo que es importante 
               seleccionar el valor apropiado en nodos DIY para no exceder los límites legales.
               <br />
