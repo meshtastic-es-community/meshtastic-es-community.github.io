@@ -6,12 +6,8 @@ authors: [ ]
 tags: [ Madrid, Zona Centro, Configuración, Narrow ]
 ---
 
-:::info
-
 Para no repetir todo el motivo de por qué hacemos estos tests, puedes leer
 la [entrada anterior del blog](2026-01-19-test-sfnarrow-zona-centro.md).
-
-:::
 
 ### ℹ️ Información general{#info-general}
 
@@ -20,6 +16,14 @@ mejorar el alcance y reducir interferencias. Para ello, hemos planificado varios
 que puedes ver a continuación.
 
 <!-- truncate -->
+
+:::warning
+
+En caso de incidente a gran escala (véase caída de las comunicaciones, fallo de la red eléctrica, etc.) durante el
+periodo de cualquier prueba, se volverá al _preset_ **MediumFast** de manera inmediata, para garantizar el uso de la red
+por parte de todos los usuarios.
+
+:::
 
 ### 🙋‍♂️ Cómo participar{#participar}
 
@@ -82,7 +86,8 @@ condiciones.
 
 #### Volvemos - del 23/05/2026 en adelante
 
-- Volvemos al _preset_ MediumFast.
+- Volvemos al _preset_ **MediumFast**.
+- Valoramos los datos obtenidos para tomar una decisión.
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=MediumFast)
 
 ### 📊 Recopilación de datos{#recopilacion-datos}
