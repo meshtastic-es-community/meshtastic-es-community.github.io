@@ -19,6 +19,8 @@ Queremos probar diferentes configuraciones de frecuencia (SFNarrow) en la malla 
 mejorar el alcance y reducir interferencias. Para ello, hemos planificado varios tests con diferentes configuraciones
 que puedes ver a continuación.
 
+<!-- truncate -->
+
 ### 🙋‍♂️ Cómo participar{#participar}
 
 Si quieres participar en los tests, simplemente debes configurar tu dispositivo con la configuración correspondiente a
@@ -33,17 +35,65 @@ Para facilitar que la gente pueda unirse a los tests, hemos organizado los inici
 configuración durará dos semanas, con el fin de poder recopilar datos suficientes a lo largo de varios días y
 condiciones.
 
-| Inicio     | Fin        | Configuración LoRa                                                                                 |
-|------------|------------|----------------------------------------------------------------------------------------------------|
-| 14/03/2026 | 27/03/2026 | _Bandwidth_: `125` <br/> _Spread Factor_: `7` <br/> _Coding Rate_: `5` <br/> _Frecuency Slot_: `1` |
-| 28/03/2026 | 10/04/2026 | _Bandwidth_: `125` <br/> _Spread Factor_: `7` <br/> _Coding Rate_: `5` <br/> _Frecuency Slot_: `2` |
-| 11/04/2026 | 24/04/2026 | _Bandwidth_: `62` <br/> _Spread Factor_: `7` <br/> _Coding Rate_: `5` <br/> _Frecuency Slot_: `1`  |
-| 25/04/2026 | 08/05/2026 | _Bandwidth_: `62` <br/> _Spread Factor_: `6` <br/> _Coding Rate_: `5` <br/> _Frecuency Slot_: `4`  |
-| 09/05/2026 |            | Volvemos al _preset MediumFast_                                                                    |
+#### Prueba 1 - del 14/03/2026 al 27/03/2026
+
+- _Bandwidth_: `62`
+- _Spread Factor_: `7`
+- _Coding Rate_: `5`
+- _Frecuency override_: `869.618`
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+1)
+
+#### Prueba 2 - del 28/03/2026 al 10/04/2026
+
+- _Bandwidth_: `62`
+- _Spread Factor_: `7`
+- _Coding Rate_: `5`
+- _Frecuency Slot_: `1`
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+2)
+
+#### Prueba 3 - del 11/04/2026 al 24/04/2026
+
+- _Bandwidth_: `125`
+- _Spread Factor_: `7`
+- _Coding Rate_: `5`
+- _Frecuency Slot_: `1`
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+3)
+
+#### Prueba 4 - del 25/04/2026 al 08/05/2026
+
+- _Bandwidth_: `125`
+- _Spread Factor_: `7`
+- _Coding Rate_: `5`
+- _Frecuency Slot_: `2`
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+4)
+
+#### Prueba 5 - del 09/05/2026 al 22/05/2026
+
+- _Bandwidth_: `62`
+- _Spread Factor_: `6`
+- _Coding Rate_: `5`
+- _Frecuency override_: `869.618`
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+5)
+
+#### Volvemos - del 23/05/2026 eal adelante
+
+- Volvemos al _preset_ MediumFast.
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=MediumFast)
 
 ### 📊 Recopilación de datos{#recopilacion-datos}
 
-<!-- Definir qué datos recoger, cómo hacerlo y cómo ponerlos en común. -->
+Nos gustaría recopilar datos de alcance, calidad de la señal y cualquier incidencia que puedas observar durante los
+tests. Puedes compartir esta información a través de nuestro canal de Telegram. Esto nos ayudará a analizar los
+resultados y tomar decisiones informadas sobre la mejor configuración para la malla en la Zona Centro.
+
+Entre los datos que queremos recopilar están:
+
+- Valores medios de SNR y RSSI con enlaces directos.
+- Nuevos enlaces directos que antes no tuvieras (o enlaces directos perdidos).
+- ChUtil y AirUtil para evaluar la eficiencia de la red.
+- Cualquier incidencia o comportamiento extraño que observes durante el test.
+    - Por ejemplo, un usuario reporta que algunos mensajes (sobre todo los largos de 200 caracteres) no siempre llegan
+      tanto como un _traceroute_.
 
 ---
 
