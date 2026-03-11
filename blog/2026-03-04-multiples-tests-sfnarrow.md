@@ -40,7 +40,8 @@ condiciones.
 - _Bandwidth_: `62`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
-- _Frecuency override_: `869.618`
+- _Frequency slot_: `4`
+- _Frequency override_: `869.618`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+1)
 
 #### Prueba 2 - del 28/03/2026 al 10/04/2026
@@ -48,7 +49,8 @@ condiciones.
 - _Bandwidth_: `62`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
-- _Frecuency Slot_: `1`
+- _Frequency slot_: `1`
+- _Frequency override_: `869.4313`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+2)
 
 #### Prueba 3 - del 11/04/2026 al 24/04/2026
@@ -56,7 +58,8 @@ condiciones.
 - _Bandwidth_: `125`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
-- _Frecuency Slot_: `1`
+- _Frequency slot_: `1`
+- _Frequency override_: `869.4625`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+3)
 
 #### Prueba 4 - del 25/04/2026 al 08/05/2026
@@ -64,7 +67,8 @@ condiciones.
 - _Bandwidth_: `125`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
-- _Frecuency Slot_: `2`
+- _Frequency slot_: `2`
+- _Frequency override_: `869.5875`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+4)
 
 #### Prueba 5 - del 09/05/2026 al 22/05/2026
@@ -72,10 +76,11 @@ condiciones.
 - _Bandwidth_: `62`
 - _Spread Factor_: `6`
 - _Coding Rate_: `5`
-- _Frecuency override_: `869.618`
+- _Frequency slot_: `4`
+- _Frequency override_: `869.618`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+5)
 
-#### Volvemos - del 23/05/2026 eal adelante
+#### Volvemos - del 23/05/2026 en adelante
 
 - Volvemos al _preset_ MediumFast.
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=MediumFast)
