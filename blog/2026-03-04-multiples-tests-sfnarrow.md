@@ -84,6 +84,14 @@ condiciones.
 - _Frequency override_: `869.618`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+5)
 
+:::info
+
+Ojo! los firmwares actuales (tanto la beta "estable" 2.7.15 como la última alpha 2.7.20) no tienen soporte para el Spreading Factor 6.
+Ademas los chips LoRa antiguos, tales como el SX1276 no son compatibles, por lo que nodos antiguos como el Heltec V2 no son compatibles.
+Antes de la prueba ofreceremos en caso necesario un firmware con soporte para flashear en los nodos compatibles.
+
+:::
+
 #### Volvemos - del 23/05/2026 en adelante
 
 - Volvemos al _preset_ **MediumFast**.
