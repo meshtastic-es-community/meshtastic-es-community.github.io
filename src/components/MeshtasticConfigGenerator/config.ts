@@ -22,8 +22,8 @@ export const PRESETS: Presets = {
       region: DEFAULT_REGION,
     },
   },
-  'SFNarrow - Prueba 1': {
-    label: 'BW 62, SF 7, CR 5, 869.618 MHz',
+  'SFNarrow': {
+    label: 'Prueba 1 (BW 62, SF 7, CR 5, 869.618 MHz)',
     loraConfig: {
       usePreset: false,
       bandwidth: 62,
@@ -33,8 +33,8 @@ export const PRESETS: Presets = {
       overrideFrequency: 869.618,
     },
   },
-  'SFNarrow - Prueba 2': {
-    label: 'BW 62, SF 7, CR 5, 869.4313 MHz',
+  'SFNarrow': {
+    label: 'Prueba 2 (BW 62, SF 7, CR 5, 869.4313 MHz)',
     loraConfig: {
       usePreset: false,
       bandwidth: 62,
@@ -44,8 +44,8 @@ export const PRESETS: Presets = {
       frecuencySlot: 1
     },
   },
-  'SFNarrow - Prueba 3': {
-    label: 'BW 125, SF 7, CR 5, 869.4625 MHz',
+  'SFNarrow': {
+    label: 'Prueba 3 (BW 125, SF 7, CR 5, 869.4625 MHz)',
     loraConfig: {
       usePreset: false,
       bandwidth: 125,
@@ -55,8 +55,8 @@ export const PRESETS: Presets = {
       frecuencySlot: 1
     },
   },
-  'SFNarrow - Prueba 4': {
-    label: 'BW 125, SF 7, CR 5, 869.5875 MHz',
+  'SFNarrow': {
+    label: 'Prueba 4 (BW 125, SF 7, CR 5, 869.5875 MHz)',
     loraConfig: {
       usePreset: false,
       bandwidth: 125,
@@ -66,8 +66,8 @@ export const PRESETS: Presets = {
       frecuencySlot: 2
     },
   },
-  'SFNarrow - Prueba 5': {
-    label: 'BW 62, SF 6, CR 5, 869.618 MHz',
+  'SFNarrow': {
+    label: 'Prueba 5 (BW 62, SF 6, CR 5, 869.618 MHz)',
     loraConfig: {
       usePreset: false,
       bandwidth: 62,
