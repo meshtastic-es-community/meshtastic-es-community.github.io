@@ -43,7 +43,8 @@ export const PRESETS: Presets = {
       spreadFactor: 7,
       codingRate: 5,
       region: DEFAULT_REGION,
-      frecuencySlot: 1
+      frecuencySlot: 1,
+      overrideFrequency: 869.4313,
     },
   },
   'SFNarrow - Prueba 3': {
@@ -55,7 +56,8 @@ export const PRESETS: Presets = {
       spreadFactor: 7,
       codingRate: 5,
       region: DEFAULT_REGION,
-      frecuencySlot: 1
+      frecuencySlot: 1,
+      overrideFrequency: 869.4625,
     },
   },
   'SFNarrow - Prueba 4': {
@@ -67,7 +69,8 @@ export const PRESETS: Presets = {
       spreadFactor: 7,
       codingRate: 5,
       region: DEFAULT_REGION,
-      frecuencySlot: 2
+      frecuencySlot: 2,
+      overrideFrequency: 869.5875,
     },
   },
   'SFNarrow - Prueba 5': {
