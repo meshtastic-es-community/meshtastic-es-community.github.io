@@ -420,8 +420,8 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
                 {channels.map((channel, idx) => (
                   <li key={channel.name}>
                     <strong>{channel.name}</strong>
-                    {idx === 0 && ` (PSK: ${channel.psk}) - Principal`}
-                    {idx > 0 && ` (PSK: ${channel.psk})`}
+                    {idx === 0 && <span> - PSK: <code>{channel.psk}</code> - Principal</span>}
+                    {idx > 0 && <span> - PSK: <code>{channel.psk}</code></span>}
                   </li>
                 ))}
               </ul>
@@ -434,14 +434,15 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
                 <li>Preset: {loraConfig.usePreset ? getPresetName(loraConfig.modemPreset) : 'Personalizado'}</li>
                 {!loraConfig.usePreset && (
                   <>
-                    <li>Ancho de banda: {loraConfig.bandwidth} kHz</li>
-                    <li>Spread Factor: {loraConfig.spreadFactor}</li>
-                    <li>Coding Rate: {loraConfig.codingRate}</li>
-                    {loraConfig.overrideFrequency && <li>Frecuencia: {loraConfig.overrideFrequency} MHz</li>}
+                    <li>Ancho de banda: <code>{loraConfig.bandwidth}</code> kHz</li>
+                    <li>Spread Factor: <code>{loraConfig.spreadFactor}</code></li>
+                    <li>Coding Rate: <code>{loraConfig.codingRate}</code></li>
+                    {loraConfig.frecuencySlot && <li>Slot: <code>{loraConfig.frecuencySlot}</code></li>}
+                    {loraConfig.overrideFrequency && <li>Frecuencia: <code>{loraConfig.overrideFrequency}</code> MHz</li>}
                   </>
                 )}
-                <li>Hop Limit: {loraConfig.hopLimit}</li>
-                {loraConfig.txPower !== undefined && <li>Potencia TX: {loraConfig.txPower} dBm</li>}
+                <li>Hop Limit: <code>{loraConfig.hopLimit}</code></li>
+                {loraConfig.txPower !== undefined && <li>Potencia TX: <code>{loraConfig.txPower}</code> dBm</li>}
               </ul>
             </div>
           </div>

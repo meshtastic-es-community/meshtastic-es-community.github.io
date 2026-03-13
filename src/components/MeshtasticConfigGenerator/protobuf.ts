@@ -166,6 +166,11 @@ export function encodeLoRaConfig(config: LoRaConfig): Uint8Array {
     parts.push(encodeVarintField(10, config.txPower));
   }
 
+  // channel_num = field 11 (uint32) - only if specified
+  if (config.frecuencySlot !== undefined) {
+    parts.push(encodeVarintField(11, config.frecuencySlot));
+  }
+
   // sx126x_rx_boosted_gain = field 13 (bool)
   parts.push(encodeVarintField(13, (config.sx126xRxBoostedGain ?? true) ? 1 : 0));
 
