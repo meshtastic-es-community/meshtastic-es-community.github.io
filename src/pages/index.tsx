@@ -55,8 +55,8 @@ export default function Home(): ReactNode {
       {showBanner && (
         <div className={styles.banner}>
         <span>
-          📢 ¡Resultados de la prueba SFNarrow en la Zona Centro!&nbsp;
-          <Link to="/blog/test-sfnarrow-zona-centro" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          📢 ¡Nuevas Pruebas de SFNarrow del 14/03/2026 al 22/05/2026!&nbsp;
+          <Link to="/blog/mas-tests-sfnarrow" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
           Click aquí
           </Link>
         </span>
