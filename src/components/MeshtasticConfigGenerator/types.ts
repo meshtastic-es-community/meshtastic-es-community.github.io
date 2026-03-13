@@ -11,6 +11,7 @@ export interface LoRaConfig {
   bandwidth?: number;
   spreadFactor?: number;
   codingRate?: number;
+  frecuencySlot?: number;
   overrideFrequency?: number;
   region: number;
   hopLimit: number;
