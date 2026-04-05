@@ -52,7 +52,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 ### 🌊 WashTastic {#WashTastic}
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://raw.githubusercontent.com/valzzu/meshtastic-pcbs/main/WashTastic/pics/Assembled.jpg" alt="WashTastic PCB" width="250" />
+  <img src="https://raw.githubusercontent.com/valzzu/meshtastic-pcbs/main/WashTastic/pics/V0.3.5/top_V0.3.5.png" alt="WashTastic PCB" width="250" />
   <div>
 
 **Descripción**: Nodo solar con bajo consumo y diseño compacto, disponible en versiones ensambladas. Enfocado a usuarios avanzados.
@@ -103,6 +103,52 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 🔗 [Ver en GitHub](https://github.com/gargomoma/xiaoWa_pcb)
 
 </div>
+</div>
+
+---
+
+### 📟 Albatastic Compact v1.0
+
+<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
+  <img src="https://raw.githubusercontent.com/sqtactical/Albatastic_Node/main/ArchivosV1.0/Preview_delante.png" alt="Albatastic Compact" width="150" />
+  <div>
+
+
+**Descripción**: PCB compacta, sencilla y flexible para NRF52840 y E22/E22P.
+
+**Características**: Placa Promicro de bajo coste, selector entre E22 y E22P, medidor % batería.
+
+**Próximamente**: V1.1 con GPS y HT-RA 62.
+
+**Autor**: EA5JSQ
+
+🔗 [Ver en GitHub](https://github.com/sqtactical/Albatastic_Node)
+
+  </div>
+</div>
+
+---
+### 🖥️ Albatastic PRO v1.1
+
+<div style={{display:'flex', alignItems:'flex-start', gap:'20px', marginBottom:'40px'}}>
+  <img 
+    src="https://raw.githubusercontent.com/EmilioAL-Git/PCB-Albatastic-PRO/refs/heads/main/images/AlbatasticPRO1.1.png" 
+    alt="Albatastic PRO" 
+    style={{width:'150px'}}
+  />
+  <div>
+
+**Descripción**: PCB modular para Meshtastic integrable en caja Famatel 3072. Filosofía *"Choose your fighter"*: monta solo lo que necesitas.
+
+**Características**: NRF52 XIAO o ProMicro, múltiples radios LoRa (E22, E22P, HT-RA62, E80), multiples cargadores solares, batería dual 18650 integrada o externa, GPS, sensores BME280/BME680/AHT20/INA219, pantalla OLED, conector serial UART, reset automático con ATTINY13A y protección de brownout con TLV840.
+
+**Versión actual**: V1.1 (probada y será publicada en breve). Cambios para 1.2 proximamente.
+
+**Autor**: @Sremylio
+
+🔗 [Ver en GitHub](https://github.com/EmilioAL-Git/PCB-Albatastic-PRO)
+
+  </div>
 </div>
 
 ---
