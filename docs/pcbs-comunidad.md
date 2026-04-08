@@ -107,6 +107,25 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 
 ---
 
+### 🔌 Pico2_W5500_E22 {#pico2-w5500-e22}
+
+<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
+  <img src="https://raw.githubusercontent.com/cvaldess/Pico2_W5500_E22/refs/heads/main/2D_Pico2_W5500_E22.png" alt="Pico2_W5500_E22 PCB" width="300" />
+  <div>
+
+**Descripción**: Placa carrier que integra un Raspberry Pi Pico 2, módulo Ethernet W5500 y módulo LoRa Ebyte E22 en un diseño compacto para aplicaciones Meshtastic con conectividad por cable Ethernet y aliemtacion PoE.
+
+**Características**: Raspberry Pi Pico 2 (RP2350), W5500 Ethernet vía SPI, Ebyte E22 900M30S LoRa, header BMP280 (I2C), expansión I2C, UART y soporte PoE PD.
+
+**Autor**: @cvaldess
+
+🔗 [Ver en GitHub](https://github.com/cvaldess/Pico2_W5500_E22)
+
+  </div>
+</div>
+
+---
+
 ## 📬 ¿Quieres añadir tu diseño?
 
 Envíanos el enlace a tu repositorio, una imagen del PCB y una breve descripción. ¡Lo añadiremos aquí para que otros puedan usarlo o mejorarlo!
