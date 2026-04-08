@@ -62,20 +62,20 @@ condiciones.
 - _Bandwidth_: `125`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
-- _Frequency slot_: `1`
-- _Frequency override_: `869.4625`
+- _Frequency slot_: `2`
+- _Frequency override_: `869.5875`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+3)
 
-#### Prueba 4 - del 25/04/2026 al 08/05/2026
+#### Prueba 4 - del 25/04/2026 al 01/05/2026
 
 - _Bandwidth_: `125`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
-- _Frequency slot_: `2`
-- _Frequency override_: `869.5875`
+- _Frequency slot_: `1`
+- _Frequency override_: `869.4625`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+4)
 
-#### Prueba 5 - del 09/05/2026 al 22/05/2026
+#### Prueba 5 - del 02/05/2026 al 08/05/2026
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `6`
@@ -83,6 +83,10 @@ condiciones.
 - _Frequency slot_: `4`
 - _Frequency override_: `869.618`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+5)
+
+#### Prueba 6 - del 09/05/2026 al 15/05/2026
+
+- Propuesta de probar el preset ShortFast
 
 :::info
 
