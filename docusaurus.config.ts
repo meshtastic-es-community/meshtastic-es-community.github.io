@@ -162,6 +162,10 @@ const config: Config = {
             {
               label: 'Política de cookies',
               to: '/politica-de-cookies',
+            },
+            {
+              label: 'Tratamiento de datos',
+              to: '/tratamiento-de-datos',
             }
           ],
         },
