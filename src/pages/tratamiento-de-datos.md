@@ -3,8 +3,9 @@ title: Política de tratamiento de datos
 ---
 # Política de tratamiento de datos
 
-Este sitio web recopila datos generados por los nodos conectados a la red Meshtastic España. Los datos que se pueden
-almacenar incluyen:
+Este sitio web no recopila ningún dato del usuario. Los datos que se describen a continuación son generados por la propia red Meshtastic y recogidos por los servicios de la comunidad (MQTT, Meshview, Malla, etc.) cuando un nodo se conecta a la red.
+
+Algunos datos son:
 
 - **Posición GPS / ubicación**: coordenadas geográficas emitidas por los nodos cuando el usuario tiene activada la
   función de localización en su dispositivo.
