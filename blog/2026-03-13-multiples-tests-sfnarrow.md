@@ -57,7 +57,8 @@ condiciones.
 - _Frequency override_: `869.4313`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+2)
 
-#### Prueba 3 - del 11/04/2026 al 24/04/2026
+#### Prueba 3 - ~~del 11/04/2026~~ del 09/04/2026 al 24/04/2026
+> Adelantamos la prueba
 
 - _Bandwidth_: `125`
 - _Spread Factor_: `7`
