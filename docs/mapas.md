@@ -11,9 +11,16 @@ Aquí encontrarás enlaces útiles para visualizar la red y herramientas de la c
 
 ## 🌐 Mapa principal {#mapa-principal}
 
-🔗 https://mapa.meshtastic.es
+🔗 Mapa completo disponible [aqui](https://mapa.meshtastic.es).
 
-Visualiza todos los nodos activos, su ubicación aproximada y su alcance. Ideal para comprobar la cobertura de la red Meshtastic en tiempo real.
+<iframe
+  src="https://mapa.meshtastic.es"
+  width="100%"
+  height="500"
+  style={{border: 'none', borderRadius: '8px'}}
+  loading="lazy"
+  title="Mapa interactivo de nodos Meshtastic España"
+/>
 
 ---
 
