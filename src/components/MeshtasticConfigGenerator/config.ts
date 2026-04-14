@@ -22,6 +22,23 @@ export const PRESETS: Presets = {
       region: DEFAULT_REGION,
     },
   },
+  'ShortSlow': {
+    loraConfig: {
+      usePreset: true,
+      modemPreset: ModemPreset.SHORT_SLOW,
+      region: DEFAULT_REGION,
+      overrideFrequency: 869.525, //Al venir de las pruebas lo incluyo por si alguien lo tiene mal
+    },
+  },
+  'ShortFast': {
+    loraConfig: {
+      usePreset: true,
+      modemPreset: ModemPreset.SHORT_FAST,
+      region: DEFAULT_REGION,
+      overrideFrequency: 869.525, //Al venir de las pruebas lo incluyo por si alguien lo tiene mal
+    },
+  },
+
   'SFNarrow - Prueba 1': {
     label: 'BW 62, SF 7, CR 5, 869.618 MHz',
     overrideChannelName: 'SFNarrow',
@@ -48,19 +65,19 @@ export const PRESETS: Presets = {
     },
   },
   'SFNarrow - Prueba 3': {
-    label: 'BW 125, SF 7, CR 5, 869.5875 MHz',
+    label: 'BW 125, SF 7, CR 8, 869.5875 MHz',
     overrideChannelName: 'SFNarrow',
     loraConfig: {
       usePreset: false,
       bandwidth: 125,
       spreadFactor: 7,
-      codingRate: 5,
+      codingRate: 8,
       region: DEFAULT_REGION,
       frecuencySlot: 2,
       overrideFrequency: 869.5875,
     },
   },
-  'SFNarrow - Prueba 4': {
+  'Narrow 125kHz Slot 1': {
     label: 'BW 125, SF 7, CR 5, 869.4625 MHz',
     overrideChannelName: 'SFNarrow',
     loraConfig: {
@@ -73,7 +90,7 @@ export const PRESETS: Presets = {
       overrideFrequency: 869.4625,
     },
   },
-  'SFNarrow - Prueba 5': {
+  'SFNarrow - Prueba 7': {
     label: 'BW 62, SF 6, CR 5, 869.618 MHz',
     overrideChannelName: 'SFNarrow',
     loraConfig: {
@@ -85,6 +102,34 @@ export const PRESETS: Presets = {
       overrideFrequency: 869.618,
     },
   },
+  //Con el PR mergeado incluyo estos dos por si nos apetece probarlos en algun momento
+  'ShortPlus': {
+    label: 'BW 250kHz, SF6, CR5, 869.525MHz',
+    overrideChannelName: 'ShortPlus',
+    loraConfig: {
+      usePreset: false,
+      bandwidth: 250,
+      spreadFactor: 6,
+      codingRate: 5,
+      region: DEFAULT_REGION,
+      frecuencySlot: 1,
+      overrideFrequency: 869.525,
+    },
+  },
+  'ShortProMax': {
+    label: 'BW 250kHz, SF5, CR5, 869.525MHz',
+    overrideChannelName: 'ShortProMax',
+    loraConfig: {
+      usePreset: false,
+      bandwidth: 250,
+      spreadFactor: 5,
+      codingRate: 5,
+      region: DEFAULT_REGION,
+      frecuencySlot: 1,
+      overrideFrequency: 869.525,
+    },
+  },
+
 };
 
 // Radio configurations

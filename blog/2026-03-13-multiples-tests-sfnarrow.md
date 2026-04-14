@@ -62,21 +62,31 @@ condiciones.
 
 - _Bandwidth_: `125`
 - _Spread Factor_: `7`
-- _Coding Rate_: `5`
+- _Coding Rate_: `8`
 - _Frequency slot_: `2`
 - _Frequency override_: `869.5875`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+3)
 
 #### Prueba 4 - del 25/04/2026 al 01/05/2026
 
-- _Bandwidth_: `125`
-- _Spread Factor_: `7`
-- _Coding Rate_: `5`
-- _Frequency slot_: `1`
-- _Frequency override_: `869.4625`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+4)
+- _Preset_: **ShortSlow**
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=ShortSlow)
 
 #### Prueba 5 - del 02/05/2026 al 08/05/2026
+
+- _Preset_: **ShortFast**
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=ShortFast)
+
+#### Prueba 6 - del 09/05/2026 al 15/05/2026 (Repeticion de la Prueba 1)
+
+- _Bandwidth_: `62`
+- _Spread Factor_: `7`
+- _Coding Rate_: `5`
+- _Frequency slot_: `4`
+- _Frequency override_: `869.618`
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+1)
+
+#### Prueba 7 - del 16/05/2026 al 22/05/2026
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `6`
@@ -85,23 +95,25 @@ condiciones.
 - _Frequency override_: `869.618`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+5)
 
-#### Prueba 6 - del 09/05/2026 al 15/05/2026
+#### Volvemos - del 23/05/2026 en adelante
 
-- Propuesta de probar el preset ShortFast
+- Volvemos temporalmente al _preset_ **MediumFast**.
+- Valoramos los datos obtenidos para tomar una decisión.
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=MediumFast)
 
 :::info
 
-Ojo! los firmwares actuales (tanto la beta "estable" 2.7.15 como la última alpha 2.7.20) no tienen soporte para el Spreading Factor 6.
-Ademas los chips LoRa antiguos, tales como el SX1276 no son compatibles, por lo que nodos antiguos como el Heltec V2 no son compatibles.
-Antes de la prueba ofreceremos en caso necesario un firmware con soporte para flashear en los nodos compatibles.
+¡Ojo! Los firmwares oficiales actuales (tanto la beta "estable" 2.7.15 como la última alpha 2.7.22) no tienen soporte para el Spreading Factor 6 ni para anchos de banda inferiores a 125kHz en algunos casos. Además, los chips LoRa antiguos, como el SX1276, no son compatibles con SF6, por lo que nodos antiguos como el Heltec V2 no podrán participar en esa prueba específica.
+
+Para participar en los tests SFNarrow, es necesario utilizar compilaciones personalizadas con el soporte desbloqueado:
+
+- **[Firmware v2.7.15-custom (Recomendado para la mayoría de nodos de dificil acceso)](https://github.com/meshtastic-es-community/sfnarrow-firmware/actions/runs/23066767401#artifacts)**
+
+- **[Firmware v2.7.22-custom (Recomendado para Heltec V4 y similares)](https://github.com/meshtastic-es-community/sfnarrow-firmware/actions/runs/24403927815#artifacts)**
+
+Esperamos que estos cambios se incluyan de forma oficial en la siguiente version del firmware. El Pull Request ya mergeado **[PR](https://github.com/meshtastic/firmware/pull/10160)**.
 
 :::
-
-#### Volvemos - del 23/05/2026 en adelante
-
-- Volvemos al _preset_ **MediumFast**.
-- Valoramos los datos obtenidos para tomar una decisión.
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=MediumFast)
 
 ### 📊 Recopilación de datos{#recopilacion-datos}
 
