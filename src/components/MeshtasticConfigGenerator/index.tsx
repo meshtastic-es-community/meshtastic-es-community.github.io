@@ -22,6 +22,8 @@ function pskToBase64(psk: Uint8Array | undefined): string {
 function generateConfigUrl(
   presetName: keyof typeof PRESETS,
   includeIberia: boolean,
+  includeTest: boolean,
+  includeBots: boolean,
   regionalChannel: string | null,
   selectedRadio: string | null
 ): { url: string; loraConfig: LoRaConfig; channels: { name: string; psk: string }[] } {
@@ -51,6 +53,30 @@ function generateConfigUrl(
       downlinkEnabled: true,
     });
     channelInfo.push({ name: 'Iberia', psk: pskToBase64(DEFAULT_PSK) });
+  }
+
+  // Add Test channel if requested
+  if (includeTest) {
+    const testKey = new Uint8Array([2]);
+    channels.push({
+      psk: testKey,
+      name: 'Test',
+      uplinkEnabled: true,
+      downlinkEnabled: true,
+    });
+    channelInfo.push({ name: 'Test', psk: pskToBase64(testKey) });
+  }
+
+  // Add Bots channel if requested
+  if (includeBots) {
+    const botsKey = new Uint8Array([2]);
+    channels.push({
+      psk: botsKey,
+      name: 'Bots',
+      uplinkEnabled: true,
+      downlinkEnabled: true,
+    });
+    channelInfo.push({ name: 'Bots', psk: pskToBase64(botsKey) });
   }
 
   // Add regional channel if selected
@@ -120,10 +146,24 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     if (radio) {
       setSelectedRadio(radio);
     }
+
+    // Parse Test
+    const test = params.get('test');
+    if (test !== null) {
+      setIncludeTest(test === 'true');
+    }
+
+    // Parse Bots
+    const bots = params.get('bots');
+    if (bots !== null) {
+      setIncludeBots(bots === 'true');
+    }
   }, []);
 
   const [selectedPreset, setSelectedPreset] = useState<keyof typeof PRESETS>(Object.keys(PRESETS)[0] as keyof typeof PRESETS);
   const [includeIberia, setIncludeIberia] = useState(false);
+  const [includeTest, setIncludeTest] = useState(false);
+  const [includeBots, setIncludeBots] = useState(false);
   const [includeRegional, setIncludeRegional] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState<string>(Object.values(REGION_CONFIGS)[0].channel);
   const [selectedRadio, setSelectedRadio] = useState<string | null>(null);
@@ -137,6 +177,8 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     const params = new URLSearchParams();
     params.set('preset', selectedPreset);
     params.set('iberia', includeIberia.toString());
+    params.set('test', includeTest.toString());
+    params.set('bots', includeBots.toString());
     params.set('regional', includeRegional.toString());
     if (includeRegional) {
       params.set('region', selectedRegion);
@@ -156,6 +198,8 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     const params = new URLSearchParams();
     params.set('preset', selectedPreset);
     params.set('iberia', includeIberia.toString());
+    params.set('test', includeTest.toString());
+    params.set('bots', includeBots.toString());
     params.set('regional', includeRegional.toString());
     if (includeRegional) {
       params.set('region', selectedRegion);
@@ -172,10 +216,12 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     return generateConfigUrl(
       selectedPreset,
       includeIberia,
+      includeTest,
+      includeBots,
       includeRegional ? selectedRegion : null,
       selectedRadio
     );
-  }, [selectedPreset, includeIberia, includeRegional, selectedRegion, selectedRadio]);
+  }, [selectedPreset, includeIberia, includeTest, includeBots, includeRegional, selectedRegion, selectedRadio]);
 
   return (
     <div className="meshtastic-config-generator">
@@ -300,6 +346,24 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
                 onChange={(e) => setIncludeIberia(e.target.checked)}
               />
               <span>Iberia</span>
+            </label>
+
+            <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
+              <input
+                type="checkbox"
+                checked={includeTest}
+                onChange={(e) => setIncludeTest(e.target.checked)}
+              />
+              <span>Test</span>
+            </label>
+
+            <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
+              <input
+                type="checkbox"
+                checked={includeBots}
+                onChange={(e) => setIncludeBots(e.target.checked)}
+              />
+              <span>Bots</span>
             </label>
             
             <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
