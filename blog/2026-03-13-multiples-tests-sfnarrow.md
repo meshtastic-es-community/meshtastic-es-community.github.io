@@ -103,7 +103,7 @@ condiciones.
 
 :::info
 
-¡Ojo! Los firmwares oficiales actuales (tanto la beta "estable" 2.7.15 como la última alpha 2.7.22) no tienen soporte para el Spreading Factor 6 ni para anchos de banda inferiores a 125kHz en algunos casos. Además, los chips LoRa antiguos, como el SX1276, no son compatibles con SF6, por lo que nodos antiguos como el Heltec V2 no podrán participar en esa prueba específica.
+¡Ojo! Los firmwares oficiales actuales (tanto la beta "estable" 2.7.15 como la última alpha 2.7.22) no tienen soporte para el Spreading Factor 6. Además, los chips LoRa antiguos, como el SX1276, no son compatibles con SF6, por lo que nodos antiguos como el Heltec V2 no podrán participar en esa prueba específica.
 
 Para participar en los tests SFNarrow, es necesario utilizar compilaciones personalizadas con el soporte desbloqueado:
 
