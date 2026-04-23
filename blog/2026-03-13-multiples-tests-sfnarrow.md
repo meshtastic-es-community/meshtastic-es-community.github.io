@@ -77,7 +77,7 @@ condiciones.
 - _Preset_: **ShortFast**
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=ShortFast)
 
-#### Prueba 6 - del 01/05/2026 al 15/05/2026 (Repeticion de la Prueba 1)
+#### Prueba 6 - del 02/05/2026 al 15/05/2026 (Repeticion de la Prueba 1)
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `7`
