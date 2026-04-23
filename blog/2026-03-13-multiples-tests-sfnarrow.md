@@ -67,17 +67,17 @@ condiciones.
 - _Frequency override_: `869.5875`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+3)
 
-#### Prueba 4 - del 17/04/2026 al 24/04/2026 ~~25/04/2026 al 01/05/2026~~
+#### Prueba 4 - del 17/04/2026 al 24/04/2026
 
 - _Preset_: **ShortSlow**
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=ShortSlow)
 
-#### Prueba 5 - del 25/05/2026 al 01/05/2026
+#### Prueba 5 - del 25/04/2026 al 01/05/2026
 
 - _Preset_: **ShortFast**
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=ShortFast)
 
-#### Prueba 6 - del 01/05/2026 al 15/05/2026 (Repeticion de la Prueba 1)
+#### Prueba 6 - del 02/05/2026 al 15/05/2026 (Repeticion de la Prueba 1)
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `7`
