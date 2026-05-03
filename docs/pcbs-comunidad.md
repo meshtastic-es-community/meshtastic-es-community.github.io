@@ -33,7 +33,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 ### ☀️ MASN Solar Node {#masn}
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="/img/guias-diy/masn/bom-masn-pcb.webp" alt="MASN PCB" width="250" />
+  <img src="/img/guias-diy/masn/bom-masn-pcb.webp" alt="MASN PCB" width="150" />
   <div>
 
 **Descripción**: Nodo solar autónomo fácil de montar, pensado para principiantes
@@ -52,7 +52,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 ### 🌊 WashTastic {#WashTastic}
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://raw.githubusercontent.com/valzzu/meshtastic-pcbs/main/WashTastic/pics/Assembled.jpg" alt="WashTastic PCB" width="250" />
+  <img src="https://raw.githubusercontent.com/valzzu/meshtastic-pcbs/main/WashTastic/pics/Assembled.jpg" alt="WashTastic PCB" width="150" />
   <div>
 
 **Descripción**: Nodo solar con bajo consumo y diseño compacto, disponible en versiones ensambladas. Enfocado a usuarios avanzados.
@@ -71,7 +71,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 ### ✂️ Planchatek {#planchatek}
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://raw.githubusercontent.com/incre77/planchatek/refs/heads/main/image.png" alt="Planchatek PCB" width="250" />
+  <img src="https://raw.githubusercontent.com/incre77/planchatek/refs/heads/main/image.png" alt="Planchatek PCB" width="150" />
   <div>
 
 **Descripción**: Una placa base para imprimir de forma casera en una sola cara y conseguir una base para construir tu pcb.
@@ -91,7 +91,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://raw.githubusercontent.com/gargomoma/xiaoWa_pcb/refs/heads/main/pics/PCB_XiaoWa_2025-11-04_top.png" alt="XiaoWa PCB" width="150" />
+  <img src="https://raw.githubusercontent.com/gargomoma/xiaoWa_pcb/refs/heads/main/pics/PCB_XiaoWa_2025-11-04_top.png" alt="XiaoWa PCB" width="100" />
   <div>
 
 **Descripción**: Esta PCB está diseñada para ocupar el menor espacio posible, ideal para nodos portátiles y ocultos. (Puede instalarse dentro de tubos de PVC de 32 mm).
@@ -110,7 +110,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 ### 🔌 Pico2_W5500_E22 {#pico2-w5500-e22}
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://raw.githubusercontent.com/cvaldess/Pico2_W5500_E22/refs/heads/main/2D_Pico2_W5500_E22.png" alt="Pico2_W5500_E22 PCB" width="300" />
+  <img src="https://raw.githubusercontent.com/cvaldess/Pico2_W5500_E22/refs/heads/main/2D_Pico2_W5500_E22.png" alt="Pico2_W5500_E22 PCB" width="150" />
   <div>
 
 **Descripción**: Placa carrier que integra un Raspberry Pi Pico 2, módulo Ethernet W5500 y módulo LoRa Ebyte E22 en un diseño compacto para aplicaciones Meshtastic con conectividad por cable Ethernet y aliemtacion PoE.
@@ -166,6 +166,29 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 **Autor**: @Sremylio
 
 🔗 [Ver en GitHub](https://github.com/EmilioAL-Git/PCB-Albatastic-PRO)
+
+  </div>
+</div>
+
+
+---
+### 🖥 AlbaPipe
+
+<div style={{display:'flex', alignItems:'flex-start', gap:'20px', marginBottom:'40px'}}>
+  <img 
+    src="https://raw.githubusercontent.com/miguelleonmanzano/Albapipe-Meshtastic-Node/refs/heads/main/pcb%20front.png" 
+    alt="AlbaPipe" 
+    style={{width:'50px'}}
+  />
+  <div>
+
+**Descripción**: PCB adaptada para poder introducir en un tubo de 50 mm de diámetro.
+
+**Características**: Basada en Promicro y E22 o E22p, preparada (opcional) para GPS, telemetría ambiental y medición eléctrica, supervisor de tensión TLV840 y reseteo automático temporizado por Attiny, medición % batería, BMS. Posibilidad de conectar la antena directamente al E22 o a un conector SMA.
+
+**Autor**: miguelleonmanzano
+
+🔗 [Ver en GitHub](https://github.com/miguelleonmanzano/Albapipe-Meshtastic-Node)
 
   </div>
 </div>
