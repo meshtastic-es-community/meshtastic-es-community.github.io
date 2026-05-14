@@ -77,7 +77,7 @@ condiciones.
 - _Preset_: **ShortFast**
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=ShortFast)
 
-#### Prueba 6 - del 02/05/2026 al 15/05/2026 (Repeticion de la Prueba 1)
+#### Prueba 6 - del 02/05/2026 al **05/06/2026** (Repeticion de la Prueba 1)
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `7`
@@ -86,7 +86,14 @@ condiciones.
 - _Frequency override_: `869.618`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+1)
 
-#### Prueba 7 - del 16/05/2026 al 22/05/2026
+:::info
+
+Actualización 14/05/2026: Como se ha unido Levante a la prueba se alarga la prueba para dar tiempo a probar el enlace Centro-Levante en SFNarrow.
+Animamos a todo el mundo de estas zonas que este en MediumFast a pasarse a SFNarrow y probar🙂
+
+:::
+
+#### Prueba 7 - del **06/06/2026** al 20/06/2026
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `6`
@@ -103,15 +110,11 @@ condiciones.
 
 :::info
 
-¡Ojo! Los firmwares oficiales actuales (tanto la beta "estable" 2.7.15 como la última alpha 2.7.22) no tienen soporte para el Spreading Factor 6. Además, los chips LoRa antiguos, como el SX1276, no son compatibles con SF6, por lo que nodos antiguos como el Heltec V2 no podrán participar en esa prueba específica.
+¡Ojo! Solo la version alpha 2.7.23 y posteriores tienen soporte para el Spreading Factor 6. Además, los chips LoRa antiguos, como el SX1276, no son compatibles con SF6, por lo que nodos antiguos como el Heltec V2 no podrán participar en esa prueba específica.
 
-Para participar en los tests SFNarrow, es necesario utilizar compilaciones personalizadas con el soporte desbloqueado:
+Para participar en los tests SFNarrow, es necesario utilizar la ultima alfa, o en caso de querer utilizar la beta 2.7.15, usar compilaciones personalizadas con el soporte desbloqueado:
 
 - **[Firmware v2.7.15-custom (Recomendado para la mayoría de nodos de dificil acceso)](https://github.com/meshtastic-es-community/sfnarrow-firmware/actions/runs/23066767401#artifacts)**
-
-- **[Firmware v2.7.22-custom (Recomendado para Heltec V4 y similares)](https://github.com/meshtastic-es-community/sfnarrow-firmware/actions/runs/24403927815#artifacts)**
-
-Esperamos que estos cambios se incluyan de forma oficial en la siguiente version del firmware. El Pull Request ya mergeado **[PR](https://github.com/meshtastic/firmware/pull/10160)**.
 
 :::
 
