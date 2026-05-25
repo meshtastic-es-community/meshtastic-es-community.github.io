@@ -148,7 +148,8 @@ el problema y además no será compatible con la división actual de 4 slots.
 
 Esto es importante porque al utilizar la misma frecuencia y bandwidth tenemos varias ventajas:
 - **Evitar colisiones**: Al estar las dos redes en SF7 el Channel Activity Detection de LoRa evita las colisiones, por lo que ambas mallas pueden usar ajustes parecidos sin colisionar. Evitando las colisiones que se producen al usar LongFast o MediumFast que genera colisiones con este preset de MeshCore Portugal.
-- **Usando SF6**: Todavia mejor puesto que al ser ortogonales los dos pueden emitir al mismo tiempo sin incordiarse al uno al otro, no solo evitas colisiones si no que tambien evitas compartir canal. A cambio tendriamos mas bitrate aunque menos alcance.
+- **Usando SF6 (en la siguiente prueba)**: Todavia mejor puesto que al ser ortogonales los dos pueden emitir al mismo tiempo sin incordiarse al uno al otro, no solo evitas colisiones si no que tambien evitas compartir canal. A cambio tendriamos mas bitrate aunque menos alcance.
+
 **Esta arquitectura de hecho tiene una década de experiencia con LoRaWAN, donde para la misma frecuencia se emite simultaneamente en todos los Spreading Factors.**
 
 En resumen: no hay un slot perfecto ahora mismo, y el Slot 4 con SF7/CR5 es el que
