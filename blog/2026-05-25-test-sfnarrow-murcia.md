@@ -5,8 +5,8 @@ authors: []
 tags: [Almería, Murcia, Alicante, Valencia, Levante, Configuración, Narrow]
 description: >
   La malla de la Zona Centro lleva meses probando SFNarrow con resultados muy positivos.
-  Los enlaces ya pasan por Toledo, Ciudad Real y Albacete. Si estás en Almería, Murcia
-  o Alicante, el hilo ya llega hasta vosotros. Este es el momento de sumarse.
+  Los enlaces ya pasan por Toledo, Ciudad Real y Albacete. Si estás en Almería, Murcia,
+  Alicante o Valencia, el hilo ya llega hasta vosotros. Este es el momento de sumarse.
 ---
 
 La malla "zona centro" de Meshtastic España está probando una nueva configuración llamada **SFNarrow**
