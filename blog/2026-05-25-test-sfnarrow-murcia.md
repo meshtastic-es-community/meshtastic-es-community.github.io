@@ -9,7 +9,7 @@ description: >
   o Alicante, el hilo ya llega hasta vosotros. Este es el momento de sumarse.
 ---
 
-La malla española de Meshtastic está probando una nueva configuración llamada **SFNarrow**
+La malla "zona centro" de Meshtastic España está probando una nueva configuración llamada **SFNarrow**
 con resultados muy prometedores. Los enlaces ya funcionan a lo largo de la cadena
 **Toledo → Ciudad Real → Albacete**, y el siguiente paso natural es llegar a Levante y
 el Sureste. Si tienes un nodo en **Almería, Murcia o Alicante**, este artículo es para ti. 🙌
