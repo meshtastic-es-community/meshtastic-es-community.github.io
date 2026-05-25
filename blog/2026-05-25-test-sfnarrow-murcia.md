@@ -20,28 +20,20 @@ el Sureste. Si tienes un nodo en **Almería, Murcia, Alicante o Valencia**, este
 
 ## 🙋 Para todo el mundo: ¿qué está pasando y por qué debería importarme?
 
-### La red Meshtastic tiene un problema conocido: las ciudades se saturan
+### La red Meshtastic tiene un problema conocido: la banda es libre y se comparte con muchos sistemas
 
-Meshtastic usa radio LoRa, una tecnología que permite que los mensajes "salten" de nodo
-en nodo sin internet. El problema es que cuando hay muchos nodos cerca usando la misma
-frecuencia, se generan interferencias y colisiones: varios nodos intentan hablar a la
-vez y se tapan entre ellos.
+Meshtastic usa radio LoRa, una tecnología que permite que los mensajes "salten" de nodo en nodo sin internet. El problema es que se utiliza una banda libre, que se comparte con otros dispositivos en la misma frecuencia. Esto da inevitablemente a interferencias y choques entre los mensajes.
 
-La configuración que usa la mayoría de la malla española ahora mismo, **MediumFast**,
-usa una "autopista" ancha de radio. Eso está bien cuando hay poco tráfico, pero cuando
-la red crece se empieza a notar la congestión.
+La configuración que usa la mayoría de la malla española ahora mismo, **MediumFast**, usa un "carril" ancho de radio. Eso está bien porque puede sostener más tráfico, pero cuando hay "obstáculos" (aunque sean estrechos) se para todo.
 
 ### SFNarrow es como dividir esa autopista en carriles
 
 En lugar de que todos usen el mismo carril ancho, SFNarrow divide la banda en
 **4 carriles estrechos independientes**. Cada nodo usa solo uno de ellos. El resultado:
 
-- 📶 **Llegas más lejos**: un canal estrecho tiene menos ruido y la señal llega mejor.
-- 🔇 **Menos interferencias**: alarmas, sensores IoT y otros dispositivos de radio ya
-  no te molestan tanto.
-- 🚗 **Caben más coches**: al dividir la banda en 4 slots independientes, redes
-  distintas pueden usar slots distintos sin pisarse entre ellas, multiplicando la
-  capacidad total disponible en la banda.
+- 📶 **Llegas más lejos**: un canal estrecho tiene menos probabilidad de que "le toque" un obstáculo. Es decir, menos ruido y la señal llega mejor.
+- 🔇 **Menos interferencias**: alarmas, sensores IoT y otros dispositivos de radio ya no te molestan tanto. Podemos ir mas rápido en el mismo carril.
+- 🚗 **Caben más coches**: al dividir la banda en 4 slots independientes, sistemas distintos pueden usar slots distintos sin pisarse entre ellos, multiplicando la capacidad total disponible en la banda.
 
 ### ¿Y qué tiene que ver Almería, Murcia, Alicante y Valencia con todo esto?
 
@@ -141,14 +133,14 @@ preset portugués, que opera también en **869.618 MHz** con BW 62.5 kHz y SF7. 
 significa que Meshtastic SFNarrow y MeshCore comparten frecuencia en esta banda.
 
 La razón por la que aun así se eligió el Slot 4
-es que es **la mejor opción disponible dentro de los constraints actuales**: el preset
+es que es **la mejor opción disponible dentro de las restricciones actuales**: el preset
 oficial que está desarrollando Meshtastic para banda estrecha (`NARROW_868`) usará 3
 slots con guardbands en una distribución de frecuencias diferente, que tampoco resuelve
 el problema y además no será compatible con la división actual de 4 slots.
 
 Esto es importante porque al utilizar la misma frecuencia y bandwidth tenemos varias ventajas:
 - **Evitar colisiones**: Al estar las dos redes en SF7 el Channel Activity Detection de LoRa evita las colisiones, por lo que ambas mallas pueden usar ajustes parecidos sin colisionar. Evitando las colisiones que se producen al usar LongFast o MediumFast que genera colisiones con este preset de MeshCore Portugal.
-- **Usando SF6 (en la siguiente prueba)**: Todavia mejor puesto que al ser ortogonales los dos pueden emitir al mismo tiempo sin incordiarse al uno al otro, no solo evitas colisiones si no que tambien evitas compartir canal. A cambio tendriamos mas bitrate aunque menos alcance.
+- **Usando SF6 (en la siguiente prueba)**: Todavia mejor puesto que, al ser **ortogonales**, los dos pueden emitir al mismo tiempo sin molestarse al uno al otro. No solo evitas colisiones si no que tambien evitas compartir canal. A cambio tendriamos mas bitrate aunque menos alcance.
 
 **Esta arquitectura de hecho tiene una década de experiencia con LoRaWAN, donde para la misma frecuencia se emite simultaneamente en todos los Spreading Factors.**
 
