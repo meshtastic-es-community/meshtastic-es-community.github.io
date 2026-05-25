@@ -2,7 +2,7 @@
 slug: sfnarrow-levante-sureste
 title: 📡 Levante y Sureste, ¡es vuestro momento! Únete a SFNarrow
 authors: []
-tags: [Almería, Murcia, Alicante, Levante, Configuración, Narrow]
+tags: [Almería, Murcia, Alicante, Valencia, Levante, Configuración, Narrow]
 description: >
   La malla de la Zona Centro lleva meses probando SFNarrow con resultados muy positivos.
   Los enlaces ya pasan por Toledo, Ciudad Real y Albacete. Si estás en Almería, Murcia
