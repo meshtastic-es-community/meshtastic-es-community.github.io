@@ -140,15 +140,20 @@ La elección de **869.618 MHz (Slot 4)** no es arbitraria. MeshCore España util
 preset portugués, que opera también en **869.618 MHz** con BW 62.5 kHz y SF7. Eso
 significa que Meshtastic SFNarrow y MeshCore comparten frecuencia en esta banda.
 
-En la práctica conviven porque las trazas son muy pequeñas y los protocolos son
-distintos, pero es una colisión real. La razón por la que aun así se eligió el Slot 4
+La razón por la que aun así se eligió el Slot 4
 es que es **la mejor opción disponible dentro de los constraints actuales**: el preset
 oficial que está desarrollando Meshtastic para banda estrecha (`NARROW_868`) usará 3
 slots con guardbands en una distribución de frecuencias diferente, que tampoco resuelve
 el problema y además no será compatible con la división actual de 4 slots.
 
+Esto es importante porque al utilizar la misma frecuencia y bandwidth tenemos varias ventajas:
+- **Evitar colisiones**: Al estar las dos redes en SF7 el Channel Activity Detection de LoRa evita las colisiones, por lo que ambas mallas pueden usar ajustes parecidos sin colisionar. Evitando las colisiones que se producen al usar LongFast o MediumFast que genera colisiones con este preset de MeshCore Portugal.
+- **Usando SF6**: Todavia mejor puesto que al ser ortogonales los dos pueden emitir al mismo tiempo sin incordiarse al uno al otro, no solo evitas colisiones si no que tambien evitas compartir canal. A cambio tendriamos mas bitrate aunque menos alcance.
+**Esta arquitectura de hecho tiene una década de experiencia con LoRaWAN, donde para la misma frecuencia se emite simultaneamente en todos los Spreading Factors.**
+
 En resumen: no hay un slot perfecto ahora mismo, y el Slot 4 con SF7/CR5 es el que
-mejores resultados está dando en campo.
+mejores resultados está dando en campo. Evitamos el ruido lateral de usar una frecuencia lateral en la misma banda y las colisiones completas de LF/MF con Narrow.
+Es decir hacemos un uso mucho mas eficiente y respetuoso de la banda que estamos usando.
 
 ### Consideraciones y limitaciones actuales
 
