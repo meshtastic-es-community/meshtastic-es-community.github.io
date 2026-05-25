@@ -43,7 +43,7 @@ En lugar de que todos usen el mismo carril ancho, SFNarrow divide la banda en
   distintas pueden usar slots distintos sin pisarse entre ellas, multiplicando la
   capacidad total disponible en la banda.
 
-### ¿Y qué tiene que ver Almería, Murcia y Alicante con todo esto?
+### ¿Y qué tiene que ver Almería, Murcia, Alicante y Valencia con todo esto?
 
 La Zona Centro lleva meses probando SFNarrow con muy buenas sensaciones. Lo importante es que **la cadena ya existe y ya llega hasta vosotros**: la ruta
 **Madrid → Toledo → Ciudad Real → Albacete → Murcia → Alicante → Cartagena** está
