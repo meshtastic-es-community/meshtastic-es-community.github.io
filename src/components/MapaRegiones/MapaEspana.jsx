@@ -12,11 +12,17 @@ const presetColors = {
   "ShortFast": "#ff6600ff",    
   "ShortSlow": "#FFEE93",    
   "MediumFast": "#00c4da",   
-  "MediumSlow": "#fda934",   
+  "MediumSlow": "#e64949", 
   "LongFast": "#5cc482",     
-  //"LongModerate": "#1f6639ff", 
-  //"LongSlow": "#08818aff",
+  "LongModerate": "#1f6639ff", 
+  "LongSlow": "#08818aff",
+  "SFNarrow": "#fda934",
+  "LiteFast": "#c0fa00",
+  "LiteNarrow": "#6fff00",
+  "NarrowFast": "#2b8fdb",  
+  "NarrowSlow": "#d44bc4",
 };
+
 const DEFAULT_COLOR = "#ccccccff"; 
 const DEFAULT_PRESET = "MediumFast";
 const NO_DATA_PRESET = "Sin Datos";
