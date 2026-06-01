@@ -46,18 +46,17 @@ condiciones.
 - _Coding Rate_: `5`
 - _Frequency slot_: `4`
 - _Frequency override_: `869.618`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+1)
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+SF7+-+Slot+4)
 
-#### Prueba 2 - del 28/03/2026 al 10/04/2026
+#### Prueba 2 - del 28/03/2026 al 08/04/2026
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
 - _Frequency slot_: `1`
 - _Frequency override_: `869.4313`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+2)
 
-#### Prueba 3 - ~~del 11/04/2026~~ del 09/04/2026 al 24/04/2026
+#### Prueba 3 - del 09/04/2026 al 16/04/2026
 > Adelantamos la prueba
 
 - _Bandwidth_: `125`
@@ -65,7 +64,6 @@ condiciones.
 - _Coding Rate_: `8`
 - _Frequency slot_: `2`
 - _Frequency override_: `869.5875`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+3)
 
 #### Prueba 4 - del 17/04/2026 al 24/04/2026
 
@@ -77,36 +75,31 @@ condiciones.
 - _Preset_: **ShortFast**
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=ShortFast)
 
-#### Prueba 6 - del 02/05/2026 al **05/06/2026** (Repeticion de la Prueba 1)
+#### Prueba 6 - desde el 02/05/2026 (Repeticion de la Prueba 1)
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `7`
 - _Coding Rate_: `5`
 - _Frequency slot_: `4`
 - _Frequency override_: `869.618`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+1)
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+SF7+-+Slot+4)
 
 :::info
 
-Actualización 14/05/2026: Como se ha unido Levante a la prueba se alarga la prueba para dar tiempo a probar el enlace Centro-Levante en SFNarrow.
-Animamos a todo el mundo de estas zonas que este en MediumFast a pasarse a SFNarrow y probar🙂
+Actualización 14/05/2026: Como hay tan buenos resultados, se ha unido Levante a la prueba. Se alarga indefinidamente la prueba para dar tiempo a probar el enlace Centro-Levante en SFNarrow Prueba 1.
+Animamos a todo el mundo de estas zonas que este en MediumFast a pasarse a los ajustes de la Prueba 1 y ver que tal 🙂
 
 :::
 
-#### Prueba 7 - del **06/06/2026** al 20/06/2026
+#### Prueba 7 - Sin fecha. Requiere firmware >= 2.7.23
 
 - _Bandwidth_: `62`
 - _Spread Factor_: `6`
 - _Coding Rate_: `5`
 - _Frequency slot_: `4`
 - _Frequency override_: `869.618`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+5)
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+SF6)
 
-#### Volvemos - del 23/05/2026 en adelante
-
-- Volvemos temporalmente al _preset_ **MediumFast**.
-- Valoramos los datos obtenidos para tomar una decisión.
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=MediumFast)
 
 :::info
 
