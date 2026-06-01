@@ -86,7 +86,7 @@ condiciones.
 
 :::info
 
-Actualización 14/05/2026: Como hay tan buenos resultados, se ha unido Levante a la prueba. Se alarga indefinidamente la prueba para dar tiempo a probar el enlace Centro-Levante en SFNarrow Prueba 1.
+Actualización 01/06/2026: Como hay tan buenos resultados, se ha unido Levante a la prueba. Se alarga indefinidamente la prueba para dar tiempo a probar el enlace Centro-Levante en SFNarrow Prueba 1.
 Animamos a todo el mundo de estas zonas que este en MediumFast a pasarse a los ajustes de la Prueba 1 y ver que tal 🙂
 
 :::
