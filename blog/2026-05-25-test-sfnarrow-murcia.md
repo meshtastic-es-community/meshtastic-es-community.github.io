@@ -224,8 +224,8 @@ Comparte tus observaciones en el [grupo de Telegram](https://t.me/meshtastic_esp
 
 | Prueba | Fechas | Config |
 |---|---|---|
-| **Prueba 6** ✅ activa | 02/05 – 05/06/2026 | BW 62, SF7, CR5, Slot 4 |
-| **Prueba 7** | 06/06 – 20/06/2026 | BW 62, **SF6**, CR5, Slot 4 |
+| **Prueba 6** ✅ activa | 02/05 – No determinado | BW 62, SF7, CR5, Slot 4 |
+| **Prueba 7** | Futuro, requiere pasar a 2.7.23 | BW 62, **SF6**, CR5, Slot 4 |
 
 ---
 
