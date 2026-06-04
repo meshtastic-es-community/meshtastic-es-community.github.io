@@ -90,12 +90,12 @@ datos y alcance razonable, pero tiene dos limitaciones importantes cuando la red
 
 SFNarrow divide la banda EU_868 en **4 subcanales de 62,5 kHz** cada uno:
 
-| Slot | Frecuencia central |
-|---|---|
-| Slot 1 | 869.4313 MHz |
-| Slot 2 | 869.4938 MHz |
-| Slot 3 | 869.5563 MHz |
-| Slot 4 | 869.6188 MHz |
+| Slot   | Frecuencia central |
+| ------ | ------------------ |
+| Slot 1 | 869.4313 MHz       |
+| Slot 2 | 869.4938 MHz       |
+| Slot 3 | 869.5563 MHz       |
+| Slot 4 | 869.6188 MHz       |
 
 La prueba activa usa el **Slot 4 (869.618 MHz)** con SF7 y CR5.
 
@@ -139,6 +139,7 @@ slots con guardbands en una distribución de frecuencias diferente, que tampoco 
 el problema y además no será compatible con la división actual de 4 slots.
 
 Esto es importante porque al utilizar la misma frecuencia y bandwidth tenemos varias ventajas:
+
 - **Evitar colisiones**: Al estar las dos redes en SF7 el Channel Activity Detection de LoRa evita las colisiones, por lo que ambas mallas pueden usar ajustes parecidos sin colisionar. Evitando las colisiones que se producen al usar LongFast o MediumFast que genera colisiones con este preset de MeshCore Portugal.
 - **Usando SF6 (en la siguiente prueba)**: Todavia mejor puesto que, al ser **ortogonales**, los dos pueden emitir al mismo tiempo sin molestarse al uno al otro. No solo evitas colisiones si no que tambien evitas compartir canal. A cambio tendriamos mas bitrate aunque menos alcance.
 
@@ -167,17 +168,17 @@ Es decir hacemos un uso mucho mas eficiente y respetuoso de la banda que estamos
 
 ### Configuración técnica completa {#cómo-unirse}
 
-Parámetros de la **Prueba 6** (activa hasta el 05/06/2026):
+Parámetros de la **Prueba 6**
 
-| Parámetro | Valor |
-|---|---|
-| Bandwidth | `62` |
-| Spreading Factor | `7` |
-| Coding Rate | `5` |
-| Frequency slot | `4` |
+| Parámetro          | Valor         |
+| ------------------ | ------------- |
+| Bandwidth          | `62`          |
+| Spreading Factor   | `7`           |
+| Coding Rate        | `5`           |
+| Frequency slot     | `4`           |
 | Frequency override | `869.618` MHz |
-| Nombre canal 0 | `SFNarrow` |
-| PSK canal 0 | `AQ==` |
+| Nombre canal 0     | `SFNarrow`    |
+| PSK canal 0        | `AQ==`        |
 
 **Opción A — Enlace de configuración automática (recomendado):**
 
@@ -222,10 +223,10 @@ Comparte tus observaciones en el [grupo de Telegram](https://t.me/meshtastic_esp
 
 ### Calendario de pruebas
 
-| Prueba | Fechas | Config |
-|---|---|---|
-| **Prueba 6** ✅ activa | 02/05 – No determinado | BW 62, SF7, CR5, Slot 4 |
-| **Prueba 7** | Futuro, requiere pasar a 2.7.23 | BW 62, **SF6**, CR5, Slot 4 |
+| Prueba                 | Fechas                          | Config                      |
+| ---------------------- | ------------------------------- | --------------------------- |
+| **Prueba 6** ✅ activa | Desde 02/05                     | BW 62, SF7, CR5, Slot 4     |
+| **Prueba 7**           | Futuro, requiere pasar a 2.7.23 | BW 62, **SF6**, CR5, Slot 4 |
 
 ---
 
