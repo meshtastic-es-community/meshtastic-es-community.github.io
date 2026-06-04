@@ -1,6 +1,7 @@
 ---
 title: Política de tratamiento de datos
 ---
+
 # Política de tratamiento de datos
 
 Este sitio web no recopila ningún dato del usuario. Los datos que se describen a continuación son generados por la propia red Meshtastic y recogidos por los servicios de la comunidad (MQTT, Meshview, Malla, etc.) cuando un nodo se conecta a la red.

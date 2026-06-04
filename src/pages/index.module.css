@@ -26,7 +26,7 @@
 }
 
 .banner {
-  background-color: #67EA94;
+  background-color: #67ea94;
   color: rgb(0, 0, 0);
   padding: 10px 20px;
   display: flex;
@@ -37,8 +37,8 @@
 }
 
 .banner span {
-  flex: 1;              
-  text-align: center;   
+  flex: 1;
+  text-align: center;
 }
 
 .closeButton {

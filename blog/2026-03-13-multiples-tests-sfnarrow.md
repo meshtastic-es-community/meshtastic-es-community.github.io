@@ -2,8 +2,8 @@
 slug: mas-tests-sfnarrow
 title: "🧑‍🔬 Múltiples tests SFNarrow en la Zona Centro"
 description: "Estamos probando nuevas configuraciones de frecuencia (SFNarrow) en la malla Meshtastic de la Zona Centro para mejorar el alcance y reducir interferencias. ¡Únete al test!"
-authors: [ ]
-tags: [ Madrid, Zona Centro, Configuración, Narrow ]
+authors: []
+tags: [Madrid, Zona Centro, Configuración, Narrow]
 ---
 
 Para no repetir todo el motivo de por qué hacemos estos tests, puedes leer
@@ -57,6 +57,7 @@ condiciones.
 - _Frequency override_: `869.4313`
 
 #### Prueba 3 - del 09/04/2026 al 16/04/2026
+
 > Adelantamos la prueba
 
 - _Bandwidth_: `125`
@@ -100,7 +101,6 @@ Animamos a todo el mundo de estas zonas que este en MediumFast a pasarse a los a
 - _Frequency override_: `869.618`
 - [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+-+Prueba+SF6)
 
-
 :::info
 
 ¡Ojo! Solo la version alpha 2.7.23 y posteriores tienen soporte para el Spreading Factor 6. Además, los chips LoRa antiguos, como el SX1276, no son compatibles con SF6, por lo que nodos antiguos como el Heltec V2 no podrán participar en esa prueba específica.
@@ -123,8 +123,8 @@ Entre los datos que queremos recopilar están:
 - Nuevos enlaces directos que antes no tuvieras (o enlaces directos perdidos).
 - ChUtil y AirUtil para evaluar la eficiencia de la red.
 - Cualquier incidencia o comportamiento extraño que observes durante el test.
-    - Por ejemplo, un usuario reporta que algunos mensajes (sobre todo los largos de 200 caracteres) no siempre llegan
-      tanto como un _traceroute_.
+  - Por ejemplo, un usuario reporta que algunos mensajes (sobre todo los largos de 200 caracteres) no siempre llegan
+    tanto como un _traceroute_.
 
 ---
 

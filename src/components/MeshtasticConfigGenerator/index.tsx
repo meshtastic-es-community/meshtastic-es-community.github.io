@@ -114,33 +114,33 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
   // Read URL parameters on mount
   useEffect(() => {
     if (!ExecutionEnvironment.canUseDOM) return;
-    
+
     const params = new URLSearchParams(window.location.search);
-    
+
     // Parse preset
     const preset = params.get('preset');
     if (preset && preset in PRESETS) {
       setSelectedPreset(preset as keyof typeof PRESETS);
     }
-    
+
     // Parse Iberia
     const iberia = params.get('iberia');
     if (iberia !== null) {
       setIncludeIberia(iberia === 'true');
     }
-    
+
     // Parse regional
     const regional = params.get('regional');
     if (regional !== null) {
       setIncludeRegional(regional === 'true');
     }
-    
+
     // Parse region
     const region = params.get('region');
     if (region) {
       setSelectedRegion(region);
     }
-    
+
     // Parse radio
     const radio = params.get('radio');
     if (radio) {
@@ -173,7 +173,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     if (!ExecutionEnvironment.canUseDOM) {
       return '#'; // Fallback for SSR
     }
-    
+
     const params = new URLSearchParams();
     params.set('preset', selectedPreset);
     params.set('iberia', includeIberia.toString());
@@ -186,7 +186,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     if (selectedRadio) {
       params.set('radio', selectedRadio);
     }
-    
+
     const baseUrl = window.location.origin + window.location.pathname;
     return `${baseUrl}?${params.toString()}`;
   }, [selectedPreset, includeIberia, includeRegional, selectedRegion, selectedRadio]);
@@ -194,7 +194,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
   // Update URL in real-time without page reload
   useEffect(() => {
     if (!ExecutionEnvironment.canUseDOM) return;
-    
+
     const params = new URLSearchParams();
     params.set('preset', selectedPreset);
     params.set('iberia', includeIberia.toString());
@@ -207,7 +207,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     if (selectedRadio) {
       params.set('radio', selectedRadio);
     }
-    
+
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.history.replaceState({}, '', newUrl);
   }, [selectedPreset, includeIberia, includeRegional, selectedRegion, selectedRadio]);
@@ -226,15 +226,15 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
   return (
     <div className="meshtastic-config-generator">
       <div className="config-options" style={{ marginBottom: '20px' }}>
-        <fieldset style={{ 
-          border: '1px solid var(--ifm-color-emphasis-300)', 
-          borderRadius: '4px', 
-          padding: '15px', 
+        <fieldset style={{
+          border: '1px solid var(--ifm-color-emphasis-300)',
+          borderRadius: '4px',
+          padding: '15px',
           marginBottom: '15px',
           backgroundColor: 'var(--ifm-background-color)'
         }}>
-          <legend style={{ 
-            fontWeight: 'bold', 
+          <legend style={{
+            fontWeight: 'bold',
             marginBottom: '10px',
             padding: '0 8px',
             fontSize: '16px'
@@ -262,24 +262,24 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
           </select>
         </fieldset>
 
-        <fieldset style={{ 
-          border: '1px solid var(--ifm-color-emphasis-300)', 
-          borderRadius: '4px', 
-          padding: '15px', 
+        <fieldset style={{
+          border: '1px solid var(--ifm-color-emphasis-300)',
+          borderRadius: '4px',
+          padding: '15px',
           marginBottom: '15px',
           backgroundColor: 'var(--ifm-background-color)'
         }}>
-          <legend style={{ 
-            fontWeight: 'bold', 
+          <legend style={{
+            fontWeight: 'bold',
             marginBottom: '10px',
             padding: '0 8px',
             fontSize: '16px'
           }}>
             Radio (Potencia de TX)
           </legend>
-          <div style={{ 
-            fontSize: '14px', 
-            color: 'var(--ifm-color-emphasis-800)', 
+          <div style={{
+            fontSize: '14px',
+            color: 'var(--ifm-color-emphasis-800)',
             marginBottom: '15px',
             padding: '10px',
             backgroundColor: 'var(--ifm-color-emphasis-100)',
@@ -287,8 +287,8 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
             borderLeft: '4px solid var(--ifm-color-warning)'
           }}>
             <p style={{ margin: '0', lineHeight: '1.4' }}>
-              <strong>Nota:</strong> La ERP máxima permitida en EU_868 es de <strong>27dBm</strong>. 
-              Algunos modulos de radio incluyen amplificadores de potencia (PAs), por lo que es importante 
+              <strong>Nota:</strong> La ERP máxima permitida en EU_868 es de <strong>27dBm</strong>.
+              Algunos modulos de radio incluyen amplificadores de potencia (PAs), por lo que es importante
               seleccionar el valor apropiado en nodos DIY para no exceder los límites legales.
               <br />
               <br />
@@ -322,22 +322,22 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
           </div>
         </fieldset>
 
-        <fieldset style={{ 
-          border: '1px solid var(--ifm-color-emphasis-300)', 
-          borderRadius: '4px', 
-          padding: '15px', 
+        <fieldset style={{
+          border: '1px solid var(--ifm-color-emphasis-300)',
+          borderRadius: '4px',
+          padding: '15px',
           marginBottom: '15px',
           backgroundColor: 'var(--ifm-background-color)'
         }}>
-          <legend style={{ 
-            fontWeight: 'bold', 
+          <legend style={{
+            fontWeight: 'bold',
             marginBottom: '10px',
             padding: '0 8px',
             fontSize: '16px'
           }}>
             Canales Adicionales
           </legend>
-          
+
           <div style={{ marginBottom: '15px', display: 'flex', flexWrap: 'wrap', gap: '15px', alignItems: 'center' }}>
             <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
               <input
@@ -365,7 +365,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
               />
               <span>Bots</span>
             </label>
-            
+
             <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
               <input
                 type="checkbox"
@@ -374,7 +374,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
               />
               <span>Canal regional</span>
             </label>
-            
+
             {includeRegional && (
               <select
                 value={selectedRegion}

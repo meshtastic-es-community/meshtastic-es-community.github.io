@@ -1,6 +1,7 @@
 ---
 sidebar_position: 9
 ---
+
 import React from 'react';
 
 # PCBs de la Comunidad Meshtastic
@@ -89,7 +90,6 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 
 ### 🌀 xiaoWa_pcb - 小瓦 {#xiaoWa}
 
-
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
   <img src="https://raw.githubusercontent.com/gargomoma/xiaoWa_pcb/refs/heads/main/pics/PCB_XiaoWa_2025-11-04_top.png" alt="XiaoWa PCB" width="100" />
   <div>
@@ -132,7 +132,6 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
   <img src="https://raw.githubusercontent.com/sqtactical/Albatastic_Node/main/ArchivosV1.0/Preview_delante.png" alt="Albatastic Compact" width="150" />
   <div>
 
-
 **Descripción**: PCB compacta, sencilla y flexible para NRF52840 y E22/E22P.
 
 **Características**: Placa Promicro de bajo coste, selector entre E22 y E22P, medidor % batería.
@@ -147,17 +146,18 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 </div>
 
 ---
+
 ### 🖥️ Albatastic PRO v1.1
 
 <div style={{display:'flex', alignItems:'flex-start', gap:'20px', marginBottom:'40px'}}>
-  <img 
-    src="https://raw.githubusercontent.com/EmilioAL-Git/PCB-Albatastic-PRO/refs/heads/main/images/AlbatasticPRO1.1.png" 
-    alt="Albatastic PRO" 
+  <img
+    src="https://raw.githubusercontent.com/EmilioAL-Git/PCB-Albatastic-PRO/refs/heads/main/images/AlbatasticPRO1.1.png"
+    alt="Albatastic PRO"
     style={{width:'150px'}}
   />
   <div>
 
-**Descripción**: PCB modular para Meshtastic integrable en caja Famatel 3072. Filosofía *"Choose your fighter"*: monta solo lo que necesitas.
+**Descripción**: PCB modular para Meshtastic integrable en caja Famatel 3072. Filosofía _"Choose your fighter"_: monta solo lo que necesitas.
 
 **Características**: NRF52 XIAO o ProMicro, múltiples radios LoRa (E22, E22P, HT-RA62, E80), multiples cargadores solares, batería dual 18650 integrada o externa, GPS, sensores BME280/BME680/AHT20/INA219, pantalla OLED, conector serial UART, reset automático con ATTINY13A y protección de brownout con TLV840.
 
@@ -170,14 +170,14 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
   </div>
 </div>
 
-
 ---
+
 ### 🖥 AlbaPipe
 
 <div style={{display:'flex', alignItems:'flex-start', gap:'20px', marginBottom:'40px'}}>
-  <img 
-    src="https://raw.githubusercontent.com/miguelleonmanzano/Albapipe-Meshtastic-Node/refs/heads/main/pcb%20front.png" 
-    alt="AlbaPipe" 
+  <img
+    src="https://raw.githubusercontent.com/miguelleonmanzano/Albapipe-Meshtastic-Node/refs/heads/main/pcb%20front.png"
+    alt="AlbaPipe"
     style={{width:'50px'}}
   />
   <div>

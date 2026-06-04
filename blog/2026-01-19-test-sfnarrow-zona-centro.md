@@ -11,22 +11,26 @@ tags: [Madrid, Zona Centro, Configuración, Narrow]
 La prueba masiva se da por **terminada**, aunque seguiremos haciendo experimentos a pequeña escala. A continuación, las conclusiones y el futuro de esta configuración.
 
 ### Lo que ha ido bien 🙂
-*   **Mejora de Enlaces:** Todos los enlaces han mejorado en general (alcance y estabilidad). Nodos que en MediumFast solo conectaban mediante saltos han conseguido enlaces directos.
-*   **Nodos "Sordos":** Mejoría drástica en nodos con problemas de ruido como los situados en altura en la sierra o nodos sin filtro, en estos dos casos oían mucho mejor en Narrow que en MediumFast.
-*   **Routers Clave:** Routers importantes de la Zona Centro como **Venturada 2**,  **Toledo 1**, **Ciudad Real 1** y **Rigel Aux** han rendido mucho mejor.
+
+- **Mejora de Enlaces:** Todos los enlaces han mejorado en general (alcance y estabilidad). Nodos que en MediumFast solo conectaban mediante saltos han conseguido enlaces directos.
+- **Nodos "Sordos":** Mejoría drástica en nodos con problemas de ruido como los situados en altura en la sierra o nodos sin filtro, en estos dos casos oían mucho mejor en Narrow que en MediumFast.
+- **Routers Clave:** Routers importantes de la Zona Centro como **Venturada 2**, **Toledo 1**, **Ciudad Real 1** y **Rigel Aux** han rendido mucho mejor.
 <!-- truncate -->
 
 ### Malla Secundaria y Pruebas Locales
+
 Aunque volvamos a la normalidad, **os animamos a realizar pruebas con vuestros nodos locales**. Sería muy interesante comparar enlaces, alcances y rendimiento entre MediumFast y SFNarrow a pequeña escala.
 
 Para dar soporte a estas pruebas continuas, se mantendrá la **malla secundaria de pruebas** de Madrid en SFNarrow (la que antes estaba en ShortFast):
-*   El nodo **Venturada 2 SF** pasa a operar como **Venturada 2 NF**.
-*   **Rigel Aux** se quedará también fijo en esta configuración experimental (SFNarrow).
+
+- El nodo **Venturada 2 SF** pasa a operar como **Venturada 2 NF**.
+- **Rigel Aux** se quedará también fijo en esta configuración experimental (SFNarrow).
 
 #### Consideraciones Técnicas
-*   **Software:** La definición de canales y QRs requiere revisión. La separación en 4 canales sin banda de guarda genera problemas, tales como que enlaces con suficiente señal puedes mandar paquetes en un slot, y que el ruido lateral emitido en el slot contiguo sea recibible como un paquete valido (Generando en casos particulares cruces de paquetes entre los slots).
-*   **Firmware:** En 62.5kHz sería ideal usar SF5/SF6, no incluidos en el firmware oficial actual.
-*   **Futuro (NARROW_868):** Meshtastic está trabajando en una región oficial `NARROW_868` que divide la banda en **3 canales con guarda**. Nuestra división actual de 4 slots (utilizando la región actual EU_868 que en principio se mantendría como está) **no será compatible** con esa futura división oficial de Meshtastic.
+
+- **Software:** La definición de canales y QRs requiere revisión. La separación en 4 canales sin banda de guarda genera problemas, tales como que enlaces con suficiente señal puedes mandar paquetes en un slot, y que el ruido lateral emitido en el slot contiguo sea recibible como un paquete valido (Generando en casos particulares cruces de paquetes entre los slots).
+- **Firmware:** En 62.5kHz sería ideal usar SF5/SF6, no incluidos en el firmware oficial actual.
+- **Futuro (NARROW_868):** Meshtastic está trabajando en una región oficial `NARROW_868` que divide la banda en **3 canales con guarda**. Nuestra división actual de 4 slots (utilizando la región actual EU_868 que en principio se mantendría como está) **no será compatible** con esa futura división oficial de Meshtastic.
 
 Por estas razones se decide retrasar mudar la malla MediumFast a banda estrecha para esperar a solucionar estos temas.
 
@@ -46,7 +50,6 @@ En nuestra búsqueda constante por mejorar la malla Meshtastic de la Zona Centro
 
 La idea es dividir la banda en **4 subcanales (Slots)** de 62.5kHz cada uno. Para este test, utilizaremos el **Slot 3**.
 
-
 #### Las ventajas de esta arquitectura:
 
 1.  **Mayor Alcance:** Al utilizar un ancho de banda más estrecho (62.5kHz vs 250kHz), conseguimos un enlace más robusto y con mayor alcance que en MediumFast.
@@ -58,46 +61,45 @@ La idea es dividir la banda en **4 subcanales (Slots)** de 62.5kHz cada uno. Par
 
 Para esta estrategia, dividimos el espectro en las siguientes frecuencias centrales (Meshtastic redondea a 4 decimales):
 
-*   **Slot 1:** 869.4313 MHz
-*   **Slot 2:** 869.4938 MHz
-*   **Slot 3:** 869.5563 MHz 👈 **(El que usaremos en este Test)**
-*   **Slot 4:** 869.6188 MHz
+- **Slot 1:** 869.4313 MHz
+- **Slot 2:** 869.4938 MHz
+- **Slot 3:** 869.5563 MHz 👈 **(El que usaremos en este Test)**
+- **Slot 4:** 869.6188 MHz
 
 ### Configuración del Test
 
 La configuración específica para esta prueba en el **Slot 3** es:
 
 - **Ancho de banda (BW):** 62.5kHz (En la app se puede poner como 62 directamente)
-- **Frecuencia:** 869.5563 MHz 
+- **Frecuencia:** 869.5563 MHz
 - **Spreading Factor:** SF7
-- **Coding Rate:** CR5 
-
+- **Coding Rate:** CR5
 
 ### Diferencias esperadas
 
 En principio al pasar de 250kHz de ancho de banda a 62.5kHz la mejora teórica sería de 6dB en los SNR, en pruebas iniciales hemos visto que mejora más incluso, consiguiendo enlaces directos que MediumFast y LongFast no consiguen.
 
-Aquí puedes ver una comparativa de un *traceroute* realizado con la configuración anterior vs la nueva configuración SFNarrow. El objetivo es observar cómo se comportan los enlaces y comparar entre una configuración y otra.
-
+Aquí puedes ver una comparativa de un _traceroute_ realizado con la configuración anterior vs la nueva configuración SFNarrow. El objetivo es observar cómo se comportan los enlaces y comparar entre una configuración y otra.
 
 <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px", marginTop: "20px" }}>
-  
-  {/* Magia negra de Gemini para hacerle un marco negro a los traces */}
-  {/* Imagen 1: MediumFast */}
+
+{/_ Magia negra de Gemini para hacerle un marco negro a los traces _/}
+{/_ Imagen 1: MediumFast _/}
+
   <figure style={{ width: "320px", margin: 0 }}>
-    <div style={{ 
-        width: "320px", 
-        height: "320px", 
+    <div style={{
+        width: "320px",
+        height: "320px",
         backgroundColor: "#1e1e1e", /* Color de fondo oscuro para que se funda con la captura */
-        borderRadius: "8px", 
-        display: "flex", 
-        alignItems: "center", 
+        borderRadius: "8px",
+        display: "flex",
+        alignItems: "center",
         justifyContent: "center",
         border: "1px solid #444"
     }}>
       <img
         src={require("../static/img/blog/mediumfast-trace.jpg").default}
-        style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} 
+        style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
         alt="Traceroute en MediumFast"
       />
     </div>
@@ -106,21 +108,22 @@ Aquí puedes ver una comparativa de un *traceroute* realizado con la configuraci
     </figcaption>
   </figure>
 
-  {/* Imagen 2: SFNarrow */}
+{/_ Imagen 2: SFNarrow _/}
+
   <figure style={{ width: "320px", margin: 0 }}>
-    <div style={{ 
-        width: "320px", 
-        height: "320px", 
+    <div style={{
+        width: "320px",
+        height: "320px",
         backgroundColor: "#1e1e1e", /* Mismo fondo oscuro */
-        borderRadius: "8px", 
-        display: "flex", 
-        alignItems: "center", 
+        borderRadius: "8px",
+        display: "flex",
+        alignItems: "center",
         justifyContent: "center",
         border: "1px solid #444"
     }}>
       <img
         src={require("../static/img/blog/sfnarrow-trace.jpg").default}
-        style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} 
+        style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
         alt="Traceroute en SFNarrow"
       />
     </div>
@@ -146,7 +149,6 @@ Hemos preparado un enlace de configuración automática. Puedes abrir este enlac
       style={{ width: "100%", maxWidth: "300px", height: "auto" }}
       alt="QR de configuración SFNarrow"
     />
- 
 
 [**🔗 Enlace de configuración SFNarrow (Abrir en App Meshtastic)**](https://meshtastic.org/e/#ChMSAQEaCFNGTmFycm93KAEwAToAEhcYPiAHKAU4A0AESAFQFlgDaAF1mmNZRA)
 
@@ -160,20 +162,22 @@ Si prefieres hacerlo manualmente o necesitas actualizar un **nodo remoto**, es c
 
 **1. Parámetros LoRa a configurar:**
 Ve a `Radio Configuration` -> `LoRa` y establece:
-*   **Region:** European Union 868MHz
-*   **Preset:** Desactiva "Usar Preset" como base para desbloquear los campos, y luego personaliza:
-*   **Bandwidth:** 62
-*   **Spreading Factor:** 7
-*   **Coding Rate:** 5
+
+- **Region:** European Union 868MHz
+- **Preset:** Desactiva "Usar Preset" como base para desbloquear los campos, y luego personaliza:
+- **Bandwidth:** 62
+- **Spreading Factor:** 7
+- **Coding Rate:** 5
 
 Y luego en la parte más abajo pon al menos uno de los dos siguientes (o los dos):
-*   **Frequency Slot:** 3
-*   **Frequency Override:** 869.5563 
 
+- **Frequency Slot:** 3
+- **Frequency Override:** 869.5563
 
 **2. Configuración del Canal Primario (Channel 0):**
-*   **Nombre:** `SFNarrow`
-*   **Clave (PSK):** `AQ==` (Esto equivale a "Default" o "None", asegurando que sea un canal público).
+
+- **Nombre:** `SFNarrow`
+- **Clave (PSK):** `AQ==` (Esto equivale a "Default" o "None", asegurando que sea un canal público).
 
 ---
 
@@ -182,21 +186,24 @@ Y luego en la parte más abajo pon al menos uno de los dos siguientes (o los dos
 Si administras un nodo al que no tienes acceso físico, **el orden de los factores sí altera el producto**. Si cambias tu nodo local primero, dejarás de "ver" al remoto y no podrás actualizarlo. Sigue estos pasos estrictamente:
 
 1.  **Cambia la configuración LoRa del NODO REMOTO:**
-    *   Conéctate a tu nodo local.
-    *   Ve a la administración del nodo remoto.
-    *   Aplica los ajustes de Ancho de banda, Frecuencia, SF y CR indicados arriba en el remoto.
-    *   *Nota: En este momento perderás conexión con el remoto temporalmente.*
+
+    - Conéctate a tu nodo local.
+    - Ve a la administración del nodo remoto.
+    - Aplica los ajustes de Ancho de banda, Frecuencia, SF y CR indicados arriba en el remoto.
+    - _Nota: En este momento perderás conexión con el remoto temporalmente._
 
 2.  **Cambia la configuración LoRa de tu NODO LOCAL:**
-    *   Aplica los mismos ajustes LoRa en tu nodo (el que tienes en la mano).
-    *   *Resultado: Deberías volver a ver al nodo remoto, ya que ambos están ahora en la nueva "velocidad".*
+
+    - Aplica los mismos ajustes LoRa en tu nodo (el que tienes en la mano).
+    - _Resultado: Deberías volver a ver al nodo remoto, ya que ambos están ahora en la nueva "velocidad"._
 
 3.  **Cambia el Canal Primario del NODO REMOTO:**
-    *   Vuelve a administrar el remoto.
-    *   Cambia el nombre del Canal 0 a `SFNarrow` y verifica que la PSK sea `AQ==`.
+
+    - Vuelve a administrar el remoto.
+    - Cambia el nombre del Canal 0 a `SFNarrow` y verifica que la PSK sea `AQ==`.
 
 4.  **Cambia el Canal Primario de tu NODO LOCAL:**
-    *   Finalmente, actualiza tu propio Canal 0 para que coincida.
+    - Finalmente, actualiza tu propio Canal 0 para que coincida.
 
 :::danger Importante
 Los nodos en SFNarrow **no se escucharán** con los nodos que sigan en MediumFast. Si haces los cambios en el orden incorrecto durante una administración remota, podrías tener problemas luego para gestionarlo remotamente.

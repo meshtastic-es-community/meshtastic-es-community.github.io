@@ -19,11 +19,11 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Instal
 - Visita [flasher.meshtastic.org](https://flasher.meshtastic.org). **Requiere navegador Chrome o Edge**.
 - Selecciona tu tipo de dispositivo:
 
-    ![Imagen del proceso de flasheo](../../static/img/guias/flasher1.png)
+  ![Imagen del proceso de flasheo](../../static/img/guias/flasher1.png)
 
 - Selecciona la última versión estable:
 
-    ![Imagen del proceso de flasheo](../../static/img/guias/flasher2.png)
+  ![Imagen del proceso de flasheo](../../static/img/guias/flasher2.png)
 
 - Pulsa en el botón de Flash y sigue las instrucciones. Si tu dispositivo es un ESP32-S3, puede que necesites apagarlo, luego mantener pulsado el botón BOOT / USR mientras conectas el cable USB.
   También puedes probar el método de reinicio a 1200bps para poner el dispositivo en modo adecuado.
@@ -35,7 +35,6 @@ Antes de empezar debes tener los drivers instalados para tu dispositivo: [Instal
 Recuerda que no debes encender tu dispositivo sin una antena conectada
 :::
 
-
 ## NRF52 y RP2040
 
 :::info
@@ -44,13 +43,14 @@ Para estos dispositivos no hace falta instalar drivers. (En caso de Windows)
 
 :::tip
 Como ayuda aquí te dejamos un video de Quixote Network donde se explica el proceso desde cero y además, también se trata la configuración básica recomendable:
+
 <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
- <iframe 
-    src="https://www.youtube.com/embed/97vBRb78pds?si=w2RA_x6kQuXMEj0C" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
+ <iframe
+    src="https://www.youtube.com/embed/97vBRb78pds?si=w2RA_x6kQuXMEj0C"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen
     style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
  </iframe>
