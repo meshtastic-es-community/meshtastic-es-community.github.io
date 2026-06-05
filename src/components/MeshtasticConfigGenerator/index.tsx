@@ -189,7 +189,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     
     const baseUrl = window.location.origin + window.location.pathname;
     return `${baseUrl}?${params.toString()}`;
-  }, [selectedPreset, includeIberia, includeRegional, selectedRegion, selectedRadio]);
+  }, [selectedPreset, includeIberia, includeTest, includeBots, includeRegional, selectedRegion, selectedRadio]);
 
   // Update URL in real-time without page reload
   useEffect(() => {
@@ -210,7 +210,7 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
     
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.history.replaceState({}, '', newUrl);
-  }, [selectedPreset, includeIberia, includeRegional, selectedRegion, selectedRadio]);
+  }, [selectedPreset, includeIberia, includeTest, includeBots, includeRegional, selectedRegion, selectedRadio]);
 
   const { url: configUrl, loraConfig, channels } = useMemo(() => {
     return generateConfigUrl(
