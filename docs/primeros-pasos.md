@@ -83,13 +83,11 @@ Si tienes problemas, revisa los controladores del puerto serie o consulta la doc
 Una vez que el firmware está instalado, configura tu dispositivo para unirlo a la red en malla:
 
 1. **Conecta el dispositivo**:
-
    - **Por Bluetooth**: Usa la app de Meshtastic en tu teléfono o el cliente web en [client.meshtastic.org](https://client.meshtastic.org). Introduce el PIN que aparece en la pantalla OLED del dispositivo para emparejarlo. (Si no tiene pantalla, el PIN predeterminado es 123456).
    - **Por USB/Serial**: Conecta el dispositivo a tu ordenador y usa el cliente web.
    - **WiFi (en algunos dispositivos)**: Algunos nodos, como el T-Deck, permiten configuración por WiFi.
 
 2. **Configura los ajustes básicos**:
-
    - **Región**: Selecciona tu región (por ejemplo, «Europa» para 868 MHz o «EE.UU.» para 915 MHz). Esto es obligatorio para cumplir con las regulaciones de frecuencia.
    - **Nombre del nodo**: Asigna un nombre único a tu dispositivo para identificarlo en la red (por ejemplo, «Nodo de Juan»).
    - **Canal**: Por defecto, los dispositivos usan un canal público. Puedes crear canales privados con cifrado para comunicarte solo con tu grupo. Comparte la clave de cifrado mediante un código QR o texto. El QR que usamos en España lo puedes encontrar en Telegram: [@meshtastic_esp](https://t.me/meshtastic_esp).
@@ -122,34 +120,28 @@ Revisa nuestra guía de [buenas prácticas](buenas-practicas.md) para asegurarte
 :::
 
 1. **Prueba con dispositivos simples primero**:
-
    - **Empieza fácil**: Usa un Heltec V3 conectado a tu teléfono.
    - **Evita complicaciones**: No compres dispositivos avanzados como el T-Deck o los RAK hasta que entiendas lo básico.
 
 2. **No te preocupes si no ves otros nodos al principio**:
-
    - **Saca tu nodo por la ventana**: (O acércalo al menos). Meshtastic funciona muy mal dentro de los edificios.
    - **Pregunta a la comunidad sobre tu antena**: La antena que utilices marca totalmente la diferencia y puede doblar tu alcance.
    - **Consejo**: Prueba de cerca con dos dispositivos para asegurarte de que todo funciona bien primero.
 
 3. **Experimenta poco a poco**:
-
    - Una vez que configures tus dispositivos, prueba diferentes configuraciones, como ajustar la potencia de transmisión o probar nodos en exteriores para maximizar el alcance.
    - Pero hazlo con cuidado para no romper nada.
 
 4. **Busca ayuda si algo no funciona**:
-
    - **Meshtastic tiene una comunidad muy útil**:
      - **Pregunta**: Hay un canal de Telegram en España ([@meshtastic_esp](https://t.me/meshtastic_esp)) donde puedes resolver tus dudas. También está el subreddit [r/meshtastic](https://www.reddit.com/r/meshtastic/).
      - **Revisa la documentación oficial**: [Meshtastic.org](https://meshtastic.org) tiene guías fáciles de entender.
 
 5. **No es necesario usar MQTT para hablar**:
-
    - **MQTT es una herramienta para conectar nuestros nodos a internet.** No es necesario (ni recomendable) al principio hasta que entiendas bien cómo funciona Meshtastic y la RF.
    - **Lo utilizamos principalmente para observar la red**. Hay herramientas como el [Mapa](https://mapa.meshtastic.es) o [Meshview](https://meshview.meshtastic.es) que sirven para ver en tiempo real, a través de internet el estado de la red de Meshtastic en España.
 
 6. **Advertencia para radioaficionados: No actives el modo HAM**:
-
    - **Si eres radioaficionado y tienes una licencia HAM**, podrías querer activar el «modo HAM» en Meshtastic para usar funciones avanzadas. Pero no lo hagas por estos motivos:
      - **Las comunicaciones HAM no pueden ir cifradas**: Por regulaciones de radioaficionados, los mensajes en modo HAM deben ser abiertos y sin cifrado. Esto significa que no podrás comunicarte con nodos que usen canales cifrados, que son los más comunes en Meshtastic.
      - **Puedes violar regulaciones**: Aunque tengas licencia, un uso incorrecto del modo HAM podría incumplir las leyes de tu país sobre frecuencias y potencia.

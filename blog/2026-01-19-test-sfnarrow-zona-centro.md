@@ -186,19 +186,16 @@ Y luego en la parte más abajo pon al menos uno de los dos siguientes (o los dos
 Si administras un nodo al que no tienes acceso físico, **el orden de los factores sí altera el producto**. Si cambias tu nodo local primero, dejarás de "ver" al remoto y no podrás actualizarlo. Sigue estos pasos estrictamente:
 
 1.  **Cambia la configuración LoRa del NODO REMOTO:**
-
     - Conéctate a tu nodo local.
     - Ve a la administración del nodo remoto.
     - Aplica los ajustes de Ancho de banda, Frecuencia, SF y CR indicados arriba en el remoto.
     - _Nota: En este momento perderás conexión con el remoto temporalmente._
 
 2.  **Cambia la configuración LoRa de tu NODO LOCAL:**
-
     - Aplica los mismos ajustes LoRa en tu nodo (el que tienes en la mano).
     - _Resultado: Deberías volver a ver al nodo remoto, ya que ambos están ahora en la nueva "velocidad"._
 
 3.  **Cambia el Canal Primario del NODO REMOTO:**
-
     - Vuelve a administrar el remoto.
     - Cambia el nombre del Canal 0 a `SFNarrow` y verifica que la PSK sea `AQ==`.
 
