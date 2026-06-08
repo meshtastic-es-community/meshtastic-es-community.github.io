@@ -28,7 +28,7 @@ Toda contribución es bienvenida. Si no estás seguro por dónde empezar, revisa
 
 ## 📬 Contacto y comunidad
 
-Puedes unirte al grupo de la comunidad en Telegram:  
+Puedes unirte al grupo de la comunidad en Telegram:
 👉 [t.me/meshtastic_esp](https://t.me/meshtastic_esp)
 
 ## 📃 Licencia

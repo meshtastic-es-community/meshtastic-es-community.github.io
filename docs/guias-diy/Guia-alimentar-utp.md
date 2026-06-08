@@ -25,6 +25,7 @@ Este método es práctico cuando necesitas llevar alimentación a distancias may
 - Fuente USB de **5V** (cargador de móvil, powerbank, PC, etc.)
 
 **Materiales usados en el ejemplo:**
+
 - Splitter o hub USB — Amazon
 - Adaptador USB a Ethernet — Amazon
 - USB-C a USB-A macho — Amazon
@@ -40,24 +41,24 @@ El principio es muy sencillo:
 3. En el otro extremo, el adaptador **RJ45 a USB hembra** reconvierte la señal a USB.
 4. Conectas tu cable USB-C a la Heltec, ¡y listo!
 
-> ⚠️ **Importante:** El cable UTP transporta **solo alimentación** (no datos USB).  
+> ⚠️ **Importante:** El cable UTP transporta **solo alimentación** (no datos USB).
 > Este método **no sirve** para comunicación USB, únicamente para alimentar.
 
 ---
 
 ## 📋 Paso a paso
 
-1. **Prepara los cables**  
+1. **Prepara los cables**
    Conecta el adaptador USB macho a RJ45 a la fuente de alimentación USB de 5V o al PC.
 
-2. **Conecta el cable UTP**  
-   Enchufa el cable Ethernet al adaptador RJ45.  
+2. **Conecta el cable UTP**
+   Enchufa el cable Ethernet al adaptador RJ45.
    Puede tener la longitud que necesites, hasta unos **10-15 metros** sin problema.
 
-3. **Adapta de nuevo a USB**  
+3. **Adapta de nuevo a USB**
    En el extremo donde está la Heltec, coloca el adaptador RJ45 a USB hembra.
 
-4. **Conecta tu Heltec**  
+4. **Conecta tu Heltec**
    Usa un cable USB-C a USB-A macho para alimentar la Heltec desde el adaptador USB hembra.
 
 ---
@@ -73,7 +74,7 @@ El principio es muy sencillo:
 
 ## 🎥 Vídeo explicativo
 
-Puedes ver el vídeo completo en YouTube:  
+Puedes ver el vídeo completo en YouTube:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/05C2DbNv62I?si=rfEPISuFVjdLn8CH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -92,4 +93,3 @@ Si tienes dudas, puedes dejarlas en los comentarios del artículo original o con
 - Redactado por @LosInventosdeAlmogu en telegram.
 
 - Adaptación a web: [emylio](https://telegram.me/sremylio)
-

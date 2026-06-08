@@ -6,6 +6,7 @@ sidebar_position: 5
 # Preguntas frecuentes
 
 <!-- El icono no existe, así que he cogido el de la llave y le he puesto un rectángulo, rotado unos 45º, a modo de tachado. -->
+
 export const KeyOffIcon = () => (
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="1em" height="1em" class="iconify">
 <path fill="currentColor" d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4c-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4z"/>
@@ -51,8 +52,9 @@ en algunos _firmwares_ (baja entropía). Tienes más información en la
 [_release_ 2.6.11](https://github.com/meshtastic/firmware/releases/tag/v2.6.11.60ec05e).
 
 Para solucionarlo, debes generar una nueva clave privada. Tienes varias formas de hacerlo:
+
 - Entrando en :mdi-settings: _Radio configuration_ › :mdi-shield-half-full: _Security_ y pulsando en
-:mdi-warning-outline: _Regenerate Private Key_.
+  :mdi-warning-outline: _Regenerate Private Key_.
 - Flasheando de nuevo el firmware, marcando la opción de _Full Erase and Install_.
 
 :::warning
@@ -92,10 +94,7 @@ Tienes un Heltec v4, un Ebyte e22... ¿y escucha peor que otros nodos?
 **Es normal, ¡estás ampliando el ruido!**
 
 :::info
-Recomendamos:
-    - **NO USAR** nodos con LNA sin filtro.
-    - Filtros: Taoglass DBP868UA30 o filtros de cavidades.
-    - Usar radios con filtros incorporados. (Ebyte E22-P)
+Recomendamos: - **NO USAR** nodos con LNA sin filtro. - Filtros: Taoglass DBP868UA30 o filtros de cavidades. - Usar radios con filtros incorporados. (Ebyte E22-P)
 :::
 
 **¿Quieres entender las razones? Sigue leyendo.**
@@ -105,12 +104,12 @@ Tu amigo Juan está a unos metros y te quiere contar algo....
 
 - ruido de fondo: ¡RATATATATÁ!
 - Juan: Psst... oye...
-- Tú: ¿Qué? ¡No te escucho! *[Decides ponerte un audífono]*
-- Ahora escuchas x3 a Juan... ¡pero también escuchas x3 el martillo neumático! *[El ruido es tan fuerte que hasta te da mareos.]*
+- Tú: ¿Qué? ¡No te escucho! _[Decides ponerte un audífono]_
+- Ahora escuchas x3 a Juan... ¡pero también escuchas x3 el martillo neumático! _[El ruido es tan fuerte que hasta te da mareos.]_
 
-No sólo sigues sin escuchar *bien*, ¡sino que ha emperado la situación!
+No sólo sigues sin escuchar _bien_, ¡sino que ha emperado la situación!
 
-Conclusión: Amplificar sin filtro puede ser contraproducente si también amplificas el ruido. Sin filtro, los nodos *están sordos*.
+Conclusión: Amplificar sin filtro puede ser contraproducente si también amplificas el ruido. Sin filtro, los nodos _están sordos_.
 
 ![Comic Ruido](../static/img/comic_ruido.png)
 :::tip
@@ -121,6 +120,7 @@ Conclusión: Amplificar sin filtro puede ser contraproducente si también amplif
 — Si el martillo suena MUCHO MÁS FUERTE que Juan: SNR Negativo.
 
     — Si Juan hablase MÁS FUERTE que el martillo: SNR Positivo.
+
 :::
 
 ## Definiciones y nomenclatura

@@ -17,7 +17,7 @@ Configura la posición del nodo según su tipo y uso.
 Si el nodo es fijo, por ejemplo un nodo en la azotea o en el campo, que no se va a mover, puedes configurar la posición de forma manual.
 
 | Campo                         | Valor                                               |
-|-------------------------------|-----------------------------------------------------|
+| ----------------------------- | --------------------------------------------------- |
 | _Position broadcast interval_ | **43200** (12 horas)                                |
 | _Smart position enabled_      | **NO** (no se mueve, no es necesario)               |
 | _Use fixed position_          | **SÍ** (para introducir la posición manualmente)    |
@@ -39,7 +39,7 @@ El resto de configuración es prácticamente igual que para [Nodos con GPS integ
 ### Nodos con GPS integrado 🛰️ {#nodos-con-gps-integrado}
 
 | Campo                              | Valor                                                                |
-|------------------------------------|----------------------------------------------------------------------|
+| ---------------------------------- | -------------------------------------------------------------------- |
 | _Position broadcast interval_      | **1800** (30 minutos) o más                                          |
 | _Smart position enabled_           | **SÍ** (para enviar la posición si nos movemos)                      |
 | _Smart broadcast minimum distance_ | **500** (distancia mínima para enviar una nueva posición)            |

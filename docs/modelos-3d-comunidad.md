@@ -2,6 +2,7 @@
 sidebar_label: Modelos 3D de la Comunidad
 sidebar_position: 10
 ---
+
 # Modelos 3D de la Comunidad Meshtastic
 
 Esta página recopila modelos 3D creados por miembros de la comunidad Meshtastic.
@@ -80,7 +81,7 @@ Cada entrada incluye una imagen, descripción y enlace al modelo.
 ---
 
 ### 📮 Caja Wio Tracker L1 e-ink {#caja-wio-tracker-l1-e-ink}
-    
+
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
 <img src="https://makerworld.bblmw.com/makerworld/model/US20ce6b1a99fe80/design/13fd198708a944c2.png" alt="Caja Wio Tracker L1 e-ink" width="250" />
 <div>

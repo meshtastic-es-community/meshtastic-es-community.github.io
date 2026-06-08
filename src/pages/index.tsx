@@ -51,7 +51,7 @@ export default function Home(): ReactNode {
     <Layout
       title={`${siteConfig.title}`}
       description="Sitio web y documentación para la comunidad de Meshtastic en España">
-      
+
       {showBanner && (
         <div className={styles.banner}>
         <span>
@@ -62,7 +62,7 @@ export default function Home(): ReactNode {
         </span>
         <button className={styles.closeButton} onClick={() => setShowBanner(false)}>×</button>
       </div>
-      
+
       )}
 
       <HomepageHeader />

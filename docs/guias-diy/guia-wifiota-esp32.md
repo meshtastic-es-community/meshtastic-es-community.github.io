@@ -108,6 +108,7 @@ A continuación se explica cómo obtener el valor correcto.
 Primero, localiza tu hardware en la carpeta [`variants`](https://github.com/meshtastic/firmware/tree/develop/variants) del firmware de Meshtastic y abre su archivo `platformio.ini`.
 
 Ejemplos:
+
 - Heltec V4: [variants/esp32s3/heltec_v4/platformio.ini](https://github.com/meshtastic/firmware/blob/develop/variants/esp32s3/heltec_v4/platformio.ini)
 - RAK3312: [variants/esp32s3/rak3312/platformio.ini](https://github.com/meshtastic/firmware/blob/develop/variants/esp32s3/rak3312/platformio.ini)
 
@@ -119,7 +120,7 @@ Si el nombre del archivo empieza por `default`, búscalo en el repositorio de [`
 Si prefieres no buscarlo, aquí tienes los valores más comunes:
 
 | Fichero                   | Offset `ota_1` |
-|---------------------------|----------------|
+| ------------------------- | -------------- |
 | `partition-table.csv`     | `0x260000`     |
 | `partition-table-8MB.csv` | `0x5D0000`     |
 | `default_8MB.csv`         | `0x340000`     |
