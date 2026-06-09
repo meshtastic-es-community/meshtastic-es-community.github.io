@@ -91,3 +91,22 @@ select {
     display: block;
     margin: 15px auto 0 auto;
 }
+
+/* Collapsibles limpios (sin borde ni fondo, pero con flecha) */
+.clean-details details.alert {
+  --ifm-alert-background-color: transparent;
+  --ifm-alert-border-color: transparent;
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+}
+
+.clean-details details.alert > summary {
+  list-style: inside disclosure-closed;
+  padding-left: 0;
+}
+
+.clean-details details.alert[open] > summary {
+  list-style: inside disclosure-open;
+  padding-left: 0;
+}
