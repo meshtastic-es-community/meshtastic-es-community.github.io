@@ -1,0 +1,326 @@
+---
+title: Preferencias de usuario
+slug: preferencias-de-usuario
+description: Guía paso a paso para compilar tu propio firmware de Meshtastic con valores preconfigurados por defecto (nombre, preset de LoRa, GPS, etc.).
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Preferencias de usuario :mdi-tune:
+
+Cuando flasheas un nodo de Meshtastic con el firmware oficial, este se inicia con una configuración genérica ("factory defaults"). Si estás desplegando repetidores de montaña, nodos fijos en tu ciudad o varios nodos para un grupo, tener que conectarte uno a uno por Bluetooth o cable para configurarlos es un proceso lento.
+
+Afortunadamente, el firmware de Meshtastic permite definir tus propios **valores preconfigurados** (o _Custom Defaults_) directamente durante la compilación. De este modo, al flashear el nodo por primera vez o al realizar un restablecimiento de fábrica, este adoptará automáticamente los parámetros que hayas preestablecido.
+
+Esta guía detalla el proceso basándose en la [documentación de desarrollo de Meshtastic](https://meshtastic.org/docs/development/firmware/build/).
+
+---
+
+## 1. Clonar el repositorio de Meshtastic :mdi-git:
+
+El primer paso es obtener el código fuente del firmware de Meshtastic en tu equipo local:
+
+```bash
+git clone https://github.com/meshtastic/firmware.git
+cd firmware
+```
+
+:::tip
+
+Se recomienda trabajar sobre la etiqueta de la versión que desees compilar, por ejemplo `v2.7.15.567b8ea` o `v2.7.23.b246bcd`. Puedes ver todas las versiones [aquí](https://github.com/meshtastic/firmware/tags).
+
+```bash
+git checkout v2.7.15.567b8ea
+```
+
+:::
+
+---
+
+## 2. Configurar las preferencias en `userPrefs.jsonc` :mdi-file-code:
+
+En la raíz del proyecto clonado encontrarás el archivo `userPrefs.jsonc`. Este fichero utiliza la sintaxis JSON con comentarios (`.jsonc`) y sirve como plantilla para definir las variables por defecto que se inyectarán en el firmware durante la compilación.
+
+Para personalizar la configuración, abre el archivo con tu editor preferido (como VSCode) y descomenta/modifica las líneas necesarias.
+
+:::info
+
+- Todos los valores en `userPrefs.jsonc` son **cadenas de texto** (entre comillas), incluso los números y booleanos.
+- Las líneas que empiezan por `//` están comentadas y se ignoran durante la compilación.
+- La mayoría de preferencias se aplican únicamente en el **primer arranque** o tras un **restablecimiento de fábrica**.
+
+:::
+
+### Qué NO se puede configurar con `userPrefs` :mdi-close-circle-outline: {#limitaciones}
+
+Antes de empezar, es importante tener claro qué **no** es posible definir a través de este fichero:
+
+- **No se pueden definir presets de LoRa personalizados.** Solo puedes elegir entre los presets predefinidos de la tabla que verás más abajo. Si necesitas valores personalizados de ancho de banda, _spreading factor_ o _coding rate_, tendrás que configurarlos en tiempo de ejecución con la CLI o la app móvil.
+- **No se pueden inyectar claves privadas.** Las claves de administración remota (`USERPREFS_USE_ADMIN_KEY_*`) corresponden siempre a la **clave pública** del nodo administrador, nunca a una clave privada.
+- **Los roles `ROUTER`, `ROUTER_LATE` y `LOST_AND_FOUND` están bloqueados.** Aunque los definas en `userPrefs`, el firmware los ignorará y aplicará el rol `CLIENT` por defecto.
+- **Solo se pueden preconfigurar hasta 3 canales** (índices 0, 1 y 2), aunque el protocolo admite hasta 8.
+
+### Identidad del nodo :mdi-card-account-details-outline: {#identidad}
+
+| Parámetro                           | Descripción                                                          |
+| :---------------------------------- | :------------------------------------------------------------------- |
+| `USERPREFS_CONFIG_OWNER_LONG_NAME`  | Nombre largo del nodo, el que aparece en la lista de nodos.          |
+| `USERPREFS_CONFIG_OWNER_SHORT_NAME` | Nombre corto, de 3 a 4 caracteres (ej. `"NCM1"`).                    |
+| `USERPREFS_CONFIG_DEVICE_ROLE`      | Rol del nodo. Por defecto es `CLIENT` (ver tabla de roles abajo).    |
+| `USERPREFS_FIXED_BLUETOOTH`         | PIN numérico fijo para el emparejamiento Bluetooth (ej. `"914257"`). |
+
+**Roles disponibles:**
+
+| Rol                    | Valor                                               |
+| :--------------------- | :-------------------------------------------------- |
+| Client _(por defecto)_ | `meshtastic_Config_DeviceConfig_Role_CLIENT`        |
+| Client Mute            | `meshtastic_Config_DeviceConfig_Role_CLIENT_MUTE`   |
+| Client Hidden          | `meshtastic_Config_DeviceConfig_Role_CLIENT_HIDDEN` |
+| Tracker                | `meshtastic_Config_DeviceConfig_Role_TRACKER`       |
+| Sensor                 | `meshtastic_Config_DeviceConfig_Role_SENSOR`        |
+| TAK                    | `meshtastic_Config_DeviceConfig_Role_TAK`           |
+| TAK Tracker            | `meshtastic_Config_DeviceConfig_Role_TAK_TRACKER`   |
+
+### LoRa y región :mdi-radio-tower: {#lora}
+
+| Parámetro                           | Descripción                                                                 |
+| :---------------------------------- | :-------------------------------------------------------------------------- |
+| `USERPREFS_CONFIG_LORA_REGION`      | Banda de frecuencia de tu país/región.                                      |
+| `USERPREFS_LORACONFIG_MODEM_PRESET` | Preset de velocidad/alcance de radio (ver tabla de presets abajo).          |
+| `USERPREFS_LORACONFIG_CHANNEL_NUM`  | Slot de canal dentro de la banda (`0` = autoselección basada en el nombre). |
+| `USERPREFS_CONFIG_LORA_IGNORE_MQTT` | `true` para ignorar completamente los paquetes provenientes de MQTT.        |
+| `USERPREFS_LORA_TX_DISABLED`        | `1` para desactivar la transmisión LoRa (modo solo recepción).              |
+
+**Presets de módem disponibles:**
+
+| Preset                    | Valor                                                    |
+| :------------------------ | :------------------------------------------------------- |
+| Long Fast _(por defecto)_ | `meshtastic_Config_LoRaConfig_ModemPreset_LONG_FAST`     |
+| Long Moderate             | `meshtastic_Config_LoRaConfig_ModemPreset_LONG_MODERATE` |
+| Long Turbo                | `meshtastic_Config_LoRaConfig_ModemPreset_LONG_TURBO`    |
+| Medium Fast               | `meshtastic_Config_LoRaConfig_ModemPreset_MEDIUM_FAST`   |
+| Medium Slow               | `meshtastic_Config_LoRaConfig_ModemPreset_MEDIUM_SLOW`   |
+| Short Fast                | `meshtastic_Config_LoRaConfig_ModemPreset_SHORT_FAST`    |
+| Short Slow                | `meshtastic_Config_LoRaConfig_ModemPreset_SHORT_SLOW`    |
+| Short Turbo               | `meshtastic_Config_LoRaConfig_ModemPreset_SHORT_TURBO`   |
+| Lite Fast _(EU 866MHz)_   | `meshtastic_Config_LoRaConfig_ModemPreset_LITE_FAST`     |
+| Lite Slow _(EU 866MHz)_   | `meshtastic_Config_LoRaConfig_ModemPreset_LITE_SLOW`     |
+| Narrow Fast _(EU 868MHz)_ | `meshtastic_Config_LoRaConfig_ModemPreset_NARROW_FAST`   |
+| Narrow Slow _(EU 868MHz)_ | `meshtastic_Config_LoRaConfig_ModemPreset_NARROW_SLOW`   |
+
+**Códigos de región para España:**
+
+| Región        | Valor                                            |
+| :------------ | :----------------------------------------------- |
+| Europa 868MHz | `meshtastic_Config_LoRaConfig_RegionCode_EU_868` |
+| Europa 433MHz | `meshtastic_Config_LoRaConfig_RegionCode_EU_433` |
+
+### Canales :mdi-forum-outline: {#canales}
+
+Se pueden preconfigurar hasta **3 canales** (índices 0, 1 y 2).
+
+| Parámetro                              | Descripción                                                                                                                        |
+| :------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| `USERPREFS_CHANNELS_TO_WRITE`          | Número de canales a inicializar en el arranque (`1` a `3`).                                                                        |
+| `USERPREFS_CHANNEL_0_NAME`             | Nombre del canal (máx. 11 caracteres). Disponible también para `_1_` y `_2_`.                                                      |
+| `USERPREFS_CHANNEL_0_PSK`              | Clave precompartida. Usa `{ 0x01 }` para la clave pública por defecto, o un array de 32 bytes hexadecimales para un canal privado. |
+| `USERPREFS_CHANNEL_0_PRECISION`        | Precisión de ubicación para el canal (ej. `14` = alta, valores bajos = menor precisión).                                           |
+| `USERPREFS_CHANNEL_0_UPLINK_ENABLED`   | `true` o `false` — si el canal sube mensajes a MQTT.                                                                               |
+| `USERPREFS_CHANNEL_0_DOWNLINK_ENABLED` | `true` o `false` — si el canal descarga mensajes de MQTT.                                                                          |
+
+### Posición GPS fija :mdi-crosshairs-gps: {#gps-fijo}
+
+Ideal para nodos estáticos (repetidores, nodos solares) que no tienen módulo GPS.
+
+| Parámetro                 | Descripción                                      |
+| :------------------------ | :----------------------------------------------- |
+| `USERPREFS_FIXED_GPS`     | `true` para activar la posición fija.            |
+| `USERPREFS_FIXED_GPS_LAT` | Latitud en formato decimal (ej. `"40.284297"`).  |
+| `USERPREFS_FIXED_GPS_LON` | Longitud en formato decimal (ej. `"-3.927447"`). |
+| `USERPREFS_FIXED_GPS_ALT` | Altitud en metros (ej. `"650"`). Opcional.       |
+
+:::warning
+
+Las coordenadas GPS fijas solo se aplican durante el **primer arranque** o justo después de un **restablecimiento de fábrica**. Si el dispositivo ya ha arrancado antes, no sobreescribirá las coordenadas almacenadas.
+
+:::
+
+### Administración remota :mdi-remote: {#admin-remoto}
+
+Se pueden preconfigurar hasta 3 claves públicas de administración remota. Cuando otro nodo envíe un comando administrativo firmado con la clave privada correspondiente, este nodo lo aceptará.
+
+| Parámetro                   | Descripción                                                                  |
+| :-------------------------- | :--------------------------------------------------------------------------- |
+| `USERPREFS_USE_ADMIN_KEY_0` | Clave pública principal del administrador (array de 32 bytes hexadecimales). |
+| `USERPREFS_USE_ADMIN_KEY_1` | Clave pública secundaria.                                                    |
+| `USERPREFS_USE_ADMIN_KEY_2` | Clave pública terciaria.                                                     |
+
+:::tip
+
+La clave que debes poner aquí es la **clave pública** (_public key_) de tu nodo administrador personal, formateada en hexadecimal byte a byte. **Nunca** introduzcas una clave privada.
+
+:::
+
+### Intervalos de posición y telemetría :mdi-timer-outline: {#telemetria}
+
+| Parámetro                                          | Descripción                                                                                      |
+| :------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
+| `USERPREFS_CONFIG_POSITION_BROADCAST_INTERVAL`     | Cada cuántos segundos se emite la posición (ej. `86400` = una vez al día).                       |
+| `USERPREFS_CONFIG_GPS_UPDATE_INTERVAL`             | Cada cuántos segundos se consulta el módulo GPS.                                                 |
+| `USERPREFS_CONFIG_SMART_POSITION_ENABLED`          | `true` o `false` — emite posición solo cuando el nodo se ha movido.                              |
+| `USERPREFS_CONFIG_GPS_MODE`                        | Modo del GPS. Usa `meshtastic_Config_PositionConfig_GpsMode_DISABLED` para apagarlo.             |
+| `USERPREFS_CONFIG_DEVICE_TELEM_UPDATE_INTERVAL`    | Intervalo de telemetría del dispositivo, en segundos.                                            |
+| `USERPREFS_CONFIG_ENV_TELEM_UPDATE_INTERVAL`       | Intervalo de telemetría ambiental (sensores), en segundos.                                       |
+| `USERPREFS_CONFIG_ENVIRONMENT_MEASUREMENT_ENABLED` | `1` para forzar lecturas de sensores (BMP280, etc.) y emisión por LoRa desde el primer arranque. |
+
+### MQTT :mdi-cloud-outline: {#mqtt}
+
+| Parámetro                           | Descripción                                                                                    |
+| :---------------------------------- | :--------------------------------------------------------------------------------------------- |
+| `USERPREFS_MQTT_ENABLED`            | `1` para activar el módulo MQTT.                                                               |
+| `USERPREFS_MQTT_ADDRESS`            | Dirección del broker (ej. `"'mqtt.meshtastic.es'"`). Ojo con las comillas simples adicionales. |
+| `USERPREFS_MQTT_USERNAME`           | Usuario MQTT.                                                                                  |
+| `USERPREFS_MQTT_PASSWORD`           | Contraseña MQTT.                                                                               |
+| `USERPREFS_MQTT_ENCRYPTION_ENABLED` | `true` para cifrar los paquetes enviados por MQTT.                                             |
+| `USERPREFS_MQTT_TLS_ENABLED`        | `true` o `false` para habilitar TLS.                                                           |
+| `USERPREFS_MQTT_ROOT_TOPIC`         | Tema raíz personalizado (ej. `"event/mi-evento"`).                                             |
+
+### WiFi (solo ESP32) :mdi-wifi: {#wifi}
+
+| Parámetro                             | Descripción                              |
+| :------------------------------------ | :--------------------------------------- |
+| `USERPREFS_NETWORK_WIFI_ENABLED`      | `true` para activar WiFi en el arranque. |
+| `USERPREFS_NETWORK_WIFI_SSID`         | Nombre de la red WiFi.                   |
+| `USERPREFS_NETWORK_WIFI_PSK`          | Contraseña WiFi.                         |
+| `USERPREFS_NETWORK_ENABLED_PROTOCOLS` | `1` para habilitar UDP mesh por red.     |
+| `USERPREFS_NETWORK_IPV6_ENABLED`      | `1` para habilitar IPv6.                 |
+
+### Branding OEM (pantalla de inicio personalizada) :mdi-monitor: {#oem}
+
+Puedes sustituir el logo y texto de arranque de Meshtastic por uno personalizado de tu comunidad o grupo.
+
+| Parámetro                    | Descripción                                                                 |
+| :--------------------------- | :-------------------------------------------------------------------------- |
+| `USERPREFS_OEM_TEXT`         | Texto personalizado en la pantalla de arranque (ej. `"Meshtastic España"`). |
+| `USERPREFS_OEM_FONT_SIZE`    | Tamaño de fuente (`0` = pequeño, `1` = mediano, `2` = grande).              |
+| `USERPREFS_OEM_IMAGE_WIDTH`  | Ancho del logo personalizado, en píxeles.                                   |
+| `USERPREFS_OEM_IMAGE_HEIGHT` | Alto del logo personalizado, en píxeles.                                    |
+| `USERPREFS_OEM_IMAGE_DATA`   | Datos de imagen como array de bytes XBM (ej. `{ 0x00, 0xFF, ... }`).        |
+
+### Notificaciones y zona horaria :mdi-bell-outline: {#notificaciones}
+
+| Parámetro                     | Descripción                                                                                                            |
+| :---------------------------- | :--------------------------------------------------------------------------------------------------------------------- |
+| `USERPREFS_RINGTONE_RTTTL`    | Tono de notificación personalizado en [formato RTTTL](https://en.wikipedia.org/wiki/Ring_Tone_Text_Transfer_Language). |
+| `USERPREFS_RINGTONE_NAG_SECS` | Segundos antes de repetir la notificación de mensaje no leído (ej. `60`).                                              |
+| `USERPREFS_TZ_STRING`         | Zona horaria en formato POSIX (ej. `"CET-1CEST,M3.5.0,M10.5.0/3"` para España peninsular).                             |
+
+### Modo evento :mdi-calendar-star: {#evento}
+
+Configuraciones especiales para eventos con muchos nodos.
+
+| Parámetro                    | Descripción                                                                                                                                                                                                                        |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `USERPREFS_EVENT_MODE`       | `1` para activar el modo evento. Aplica restricciones estrictas: limita saltos a 2, aumenta retardos, bloquea puertos no esenciales, degrada roles Router a Client, limita posición a 1 emisión cada 5 min y bloquea MQTT público. |
+| `USERPREFS_FIRMWARE_EDITION` | Etiqueta la edición del firmware para que las apps (iOS/Android) muestren temas específicos del evento.                                                                                                                            |
+
+### Ejemplo completo para España :mdi-map-marker: {#ejemplo}
+
+```jsonc
+{
+  // Identidad
+  "USERPREFS_CONFIG_OWNER_LONG_NAME": "Nodo Central Madrid",
+  "USERPREFS_CONFIG_OWNER_SHORT_NAME": "NCM1",
+  "USERPREFS_CONFIG_DEVICE_ROLE": "meshtastic_Config_DeviceConfig_Role_CLIENT",
+
+  // LoRa
+  "USERPREFS_CONFIG_LORA_REGION": "meshtastic_Config_LoRaConfig_RegionCode_EU_868",
+  "USERPREFS_LORACONFIG_MODEM_PRESET": "meshtastic_Config_LoRaConfig_ModemPreset_LONG_FAST",
+
+  // Posición GPS fija (ejemplo: Puerta del Sol, Madrid)
+  "USERPREFS_FIXED_GPS": "true",
+  "USERPREFS_FIXED_GPS_LAT": "40.416775",
+  "USERPREFS_FIXED_GPS_LON": "-3.703790",
+  "USERPREFS_FIXED_GPS_ALT": "657",
+
+  // Clave pública del nodo administrador para administración remota
+  "USERPREFS_USE_ADMIN_KEY_0": "{ 0xcd, 0xc0, 0xb4, 0x3c, 0x53, 0x24, 0xdf, 0x13, 0xca, 0x5a, 0xa6, 0x0c, 0x0d, 0xec, 0x85, 0x5a, 0x4c, 0xf6, 0x1a, 0x96, 0x04, 0x1a, 0x3e, 0xfc, 0xbb, 0x8e, 0x33, 0x71, 0xe5, 0xfc, 0xff, 0x3c }",
+
+  // Zona horaria de España peninsular
+  "USERPREFS_TZ_STRING": "CET-1CEST,M3.5.0,M10.5.0/3",
+}
+```
+
+---
+
+## 3. Compilar el firmware :mdi-hammer:
+
+Una vez editado y guardado tu archivo `userPrefs.jsonc`, puedes compilar el firmware de dos formas:
+
+<Tabs groupId="build-method">
+<TabItem value="vscode" label="VSCode + PlatformIO">
+
+1. Instala **VSCode** y añade la extensión **PlatformIO IDE**.
+2. Abre la carpeta del firmware clonado desde VSCode (`Archivo -> Abrir carpeta`).
+3. Espera a que PlatformIO inicialice el proyecto y descargue las dependencias necesarias.
+4. Abre la **Paleta de Comandos** (`Ctrl+Shift+P` en Windows/Linux o `Cmd+Shift+P` en macOS).
+5. Escribe `PlatformIO: Build` para iniciar la compilación. También puedes hacerlo desde el panel lateral de PlatformIO seleccionando el modelo exacto de tu dispositivo (_Target_) y haciendo clic en **Build**.
+
+</TabItem>
+<TabItem value="terminal" label="Terminal (CLI)">
+
+Primero debes tener instalado [PlatformIO Core CLI](https://docs.platformio.org/en/latest/core/installation/methods/index.html).
+
+1. Abre una terminal y sitúate en la raíz del repositorio.
+2. Si no conoces el nombre del target exacto de tu placa, puedes listar los entornos disponibles ejecutando:
+   ```bash
+   pio project config | grep -e "^env:"
+   ```
+3. Ejecuta el comando de compilación especificando el target de tu hardware con la opción `-e`:
+   ```bash
+   pio run -e DEVICE_TARGET
+   ```
+   _Ejemplo para un chip nRF52 DIY:_
+   ```bash
+   pio run -e nrf52_promicro_diy_tcxo
+   ```
+
+</TabItem>
+</Tabs>
+
+---
+
+## 4. Flashear / Subir el firmware al nodo :mdi-upload:
+
+Cuando la compilación se complete con éxito, tendrás listo el binario personalizado. Ahora solo queda flashearlo al dispositivo:
+
+<Tabs groupId="build-method">
+<TabItem value="vscode" label="VSCode + PlatformIO">
+
+Conecta el nodo a tu ordenador por cable USB y ejecuta la tarea de subida desde el panel de tareas de PlatformIO, o usa la paleta de comandos buscando:
+`PlatformIO: Upload`
+
+</TabItem>
+<TabItem value="terminal" label="Terminal (CLI)">
+
+Conecta tu nodo por USB y ejecuta el comando indicando el target y el parámetro de subida (`-t upload`):
+
+```bash
+pio run -e DEVICE_TARGET -t upload
+```
+
+_Ejemplo:_
+
+```bash
+pio run -e nrf52_promicro_diy_tcxo -t upload
+```
+
+</TabItem>
+</Tabs>
+
+:::warning
+
+Asegúrate de que el puerto serie de tu nodo no esté ocupado por otra aplicación (como un monitor serie o el flasheador web de Meshtastic en el navegador) antes de lanzar el comando de subida.
+
+:::
