@@ -19,7 +19,7 @@ Esta guía detalla el proceso basándose en la [documentación de desarrollo de 
 
 ## 1. Clonar el repositorio de Meshtastic :mdi-git:
 
-El primer paso es obtener el código fuente del firmware de Meshtastic en tu equipo local:
+El primer paso es obtener el código fuente del [firmware de Meshtastic](https://github.com/meshtastic/firmware) en tu equipo, ya sea clonando el repositorio o descargando el ZIP:
 
 ```bash
 git clone https://github.com/meshtastic/firmware.git
@@ -64,7 +64,7 @@ Antes de empezar, es importante tener claro qué **no** es posible definir a tra
 ### Identidad del nodo :mdi-card-account-details-outline: {#identidad}
 
 | Parámetro                           | Descripción                                                          |
-| :---------------------------------- | :------------------------------------------------------------------- |
+|:------------------------------------|:---------------------------------------------------------------------|
 | `USERPREFS_CONFIG_OWNER_LONG_NAME`  | Nombre largo del nodo, el que aparece en la lista de nodos.          |
 | `USERPREFS_CONFIG_OWNER_SHORT_NAME` | Nombre corto, de 3 a 4 caracteres (ej. `"NCM1"`).                    |
 | `USERPREFS_CONFIG_DEVICE_ROLE`      | Rol del nodo. Por defecto es `CLIENT` (ver tabla de roles abajo).    |
@@ -73,7 +73,7 @@ Antes de empezar, es importante tener claro qué **no** es posible definir a tra
 **Roles disponibles:**
 
 | Rol                    | Valor                                               |
-| :--------------------- | :-------------------------------------------------- |
+|:-----------------------|:----------------------------------------------------|
 | Client _(por defecto)_ | `meshtastic_Config_DeviceConfig_Role_CLIENT`        |
 | Client Mute            | `meshtastic_Config_DeviceConfig_Role_CLIENT_MUTE`   |
 | Client Hidden          | `meshtastic_Config_DeviceConfig_Role_CLIENT_HIDDEN` |
@@ -85,7 +85,7 @@ Antes de empezar, es importante tener claro qué **no** es posible definir a tra
 ### LoRa y región :mdi-radio-tower: {#lora}
 
 | Parámetro                           | Descripción                                                                 |
-| :---------------------------------- | :-------------------------------------------------------------------------- |
+|:------------------------------------|:----------------------------------------------------------------------------|
 | `USERPREFS_CONFIG_LORA_REGION`      | Banda de frecuencia de tu país/región.                                      |
 | `USERPREFS_LORACONFIG_MODEM_PRESET` | Preset de velocidad/alcance de radio (ver tabla de presets abajo).          |
 | `USERPREFS_LORACONFIG_CHANNEL_NUM`  | Slot de canal dentro de la banda (`0` = autoselección basada en el nombre). |
@@ -95,7 +95,7 @@ Antes de empezar, es importante tener claro qué **no** es posible definir a tra
 **Presets de módem disponibles:**
 
 | Preset                    | Valor                                                    |
-| :------------------------ | :------------------------------------------------------- |
+|:--------------------------|:---------------------------------------------------------|
 | Long Fast _(por defecto)_ | `meshtastic_Config_LoRaConfig_ModemPreset_LONG_FAST`     |
 | Long Moderate             | `meshtastic_Config_LoRaConfig_ModemPreset_LONG_MODERATE` |
 | Long Turbo                | `meshtastic_Config_LoRaConfig_ModemPreset_LONG_TURBO`    |
@@ -112,7 +112,7 @@ Antes de empezar, es importante tener claro qué **no** es posible definir a tra
 **Códigos de región para España:**
 
 | Región        | Valor                                            |
-| :------------ | :----------------------------------------------- |
+|:--------------|:-------------------------------------------------|
 | Europa 868MHz | `meshtastic_Config_LoRaConfig_RegionCode_EU_868` |
 | Europa 433MHz | `meshtastic_Config_LoRaConfig_RegionCode_EU_433` |
 
@@ -121,7 +121,7 @@ Antes de empezar, es importante tener claro qué **no** es posible definir a tra
 Se pueden preconfigurar hasta **3 canales** (índices 0, 1 y 2).
 
 | Parámetro                              | Descripción                                                                                                                        |
-| :------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+|:---------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
 | `USERPREFS_CHANNELS_TO_WRITE`          | Número de canales a inicializar en el arranque (`1` a `3`).                                                                        |
 | `USERPREFS_CHANNEL_0_NAME`             | Nombre del canal (máx. 11 caracteres). Disponible también para `_1_` y `_2_`.                                                      |
 | `USERPREFS_CHANNEL_0_PSK`              | Clave precompartida. Usa `{ 0x01 }` para la clave pública por defecto, o un array de 32 bytes hexadecimales para un canal privado. |
@@ -134,7 +134,7 @@ Se pueden preconfigurar hasta **3 canales** (índices 0, 1 y 2).
 Ideal para nodos estáticos (repetidores, nodos solares) que no tienen módulo GPS.
 
 | Parámetro                 | Descripción                                      |
-| :------------------------ | :----------------------------------------------- |
+|:--------------------------|:-------------------------------------------------|
 | `USERPREFS_FIXED_GPS`     | `true` para activar la posición fija.            |
 | `USERPREFS_FIXED_GPS_LAT` | Latitud en formato decimal (ej. `"40.284297"`).  |
 | `USERPREFS_FIXED_GPS_LON` | Longitud en formato decimal (ej. `"-3.927447"`). |
@@ -151,7 +151,7 @@ Las coordenadas GPS fijas solo se aplican durante el **primer arranque** o justo
 Se pueden preconfigurar hasta 3 claves públicas de administración remota. Cuando otro nodo envíe un comando administrativo firmado con la clave privada correspondiente, este nodo lo aceptará.
 
 | Parámetro                   | Descripción                                                                  |
-| :-------------------------- | :--------------------------------------------------------------------------- |
+|:----------------------------|:-----------------------------------------------------------------------------|
 | `USERPREFS_USE_ADMIN_KEY_0` | Clave pública principal del administrador (array de 32 bytes hexadecimales). |
 | `USERPREFS_USE_ADMIN_KEY_1` | Clave pública secundaria.                                                    |
 | `USERPREFS_USE_ADMIN_KEY_2` | Clave pública terciaria.                                                     |
@@ -165,7 +165,7 @@ La clave que debes poner aquí es la **clave pública** (_public key_) de tu nod
 ### Intervalos de posición y telemetría :mdi-timer-outline: {#telemetria}
 
 | Parámetro                                          | Descripción                                                                                      |
-| :------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
+|:---------------------------------------------------|:-------------------------------------------------------------------------------------------------|
 | `USERPREFS_CONFIG_POSITION_BROADCAST_INTERVAL`     | Cada cuántos segundos se emite la posición (ej. `86400` = una vez al día).                       |
 | `USERPREFS_CONFIG_GPS_UPDATE_INTERVAL`             | Cada cuántos segundos se consulta el módulo GPS.                                                 |
 | `USERPREFS_CONFIG_SMART_POSITION_ENABLED`          | `true` o `false` — emite posición solo cuando el nodo se ha movido.                              |
@@ -177,7 +177,7 @@ La clave que debes poner aquí es la **clave pública** (_public key_) de tu nod
 ### MQTT :mdi-cloud-outline: {#mqtt}
 
 | Parámetro                           | Descripción                                                                                    |
-| :---------------------------------- | :--------------------------------------------------------------------------------------------- |
+|:------------------------------------|:-----------------------------------------------------------------------------------------------|
 | `USERPREFS_MQTT_ENABLED`            | `1` para activar el módulo MQTT.                                                               |
 | `USERPREFS_MQTT_ADDRESS`            | Dirección del broker (ej. `"'mqtt.meshtastic.es'"`). Ojo con las comillas simples adicionales. |
 | `USERPREFS_MQTT_USERNAME`           | Usuario MQTT.                                                                                  |
@@ -189,7 +189,7 @@ La clave que debes poner aquí es la **clave pública** (_public key_) de tu nod
 ### WiFi (solo ESP32) :mdi-wifi: {#wifi}
 
 | Parámetro                             | Descripción                              |
-| :------------------------------------ | :--------------------------------------- |
+|:--------------------------------------|:-----------------------------------------|
 | `USERPREFS_NETWORK_WIFI_ENABLED`      | `true` para activar WiFi en el arranque. |
 | `USERPREFS_NETWORK_WIFI_SSID`         | Nombre de la red WiFi.                   |
 | `USERPREFS_NETWORK_WIFI_PSK`          | Contraseña WiFi.                         |
@@ -201,7 +201,7 @@ La clave que debes poner aquí es la **clave pública** (_public key_) de tu nod
 Puedes sustituir el logo y texto de arranque de Meshtastic por uno personalizado de tu comunidad o grupo.
 
 | Parámetro                    | Descripción                                                                 |
-| :--------------------------- | :-------------------------------------------------------------------------- |
+|:-----------------------------|:----------------------------------------------------------------------------|
 | `USERPREFS_OEM_TEXT`         | Texto personalizado en la pantalla de arranque (ej. `"Meshtastic España"`). |
 | `USERPREFS_OEM_FONT_SIZE`    | Tamaño de fuente (`0` = pequeño, `1` = mediano, `2` = grande).              |
 | `USERPREFS_OEM_IMAGE_WIDTH`  | Ancho del logo personalizado, en píxeles.                                   |
@@ -211,7 +211,7 @@ Puedes sustituir el logo y texto de arranque de Meshtastic por uno personalizado
 ### Notificaciones y zona horaria :mdi-bell-outline: {#notificaciones}
 
 | Parámetro                     | Descripción                                                                                                            |
-| :---------------------------- | :--------------------------------------------------------------------------------------------------------------------- |
+|:------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
 | `USERPREFS_RINGTONE_RTTTL`    | Tono de notificación personalizado en [formato RTTTL](https://en.wikipedia.org/wiki/Ring_Tone_Text_Transfer_Language). |
 | `USERPREFS_RINGTONE_NAG_SECS` | Segundos antes de repetir la notificación de mensaje no leído (ej. `60`).                                              |
 | `USERPREFS_TZ_STRING`         | Zona horaria en formato POSIX (ej. `"CET-1CEST,M3.5.0,M10.5.0/3"` para España peninsular).                             |
@@ -221,7 +221,7 @@ Puedes sustituir el logo y texto de arranque de Meshtastic por uno personalizado
 Configuraciones especiales para eventos con muchos nodos.
 
 | Parámetro                    | Descripción                                                                                                                                                                                                                        |
-| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|:-----------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `USERPREFS_EVENT_MODE`       | `1` para activar el modo evento. Aplica restricciones estrictas: limita saltos a 2, aumenta retardos, bloquea puertos no esenciales, degrada roles Router a Client, limita posición a 1 emisión cada 5 min y bloquea MQTT público. |
 | `USERPREFS_FIRMWARE_EDITION` | Etiqueta la edición del firmware para que las apps (iOS/Android) muestren temas específicos del evento.                                                                                                                            |
 
@@ -261,11 +261,16 @@ Una vez editado y guardado tu archivo `userPrefs.jsonc`, puedes compilar el firm
 <Tabs groupId="build-method">
 <TabItem value="vscode" label="VSCode + PlatformIO">
 
-1. Instala **VSCode** y añade la extensión **PlatformIO IDE**.
+1. Instala [**VSCode**](https://code.visualstudio.com/) y añade la extensión [**PlatformIO IDE**](https://platformio.org/platformio-ide).
 2. Abre la carpeta del firmware clonado desde VSCode (`Archivo -> Abrir carpeta`).
-3. Espera a que PlatformIO inicialice el proyecto y descargue las dependencias necesarias.
+3. Espera a que _PlatformIO_ inicialice el proyecto y descargue las dependencias necesarias.
 4. Abre la **Paleta de Comandos** (`Ctrl+Shift+P` en Windows/Linux o `Cmd+Shift+P` en macOS).
-5. Escribe `PlatformIO: Build` para iniciar la compilación. También puedes hacerlo desde el panel lateral de PlatformIO seleccionando el modelo exacto de tu dispositivo (_Target_) y haciendo clic en **Build**.
+5. Escribe `PlatformIO: Pick Project Target` y selecciona tu placa.
+    <img width="49%" src="/img/configuracion-avanzada/preferencias-de-usuario/pio-vscode-pick-project-1.png" alt="" />
+    <img width="49%" src="/img/configuracion-avanzada/preferencias-de-usuario/pio-vscode-pick-project-2.png" alt="" />
+6. Escribe `PlatformIO: Build` para iniciar la compilación. También puedes hacerlo desde el panel lateral de PlatformIO seleccionando el modelo exacto de tu dispositivo (_Target_) y haciendo clic en **Build**.
+    <img width="49%" src="/img/configuracion-avanzada/preferencias-de-usuario/pio-vscode-build-1.png" alt="" />
+    <img width="49%" src="/img/configuracion-avanzada/preferencias-de-usuario/pio-vscode-build-2.png" alt="" />
 
 </TabItem>
 <TabItem value="terminal" label="Terminal (CLI)">
@@ -277,6 +282,7 @@ Primero debes tener instalado [PlatformIO Core CLI](https://docs.platformio.org/
    ```bash
    pio project config | grep -e "^env:"
    ```
+    <img src="/img/configuracion-avanzada/preferencias-de-usuario/pio-cli-pick-project.png" alt="" />
 3. Ejecuta el comando de compilación especificando el target de tu hardware con la opción `-e`:
    ```bash
    pio run -e DEVICE_TARGET
@@ -285,6 +291,7 @@ Primero debes tener instalado [PlatformIO Core CLI](https://docs.platformio.org/
    ```bash
    pio run -e nrf52_promicro_diy_tcxo
    ```
+    <img src="/img/configuracion-avanzada/preferencias-de-usuario/pio-cli-build.png" alt="" />
 
 </TabItem>
 </Tabs>
@@ -301,6 +308,8 @@ Cuando la compilación se complete con éxito, tendrás listo el binario persona
 Conecta el nodo a tu ordenador por cable USB y ejecuta la tarea de subida desde el panel de tareas de PlatformIO, o usa la paleta de comandos buscando:
 `PlatformIO: Upload`
 
+<img src="/img/configuracion-avanzada/preferencias-de-usuario/pio-vscode-upload-1.png" alt="" />
+
 </TabItem>
 <TabItem value="terminal" label="Terminal (CLI)">
 
@@ -315,6 +324,8 @@ _Ejemplo:_
 ```bash
 pio run -e nrf52_promicro_diy_tcxo -t upload
 ```
+
+<!-- <img src="/img/configuracion-avanzada/preferencias-de-usuario/pio-cli-upload.png" alt="" /> Aún no he creado la imagen -->
 
 </TabItem>
 </Tabs>
