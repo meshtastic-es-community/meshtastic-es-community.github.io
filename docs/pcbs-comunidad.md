@@ -126,18 +126,18 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 
 ---
 
-### 📟 Albatastic Compact v1.0
+### 📟 Albatastic Compact v2.2/1.3
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://raw.githubusercontent.com/sqtactical/Albatastic_Node/main/ArchivosV1.0/Preview_delante.png" alt="Albatastic Compact" width="150" />
+  <img src="https://github.com/user-attachments/assets/32965fe6-f38c-4d1d-ba76-e3bafcaca86e" alt="Albatastic Compact V2.2" width="150" />
   <div>
 
 
-**Descripción**: PCB compacta, sencilla y flexible para NRF52840 y E22/E22P.
+**Descripción**: PCB compacta, sencilla y modular para NRF52840 y E22/E22P, RA62, E80 o E28 (según versión).
 
-**Características**: Placa Promicro de bajo coste, selector entre E22 y E22P, medidor % batería.
+**Características**: Diseño modular y apilable, compacto y para diversas radios. Posibilidad de usar una placa con el mismo tamaño para alimentación y de conectarlas por serial
 
-**Próximamente**: V1.1 con GPS y HT-RA 62.
+**Versión actual**: V1.3, V2.2 para Pro micro en SMD
 
 **Autor**: EA5JSQ
 
@@ -189,6 +189,47 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 **Autor**: miguelleonmanzano
 
 🔗 [Ver en GitHub](https://github.com/miguelleonmanzano/Albapipe-Meshtastic-Node)
+
+  </div>
+</div>
+
+---
+### 🛰️ Albatastic Scout 
+
+<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
+  <img src="https://github.com/user-attachments/assets/ff0325e0-aca7-458b-9571-c9f083cb64d4" alt="Albatastic Scout PCB" width="150" />
+  <div>
+
+**Descripción**: PCB barebones compacta todo-en-uno diseñada específicamente para nodos solares sencillos y clientes de despliegue rápido.
+
+**Características**: Pro Micro nRF52, compatibilidad multi-radio (E22/E22P, E80, E28, HT-RA62), soporte para 3 tipos de MPPT (CN3795/CN3791/SD30CRMA), batería dual con BMS y sensor BME280.
+
+**Versión actual**: V1.0.
+
+**Autor**: EA5JSQ
+
+🔗 [Ver en GitHub](https://github.com/sqtactical/Albatastic-Scout)
+
+  </div>
+</div>
+
+---
+
+### 🔬 Albatastic Micro 
+
+<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
+  <img src="https://github.com/user-attachments/assets/e0857c7a-690c-4f96-a0e6-cd1726f825af" alt="Albatastic Micro PCB" width="150" />
+  <div>
+
+**Descripción**: La PCB más ultra-compacta y minimalista para el E22P, con NRF52840.
+
+**Características**: NRF52 Pro Micro, radio nativa E22/E22P (con soporte ampliado en V2.0), resistencias para monitorización de batería, pads I2C para sensores y supervisor de voltaje integrado TLV840.
+
+**Versión actual**: V1.0 (Estable y funcional). V1.1 (Con plano de tierra) y V2.0 (Pro Micro en SMD y multi-radio) en desarrollo.
+
+**Autor**: EA5JSQ
+
+🔗 [Ver en GitHub](https://github.com/sqtactical/PCB-Albatastic-micro)
 
   </div>
 </div>
