@@ -130,7 +130,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 
 Familia de PCBs modulares para Meshtastic creadas por la comunidad Albaceteña, pensadas para distintos formatos y casos de uso: desde la versión compacta y apilable, pasando por la versión PRO con varias opciones, hasta la ultra-minimalista Micro y la variante AlbaPipe diseñada para tubos de 50 mm.
 
-<details open>
+<details>
 <summary><strong>Albatastic-Series</strong> (Compact, PRO, Micro, AlbaPipe)</summary>
 
 <br />
