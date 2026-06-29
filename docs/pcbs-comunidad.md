@@ -126,18 +126,48 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 
 ---
 
-### 📟 Albatastic Compact v2.2/1.3
+### 📦 Albatastic Series
+
+Familia de PCBs modulares para Meshtastic creadas por la comunidad Albaceteña, pensadas para distintos formatos y casos de uso: desde la versión compacta y apilable, pasando por la versión PRO con varias opciones, hasta la ultra-minimalista Micro y la variante AlbaPipe diseñada para tubos de 50 mm.
+
+<details>
+<summary><strong>Albatastic-Series</strong> (Compact, PRO, Micro, AlbaPipe)</summary>
+
+<br />
+
+### 🖥️ Albatastic PRO
+
+<div style={{display:'flex', alignItems:'flex-start', gap:'20px', marginBottom:'40px'}}>
+  <img 
+    src="https://raw.githubusercontent.com/EmilioAL-Git/PCB-Albatastic-PRO/main/images/Albatastic%20PRO%201.2.png" 
+    alt="Albatastic PRO" 
+    style={{width:'150px'}}
+  />
+  <div>
+
+**Descripción**: PCB modular para Meshtastic integrable en caja Famatel 3072. Filosofía *"Choose your fighter"*: monta solo lo que necesitas.
+
+**Características**: Nrf52 XIAO o ProMicro, múltiples radios LoRa (E22, E22P, HT-RA62, RA-01, E80) con pistas anchas y condensadores de tantalio para estabilidad. Múltiples cargadores solares compatibles (CN3791, CN3065, SD05CRMA, SD30CRMA), batería dual 18650 integrada o externa, GPS para control horario, sensores ambientales BME280/BME680/AHT20/INA219, pantalla OLED opcional, salida serial UART, watchdog inteligente con ATTINY13A y recuperación automática vía relé y BMS incorporado.
+
+**Autor**: @Sremylio
+
+🔗 [Ver en GitHub](https://github.com/EmilioAL-Git/PCB-Albatastic-PRO)
+
+  </div>
+</div>
+
+---
+
+### 📟 Albatastic Compact
 
 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://github.com/user-attachments/assets/32965fe6-f38c-4d1d-ba76-e3bafcaca86e" alt="Albatastic Compact V2.2" width="150" />
+  <img src="https://github.com/user-attachments/assets/32965fe6-f38c-4d1d-ba76-e3bafcaca86e" alt="Albatastic Compact" width="150" />
   <div>
 
 
 **Descripción**: PCB compacta, sencilla y modular para NRF52840 y E22/E22P, RA62, E80 o E28 (según versión).
 
-**Características**: Diseño modular y apilable, compacto y para diversas radios. Posibilidad de usar una placa con el mismo tamaño para alimentación y de conectarlas por serial
-
-**Versión actual**: V1.3, V2.2 para Pro micro en SMD
+**Características**: Diseño modular y apilable, compacto y para diversas radios. Posibilidad de usar una placa con el mismo tamaño para alimentación y de conectarlas por serial. Disponible para Pro Micro en SMD.
 
 **Autor**: EA5JSQ
 
@@ -147,31 +177,26 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 </div>
 
 ---
-### 🖥️ Albatastic PRO v1.1
 
-<div style={{display:'flex', alignItems:'flex-start', gap:'20px', marginBottom:'40px'}}>
-  <img 
-    src="https://raw.githubusercontent.com/EmilioAL-Git/PCB-Albatastic-PRO/refs/heads/main/images/AlbatasticPRO1.1.png" 
-    alt="Albatastic PRO" 
-    style={{width:'150px'}}
-  />
+### 🔬 Albatastic Micro
+
+<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
+  <img src="https://github.com/user-attachments/assets/e0857c7a-690c-4f96-a0e6-cd1726f825af" alt="Albatastic Micro PCB" width="150" />
   <div>
 
-**Descripción**: PCB modular para Meshtastic integrable en caja Famatel 3072. Filosofía *"Choose your fighter"*: monta solo lo que necesitas.
+**Descripción**: La PCB más ultra-compacta y minimalista para el E22P, con NRF52840.
 
-**Características**: NRF52 XIAO o ProMicro, múltiples radios LoRa (E22, E22P, HT-RA62, E80), multiples cargadores solares, batería dual 18650 integrada o externa, GPS, sensores BME280/BME680/AHT20/INA219, pantalla OLED, conector serial UART, reset automático con ATTINY13A y protección de brownout con TLV840.
+**Características**: NRF52 Pro Micro, radio nativa E22/E22P con soporte ampliado para más radios, plano de tierra, resistencias para monitorización de batería, pads I2C para sensores y supervisor de voltaje integrado TLV840.
 
-**Versión actual**: V1.1 (probada y será publicada en breve). Cambios para 1.2 proximamente.
+**Autor**: EA5JSQ
 
-**Autor**: @Sremylio
-
-🔗 [Ver en GitHub](https://github.com/EmilioAL-Git/PCB-Albatastic-PRO)
+🔗 [Ver en GitHub](https://github.com/sqtactical/PCB-Albatastic-micro)
 
   </div>
 </div>
 
-
 ---
+
 ### 🖥 AlbaPipe
 
 <div style={{display:'flex', alignItems:'flex-start', gap:'20px', marginBottom:'40px'}}>
@@ -193,26 +218,7 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
   </div>
 </div>
 
----
-
-### 🔬 Albatastic Micro 
-
-<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://github.com/user-attachments/assets/e0857c7a-690c-4f96-a0e6-cd1726f825af" alt="Albatastic Micro PCB" width="150" />
-  <div>
-
-**Descripción**: La PCB más ultra-compacta y minimalista para el E22P, con NRF52840.
-
-**Características**: NRF52 Pro Micro, radio nativa E22/E22P (con soporte ampliado en V2.0), resistencias para monitorización de batería, pads I2C para sensores y supervisor de voltaje integrado TLV840.
-
-**Versión actual**: V1.0 (Estable y funcional). V1.1 (Con plano de tierra) y V2.0 (Pro Micro en SMD y multi-radio) en desarrollo.
-
-**Autor**: EA5JSQ
-
-🔗 [Ver en GitHub](https://github.com/sqtactical/PCB-Albatastic-micro)
-
-  </div>
-</div>
+</details>
 
 ---
 
