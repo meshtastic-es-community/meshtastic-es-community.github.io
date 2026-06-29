@@ -194,26 +194,6 @@ Esta página recopila diseños de placas PCB creadas por miembros de la comunida
 </div>
 
 ---
-### 🛰️ Albatastic Scout 
-
-<div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '40px' }}>
-  <img src="https://github.com/user-attachments/assets/ff0325e0-aca7-458b-9571-c9f083cb64d4" alt="Albatastic Scout PCB" width="150" />
-  <div>
-
-**Descripción**: PCB barebones compacta todo-en-uno diseñada específicamente para nodos solares sencillos y clientes de despliegue rápido.
-
-**Características**: Pro Micro nRF52, compatibilidad multi-radio (E22/E22P, E80, E28, HT-RA62), soporte para 3 tipos de MPPT (CN3795/CN3791/SD30CRMA), batería dual con BMS y sensor BME280.
-
-**Versión actual**: V1.0.
-
-**Autor**: EA5JSQ
-
-🔗 [Ver en GitHub](https://github.com/sqtactical/Albatastic-Scout)
-
-  </div>
-</div>
-
----
 
 ### 🔬 Albatastic Micro 
 
