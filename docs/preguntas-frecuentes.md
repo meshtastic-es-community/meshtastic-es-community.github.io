@@ -15,7 +15,7 @@ export const KeyOffIcon = () => (
 
 ## Enviar mensajes por MQTT en el canal principal o Iberia {#mqtt-downlink}
 
-En el servidor MQTT hemos deshabilitado el _downlink_ a los canales con nombre de _presets_ (LongFast, MediumFast...)
+En el servidor MQTT hemos deshabilitado el _downlink_ a los canales con nombre de _presets_ 
 e Iberia. Esto se hizo para evitar que los nodos se saturen con paquetes de toda España y probablemente consuman el
 [_duty cycle_](#duty-cycle).
 
@@ -23,7 +23,7 @@ Sin embargo, <u>es **importante** mantener activado</u> en los nodos tanto _upli
 que nos da más agilidad en el futuro si cambiamos algo en el servidor MQTT. Además, se permite que lleguen mensajes
 directos, telemetrías y otros paquetes cifrados, como por ejemplo la [administración de nodos en remoto](configuracion-avanzada/administracion-remota.md).
 
-La gran mayoría de los nodos en España tienen como canal principal el canal del _preset_ (LongFast, MediumFast...). Al ser
+La gran mayoría de los nodos en España tienen como canal principal el canal del _preset_. Al ser
 canal principal, es por donde se envían todos los paquetes de NodeInfo, telemetría variada, ubicación... todos esos datos
 que se mandan a intervalos. Si tu nodo reenviara por radiofrecuencia todo eso, llegaría rápidamente a su [_duty cycle_](#duty-cycle).
 
@@ -64,8 +64,7 @@ cambia. Haz una copia de tus claves, por si tuvieras que volver a utilizarlas.
 
 ### ¿Por qué aparece un candado amarillo en un canal? <span style={{color:"yellow"}} class="shadow">:mdi-unlocked-variant-outline:</span> {#candado-amarillo-canal}
 
-El candado amarillo indica que el canal está utilizando la clave por defecto. Es normal en los canales públicos (MediumFast,
-LongFast, Iberia, canales de provincia...). No se considera tan segura porque es pública y conocida por todo el mundo.
+El candado amarillo indica que el canal está utilizando la clave por defecto. Es normal en los canales públicos. No se considera tan segura porque es pública y conocida por todo el mundo.
 
 En canales privados, cambia la clave del canal por una propia para cifrar tus comunicaciones.
 
