@@ -342,10 +342,10 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
             <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
               <input
                 type="checkbox"
-                checked={includeIberia}
-                onChange={(e) => setIncludeIberia(e.target.checked)}
+                checked={includeRegional}
+                onChange={(e) => setIncludeRegional(e.target.checked)}
               />
-              <span>Iberia</span>
+              <span>Canal provincial</span>
             </label>
 
             <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
@@ -365,14 +365,14 @@ export default function MeshtasticConfigGenerator(): React.ReactElement {
               />
               <span>Bots</span>
             </label>
-            
+
             <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '8px' }}>
               <input
                 type="checkbox"
-                checked={includeRegional}
-                onChange={(e) => setIncludeRegional(e.target.checked)}
+                checked={includeIberia}
+                onChange={(e) => setIncludeIberia(e.target.checked)}
               />
-              <span>Canal regional</span>
+              <span>Iberia</span>
             </label>
             
             {includeRegional && (
