@@ -110,7 +110,7 @@ Ahora viene la parte más importante de la configuración, ya que si esto está 
     | _Ancho de banda_           | **62**                                                                                                           |
     | _Factor de dispersión_     | **7**                                                                                                            |
     | _Tasa de codificación_     | **5**                                                                                                            |
-    | _Region_                   | **European Union 868MHz** EU_868                                                                                 |
+    | _Region_                   | **European Union 868MHz** (EU_868)                                                                                 |
     | _Saltos_                   | **≤ 4**. Consulta las [buenas prácticas de saltos](../buenas-practicas.md#cantidad-de-saltos-máxima).            |
     | _Override Duty Cycle_      | **NO** (es ilegal y perjudica a la malla)                                                                        |
     | _Override frequency (MHz)_ | **869.618**                                                                                                      |
@@ -153,6 +153,13 @@ Accede [aquí al generador de QRs](../generador-configuracion).
 Comprueba qué preset se usa en tu zona en el [mapa de Presets](../mapas#mapa-presets) o en [Meshview](https://meshview.meshtastic.es).
 :::
 
+:::info
+Aunque permitas uplink y downlink en los canales, tus comunicaciones van a seguir viajando siempre a traves de RF.
+Nuestro servidor MQTT está configurado para no transportar los mensajes y no "ayudar" a la malla RF, por tanto los nodos **no utilizan internet** para comunicarse entre ellos.
+El objetivo de habilitar up y downlink en todos los canales es poder usar [herramientas](../mapas) de diagnóstico para estudiar, pulir y tener vision sobre el correcto funcionamiento de la malla.
+
+[Más info](../preguntas-frecuentes#mqtt-downlink)
+:::
 ---
 
 Una vez configurado todo esto, ya deberías poder comunicarte con otros nodos por radiofrecuencia.

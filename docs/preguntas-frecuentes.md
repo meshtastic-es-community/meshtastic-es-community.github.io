@@ -13,19 +13,14 @@ export const KeyOffIcon = () => (
 </svg>
 );
 
-## Enviar mensajes por MQTT en el canal principal o Iberia {#mqtt-downlink}
+## Enviar mensajes por MQTT {#mqtt-downlink}
 
-En el servidor MQTT hemos deshabilitado el _downlink_ a los canales con nombre de _presets_ 
-e Iberia. Esto se hizo para evitar que los nodos se saturen con paquetes de toda España y probablemente consuman el
-[_duty cycle_](#duty-cycle).
+En el servidor MQTT hemos deshabilitado el _downlink_ a todos los canales. No se puede habilitar porque los nodos se saturarían con todos los paquetes de toda España al mismo tiempo consumuendo todo el _Airtime_.
+Además, queremos promover una malla fuerte en RF y para ello no creemos que deba apoyarse en Internet.
 
-Sin embargo, <u>es **importante** mantener activado</u> en los nodos tanto _uplink_ como _downlink_ en estos canales, ya
-que nos da más agilidad en el futuro si cambiamos algo en el servidor MQTT. Además, se permite que lleguen mensajes
-directos, telemetrías y otros paquetes cifrados, como por ejemplo la [administración de nodos en remoto](configuracion-avanzada/administracion-remota.md).
+Sin embargo, <u>es **importante** mantener activado</u> en los nodos tanto _uplink_ como _downlink_ en estos canales. Esto nos da más agilidad en el futuro si cambiase algo en el servidor MQTT. Además, puede permitir que se envíen mensajes directos y otros paquetes cifrados, como por ejemplo la [administración de nodos en remoto](configuracion-avanzada/administracion-remota.md) que nos podéis solicitar si fuese necesario activarlo puntualmente.
 
-La gran mayoría de los nodos en España tienen como canal principal el canal del _preset_. Al ser
-canal principal, es por donde se envían todos los paquetes de NodeInfo, telemetría variada, ubicación... todos esos datos
-que se mandan a intervalos. Si tu nodo reenviara por radiofrecuencia todo eso, llegaría rápidamente a su [_duty cycle_](#duty-cycle).
+En caso excepcional y de necesidad, mientras la mayoría de nodos tengan up y downlink activo, tendremos la opción de habilitar un refuerzo temporal de la malla usando Internet. Si hay una emergencia e Internet puede ayudar, no vamos a desaprovechar la opción de reforzar la malla.
 
 ## Problemas comunes {#problemas-comunes}
 
