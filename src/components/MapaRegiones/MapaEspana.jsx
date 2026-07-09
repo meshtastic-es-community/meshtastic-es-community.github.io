@@ -24,7 +24,7 @@ const presetColors = {
 };
 
 const DEFAULT_COLOR = "#ccccccff"; 
-const DEFAULT_PRESET = "MediumFast";
+const DEFAULT_PRESET = "SFNarrow";
 const NO_DATA_PRESET = "Sin Datos";
 
 

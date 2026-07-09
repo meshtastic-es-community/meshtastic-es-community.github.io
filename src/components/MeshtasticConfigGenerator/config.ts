@@ -8,6 +8,18 @@ export const DEFAULT_PSK = new Uint8Array([1]); // AQ== in base64 = byte value 1
 
 // Preset definitions
 export const PRESETS: Presets = {
+  'SFNarrow': {
+    label: 'BW 62, SF 7, 869.618 MHz',
+    overrideChannelName: 'SFNarrow',
+    loraConfig: {
+      usePreset: false,
+      bandwidth: 62,
+      spreadFactor: 7,
+      codingRate: 5,
+      region: DEFAULT_REGION,
+      overrideFrequency: 869.618,
+    },
+  },
   'LongFast': {
     loraConfig: {
       usePreset: true,
@@ -36,18 +48,6 @@ export const PRESETS: Presets = {
       modemPreset: ModemPreset.SHORT_FAST,
       region: DEFAULT_REGION,
       overrideFrequency: 869.525, //Al venir de las pruebas lo incluyo por si alguien lo tiene mal
-    },
-  },
-  'SFNarrow SF7 - Slot 4': {
-    label: 'BW 62, SF 7, CR 5, 869.618 MHz',
-    overrideChannelName: 'SFNarrow',
-    loraConfig: {
-      usePreset: false,
-      bandwidth: 62,
-      spreadFactor: 7,
-      codingRate: 5,
-      region: DEFAULT_REGION,
-      overrideFrequency: 869.618,
     },
   },
   'SFNarrow - Prueba SF6': {

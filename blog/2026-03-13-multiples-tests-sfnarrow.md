@@ -46,7 +46,7 @@ condiciones.
 - _Coding Rate_: `5`
 - _Frequency slot_: `4`
 - _Frequency override_: `869.618`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+SF7+-+Slot+4)
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow)
 
 #### Prueba 2 - del 28/03/2026 al 08/04/2026
 
@@ -82,7 +82,7 @@ condiciones.
 - _Coding Rate_: `5`
 - _Frequency slot_: `4`
 - _Frequency override_: `869.618`
-- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow+SF7+-+Slot+4)
+- [Enlace al QR de configuración](/docs/generador-configuracion?preset=SFNarrow)
 
 :::info
 

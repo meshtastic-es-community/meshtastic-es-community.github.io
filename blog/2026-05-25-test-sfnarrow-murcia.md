@@ -161,8 +161,7 @@ Es decir hacemos un uso mucho mas eficiente y respetuoso de la banda que estamos
 - **NARROW_868 en el horizonte**: Meshtastic está desarrollando una región oficial
   `NARROW_868` con 3 canales y bandas de guarda. La división actual de 4 slots **no
   será compatible** con esa futura región, por lo que la configuración definitiva aún
-  está por determinar. Por esto se mantiene MediumFast como malla principal y SFNarrow
-  como experimento paralelo.
+  está por determinar.
 - **SX1276 incompatible con SF6**: chips como el del Heltec V2 no soportan SF6. Para
   la Prueba 6 actual (SF7) no hay problema.
 
