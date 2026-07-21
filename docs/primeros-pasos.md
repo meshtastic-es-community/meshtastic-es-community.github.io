@@ -127,7 +127,7 @@ Revisa nuestra guía de [buenas prácticas](buenas-practicas.md) para asegurarte
 
 2. **No te preocupes si no ves otros nodos al principio**:
 
-   - **Saca tu nodo por la ventana**: (O acércalo al menos). Meshtastic funciona muy mal dentro de los edificios.
+   - **Saca tu nodo por la ventana**: (Acércalo al menos). Meshtastic funciona muy mal dentro de los edificios.
    - **Pregunta a la comunidad sobre tu antena**: La antena que utilices marca totalmente la diferencia y puede doblar tu alcance.
    - **Consejo**: Prueba de cerca con dos dispositivos para asegurarte de que todo funciona bien primero.
 
@@ -142,10 +142,12 @@ Revisa nuestra guía de [buenas prácticas](buenas-practicas.md) para asegurarte
      - **Pregunta**: Hay un canal de Telegram en España ([@meshtastic_esp](https://t.me/meshtastic_esp)) donde puedes resolver tus dudas. También está el subreddit [r/meshtastic](https://www.reddit.com/r/meshtastic/).
      - **Revisa la documentación oficial**: [Meshtastic.org](https://meshtastic.org) tiene guías fáciles de entender.
 
-5. **No es necesario usar MQTT para hablar**:
+5. **MQTT es solo para analizar la malla, no para enviar mensajes**:
 
-   - **MQTT es una herramienta para conectar nuestros nodos a internet.** No es necesario (ni recomendable) al principio hasta que entiendas bien cómo funciona Meshtastic y la RF.
+   - **MQTT es una herramienta que reporta datos de nuestros nodos por internet.** En España no se utiliza para transportar mensajes, todas las comunicaciones van por la malla de radio porque eso es lo interesante de Meshtastic. [Info MQTT](preguntas-frecuentes#mqtt-downlink)
    - **Lo utilizamos principalmente para observar la red**. Hay herramientas como el [Mapa](https://mapa.meshtastic.es) o [Meshview](https://meshview.meshtastic.es) que sirven para ver en tiempo real, a través de internet el estado de la red de Meshtastic en España.
+   
+   - **Asegurate de tener activo "OK to MQTT" o "Permitir MQTT"** en los ajustes LoRa para aparecer en estas herramientas. Te va a ser de gran utilidad para realizar comprobaciones. [Mas info](mapas#como-aparecer-en-mapas)
 
 6. **Advertencia para radioaficionados: No actives el modo HAM**:
 
