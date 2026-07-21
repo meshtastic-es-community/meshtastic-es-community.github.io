@@ -6,33 +6,79 @@ sidebar_position: 4
 
 En este artículo te damos algunos consejos para que entre todos mantengamos la red funcionando a pleno rendimiento. Como es una tecnología descentralizada, es responsabilidad de todos hacer bien las cosas.
 
-Hay unos aspectos clave en cuanto a la red que es importante destacar, para que entiendas estas buenas prácticas:
+La idea es reducir todo el tráfico posible con la ayuda de todos. Cada granito de arena cuenta, somos muchos y podemos hacer una gran diferencia en la calidad de la malla.
+
+<details>
+<summary>Aspectos clave para que entiendas mejor el por qué de esta guía</summary>
 
 - Un nodo **NO** puede enviar y recibir mensajes a la vez. Si está oyendo, no está hablando, y viceversa.
 - Un nodo sólo puede recibir **UN** mensaje a la vez. Como la vida misma, si varios hablan a la vez, no te enteras de nada.
-- Si un nodo detecta a otro nodo emitiendo, este **NO** emitirá mensajes (para evitar colisiones). Esperará a que la red esté libre.
+- Si un nodo detecta a otro nodo emitiendo, este **NO** emitirá mensajes (para evitar colisiones). Esperará a que la red esté libre.</details>
 
-## Cantidad de saltos máxima
+## Intervalos de broadcast automáticos
 
-Para evitar saturar la malla, es importante **no sobrepasar** el número de saltos máximo recomendado.
-Este ajuste viene en **3 saltos** por defecto, que es más que suficiente según la [documentación oficial](https://meshtastic.org/docs/configuration/tips/#hop-count). Dejarlo en **3** es ideal.
+De fábrica, Meshtastic envía frecuentemente mucha información sobre tu nodo. Esto incluye su identificación, la posición, los niveles de batería...
+
+En la mayoría de casos, no es necesario actualizar esta información porque no cambia o no es importante. **En las mallas grandes, es más del 90% del tráfico total.** Por este motivo, proponemos no enviarlos tan a menudo.
 :::note
-Con 3 o 4 hops se llega bien a todas las partes de la malla.
+Los intervalos propuestos son **MÍNIMOS**, puedes aumentarlos todavía más para mejorar el rendimiento en tu zona.
 :::
 
-Si **realmente** necesitas subirlos, este ajuste se encuentra en `Configuración -> Radio -> LoRa -> Hop limit`
+### NodeInfo
 
-### Los saltos MÁXIMOS que recomendamos son:
+Detalle de los datos identificativos del nodo: claves, ID... Se puede solicitar manualmente al nodo siempre que se quiera. Son datos que no suelen cambiar.
 
-- 4 - Para nodos bien conectados (CLIENT en exterior)
-- 5 - **Solamente** si estamos en los extremos de la malla o para un nodo CLIENT_MUTE en interior.
+**Es la mayor parte del tráfico de la malla** (varias veces más que los mensajes de texto) y ocupan demasiado espacio de forma innecesaria.
 
-:::info
-Los mensajes se moverán de forma mucho más ágil si entre todos usamos solamente los hops mínimos necesarios. Cuantos más hops, los mensajes dan más vueltas, con caminos redundantes y saturando la malla innecesariamente.
-:::
-:::warning
-Muchos usuarios creen erróneamente que poner 7 hops (el más alto) es mejor, pero es totalmente contraproducente para todos. Vienen configurados 3 de fábrica por algo.
-:::
+Además, solo caben entre 80 y 200 en la memoria de los nodos. En una malla grande como la nuestra (+1500 nodos), se están borrando y reescribiendo constantemente porque no caben todos. Como es imposible conservarlos, automatizados **tienen poca utilidad**.
+
+**El valor recomendado es 72h**:
+
+- Android: `Configuración -> Configuración del dispositivo -> Dispositivo -> Intervalo de transmisión de información del dispositivo`
+- iOS: `Configuración -> Dispositivo -> Node Info Broadcast Interval`
+
+### Posición
+
+En nodos fijos no cambia nunca por lo que no tiene sentido enviarla a menudo. Además, se puede solicitar manualmente al nodo siempre que se quiera.
+
+**Para nodos fijos:** el valor recomendado es **72h**.
+
+En nodos móviles o con GPS, puede interesar enviarla más frecuente pero sin abusar de ello porque provoca mucha congestión en la malla. Es recomendable deshabilitar el ajuste `Ubicación/Posición inteligente`.
+
+**Para nodos móviles:** no es aconsejable bajar de 1h.
+
+- Android: `Configuración -> Configuración del dispositivo -> Posición -> Intervalo de transmision`
+- iOS: `Configuración -> Posición -> Broadcast Interval`
+
+También recomendamos **desactivar todos** los `Position flags` para reducir la cantidad de datos que emitimos.
+
+- Android: `Configuración -> Configuración del dispositivo -> Posición -> Marcas de posición`
+- iOS: `Configuración -> Posición -> Banderas de posición`
+
+### Telemetría
+
+Meshtastic permite enviar diversa información de los nodos. Datos de sensores de temperatura, presión, humedad... Tambien de su estado como la carga de la batería o el porcentaje de uso del canal RF.
+
+Es información que generalmente no interesa a la malla 
+
+- Android: `Configuración -> Configuración de módulo -> Telemetría`
+- iOS: `Configuración -> Telemetría`
+
+#### Telemetría del dispositivo:
+
+
+- **Nodos enchufados a la corriente** en casa: **Desactivar**, tiene poca utilidad.
+- **Nodos solares**: Es útil para ver el estado de la batería. Se puede poner en un intervalo de **4h o más**.
+- **Nodos de infraestructura**: Si interconectan partes grandes de la malla, interesa poder ver el ChUtil (utilización del canal) que sirve para medir la saturación de la malla. **6h o más**
+
+#### Medidas del entorno:
+**Recomendamos desactivarlo** o poner un valor muy alto (superior a 4h).
+La mayoría de nodos ni siquiera tienen estos sensores.
+
+#### Medidas eléctricas:
+**Recomendamos desactivarlo** a no ser que sepas exactamente si lo necesitas y para qué sirve
+
+Solo algunos nodos reportan esta información avanzada de su consumo eléctrico. Si lo activas temporalmente para hacer pruebas, no te olvides de desactivarlo cuando termines.
 
 ## Utilizar el rol adecuado
 
@@ -44,16 +90,17 @@ Antes de decidir qué rol tendrá tu nodo, es importante que entiendas los mismo
 
 **CLIENT** para nodos exteriores, con buena ubicación (tipo una azotea o una terraza despejada) que ayudan a una parte de la malla, reenviando los mensajes de otros. Tiene conexión directa con varios nodos.
 
-**ROUTER** para nodos ubicados en zonas muy estratégicas. Este rol requiere planificación y coordinación con otros miembros de la malla. No lo utilices a lo loco.
+**ROUTER** para nodos ubicados en zonas muy estratégicas. Este rol requiere planificación y coordinación con otros miembros de la malla. No lo utilices si no tienes 100% claro lo que estás haciendo.
 
-**ROUTER_LATE** funciona igual que el ROUTER pero con un retardo largo, generalmente no está recomendado utilizarlo puesto que causa problemas a la malla. También requiere planificación y coordinación con los demás igual que ROUTER.
+**ROUTER_LATE** funciona igual que el ROUTER pero con un retardo largo, no está recomendado utilizarlo puesto que causa problemas a la malla. También requiere planificación y coordinación con los demás igual que ROUTER.
 
-**CLIENT_BASE** rol para nodos de tejados/azoteas (MUY IMPORTANTE: en un nodo CLIENT_BASE solo se deben añadir como favoritos tus propios nodos interiores)
+**CLIENT_BASE** rol para nodos de tejados/azoteas (MUY IMPORTANTE: en un nodo CLIENT_BASE solo se deben añadir como favoritos tus propios nodos interiores). A partir de las ultimas versiones se comporta en parte como un ROUTER_LATE por lo que ya no se recomienda a no ser que sepas bien lo que haces.
 
 Con esos roles es más que suficiente. Obviamente puedes usar otros, pero no los recomendamos si no lo tienes claro, ya que puede ser contraproducente para todos (tanto para ti como para el resto de la malla).
 
 :::tip
-Esto es una red colaborativa. No hace falta que todos aportemos. De verdad, no te sientas mal por tener únicamente nodos CLIENT_MUTE y no "ayudar" a expandir la malla. Ya estás ayudando al no generar más tráfico reenviando mensajes de otros. Redes como Madrid o Cataluña ya están muy bien cubiertas y probablemente ya puedas comunicarte con otros nodos sin problemas.
+Esto es una red colaborativa y es más importante la calidad que la cantidad de nodos. No es necesario que todos aportemos. De verdad, no te sientas mal por tener únicamente nodos CLIENT_MUTE y no "ayudar" a expandir la malla. 
+Ya estás ayudando al no generar más tráfico reenviando mensajes de otros. La red ya está bastante bien cubierta y probablemente ya puedas comunicarte con otros nodos sin problemas.
 :::
 
 :::note
@@ -63,65 +110,30 @@ Los roles no son definitivos, se pueden cambiar en cualquier momento. Quizás un
 <details>
 <summary>Ejemplos de roles incorrectos</summary>
 
-Un nodo REPEATER viene a ser lo mismo que un ROUTER, pero no aparece en la lista de nodos. Va oculto por la vida. Esto es una malla colaborativa, no es necesario estar en la sombra.
-
 Asignar a un nodo CLIENT cuando no tiene buenas conexiones con otros nodos. Lo único que consigues es entorpecer a los pocos nodos que te oigan. Por ejemplo un nodo CLIENT bien ubicado en una azotea, con visión y conexión directa a un ROUTER, pero que no sirve a otros nodos. Este nodo, reenviando los mensajes que reciba del ROUTER, hace que ese ROUTER no escuche otros mensajes y no pueda enviar mensajes.
 
 Un ROUTER en el tejado de casa (o en ubicaciones aún peores).
 
 </details>
 
-## Intervalos de broadcast automáticos
+## Cantidad de saltos máxima
 
-De fábrica, Meshtastic envía frecuentemente mucha información sobre tu nodo. Esto incluye su identificación, la posición, los niveles de batería...
-
-En la mayoría de casos, no es necesario actualizar tan frecuentemente esta información porque no cambia o no es importante. **En las mallas grandes, es más del 90% del tráfico total.** Por este motivo, proponemos aumentar los intervalos en los que se transmiten estos datos, para no enviarlos tan a menudo.
+Para evitar saturar la malla, es importante **no sobrepasar** el número de saltos máximo recomendado.
+Este ajuste viene en **3 saltos** por defecto, que es más que suficiente según la [documentación oficial](https://meshtastic.org/docs/configuration/tips/#hop-count). Dejarlo en **3** es ideal.
 :::note
-Los intervalos propuestos son **MÍNIMOS**, puedes aumentarlos todavía más para mejorar el rendimiento en tu zona.
+Con 3 o 4 hops se llega bien a todas las partes de la malla.
 :::
 
-### Métricas del dispositivo
+Si **realmente** necesitas subirlos, este ajuste se encuentra en `Configuración -> LoRa -> Número de saltos`
 
-Son los datos de "salud" del nodo. Por ejemplo: nivel de batería, voltaje, % de utilización del canal...
+### Los saltos MÁXIMOS que recomendamos son:
 
-Se puede reducir temporalmente si sabes lo que estás haciendo, para evaluar el funcionamiento de un nodo nuevo por ejemplo. ¡No te olvides de volver a subirlo!
+- 4 - Para nodos bien conectados (CLIENT en exterior)
+- 5 - **Solamente** si estamos en los extremos de la malla o para un nodo CLIENT_MUTE en interior.
 
-El valor recomendado es `43200` segundos, es decir 12h.
-
-Configurable en `Configuracion -> Telemetry -> Device metrics update interval -> 43200`
-
-### Identificación del nodo
-
-Se envía en más detalle los datos identificativos del nodo: nombre, claves, ID... Se puede solicitar manualmente al nodo siempre que se quiera.
-
-Aunque todos los mensajes llevan tu identificador, estos mensajes complementan la información del "perfil" de tu nodo. Estos datos son fijos y no cambian nunca, a no ser que los cambies tú. Sirve para que te identifiquen correctamente **la primera vez.**
-
-El valor recomendado es `86400` segundos, es decir 24h.
-
-Configurable en `Configuracion -> Device -> NodeInfo broadcast interval -> 86400`
-
-### Posición
-
-En nodos fijos no cambia nunca por lo que no tiene sentido enviarla a menudo. Además, se puede solicitar manualmente al nodo siempre que se quiera.
-
-En nodos móviles o con GPS, puede interesar enviarla más frecuente pero sin abusar de ello porque provoca la mayoría de la congestión en la malla. Es recomendable deshabilitar el ajuste `Smart Position`.
-
-**Para nodos fijos:** el valor recomendado es `86400` segundos, es decir 24h.
-
-**Para nodos móviles:** no es aconsejable bajar de `1800` segundos, es decir 30 minutos.
-
-Configurable en `Configuracion -> Position -> Position broadcast interval -> 86400`
-
-También recomendamos desactivar casi todos los `Position flags` para dejar los mínimos necesarios y así reducir la cantidad de datos que emitimos. El imprescindible es `DOP`. El resto son información adicional que no es necesaria como tal.
-
-Configurable en `Configuracion -> Position -> Position flags`
-
-### Métricas del entorno
-
-Meshtastic permite enviar información de sensores conectados a los nodos. De temperatura, presión, humedad...
-
-Es información "chula" pero poco importante para la malla. La mayoría de nodos ni siquiera tienen estos sensores.
-
-Recomendamos desactivarlo o poner un valor muy alto.
-
-Configurable en `Configuracion -> Telemetry -> Environment metrics`
+:::info
+Los mensajes se moverán de forma mucho más ágil si entre todos usamos solamente los hops mínimos necesarios.
+:::
+:::warning
+Muchos usuarios creen erróneamente que poner 7 hops (el más alto) es mejor, pero es contraproducente para todos. Vienen configurados 3 de fábrica por algo.
+:::
