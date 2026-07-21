@@ -6,20 +6,30 @@ sidebar_position: 4
 
 En este artículo te damos algunos consejos para que entre todos mantengamos la red funcionando a pleno rendimiento. Como es una tecnología descentralizada, es responsabilidad de todos hacer bien las cosas.
 
-La idea es reducir todo el tráfico posible con la ayuda de todos. Cada granito de arena cuenta, somos muchos y podemos hacer una gran diferencia en la calidad de la malla.
+La idea es reducir el tráfico innecesario entre todos. Cada granito de arena cuenta, somos muchos y podemos hacer una gran diferencia en la calidad de la malla.
 
-<details>
-<summary>Aspectos clave para que entiendas mejor el por qué de esta guía</summary>
+Es un artículo un poco largo, detallado y con explicaciones de los motivos de cada recomendación.
+<details><summary>Aquí tienes una guía rápida, resumen de todo para ajustar y listo.</summary>
+
+</details>
+
+## ¿Por qué? Aspectos clave:
 
 - Un nodo **NO** puede enviar y recibir mensajes a la vez. Si está oyendo, no está hablando, y viceversa.
-- Un nodo sólo puede recibir **UN** mensaje a la vez. Como la vida misma, si varios hablan a la vez, no te enteras de nada.
-- Si un nodo detecta a otro nodo emitiendo, este **NO** emitirá mensajes (para evitar colisiones). Esperará a que la red esté libre.</details>
+- Un nodo sólo puede recibir **UN** mensaje a la vez. Si varios hablan a la vez, no te enteras de nada.
+- Si un nodo detecta a otro nodo emitiendo, este **NO** emitirá mensajes (para evitar pisarse). Esperará a que la red esté libre.
+
+Como ves, la malla necesita que los nodos se turnen para funcionar correctamente. Cuantos más nodos hay y más hablan entre ellos, más largas son las esperas de turno para todos.
+
+El objetivo es reducir todo el tráfico innecesario, para hacer hueco a los mensajes de los usuarios.
+
+En el momento de escribir este artículo, **la mensajería es menos de un 10% del tráfico total en España**. El resto es tráfico que no tiene utilidad real.
 
 ## Intervalos de broadcast automáticos
 
 De fábrica, Meshtastic envía frecuentemente mucha información sobre tu nodo. Esto incluye su identificación, la posición, los niveles de batería...
 
-En la mayoría de casos, no es necesario actualizar esta información porque no cambia o no es importante. **En las mallas grandes, es más del 90% del tráfico total.** Por este motivo, proponemos no enviarlos tan a menudo.
+En la mayoría de casos, no es necesario actualizar esta información porque no cambia o no es importante. **En las mallas grandes, es más del 90% del tráfico total.** 
 :::note
 Los intervalos propuestos son **MÍNIMOS**, puedes aumentarlos todavía más para mejorar el rendimiento en tu zona.
 :::
@@ -28,9 +38,9 @@ Los intervalos propuestos son **MÍNIMOS**, puedes aumentarlos todavía más par
 
 Detalle de los datos identificativos del nodo: claves, ID... Se puede solicitar manualmente al nodo siempre que se quiera. Son datos que no suelen cambiar.
 
-**Es la mayor parte del tráfico de la malla** (varias veces más que los mensajes de texto) y ocupan demasiado espacio de forma innecesaria.
+**Es la mayor parte del tráfico de la malla** (varias veces más que los mensajes de texto) y ocupan mucha capacidad de forma innecesaria.
 
-Además, solo caben entre 80 y 200 en la memoria de los nodos. En una malla grande como la nuestra (+1500 nodos), se están borrando y reescribiendo constantemente porque no caben todos. Como es imposible conservarlos, automatizados **tienen poca utilidad**.
+Además, solo caben entre 80 y 200 en la memoria de los nodos. En una malla grande como la nuestra (+1500 nodos), se están borrando y reescribiendo constantemente porque no entran todos. Como es imposible conservarlos, automatizarlos **tiene poca utilidad**.
 
 **El valor recomendado es 72h**:
 
@@ -47,6 +57,7 @@ En nodos móviles o con GPS, puede interesar enviarla más frecuente pero sin ab
 
 **Para nodos móviles:** no es aconsejable bajar de 1h.
 
+Se puede cambiar en:
 - Android: `Configuración -> Configuración del dispositivo -> Posición -> Intervalo de transmision`
 - iOS: `Configuración -> Posición -> Broadcast Interval`
 
@@ -90,17 +101,15 @@ Antes de decidir qué rol tendrá tu nodo, es importante que entiendas los mismo
 
 **CLIENT** para nodos exteriores, con buena ubicación (tipo una azotea o una terraza despejada) que ayudan a una parte de la malla, reenviando los mensajes de otros. Tiene conexión directa con varios nodos.
 
+**CLIENT_BASE** rol para nodos de tejados/azoteas. A partir de las ultimas versiones se comporta en parte como un ROUTER_LATE por lo que ya no se recomienda a no ser que sepas bien lo que haces. (MUY IMPORTANTE: en un nodo CLIENT_BASE solo se deben añadir como favoritos tus propios nodos interiores).
+
 **ROUTER** para nodos ubicados en zonas muy estratégicas. Este rol requiere planificación y coordinación con otros miembros de la malla. No lo utilices si no tienes 100% claro lo que estás haciendo.
 
 **ROUTER_LATE** funciona igual que el ROUTER pero con un retardo largo, no está recomendado utilizarlo puesto que causa problemas a la malla. También requiere planificación y coordinación con los demás igual que ROUTER.
 
-**CLIENT_BASE** rol para nodos de tejados/azoteas (MUY IMPORTANTE: en un nodo CLIENT_BASE solo se deben añadir como favoritos tus propios nodos interiores). A partir de las ultimas versiones se comporta en parte como un ROUTER_LATE por lo que ya no se recomienda a no ser que sepas bien lo que haces.
-
-Con esos roles es más que suficiente. Obviamente puedes usar otros, pero no los recomendamos si no lo tienes claro, ya que puede ser contraproducente para todos (tanto para ti como para el resto de la malla).
-
 :::tip
-Esto es una red colaborativa y es más importante la calidad que la cantidad de nodos. No es necesario que todos aportemos. De verdad, no te sientas mal por tener únicamente nodos CLIENT_MUTE y no "ayudar" a expandir la malla. 
-Ya estás ayudando al no generar más tráfico reenviando mensajes de otros. La red ya está bastante bien cubierta y probablemente ya puedas comunicarte con otros nodos sin problemas.
+Esto es una red colaborativa y es más importante la calidad que la cantidad de nodos. No es necesario que todos repitamos mensajes. De verdad, no te sientas mal por tener únicamente nodos CLIENT_MUTE. 
+Ya estás ayudando al no generar más tráfico. La red está bastante bien cubierta y probablemente puedas comunicarte con otros nodos sin problemas.
 :::
 
 :::note
@@ -110,9 +119,9 @@ Los roles no son definitivos, se pueden cambiar en cualquier momento. Quizás un
 <details>
 <summary>Ejemplos de roles incorrectos</summary>
 
-Asignar a un nodo CLIENT cuando no tiene buenas conexiones con otros nodos. Lo único que consigues es entorpecer a los pocos nodos que te oigan. Por ejemplo un nodo CLIENT bien ubicado en una azotea, con visión y conexión directa a un ROUTER, pero que no sirve a otros nodos. Este nodo, reenviando los mensajes que reciba del ROUTER, hace que ese ROUTER no escuche otros mensajes y no pueda enviar mensajes.
+- Asignar a un nodo CLIENT cuando no tiene buenas conexiones con otros nodos (debería ser CLIENT_MUTE). Lo único que consigues es entorpecer a los pocos nodos que te oigan.
 
-Un ROUTER en el tejado de casa (o en ubicaciones aún peores).
+- Un ROUTER en el tejado de casa (o en ubicaciones aún peores) que debería ser CLIENT.
 
 </details>
 
@@ -132,8 +141,5 @@ Si **realmente** necesitas subirlos, este ajuste se encuentra en `Configuración
 - 5 - **Solamente** si estamos en los extremos de la malla o para un nodo CLIENT_MUTE en interior.
 
 :::info
-Los mensajes se moverán de forma mucho más ágil si entre todos usamos solamente los hops mínimos necesarios.
-:::
-:::warning
 Muchos usuarios creen erróneamente que poner 7 hops (el más alto) es mejor, pero es contraproducente para todos. Vienen configurados 3 de fábrica por algo.
 :::
