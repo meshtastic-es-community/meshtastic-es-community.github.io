@@ -1,22 +1,19 @@
 ---
 slug: malla-2.4G-preparacion
-title: 📡 ¡Salto a los 2.4GHz! Antenas, cacharreo DIY y la conquista de Madrid
+title: 📡 ¡Probamos los 2.4GHz! Primeras pruebas y conclusiones en esta nueva forma de usar Meshtastic
 authors: []
 tags: [2.4GHz, Antenas, Hardware, DIY, Configuración, Mesh]
 description: >
-  La malla en 2.4GHz arranca motores. Mientras los nodos se preparan para iluminar
-  Madrid y otras zonas, repasamos las mejores opciones de antenas comerciales,
-  el resurgir de las "cantennas" caseras y los retos de aduanas. ¡Prepara tu VNA!
+  La malla en 2.4GHz arranca motores. Repasamos las mejores opciones de antenas comerciales,
+  el resurgir de las "cantennas" caseras y el hardware compatible.
 ---
 
 # ¡La Red Malla en 2.4 GHz es Real y Funciona! 🚀
 ## Por qué deberías desplegar tu nodo en 2.4G hoy mismo
 
-Las redes mesh o malla en bandas ISM han revolucionado la comunicación libre, descentralizada y sin dependencia de la infraestructura móvil tradicional. Durante mucho tiempo, las frecuencias de sub-GHz (como 868 MHz en Europa o 915 MHz en América) han sido las reinas indiscutibles para enlaces a larga distancia. Sin embargo, **la banda de 2.4 GHz para redes LoRa Mesh ha llegado para cambiar las reglas del juego**.
+Tras varias pruebas de campo y tests de rendimiento con hardware el hardware disponible, los resultados son rotundamente claros: **la malla en 2.4 GHz no solo es viable, sino que ofrece ventajas únicas de velocidad, tamaño y capacidad que complementan perfectamente el ecosistema mesh.**
 
-Tras varias pruebas de campo y tests de rendimiento con hardware el hardware disponible, los resultados son rotundamente claros: **la malla en 2.4 GHz no solo es viable, sino que ofrece ventajas únicas de velocidad, compacidad y capacidad que complementan perfectamente el ecosistema mesh.**
-
-Si estabas pensando en probar tecnologias alternativas, aquí te contamos todo lo que hemos descubierto en los tests y por qué es interesante probar los 2.4 GHz.
+Si estabas pensando en probar tecnologías alternativas, aquí te contamos todo lo que hemos descubierto en los tests y por qué es interesante probar los 2.4 GHz.
 
 ---
 
@@ -24,7 +21,7 @@ Si estabas pensando en probar tecnologias alternativas, aquí te contamos todo l
 
 ### 1. Ancho de banda y velocidad de transmisión superiores
 A diferencia de las bandas sub-GHz tradicionales donde la tasa de bits es muy limitada, en 2.4 GHz disponemos de un ancho de banda significativamente mayor. El preset SFNarrow da una velocidad aproximada de 2.5Kb/s, mientras que en 2.4G, el preset inicial tendrá una velocidad de 6Kb/s. Esto se traduce en:
-* **Mensajes instantáneos:** Latencia casi imperceptible en la entrega de pings y paquetes de texto.
+* **Mensajes más rápidos:** Latencia mas baja en la entrega de pings y paquetes de texto.
 * **Menor tiempo en el aire (Airtime):** Al transmitir más rápido, el canal sufre muchísima menos saturación, reduciendo las colisiones incluso con decenas de nodos activos.
 * **Sin duty cycle restrictivo:** La banda de 2.4 GHz se caracteriza por no tener las restricciones de ciclo de trabajo del 10% presentes en 869 MHz, permitiendo un tráfico de datos más fluido.
 
@@ -42,7 +39,7 @@ La banda ISM de 2.4 GHz es la misma en todo el mundo. No hay confusión entre co
 
 ## 📊 Resultados de los Tests de Campo
 
-En nuestras pruebas recientes hemos sometido a test intensivos varios nodos equipados con transceptores **SX1280 / SX1281** combinados con microcontroladores de ultra bajo consumo (**nRF52840**) y **ESP32-S3**, conectados a distintas antenas e instalados a diferentes alturas.
+En nuestras pruebas recientes hemos sometido a test intensivos varios nodos equipados con transceptores **SX1280 / SX1281** combinados con microcontroladores de bajo consumo (**nRF52840**) y **ESP32-S3**, conectados a distintas antenas e instalados a diferentes alturas.
 
 ### 1. Alcance en Línea de Vista (LOS)
 En pruebas con visión directa entre puntos elevados y nodos móviles:
@@ -53,12 +50,13 @@ En pruebas con visión directa entre puntos elevados y nodos móviles:
 Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y se han obtenido distancias de 780m (a falta de probar más), contrastándolo con 868 y teniendo las siguientes conclusiones:
 * El RSSI era de aproximadamente 8-9dB menos que en 868.
 * El SNR variaba, dependiendo de la localización y de la posición, ya sea por interferencias de otros dispositivos o incluso por la propagación multicamino.
+* Esta frecuencia es mucho mas dependiente del LOS pero incluso sin ese enlace directo ofrece buen resultado en ciertas circunstancias.
 
 ---
 
 ## 🛠️ Guía Rápida de Hardware Recomendado
 
-Si quieres armar tu propio nodo de 2.4 GHz, este es el hardware probado que te recomendamos:
+Si quieres montar tu propio nodo de 2.4 GHz, este es el hardware probado que te recomendamos:
 
 | Componente | Opción Recomendada | Notas y Ventajas |
 | :--- | :--- | :--- |
@@ -90,12 +88,10 @@ Para garantizar la máxima interoperabilidad entre nodos y evitar fragmentar la 
 | **Preset** | `MediumSlow` | Ofrece un excelente compromiso entre velocidad (~6 Kbps) y alcance. |
 | **Frecuency Override** | `2480` | Frecuencia elegida para alejarnos del WiFi. |
 | **Saltos Máximos (Hop Limit)** | `3` | Evita saturación innecesaria en la malla manteniendo buena cobertura. |
-| **Nombre del canal principal** | `Medium24` | Nombre elegido para evitar confusión con el MediumSlow de 868. |
+| **Nombre del canal principal** | `Medium24` | Nombre elegido para evitar confusión con el MediumSlow de 868. Con clave `AQ==` |
 | **Ok to MQTT** | `Activado` | Recuerda activarlo para que podamos recopilar estadísticas. |
 
 ## 🤝 ¡Únete a la Malla 2.4G y Haz Crecer la Red!
-
-Una red malla solo es tan fuerte como la comunidad que la sostiene. Cada nuevo nodo en 2.4 GHz agrega redundancia, amplía la cobertura y demuestra el enorme potencial de esta frecuencia para comunicaciones libres y resilientes.
 
 ### Pasos para animarte hoy:
 1. **Consigue tu hardware:** Los componentes son económicos y fáciles de adquirir.
@@ -103,3 +99,24 @@ Una red malla solo es tan fuerte como la comunidad que la sostiene. Cada nuevo n
 3. **Pasa la voz:** Comparte tus pruebas de cobertura con el grupo local de makers o entusiastas de Meshtastic / redes mesh.
 
 ¡La banda de 2.4 GHz en malla está despegando y es el momento perfecto para formar parte de ella! Si tienes dudas sobre la configuración o los componentes, ¡pregunta a la comunidad y pongamos más nodos en el aire! 📡⚡
+
+---
+
+:::warning Nota importante
+Esta frecuencia no es compatible con 868 y nodos de 2.4 y nodos de 868 no se escucharán entre ellos, quedando la posibilidad de realizar un bridge para lograr esa comunicación.
+:::
+
+:::info Otra nota
+Actualmente, para que funcione el SX1280 es necesario compilar firmware personalizado con estos valores en el `variant.h`:
+
+```c
+#ifdef USE_SX1280
+#define SX128X_CS    LORA_CS      // P1.13 — mismo CS que SX126x
+#define SX128X_DIO1  (0 + 10)    // P0.10 — mismo que SX126x DIO1
+#define SX128X_BUSY  (0 + 29)    // P0.29 — mismo que SX126x BUSY
+#define SX128X_RESET LORA_RESET  // P0.09 — mismo que SX126x RESET
+#define SX128X_RXEN  (0 + 17)    // P0.17 — mismo que SX126x RXEN
+#define SX128X_TXEN  (32 + 6)    // P1.06 - pin para activar el PA
+#define SX128X_MAX_POWER 3
+```
+:::
