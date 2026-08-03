@@ -56,6 +56,12 @@ Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y 
 
 ## 🛠️ Guía Rápida de Hardware Recomendado
 
+:::warning
+
+El límite legal de potencia en la banda de 2,4 GHz es de 10 mW EIRP (o 10 dBm). Es imprescindible asegurarse de cumplir en todo momento con la normativa, ya que todos los nodos, en combinación con la antena, son capaces de superar este límite si están mal configurados.
+
+:::
+
 Si quieres montar tu propio nodo de 2.4 GHz, este es el hardware probado que te recomendamos:
 
 | Componente | Opción Recomendada | Notas y Ventajas |
@@ -67,6 +73,7 @@ Si quieres montar tu propio nodo de 2.4 GHz, este es el hardware probado que te 
 | **Alimentación** | Batería 18650 / LiFePO4 + Panel Solar | Se monta igual que un nodo solar de 868 salvo cambiando la radio. |
 
 > ⚠️ **Consejo de cacharreo:** Si compras antenas genéricas de 2.4 GHz en AliExpress o tiendas sin marca, asegúrate de comprobar el conector (SMA vs RP-SMA) y, a ser posible, valídala con un VNA adecuado (NanoVNA V2 / V2 Plus4 o superior) antes de transmitir.
+
 
 ---
 
