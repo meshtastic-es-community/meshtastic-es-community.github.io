@@ -50,7 +50,7 @@ En pruebas con visión directa entre puntos elevados y nodos móviles:
 Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y se han obtenido distancias de 780m (a falta de probar más), contrastándolo con 868 y teniendo las siguientes conclusiones:
 * El RSSI era de aproximadamente 8-9dB menos que en 868.
 * El SNR variaba, dependiendo de la localización y de la posición, ya sea por interferencias de otros dispositivos o incluso por la propagación multicamino.
-* Esta frecuencia es mucho mas dependiente del LOS pero incluso sin ese enlace directo ofrece buen resultado en ciertas circunstancias.
+* Esta frecuencia es mucho mas dependiente del alcance visual (LOS) pero incluso sin ese enlace directo ofrece buen resultado en ciertas circunstancias.
 
 ---
 
@@ -73,7 +73,7 @@ Si quieres montar tu propio nodo de 2.4 GHz, este es el hardware probado que te 
 
 ## 📐 Repositorio de PCBs y Diseños Hardware 2.4G
 
-Para que sea más facil arrancar, ya que se van a utilizar otros transceptores distintos a los de 868, se ha hecho un repositorio en GitHub donde se recopilan las distintas PCBs compatibles con 2.4G. De momento, el chip más utilizado es el Ebyte E28-2G4.
+Para que sea más fácil arrancar, ya que se van a utilizar otros transceptores distintos a los de 868, se ha hecho un repositorio en GitHub donde se recopilan las distintas PCBs compatibles con 2.4G. De momento, el chip más utilizado es el Ebyte E28-2G4.
 
 👉 **[Accede al Repositorio de PCBs 2.4 GHz en GitHub](https://github.com/sqtactical/2.4GHz_PCBs)** 
 
