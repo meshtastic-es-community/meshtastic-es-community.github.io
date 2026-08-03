@@ -14,16 +14,16 @@ description: >
 
 Las redes mesh o malla en bandas ISM han revolucionado la comunicación libre, descentralizada y sin dependencia de la infraestructura móvil tradicional. Durante mucho tiempo, las frecuencias de sub-GHz (como 868 MHz en Europa o 915 MHz en América) han sido las reinas indiscutibles para enlaces a larga distancia. Sin embargo, **la banda de 2.4 GHz para redes LoRa Mesh ha llegado para cambiar las reglas del juego**.
 
-Tras pruebas de campo y tests de rendimiento con hardware de última generación, los resultados son rotundamente claros: **la malla en 2.4 GHz no solo es viable, sino que ofrece ventajas únicas de velocidad, compacidad y capacidad que complementan perfectamente el ecosistema mesh.**
+Tras varias pruebas de campo y tests de rendimiento con hardware el hardware disponible, los resultados son rotundamente claros: **la malla en 2.4 GHz no solo es viable, sino que ofrece ventajas únicas de velocidad, compacidad y capacidad que complementan perfectamente el ecosistema mesh.**
 
-Si estabas pensando en montar un nuevo nodo o ampliar la cobertura en tu ciudad, aquí te contamos todo lo que hemos descubierto en los tests y por qué deberías dar el salto a los 2.4 GHz.
+Si estabas pensando en probar tecnologias alternativas, aquí te contamos todo lo que hemos descubierto en los tests y por qué es interesante probar los 2.4 GHz.
 
 ---
 
 ## ⚡ ¿Por qué la frecuencia de 2.4 GHz? Las Ventajas Clave
 
 ### 1. Ancho de banda y velocidad de transmisión superiores
-A diferencia de las bandas sub-GHz tradicionales donde la tasa de bits es muy limitada, en 2.4 GHz disponemos de un ancho de banda significativamente mayor. Para haceros una idea, el preset SFNarrow da una velocidad aproximada de 2.5Kb/s, mientras que en 2.4G, el preset inicial tendrá una velocidad de 8Kb/s. Esto se traduce en:
+A diferencia de las bandas sub-GHz tradicionales donde la tasa de bits es muy limitada, en 2.4 GHz disponemos de un ancho de banda significativamente mayor. El preset SFNarrow da una velocidad aproximada de 2.5Kb/s, mientras que en 2.4G, el preset inicial tendrá una velocidad de 6Kb/s. Esto se traduce en:
 * **Mensajes instantáneos:** Latencia casi imperceptible en la entrega de pings y paquetes de texto.
 * **Menor tiempo en el aire (Airtime):** Al transmitir más rápido, el canal sufre muchísima menos saturación, reduciendo las colisiones incluso con decenas de nodos activos.
 * **Sin duty cycle restrictivo:** La banda de 2.4 GHz se caracteriza por no tener las restricciones de ciclo de trabajo del 10% presentes en 869 MHz, permitiendo un tráfico de datos más fluido.
@@ -42,12 +42,12 @@ La banda ISM de 2.4 GHz es la misma en todo el mundo. No hay confusión entre co
 
 ## 📊 Resultados de los Tests de Campo
 
-En nuestras pruebas recientes hemos sometido a test intensivos varios nodos equipados con transceptores **SX1280 / SX1281 (+27 dBm)** combinados con microcontroladores de ultra bajo consumo (**nRF52840**) y **ESP32-S3**, conectados a distintas antenas e instalados a diferentes alturas.
+En nuestras pruebas recientes hemos sometido a test intensivos varios nodos equipados con transceptores **SX1280 / SX1281** combinados con microcontroladores de ultra bajo consumo (**nRF52840**) y **ESP32-S3**, conectados a distintas antenas e instalados a diferentes alturas.
 
 ### 1. Alcance en Línea de Vista (LOS)
 En pruebas con visión directa entre puntos elevados y nodos móviles:
-* **Distancias sostenidas de 60+ kilómetros** sin pérdida de paquetes.
-* Calidad del enlace (RSSI y SNR) sorprendentemente estable gracias al procesado de señal LoRa CSS en 2.4G.
+* **Distancias alcanzadas de 60+ kilómetros**.
+* Calidad del enlace (RSSI y SNR) sorprendentemente estable gracias al procesado de señal LoRa en 2.4G.
 
 ### 2. Comportamiento en entornos desfavorables (NLOS)
 Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y se han obtenido distancias de 780m (a falta de probar más), contrastándolo con 868 y teniendo las siguientes conclusiones:
@@ -87,10 +87,10 @@ Para garantizar la máxima interoperabilidad entre nodos y evitar fragmentar la 
 | Parámetro | Valor Recomendado | Explicación |
 | :--- | :--- | :--- |
 | **Región (Region)** | `2.4GHz`  | Selecciona la banda global de 2.4 GHz en el firmware. |
-| **Preset** | `MediumSlow` | Ofrece un excelente compromiso entre velocidad (~8 Kbps) y alcance. |
+| **Preset** | `MediumSlow` | Ofrece un excelente compromiso entre velocidad (~6 Kbps) y alcance. |
 | **Frecuency Override** | `2480` | Frecuencia elegida para alejarnos del WiFi. |
 | **Saltos Máximos (Hop Limit)** | `3` | Evita saturación innecesaria en la malla manteniendo buena cobertura. |
-| **Nombre del canal 0** | `Medium24` | Nombre elegido para evitar confusión con los MediumFast y MediumSlow de 868. |
+| **Nombre del canal principal** | `Medium24` | Nombre elegido para evitar confusión con el MediumSlow de 868. |
 | **Ok to MQTT** | `Activado` | Recuerda activarlo para que podamos recopilar estadísticas. |
 
 ## 🤝 ¡Únete a la Malla 2.4G y Haz Crecer la Red!
