@@ -26,7 +26,7 @@ Si estabas pensando en montar un nuevo nodo o ampliar la cobertura en tu ciudad,
 A diferencia de las bandas sub-GHz tradicionales donde la tasa de bits es muy limitada, en 2.4 GHz disponemos de un ancho de banda significativamente mayor. Para haceros una idea, el preset SFNarrow da una velocidad aproximada de 2.5Kb/s, mientras que en 2.4G, el preset inicial tendrá una velocidad de 8Kb/s. Esto se traduce en:
 * **Mensajes instantáneos:** Latencia casi imperceptible en la entrega de pings y paquetes de texto.
 * **Menor tiempo en el aire (Airtime):** Al transmitir más rápido, el canal sufre muchísima menos saturación, reduciendo las colisiones incluso con decenas de nodos activos.
-* **Sin duty cycle restrictivo:** La banda de 2.4 GHz se caracteriza por no tener las restricciones de ciclo de trabajo del 1% presentes en 868 MHz, permitiendo un tráfico de datos más fluido.
+* **Sin duty cycle restrictivo:** La banda de 2.4 GHz se caracteriza por no tener las restricciones de ciclo de trabajo del 10% presentes en 869 MHz, permitiendo un tráfico de datos más fluido.
 
 
 ### 2. Antenas compactas
