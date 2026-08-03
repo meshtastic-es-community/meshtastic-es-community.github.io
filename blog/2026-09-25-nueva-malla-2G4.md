@@ -76,7 +76,19 @@ Si quieres montar tu propio nodo de 2.4 GHz, este es el hardware probado que te 
 
 
 ---
+## 📡 Antenas Medidas y Probadas en VNA
+Estas antenas han sido ya medidas por la comunidad, ya que no todos los nanoVNA llegan hasta 2.4GHz:
 
+| Nombre | Enlace | Tipo | Ganancia | Precio Aprox. |
+| :--- | :--- | :--- | :--- | :--- |
+| **CDEBYTE TX2400-BLG-30** | [Ver en AliExpress](https://es.aliexpress.com/item/1005010476741641.html) | Omnidireccional (Fibra) | 8.0 dBi | ~11 - 13 € |
+| **EBYTE TX2400-JK-11 (Stock ebyte)** | [Ver en AliExpress](https://es.aliexpress.com/item/1005010288386483.html) | Omnidireccional (Tipo Router WiFi)| 5.0 dBi | ~1 - 3 € |
+| **Antena Flexible Gizont** | [Ver en AliExpress](https://es.aliexpress.com/item/1005004598468979.html) | Omnidireccional (Flexible) | 2.0 - 3.0 dBi | ~8 - 9 € |
+| **Antena Yagi PCB** | [Ver en AliExpress](https://es.aliexpress.com/item/1005011977259250.html) | Direccional | 12 dBi | ~5 € |
+
+*Enlaces no afiliados. Estas antenas son una sugerencia ya que hay miles de antenas para esta banda*
+
+---
 
 ## 📐 Repositorio de PCBs y Diseños Hardware 2.4G
 
