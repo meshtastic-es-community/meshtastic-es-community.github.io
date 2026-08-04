@@ -90,6 +90,31 @@ Estas antenas han sido ya medidas por la comunidad, ya que no todos los nanoVNA 
 
 ---
 
+## 🎯 Casos de Uso: ¿Para qué sirve realmente el 2.4G?
+
+El salto de velocidad y el tamaño reducido de antenas no son solo curiosidades técnicas: abren la puerta a usos muy concretos que complementan (no sustituyen) a la malla en 868 MHz.
+
+### 🔗 Enlaces punto a punto
+Gracias al mayor ancho de banda (~6 Kb/s frente a los ~2.5 Kb/s de SFNarrow) y a antenas direccionales compactas como la Yagi de 12 dBi, el 2.4G es una opción excelente para enlazar dos puntos concretos con más caudal que un enlace equivalente en 868 — por ejemplo, para llevar conectividad a una zona sin cobertura o unir dos "islas" de malla.
+
+### 🌉 Puentes entre mallas (bridge 868 ↔ 2.4G)
+Como se indica más abajo, los nodos de 868 y 2.4G **no se escuchan entre sí**. Un nodo bridge (o dos nodos conectados vía MQTT/serial) puede recoger el tráfico de la malla local en 868 y republicarlo en la malla 2.4G, y viceversa, permitiendo que ambas redes convivan y se complementen sin fragmentar la comunidad.
+
+### 🦴 Backhaul de la red principal
+En lugar de migrar todos los nodos de usuario a 2.4G, tiene más sentido reservarlo como "columna vertebral" de alta velocidad entre nodos fijos y repetidores estratégicos (tejados, cerros, puntos altos), mientras los nodos de usuario siguen operando en 868. Esto reduce el airtime y la saturación en la malla principal.
+
+### 🏠 Malla local de corto alcance
+En interiores, eventos o entornos con muchos nodos concentrados, el mayor ancho de banda permite cursar más tráfico simultáneo sin saturar el canal, algo especialmente útil en despliegues temporales (ferias, actividades, emergencias puntuales).
+
+### 🔀 Reticulum y otros protocolos
+El mismo hardware (SX1280/SX1281 + nRF52840) no está atado a Meshtastic: es perfectamente reutilizable para experimentar con **Reticulum** u otros protocolos mesh, abriendo la puerta a quien quiera ir más allá del ecosistema Meshtastic con el mismo módulo de radio.
+
+:::info Pendiente de validar
+Aún queda por comprobar el comportamiento de esta banda con mal tiempo (lluvia, niebla, humedad), especialmente en enlaces NLOS. Si haces pruebas en estas condiciones, comparte los resultados con la comunidad.
+:::
+
+---
+
 ## 📐 Repositorio de PCBs y Diseños Hardware 2.4G
 
 Para que sea más fácil arrancar, ya que se van a utilizar otros transceptores distintos a los de 868, se ha hecho un repositorio en GitHub donde se recopilan las distintas PCBs compatibles con 2.4G. De momento, el chip más utilizado es el Ebyte E28-2G4.
@@ -109,6 +134,7 @@ Para garantizar la máxima interoperabilidad entre nodos y evitar fragmentar la 
 | **Saltos Máximos (Hop Limit)** | `3` | Evita saturación innecesaria en la malla manteniendo buena cobertura. |
 | **Nombre del canal principal** | `Medium24` | Nombre elegido para evitar confusión con el MediumSlow de 868. Con clave `AQ==` |
 | **Ok to MQTT** | `Activado` | Recuerda activarlo para que podamos recopilar estadísticas. |
+| **Root Topic MQTT** | `msh/LORA_24` | Si quieres aportar al mapa deberás configurar tu nodo con este tópic. |
 
 ## 🤝 ¡Únete a la Malla 2.4G y Haz Crecer la Red!
 
