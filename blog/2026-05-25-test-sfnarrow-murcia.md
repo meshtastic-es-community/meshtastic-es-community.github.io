@@ -8,6 +8,7 @@ description: >
   Los enlaces ya pasan por Toledo, Ciudad Real y Albacete. Si estás en Almería, Murcia,
   Alicante o Valencia, el hilo ya llega hasta vosotros. Este es el momento de sumarse.
 ---
+git add .
 
 La malla "zona centro" de Meshtastic España está probando una nueva configuración llamada **SFNarrow**
 con resultados muy prometedores. Los enlaces ya funcionan a lo largo de la cadena
