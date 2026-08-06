@@ -115,6 +115,26 @@ Aún queda por comprobar el comportamiento de esta banda con mal tiempo (lluvia,
 
 ---
 
+## 🔌 Comparativa de velocidades (2.4GHz vs 433/868 MHz)
+Pese a que los presets se llamen igual, en 2.4GHz cambian considerablemente los anchos de banda, teniendo un rango de entre 203 y 812KHz (Además de 1625 únicamente para los módulos que usen el SX1281 (Ej: Ebyte E28)):
+
+| Preset | Velocidad 2.4GHz | Ancho de banda 2.4GHz | Velocidad 868/433 | Ancho de banda 868/433 | SF / CR |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Short Turbo** | 71.09 kbps | 1625.0 kHz¹ | 21.88 kbps | 500 kHz² | SF 7 / CR 4/5 |
+| **Short Fast** | 35.55 kbps | 812.5 kHz | 10.94 kbps | 250 kHz | SF 7 / CR 4/5 |
+| **Short Slow** | 20.31 kbps | 812.5 kHz | 6.25 kbps | 250 kHz | SF 8 / CR 4/5 |
+| **Medium Fast** | 11.43 kbps | 812.5 kHz | 3.52 kbps | 250 kHz | SF 9 / CR 4/5 |
+| **Medium Slow** | 6.35 kbps | 812.5 kHz | 1.95 kbps | 250 kHz | SF 10 / CR 4/5 |
+| **Long Turbo** | 4.36 kbps | 1625.0 kHz¹ | 1.34 kbps | 500 kHz² | SF 11 / CR 4/8 |
+| **Long Fast** | 3.49 kbps | 812.5 kHz | 1.07 kbps | 250 kHz | SF 11 / CR 4/5 |
+| **Long Moderate** | 1.09 kbps | 406.25 kHz | 0.34 kbps | 125 kHz | SF 11 / CR 4/8 |
+| **Long Slow** | 0.60 kbps | 406.25 kHz | 0.18 kbps | 125 kHz | SF 12 / CR 4/8 |
+
+¹ Solo disponible para chips basados en SX1281  
+² No disponible en la región UE
+
+Pese a estos presets, se puede lograr todavía más velocidad en 2.4GHz en modo LoRa con un preset custom (Por ejemplo, BW 1625 SF5 CR 4/5), e incluso se puede lograr hasta 2 Mbps con otras modulaciones (FSK, FLRC) siendo muy interesante para Reticulum o enlaces punto a punto.
+
 ## 📐 Repositorio de PCBs y Diseños Hardware 2.4G
 
 Para que sea más fácil arrancar, ya que se van a utilizar otros transceptores distintos a los de 868, se ha hecho un repositorio en GitHub donde se recopilan las distintas PCBs compatibles con 2.4G. De momento, el chip más utilizado es el Ebyte E28-2G4.
