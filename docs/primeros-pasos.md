@@ -16,7 +16,7 @@ Para comenzar con Meshtastic, necesitarás al menos un dispositivo compatible co
 | LILYGO T-Beam Supreme* | ESP32-S3 | Incluye GPS, recomendado para quienes buscan compartir su ubicación. | 30–40 € | ✅ |
 | LILYGO T-Echo | ESP32-PICO-D4 | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play». | 50–60 € | ✅ |
 | RAK WisBlock | nRF52840 | Muy bajo consumo, ideal para nodos solares o para una larga duración de batería. | 60–80 € | ❌ |
-| T-Deck | ESP32-S3 | Similar a una BlackBerry.<br>⚠️No recomendados como primer dispositivo. | 70–90 € | ✅ |
+| T-Deck | ESP32-S3 | Similar a una BlackBerry.<br/>⚠️No recomendados como primer dispositivo. | 70–90 € | ✅ |
 | Opciones DIY (como la «FakeTec») | ESP32 / nRF52** | Puedes construir tu propio dispositivo con un chip de bajo consumo, ideal para nodos solares. | 15–20 € | 🤷** |
 
 \* No confundir con el T-Beam clásico (que usa ESP32 y SX1276), no recomendamos esa versión.
@@ -37,8 +37,8 @@ Asegúrate de que el dispositivo que compras sea compatible con la frecuencia Lo
 
 ## Accesorios
 
-- **Antena adecuada**: ⚠️<u>No recomendamos la antenas de serie.</u>⚠️<br>
-[Pulsa aquí para ver las antenas recomendadas.](/docs/guias-basicas/antenas) <br>
+- **Antena adecuada**: ⚠️<u>No recomendamos la antenas de serie.</u>⚠️<br/>
+[Pulsa aquí para ver las antenas recomendadas.](/docs/guias-basicas/antenas) <br/>
 Verifica que la antena sea compatible con la frecuencia de tu dispositivo (por ejemplo, 868 MHz para Europa). Algunos dispositivos, como el T-Beam, pueden incluir una antena de 433 MHz que no es óptima para 868 MHz.
 - **Filtro**: Se conectan entre el nodo y la antena y sirven para reducir el ruido provocado por antenas cercanas como por ejemplo antenas de telefonía.
 - **Batería**: Muchos dispositivos requieren baterías recargables (como celdas 18650 para el T-Beam). Suelen costar 5-10 euros.
