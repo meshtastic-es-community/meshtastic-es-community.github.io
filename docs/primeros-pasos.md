@@ -6,18 +6,28 @@ sidebar_position: 2
 
 Para comenzar con Meshtastic, necesitarás al menos un dispositivo compatible con LoRa. Aquí tienes algunas opciones populares para principiantes, con precios aproximados (pueden variar según el proveedor, aunque lo más típico es comprar en AliExpress):
 
-| Dispositivo                      | Descripción                                                                                                  | Precio aproximado |
-|----------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------|
-| Heltec V3                        | Económico y fácil de usar, ideal para conectarlo con tu teléfono.                                            | 20-30 euros       |
-| Heltec V4                        | Versión más moderna del V3 con amplificador de potencia (Altamente recomendable ponerle filtro)              | 20-30 euros       |
-| LILYGO T-Beam                    | Incluye GPS, recomendado para quienes buscan compartir su ubicación.                                         | 30-40 euros       |
-| LILYGO T-Echo                    | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play».                                     | 50-60 euros       |
-| RAK WisBlock                     | Muy bajo consumo, ideal para nodos solares o larga duración de batería.                                      | 60-80 euros       |
-| T-Deck                           | Dispositivo independiente con pantalla y teclado, útil para comunicaciones sin usar el teléfono.             | 70-90 euros       |
-| SenseCAP T1000-E                 | Compacto, bajo consumo, con GPS, resistencia al agua (IP65) y batería de 700 mAh. Ideal para excursionistas. | 40-50 euros       |
-| Opciones DIY (como la «FakeTec») | Puedes construir tu propio dispositivo con un chip de bajo consumo, ideal para nodos solares.                | 15-20 euros       |
+| Dispositivo | MCU | Descripción | Precio aproximado | WiFi |
+|-------------|-----|-------------|-------------------|:----:|
+| Heltec V3 | ESP32-S3 | Económico y fácil de usar, ideal para conectarlo con tu teléfono. | 20–30 € | ✅ |
+| SenseCAP T1000-E | nRF52840 | Compacto, bajo consumo, con GPS, resistencia al agua (IP65) y batería de 700 mAh. Ideal para excursionistas. | 40 € | ❌ |
+| Seed Xiao nRF52 | nRF52840 | Compacto, bajo consumo. | 20 € | ❌ |
+| Seed Xiao ESP32-S3 | ESP32-S3 | Compacto, con WiFi. | 20 € | ✅ |
+| Heltec V4 | ESP32-S3 | Versión más moderna del V3 con amplificador de potencia (necesario ponerle filtro). | 20–30 € | ✅ |
+| LILYGO T-Beam Supreme* | ESP32-S3 | Incluye GPS, recomendado para quienes buscan compartir su ubicación. | 30–40 € | ✅ |
+| LILYGO T-Echo | ESP32-PICO-D4 | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play». | 50–60 € | ✅ |
+| RAK WisBlock | nRF52840 | Muy bajo consumo, ideal para nodos solares o para una larga duración de batería. | 60–80 € | ❌ |
+| T-Deck | ESP32-S3 | Similar a una BlackBerry.<br/>⚠️No recomendados como primer dispositivo. | 70–90 € | ✅ |
+| Opciones DIY (como la «FakeTec») | ESP32 / nRF52** | Puedes construir tu propio dispositivo con un chip de bajo consumo, ideal para nodos solares. | 15–20 € | 🤷** |
 
-**Recomendación**: Si eres principiante, el Heltec V3, el T-Echo o el SenseCAP T1000-E son excelentes por su facilidad de uso. Compra al menos dos dispositivos para probar la comunicación, ya que Meshtastic requiere múltiples nodos.
+\* No confundir con el T-Beam clásico (que usa ESP32 y SX1276), no recomendamos esa versión.
+
+** En las opciones DIY, depende del chip que compres. Si usas un ESP32 (lo más común para "FakeTec"), tendrá WiFi. Si optas por un nRF52 para ahorro de batería, no lo tendrá.
+
+**Recomendación**:
+* El Heltec V3, el Seed Xiao nRF52 o el SenseCAP T1000-E son excelentes por su facilidad de uso y precio.
+* No compres radios con SX1276, y revisa la frecuencia usamos 868 MHz.
+* Compra al menos dos dispositivos para probar la comunicación, ya que Meshtastic requiere múltiples nodos.
+
 
 **Dónde comprar**: Puedes adquirir dispositivos en sitios como AliExpress o Amazon.
 
@@ -27,7 +37,9 @@ Asegúrate de que el dispositivo que compras sea compatible con la frecuencia Lo
 
 ## Accesorios
 
-- **Antena adecuada**: Verifica que la antena sea compatible con la frecuencia de tu dispositivo (por ejemplo, 868 MHz para Europa). Algunos dispositivos, como el T-Beam, pueden incluir una antena de 433 MHz que no es óptima para 868 MHz.
+- **Antena adecuada**: ⚠️<u>No recomendamos la antenas de serie.</u>⚠️<br/>
+[Pulsa aquí para ver las antenas recomendadas.](/docs/guias-basicas/antenas) <br/>
+Verifica que la antena sea compatible con la frecuencia de tu dispositivo (por ejemplo, 868 MHz para Europa). Algunos dispositivos, como el T-Beam, pueden incluir una antena de 433 MHz que no es óptima para 868 MHz.
 - **Filtro**: Se conectan entre el nodo y la antena y sirven para reducir el ruido provocado por antenas cercanas como por ejemplo antenas de telefonía.
 - **Batería**: Muchos dispositivos requieren baterías recargables (como celdas 18650 para el T-Beam). Suelen costar 5-10 euros.
 - **Carcasa**: Puedes usar carcasas impresas en 3D para proteger los dispositivos. Hay diseños gratuitos en línea o puedes comprarlas en sitios como Etsy o eBay.

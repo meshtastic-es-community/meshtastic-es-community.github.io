@@ -33,6 +33,12 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--secondary button--lg"
+            to="/docs/generador-configuracion"
+            style={{ margin: '10px' }}>
+            Generador de Configuración
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
             to="/docs/mapas"
             style={{ margin: '10px' }}>
             Mapa de Nodos
@@ -55,9 +61,9 @@ export default function Home(): ReactNode {
       {showBanner && (
         <div className={styles.banner}>
         <span>
-          📢 ¡Nueva Prueba de SFNarrow en Levante!&nbsp;
-          <Link to="/blog/sfnarrow-levante-sureste" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
-          Click aquí
+          📢 Nuevo preset SFNarrow:&nbsp;
+          <Link to="/docs/generador-configuracion" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          ¡Usa el configurador para unirte!
           </Link>
         </span>
         <button className={styles.closeButton} onClick={() => setShowBanner(false)}>×</button>
