@@ -1,15 +1,15 @@
 ---
 slug: malla-2.4G-preparacion
-title: 📡 ¡Probamos los 2.4GHz! Primeras pruebas y conclusiones en esta nueva forma de usar Meshtastic
+title: 🧪 ¡Probamos los 2.4 GHz! Primeras pruebas y conclusiones en esta nueva forma de usar Meshtastic
 authors: []
-tags: [2.4GHz, Antenas, Hardware, DIY, Configuración, Mesh]
+tags: [2.4 GHz, Antenas, Hardware, DIY, Configuración, Mesh]
 description: >
-  La malla en 2.4GHz arranca motores. Repasamos las mejores opciones de antenas comerciales,
+  La malla en 2.4 GHz arranca motores. Repasamos las mejores opciones de antenas comerciales,
   el resurgir de las "cantennas" caseras y el hardware compatible.
 ---
 
 # ¡La Red Malla en 2.4 GHz es Real y Funciona! 🚀
-## Por qué deberías desplegar tu nodo en 2.4G hoy mismo
+## Por qué deberías desplegar tu nodo en 2.4 Ghz hoy mismo
 
 Tras varias pruebas de campo y tests de rendimiento con hardware el hardware disponible, los resultados son rotundamente claros: **la malla en 2.4 GHz no solo es viable, sino que ofrece ventajas únicas de velocidad, tamaño y capacidad que complementan perfectamente el ecosistema mesh.**
 
@@ -20,7 +20,7 @@ Si estabas pensando en probar tecnologías alternativas, aquí te contamos todo 
 ## ⚡ ¿Por qué la frecuencia de 2.4 GHz? Las Ventajas Clave
 
 ### 1. Ancho de banda y velocidad de transmisión superiores
-A diferencia de las bandas sub-GHz tradicionales donde la tasa de bits es muy limitada, en 2.4 GHz disponemos de un ancho de banda significativamente mayor. El preset SFNarrow da una velocidad aproximada de 2.5Kb/s, mientras que en 2.4G, el preset inicial tendrá una velocidad de 6Kb/s. Esto se traduce en:
+A diferencia de las bandas sub-GHz tradicionales donde la tasa de bits es muy limitada, en 2.4 GHz disponemos de un ancho de banda significativamente mayor. El preset SFNarrow da una velocidad aproximada de 2.5Kb/s, mientras que en 2.4 Ghz, el preset inicial tendrá una velocidad de 6Kb/s. Esto se traduce en:
 * **Mensajes más rápidos:** Latencia mas baja en la entrega de pings y paquetes de texto.
 * **Menor tiempo en el aire (Airtime):** Al transmitir más rápido, el canal sufre muchísima menos saturación, reduciendo las colisiones incluso con decenas de nodos activos.
 * **Sin duty cycle restrictivo:** La banda de 2.4 GHz se caracteriza por no tener las restricciones de ciclo de trabajo del 10% presentes en 869 MHz, permitiendo un tráfico de datos más fluido.
@@ -44,11 +44,11 @@ En nuestras pruebas recientes hemos sometido a test intensivos varios nodos equi
 ### 1. Alcance en Línea de Vista (LOS)
 En pruebas con visión directa entre puntos elevados y nodos móviles:
 * **Distancias alcanzadas de 60+ kilómetros**.
-* Calidad del enlace (RSSI y SNR) sorprendentemente estable gracias al procesado de señal LoRa en 2.4G.
+* Calidad del enlace (RSSI y SNR) sorprendentemente estable gracias al procesado de señal LoRa en 2.4 Ghz.
 
 ### 2. Comportamiento en entornos desfavorables (NLOS)
-Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y se han obtenido distancias de 780m (a falta de probar más), contrastándolo con 868 y teniendo las siguientes conclusiones:
-* El RSSI era de aproximadamente 8-9dB menos que en 868.
+Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y se han obtenido distancias de 780m (a falta de probar más), contrastándolo con  Mhz y teniendo las siguientes conclusiones:
+* El RSSI era de aproximadamente 8-9dB menos que en 868 Mhz.
 * El SNR variaba, dependiendo de la localización y de la posición, ya sea por interferencias de otros dispositivos o incluso por la propagación multicamino.
 * Esta frecuencia es mucho mas dependiente del alcance visual (LOS) pero incluso sin ese enlace directo ofrece buen resultado en ciertas circunstancias.
 
@@ -66,18 +66,18 @@ Si quieres montar tu propio nodo de 2.4 GHz, este es el hardware probado que te 
 
 | Componente | Opción Recomendada | Notas y Ventajas |
 | :--- | :--- | :--- |
-| **Módulo LoRa 2.4G** | **SX1281 / LR1121** | Chips que soportan 2.4G (e incluso 868 y 2.4G). |
+| **Módulo LoRa 2.4 Ghz** | **SX1281 / LR1121** | Chips que soportan 2.4 Ghz (e incluso 868 Mhz y 2.4 Ghz). |
 | **Microcontrolador** | **nRF52840** (o ESP32-S3) | Consumo ultra bajo, conectividad Bluetooth nativa para la app. |
 | **Antena Fija (Tejado/Balcón)** | **CDEBYTE TX2400-BLG-30** (Fibra de vidrio) | Alta ganancia omnidireccional, resistente a la intemperie. |
 | **Antena Portátil** | Antena de 5dBi que incluye Ebyte | Antena tipo router. Evitas la tasa de 3€ al pedirlo junto a la radio. |
-| **Alimentación** | Batería 18650 / LiFePO4 + Panel Solar | Se monta igual que un nodo solar de 868 salvo cambiando la radio. |
+| **Alimentación** | Batería 18650 / LiFePO4 + Panel Solar | Se monta igual que un nodo solar de 868 Mhz salvo cambiando la radio. |
 
 > ⚠️ **Consejo de cacharreo:** Si compras antenas genéricas de 2.4 GHz en AliExpress o tiendas sin marca, asegúrate de comprobar el conector (SMA vs RP-SMA) y, a ser posible, valídala con un VNA adecuado (NanoVNA V2 / V2 Plus4 o superior) antes de transmitir.
 
 
 ---
 ## 📡 Antenas Medidas y Probadas en VNA
-Estas antenas han sido ya medidas por la comunidad, ya que no todos los nanoVNA llegan hasta 2.4GHz:
+Estas antenas han sido ya medidas por la comunidad, ya que no todos los nanoVNA llegan hasta 2.4 GHz:
 
 | Nombre | Enlace | Tipo | Ganancia | Precio Aprox. |
 | :--- | :--- | :--- | :--- | :--- |
@@ -90,18 +90,18 @@ Estas antenas han sido ya medidas por la comunidad, ya que no todos los nanoVNA 
 
 ---
 
-## 🎯 Casos de Uso: ¿Para qué sirve realmente el 2.4G?
+## 🎯 Casos de Uso: ¿Para qué sirven realmente los 2.4 Ghz?
 
 El salto de velocidad y el tamaño reducido de antenas no son solo curiosidades técnicas: abren la puerta a usos muy concretos que complementan (no sustituyen) a la malla en 868 MHz.
 
 ### 🔗 Enlaces punto a punto
-Gracias al mayor ancho de banda (~6 Kb/s frente a los ~2.5 Kb/s de SFNarrow) y a antenas direccionales compactas como la Yagi de 12 dBi, el 2.4G es una opción excelente para enlazar dos puntos concretos con más caudal que un enlace equivalente en 868 — por ejemplo, para llevar conectividad a una zona sin cobertura o unir dos "islas" de malla.
+Gracias al mayor ancho de banda (~6 Kb/s frente a los ~2.5 Kb/s de SFNarrow) y a antenas direccionales compactas como la Yagi de 12 dBi, el 2.4G es una opción excelente para enlazar dos puntos concretos con más caudal que un enlace equivalente en 868 Mhz, por ejemplo, para llevar conectividad a una zona sin cobertura o unir dos "islas" de malla.
 
-### 🌉 Puentes entre mallas (bridge 868 ↔ 2.4G)
-Como se indica más abajo, los nodos de 868 y 2.4G **no se escuchan entre sí**. Un nodo bridge (o dos nodos conectados vía MQTT/serial) puede recoger el tráfico de la malla local en 868 y republicarlo en la malla 2.4G, y viceversa, permitiendo que ambas redes convivan y se complementen sin fragmentar la comunidad.
+### 🌉 Puentes entre mallas (bridge 868 Mhz ↔ 2.4 Ghz)
+Como se indica más abajo, los nodos de  868 Mhzy 2.4 Ghz **no se escuchan entre sí**. Un nodo bridge (o dos nodos conectados vía MQTT/serial) puede recoger el tráfico de la malla local en 868 Mhz y republicarlo en la malla 2.4 Ghz, y viceversa, permitiendo que ambas redes convivan y se complementen sin fragmentar la comunidad.
 
 ### 🦴 Backhaul de la red principal
-En lugar de migrar todos los nodos de usuario a 2.4G, tiene más sentido reservarlo como "columna vertebral" de alta velocidad entre nodos fijos y repetidores estratégicos (tejados, cerros, puntos altos), mientras los nodos de usuario siguen operando en 868. Esto reduce el airtime y la saturación en la malla principal.
+En lugar de migrar todos los nodos de usuario a 2.4 Ghz, tiene más sentido reservarlo como "columna vertebral" de alta velocidad entre nodos fijos y repetidores estratégicos (tejados, cerros, puntos altos), mientras los nodos de usuario siguen operando en 868 Mhz. Esto reduce el airtime y la saturación en la malla principal.
 
 ### 🏠 Malla local de corto alcance
 En interiores, eventos o entornos con muchos nodos concentrados, el mayor ancho de banda permite cursar más tráfico simultáneo sin saturar el canal, algo especialmente útil en despliegues temporales (ferias, actividades, emergencias puntuales).
@@ -115,10 +115,10 @@ Aún queda por comprobar el comportamiento de esta banda con mal tiempo (lluvia,
 
 ---
 
-## 🔌 Comparativa de velocidades (2.4GHz vs 433/868 MHz)
-Pese a que los presets se llamen igual, en 2.4GHz cambian considerablemente los anchos de banda, teniendo un rango de entre 203 y 812KHz (Además de 1625 únicamente para los módulos que usen el SX1281 (Ej: Ebyte E28)):
+## 🔌 Comparativa de velocidades (2.4 GHz vs 433/868 MHz)
+Pese a que los presets se llamen igual, en 2.4 GHz cambian considerablemente los anchos de banda, teniendo un rango de entre 203 y 812KHz (Además de 1625 únicamente para los módulos que usen el SX1281 (Ej: Ebyte E28)):
 
-| Preset | Velocidad 2.4GHz | Ancho de banda 2.4GHz | Velocidad 868/433 | Ancho de banda 868/433 | SF / CR |
+| Preset | Velocidad 2.4 GHz | Ancho de banda 2.4 GHz | Velocidad 868/433 | Ancho de banda 868/433 | SF / CR |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Short Turbo** | 71.09 kbps | 1625.0 kHz¹ | 21.88 kbps | 500 kHz² | SF 7 / CR 4/5 |
 | **Short Fast** | 35.55 kbps | 812.5 kHz | 10.94 kbps | 250 kHz | SF 7 / CR 4/5 |
@@ -133,13 +133,35 @@ Pese a que los presets se llamen igual, en 2.4GHz cambian considerablemente los 
 ¹ Solo disponible para chips basados en SX1281  
 ² No disponible en la región UE
 
-Pese a estos presets, se puede lograr todavía más velocidad en 2.4GHz en modo LoRa con un preset custom (Por ejemplo, BW 1625 SF5 CR 4/5), e incluso se puede lograr hasta 2 Mbps con otras modulaciones (FSK, FLRC) siendo muy interesante para Reticulum o enlaces punto a punto.
+Pese a estos presets, se puede lograr todavía más velocidad en 2.4 GHz en modo LoRa con un preset custom (Por ejemplo, BW 1625 SF5 CR 4/5), e incluso se puede lograr hasta 2 Mbps con otras modulaciones (FSK, FLRC) siendo muy interesante para Reticulum o enlaces punto a punto.
 
-## 📐 Repositorio de PCBs y Diseños Hardware 2.4G
+## 📐 Repositorio de PCBs y Diseños Hardware 2.4 Ghz
 
-Para que sea más fácil arrancar, ya que se van a utilizar otros transceptores distintos a los de 868, se ha hecho un repositorio en GitHub donde se recopilan las distintas PCBs compatibles con 2.4G. De momento, el chip más utilizado es el Ebyte E28-2G4.
+Para que sea más fácil arrancar, ya que se van a utilizar otros transceptores distintos a los de 868 Mhz, se ha hecho un repositorio en GitHub donde se recopilan las distintas PCBs compatibles con 2.4 Ghz. De momento, el chip más utilizado es el Ebyte E28-2G4.
 
 👉 **[Accede al Repositorio de PCBs 2.4 GHz en GitHub](https://github.com/sqtactical/2.4GHz_PCBs)** 
+
+---
+## 📦 Módulos Compatibles
+
+Además del chip en sí, existen módulos ya integrados que facilitan el montaje sin tener que soldar el SX1280/SX1281/LR1121 directamente:
+
+| Módulo | Chip | Notas |
+| :--- | :--- | :--- |
+| **Ebyte E28-2G4M12S** (y variantes 2G4M20S/27S) | SX1280 / SX1281 | El más utilizado actualmente por la comunidad, soporta BW 1625 kHz en la variante SX1281. Buen soporte y stock disponible. |
+| **Ebyte E80-400M2213S** | LR1121 | Módulo **dual-band** (Sub-GHz 410-493 MHz + 2.4 GHz en el mismo chip). Potencia máxima de chip: 22 dBm en sub-GHz / 13 dBm en 2.4 GHz (recuerda que el límite legal en 2.4 GHz es **10 mW / 10 dBm EIRP**), interfaz SPI, tamaño 26×16 mm. Interesante para quien quiera un único módulo capaz de moverse entre 868 y 2.4 GHz. |
+
+### 🖥️ Placa "todo en uno"
+Para quien prefiera no montar nada desde cero, la **LilyGO T3-S3 (versión SX1280 2.4G)** integra ESP32-S3, radio SX1280 (con PA en la versión "with PA", hasta +20 dBm de chip, de nuevo, por encima del límite legal de **10 mW / 10 dBm EIRP** en 2.4 GHz), pantalla OLED 0.96", USB-C y gestión de batería en una sola placa lista para flashear.
+
+### 🧪 En pruebas
+También se están evaluando otros módulos, aunque todavía sin resultados concluyentes ni soporte confirmado:
+* **Vollgo VG2392S240X0M3** — SX1281, hasta 30 dBm de chip, sensibilidad -137 dBm, alimentación 4.5-5.5V.
+* **NiceRF LORA1281-TCXO** — chip LoRa 128X con TCXO de 0.5 ppm, hasta 12.5 dBm de chip, sensibilidad -132 dBm.
+
+En todos los casos, la potencia de chip es solo la capacidad máxima del hardware: **el límite legal a la salida de la antena en 2.4 GHz es 10 mW / 10 dBm EIRP**, así que hay que configurar la potencia (y tener en cuenta la ganancia de la antena) para no superarlo.
+
+Si tienes alguno de estos módulos y te animas a probarlo, comparte tus resultados con la comunidad para ir ampliando esta lista.
 
 ---
 ## ⚙️ Configuración y Ajustes Iniciales
@@ -148,7 +170,7 @@ Para garantizar la máxima interoperabilidad entre nodos y evitar fragmentar la 
 
 | Parámetro | Valor Recomendado | Explicación |
 | :--- | :--- | :--- |
-| **Región (Region)** | `2.4GHz`  | Selecciona la banda global de 2.4 GHz en el firmware. |
+| **Región (Region)** | `2.4 GHz`  | Selecciona la banda global de 2.4 GHz en el firmware. |
 | **Preset** | `MediumSlow` | Ofrece un excelente compromiso entre velocidad (~6 Kbps) y alcance. |
 | **Frecuency Override** | `2480` | Frecuencia elegida para alejarnos del WiFi. |
 | **Saltos Máximos (Hop Limit)** | `3` | Evita saturación innecesaria en la malla manteniendo buena cobertura. |
@@ -156,7 +178,7 @@ Para garantizar la máxima interoperabilidad entre nodos y evitar fragmentar la 
 | **Ok to MQTT** | `Activado` | Recuerda activarlo para que podamos recopilar estadísticas. |
 | **Root Topic MQTT** | `msh/LORA_24` | Si quieres aportar al mapa deberás configurar tu nodo con este tópic. |
 
-## 🤝 ¡Únete a la Malla 2.4G y Haz Crecer la Red!
+## 🤝 ¡Únete a la Malla 2.4 Ghz y Haz Crecer la Red!
 
 ### Pasos para animarte hoy:
 1. **Consigue tu hardware:** Los componentes son económicos y fáciles de adquirir.
@@ -168,7 +190,7 @@ Para garantizar la máxima interoperabilidad entre nodos y evitar fragmentar la 
 ---
 
 :::warning Nota importante
-Esta frecuencia no es compatible con 868 y nodos de 2.4 y nodos de 868 no se escucharán entre ellos, quedando la posibilidad de realizar un bridge para lograr esa comunicación.
+Esta frecuencia no es compatible con 868 Mhz y nodos de 2.4 Ghz y nodos de 868 Mhz no se escucharán entre ellos, quedando la posibilidad de realizar un bridge para lograr esa comunicación.
 :::
 
 :::info Otra nota
