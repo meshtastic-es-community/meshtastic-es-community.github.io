@@ -201,7 +201,7 @@ Esta frecuencia no es compatible con 868 Mhz y nodos de 2.4 Ghz y nodos de 868 M
 :::
 
 :::info Otra nota
-Actualmente, para que funcione el SX1280 es necesario compilar firmware personalizado con estos valores en el `variant.h`:
+Actualmente, para que funcione el SX1280 con el Promicro es necesario compilar firmware personalizado con estos valores en el `variant.h`:
 
 ```c
 #ifdef USE_SX1280
