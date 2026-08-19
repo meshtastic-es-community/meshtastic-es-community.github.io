@@ -47,7 +47,7 @@ En pruebas con visión directa entre puntos elevados y nodos móviles:
 * Calidad del enlace (RSSI y SNR) sorprendentemente estable gracias al procesado de señal LoRa en 2.4 Ghz.
 
 ### 2. Comportamiento en entornos desfavorables (NLOS)
-Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y se han obtenido distancias de 780m (a falta de probar más), contrastándolo con  Mhz y teniendo las siguientes conclusiones:
+Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y se han obtenido distancias de 780m (a falta de probar más), contrastándolo con 868 Mhz y teniendo las siguientes conclusiones:
 * El RSSI era de aproximadamente 8-9dB menos que en 868 Mhz.
 * El SNR variaba, dependiendo de la localización y de la posición, ya sea por interferencias de otros dispositivos o incluso por la propagación multicamino.
 * Esta frecuencia es mucho mas dependiente del alcance visual (LOS) pero incluso sin ese enlace directo ofrece buen resultado en ciertas circunstancias.
@@ -149,7 +149,7 @@ Además del chip en sí, existen módulos ya integrados que facilitan el montaje
 | Módulo | Chip | Notas |
 | :--- | :--- | :--- |
 | **Ebyte E28-2G4M12S** (y variantes 2G4M20S/27S) | SX1280 / SX1281 | El más utilizado actualmente por la comunidad, soporta BW 1625 kHz en la variante SX1281. Buen soporte y stock disponible. |
-| **Ebyte E80-400M2213S** | LR1121 | Módulo **dual-band** (Sub-GHz 410-493 MHz + 2.4 GHz en el mismo chip). Potencia máxima de chip: 22 dBm en sub-GHz / 13 dBm en 2.4 GHz (recuerda que el límite legal en 2.4 GHz es **10 mW / 10 dBm EIRP**), interfaz SPI, tamaño 26×16 mm. Interesante para quien quiera un único módulo capaz de moverse entre 868 y 2.4 GHz. |
+| **Ebyte E80-400M2213S** | LR1121 | Módulo **dual-band** (Sub-GHz 868 MHz + 2.4 GHz en el mismo chip). Potencia máxima de chip: 22 dBm en sub-GHz / 13 dBm en 2.4 GHz (recuerda que el límite legal en 2.4 GHz es **10 mW / 10 dBm EIRP**), interfaz SPI, tamaño 26×16 mm. Interesante para quien quiera un único módulo capaz de moverse entre 868 y 2.4 GHz. |
 
 ### 🖥️ Placa "todo en uno"
 Para quien prefiera no montar nada desde cero, la **LilyGO T3-S3 (versión SX1280 2.4G)** integra ESP32-S3, radio SX1280 (con PA en la versión "with PA", hasta +20 dBm de chip, de nuevo, por encima del límite legal de **10 mW / 10 dBm EIRP** en 2.4 GHz), pantalla OLED 0.96", USB-C y gestión de batería en una sola placa lista para flashear.
