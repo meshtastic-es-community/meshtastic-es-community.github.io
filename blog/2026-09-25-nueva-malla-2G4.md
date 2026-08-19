@@ -153,12 +153,17 @@ Además del chip en sí, existen módulos ya integrados que facilitan el montaje
 | **Ebyte E28-2G4M12S/SX** (y variantes 2G4M20S/27S/SX) | SX1280 / SX1281 | El más utilizado actualmente por la comunidad, soporta BW 1625 kHz en la variante SX1281. Buen soporte y stock disponible. |
 | **Ebyte E80-900M2213S** | LR1121 | Módulo **dual-band** (Sub-GHz 868 MHz + 2.4 GHz en el mismo chip). Potencia máxima de chip: 22 dBm en sub-GHz / 13 dBm en 2.4 GHz (recuerda que el límite legal en 2.4 GHz es **10 mW / 10 dBm EIRP**), interfaz SPI, tamaño 26×16 mm. Interesante para quien quiera un único módulo capaz de moverse entre 868 y 2.4 GHz. |
 
+
+Estos chips **NO** los recomendamos por los siguientes motivos: 
+| Módulo | Chip | Motivo |
+| :--- | :--- | :--- |
+| **Vollgo VG2392S240X0M3**  |  SX1281 | La potencia mínima es de 13dbm, necesitando con ello de un filtro o atenuador para caer dentro de los límites legales |
+
 ### 🖥️ Placa "todo en uno"
 Para quien prefiera no montar nada desde cero, la **LilyGO T3-S3 (versión SX1280 2.4G)** integra ESP32-S3, radio SX1280 (con PA en la versión "with PA", hasta +20 dBm de chip, de nuevo, por encima del límite legal de **10 mW / 10 dBm EIRP** en 2.4 GHz), conector RP SMA, pantalla OLED 0.96", USB-C y gestión de batería en una sola placa lista para flashear.
 
 ### 🧪 En pruebas
 También se están evaluando otros módulos, aunque todavía sin resultados concluyentes ni soporte confirmado:
-* **Vollgo VG2392S240X0M3** — SX1281, hasta 30 dBm de chip, sensibilidad -137 dBm, alimentación 4.5-5.5V.
 * **NiceRF LORA1281-TCXO** — chip LoRa 128X con TCXO de 0.5 ppm, hasta 12.5 dBm de chip, sensibilidad -132 dBm.
 
 En todos los casos, la potencia de chip es solo la capacidad máxima del hardware: **el límite legal a la salida de la antena en 2.4 GHz es 10 mW / 10 dBm EIRP**, así que hay que configurar la potencia (y tener en cuenta la ganancia de la antena) para no superarlo.
