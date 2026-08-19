@@ -52,6 +52,8 @@ Se han hecho pruebas en parques periurbanos, llenos de árboles y obstáculos y 
 * El SNR variaba, dependiendo de la localización y de la posición, ya sea por interferencias de otros dispositivos o incluso por la propagación multicamino.
 * Esta frecuencia es mucho mas dependiente del alcance visual (LOS) pero incluso sin ese enlace directo ofrece buen resultado en ciertas circunstancias.
 
+Además, se han hecho pruebas en entorno urbano, entre un nodo en un balcón y otro a pie de calle y se han obtenido alcances fiables de 300m, aunque el alcance dependerá también de la distribución de los edificios y obstáculos que hubieran presentes. Los SNR y RSSI pueden variar al mover ligeramente el nodo debido a que en esta banda, los efectos de la propagación multicamino (multipath), son algo pronunciados, pudiendo crear interferencias constructivas o destructivas
+
 ---
 
 ## 🛠️ Guía Rápida de Hardware Recomendado
@@ -98,7 +100,7 @@ El salto de velocidad y el tamaño reducido de antenas no son solo curiosidades 
 Gracias al mayor ancho de banda (~6 Kb/s frente a los ~2.5 Kb/s de SFNarrow) y a antenas direccionales compactas como la Yagi de 12 dBi, el 2.4G es una opción excelente para enlazar dos puntos concretos con más caudal que un enlace equivalente en 868 Mhz, por ejemplo, para llevar conectividad a una zona sin cobertura o unir dos "islas" de malla.
 
 ### 🌉 Puentes entre mallas (bridge 868 Mhz ↔ 2.4 Ghz)
-Como se indica más abajo, los nodos de  868 Mhzy 2.4 Ghz **no se escuchan entre sí**. Un nodo bridge (o dos nodos conectados vía MQTT/serial) puede recoger el tráfico de la malla local en 868 Mhz y republicarlo en la malla 2.4 Ghz, y viceversa, permitiendo que ambas redes convivan y se complementen sin fragmentar la comunidad.
+Como se indica más abajo, los nodos de  868 Mhz y 2.4 Ghz **no se escuchan entre sí**. Un nodo bridge (o dos nodos conectados vía MQTT/serial) puede recoger el tráfico de la malla local en 868 Mhz y republicarlo en la malla 2.4 Ghz, y viceversa, permitiendo que ambas redes convivan y se complementen sin fragmentar la comunidad.
 
 ### 🦴 Backhaul de la red principal
 En lugar de migrar todos los nodos de usuario a 2.4 Ghz, tiene más sentido reservarlo como "columna vertebral" de alta velocidad entre nodos fijos y repetidores estratégicos (tejados, cerros, puntos altos), mientras los nodos de usuario siguen operando en 868 Mhz. Esto reduce el airtime y la saturación en la malla principal.
@@ -148,11 +150,11 @@ Además del chip en sí, existen módulos ya integrados que facilitan el montaje
 
 | Módulo | Chip | Notas |
 | :--- | :--- | :--- |
-| **Ebyte E28-2G4M12S** (y variantes 2G4M20S/27S) | SX1280 / SX1281 | El más utilizado actualmente por la comunidad, soporta BW 1625 kHz en la variante SX1281. Buen soporte y stock disponible. |
-| **Ebyte E80-400M2213S** | LR1121 | Módulo **dual-band** (Sub-GHz 868 MHz + 2.4 GHz en el mismo chip). Potencia máxima de chip: 22 dBm en sub-GHz / 13 dBm en 2.4 GHz (recuerda que el límite legal en 2.4 GHz es **10 mW / 10 dBm EIRP**), interfaz SPI, tamaño 26×16 mm. Interesante para quien quiera un único módulo capaz de moverse entre 868 y 2.4 GHz. |
+| **Ebyte E28-2G4M12S/SX** (y variantes 2G4M20S/27S/SX) | SX1280 / SX1281 | El más utilizado actualmente por la comunidad, soporta BW 1625 kHz en la variante SX1281. Buen soporte y stock disponible. |
+| **Ebyte E80-900M2213S** | LR1121 | Módulo **dual-band** (Sub-GHz 868 MHz + 2.4 GHz en el mismo chip). Potencia máxima de chip: 22 dBm en sub-GHz / 13 dBm en 2.4 GHz (recuerda que el límite legal en 2.4 GHz es **10 mW / 10 dBm EIRP**), interfaz SPI, tamaño 26×16 mm. Interesante para quien quiera un único módulo capaz de moverse entre 868 y 2.4 GHz. |
 
 ### 🖥️ Placa "todo en uno"
-Para quien prefiera no montar nada desde cero, la **LilyGO T3-S3 (versión SX1280 2.4G)** integra ESP32-S3, radio SX1280 (con PA en la versión "with PA", hasta +20 dBm de chip, de nuevo, por encima del límite legal de **10 mW / 10 dBm EIRP** en 2.4 GHz), pantalla OLED 0.96", USB-C y gestión de batería en una sola placa lista para flashear.
+Para quien prefiera no montar nada desde cero, la **LilyGO T3-S3 (versión SX1280 2.4G)** integra ESP32-S3, radio SX1280 (con PA en la versión "with PA", hasta +20 dBm de chip, de nuevo, por encima del límite legal de **10 mW / 10 dBm EIRP** en 2.4 GHz), conector RP SMA, pantalla OLED 0.96", USB-C y gestión de batería en una sola placa lista para flashear.
 
 ### 🧪 En pruebas
 También se están evaluando otros módulos, aunque todavía sin resultados concluyentes ni soporte confirmado:
