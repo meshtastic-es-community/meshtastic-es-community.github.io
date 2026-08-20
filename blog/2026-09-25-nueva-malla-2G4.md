@@ -157,7 +157,7 @@ Además del chip en sí, existen módulos ya integrados que facilitan el montaje
 Estos chips **NO** los recomendamos por los siguientes motivos: 
 | Módulo | Chip | Motivo |
 | :--- | :--- | :--- |
-| **Vollgo VG2392S240X0M3**  |  SX1281 | La potencia mínima es de 13dbm, necesitando con ello de un filtro o atenuador para caer dentro de los límites legales |
+| **Vollgo VG2392S240X0M3**  |  SX1281 | La potencia mínima excede la máxima legal |
 
 ### 🖥️ Placa "todo en uno"
 Para quien prefiera no montar nada desde cero, la **LilyGO T3-S3 (versión SX1280 2.4G)** integra ESP32-S3, radio SX1280 (con PA en la versión "with PA", hasta +20 dBm de chip, de nuevo, por encima del límite legal de **10 mW / 10 dBm EIRP** en 2.4 GHz), conector RP SMA, pantalla OLED 0.96", USB-C y gestión de batería en una sola placa lista para flashear.
