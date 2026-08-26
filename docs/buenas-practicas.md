@@ -9,7 +9,10 @@ En este artículo te damos algunos consejos para que entre todos mantengamos la 
 La idea es reducir el tráfico innecesario entre todos. Cada granito de arena cuenta, somos muchos y podemos hacer una gran diferencia en la calidad de la malla.
 
 Es un artículo un poco largo, detallado y con explicaciones de los motivos de cada recomendación.
-<details><summary>Aquí tienes una guía rápida, resumen de todo para ajustar y listo.</summary>
+
+<details>
+<summary>Aquí tienes una guía rápida, resumen de todo para ajustar y listo.</summary>
+
 ### Guia rápida
 
 **[Nodeinfo](#nodeinfo) - Intervalo de transmisión de información del dispositivo:**
