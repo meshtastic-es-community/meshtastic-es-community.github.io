@@ -10,7 +10,25 @@ La idea es reducir el tráfico innecesario entre todos. Cada granito de arena cu
 
 Es un artículo un poco largo, detallado y con explicaciones de los motivos de cada recomendación.
 <details><summary>Aquí tienes una guía rápida, resumen de todo para ajustar y listo.</summary>
+### Guia rápida
 
+**[Nodeinfo](#nodeinfo) - Intervalo de transmisión de información del dispositivo:**
+- Intervalo: **72h**
+
+**[Posición](#posición) - Intervalos de transmisión automáticos:**
+
+- Intervalo para nodos fijos: **72h**
+- Intervalo para nodos móviles: **1h o más**
+- Marcas/banderas de posicion: **Todas desactivadas**
+
+**[Telemetría](#telemetría) - Intervalos de transmisión automáticos:**
+- En nodo solar: **4h o más**
+- En nodo troncal: **6h o más**
+- En el resto: **Desactivada**
+
+:::info
+Los enlaces de los títulos te llevarán a una explicación más detallada.
+:::
 </details>
 
 ## ¿Por qué? Aspectos clave:
