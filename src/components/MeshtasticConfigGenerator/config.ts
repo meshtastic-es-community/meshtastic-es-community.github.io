@@ -144,7 +144,7 @@ export const REGION_CONFIGS: RegionConfigs = {
   'Tarragona': { channel: 'Tarragona' },
   'Teruel': { channel: 'Teruel' },
   'Toledo': { channel: 'Toledo' },
-  'Valencia': { channel: 'Valencia' },
+  'Valencia': { channel: 'Valencia', key: new Uint8Array([84]) },
   'Valladolid': { channel: 'Valladolid' },
   'Bizkaia': { channel: 'Bizkaia' },
   'Zamora': { channel: 'Zamora' },

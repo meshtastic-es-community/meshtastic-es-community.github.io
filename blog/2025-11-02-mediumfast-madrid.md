@@ -6,6 +6,10 @@ authors: []
 tags: [Madrid, Zona Centro, Configuración, MediumFast]
 ---
 
+:::warning Artículo desactualizado
+Esta información puede no reflejar la configuración actual de la red. Consulta la [configuración inicial](https://meshtastic.es/docs/guias-basicas/configuracion-inicial) o el [mapa de presets](https://meshtastic.es/docs/mapas#mapa-presets) para conocer el estado actual, o pregunta en el canal de Telegram.
+:::
+
 ### ¿Cuándo?
 
 :::info
