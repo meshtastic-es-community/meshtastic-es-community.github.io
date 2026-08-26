@@ -179,11 +179,15 @@ Para garantizar la máxima interoperabilidad entre nodos y evitar fragmentar la 
 | :--- | :--- | :--- |
 | **Región (Region)** | `2.4 GHz`  | Selecciona la banda global de 2.4 GHz en el firmware. |
 | **Preset** | `MediumSlow` | Ofrece un excelente compromiso entre velocidad (~6 Kbps) y alcance. |
-| **Frecuency Override** | `2480` | Frecuencia elegida para alejarnos del WiFi. |
+| **Frecuency Override** | `2482` | Frecuencia elegida para alejarnos del WiFi. |
 | **Saltos Máximos (Hop Limit)** | `3` | Evita saturación innecesaria en la malla manteniendo buena cobertura. |
 | **Nombre del canal principal** | `Medium24` | Nombre elegido para evitar confusión con el MediumSlow de 868. Con clave `AQ==` |
 | **Ok to MQTT** | `Activado` | Recuerda activarlo para que podamos recopilar estadísticas. |
 | **Root Topic MQTT** | `msh/LORA_24` | Si quieres aportar al mapa deberás configurar tu nodo con este tópic. |
+
+:::warning Nota importante
+Al ser una tecnología nueva y al no tener los presets tan pulidos como en 868, recomendamos que consultes con los usuarios de tu zona para ver que configuración usais. En caso de no haber usuarios en 2.4G, te recomendamos que como punto de partida uses los ajustes que indicamos, a falta de tener un preset como SFNarrow.
+:::
 
 ## 🤝 ¡Únete a la Malla 2.4 Ghz y Haz Crecer la Red!
 
