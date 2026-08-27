@@ -61,9 +61,9 @@ export default function Home(): ReactNode {
       {showBanner && (
         <div className={styles.banner}>
         <span>
-          📢 Nuevo preset SFNarrow:&nbsp;
-          <Link to="/docs/generador-configuracion" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
-          ¡Usa el configurador para unirte!
+          📢 Nueva frecuencia!:&nbsp;
+          <Link to="/blog/malla-2.4G-preparacion" style={{ color: '#28a3e0', textDecoration: 'underline' }}>
+          Probamos Meshtastic en 2.4 Ghz
           </Link>
         </span>
         <button className={styles.closeButton} onClick={() => setShowBanner(false)}>×</button>
