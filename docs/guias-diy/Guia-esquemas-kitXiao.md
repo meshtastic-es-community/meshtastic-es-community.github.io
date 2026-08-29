@@ -47,7 +47,7 @@ Ambas versiones incorporan:
 
 ### 🔍 Puntos clave
 
-- Conector de antena 868 MHz (LoRa) y 2.4 GHz (Wi-Fi)  
+- Conector de antena 868 MHz (LoRa) y 2.4 GHz (Bluetooth / BLE, el XIAO nRF52840 no tiene Wi-Fi)  
 - Integración I2C para INA3221 y BME280
 
 ### 📷 Esquema de cableado
@@ -84,7 +84,7 @@ Ambas versiones incorporan:
 2. Suelda el INA3221: incluye los pads traseros (2 puntos) si tu módulo lo requiere  
 3. Instala el CN3791 y conecta panel y batería (respeta polaridades B+ / B−)  
 4. Tira el bus I2C (SDA/SCL, 3V3, GND) a INA3221 y BME280  
-5. Conecta antenas 868 MHz y 2.4 GHz  
+5. Conecta las antenas de 868 MHz (LoRa) y de 2.4 GHz (BLE)  
 6. Prueba en banco: verifica tensiones, lectura del BME280 y del INA3221  
 7. Encapsulado: coloca todo en caja estanca, gestiona pasamuros para antenas y panel
 

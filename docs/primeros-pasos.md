@@ -10,11 +10,11 @@ Para comenzar con Meshtastic, necesitarás al menos un dispositivo compatible co
 |-------------|-----|-------------|-------------------|:----:|
 | Heltec V3 | ESP32-S3 | Económico y fácil de usar, ideal para conectarlo con tu teléfono. | 20–30 € | ✅ |
 | SenseCAP T1000-E | nRF52840 | Compacto, bajo consumo, con GPS, resistencia al agua (IP65) y batería de 700 mAh. Ideal para excursionistas. | 40 € | ❌ |
-| Seed Xiao nRF52 | nRF52840 | Compacto, bajo consumo. | 20 € | ❌ |
-| Seed Xiao ESP32-S3 | ESP32-S3 | Compacto, con WiFi. | 20 € | ✅ |
+| Seeed XIAO nRF52 | nRF52840 | Compacto, bajo consumo. | 20 € | ❌ |
+| Seeed XIAO ESP32-S3 | ESP32-S3 | Compacto, con WiFi. | 20 € | ✅ |
 | Heltec V4 | ESP32-S3 | Versión más moderna del V3 con amplificador de potencia (necesario ponerle filtro). | 20–30 € | ✅ |
 | LILYGO T-Beam Supreme* | ESP32-S3 | Incluye GPS, recomendado para quienes buscan compartir su ubicación. | 30–40 € | ✅ |
-| LILYGO T-Echo | ESP32-PICO-D4 | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play». | 50–60 € | ✅ |
+| LILYGO T-Echo | nRF52840 | Compacto, con GPS integrado y bajo consumo, considerado «plug-and-play». | 50–60 € | ❌ |
 | RAK WisBlock | nRF52840 | Muy bajo consumo, ideal para nodos solares o para una larga duración de batería. | 60–80 € | ❌ |
 | T-Deck | ESP32-S3 | Similar a una BlackBerry.<br/>⚠️No recomendados como primer dispositivo. | 70–90 € | ✅ |
 | Opciones DIY (como la «FakeTec») | ESP32 / nRF52** | Puedes construir tu propio dispositivo con un chip de bajo consumo, ideal para nodos solares. | 15–20 € | 🤷** |
@@ -24,7 +24,7 @@ Para comenzar con Meshtastic, necesitarás al menos un dispositivo compatible co
 ** En las opciones DIY, depende del chip que compres. Si usas un ESP32 (lo más común para "FakeTec"), tendrá WiFi. Si optas por un nRF52 para ahorro de batería, no lo tendrá.
 
 **Recomendación**:
-* El Heltec V3, el Seed Xiao nRF52 o el SenseCAP T1000-E son excelentes por su facilidad de uso y precio.
+* El Heltec V3, el Seeed XIAO nRF52 o el SenseCAP T1000-E son excelentes por su facilidad de uso y precio.
 * No compres radios con SX1276, y revisa la frecuencia usamos 868 MHz.
 * Compra al menos dos dispositivos para probar la comunicación, ya que Meshtastic requiere múltiples nodos.
 
@@ -171,7 +171,7 @@ Revisa nuestra guía de [buenas prácticas](buenas-practicas.md) para asegurarte
 
 7. **No ignores la versión de firmware que utilizas**:
    - **El firmware es el programa que hace funcionar tu dispositivo**. Es importante tener la última versión **estable**:
-     - **No utilices la ultimísima versión**, pero tampoco lo dejes sin actualizar nunca. **Recomendamos usar la rama beta.**
+     - **No utilices la ultimísima versión**, pero tampoco lo dejes sin actualizar nunca. **Recomendamos usar la última versión estable (_Stable_).**
      - **Podrías quedarte atrás**: Las actualizaciones arreglan problemas y añaden funciones.
       - **Si tienes algún problema extraño, podría ser culpa de tu versión.**
    - **Consejo**: Revisa si hay actualizaciones en [flasher.meshtastic.org](https://flasher.meshtastic.org).

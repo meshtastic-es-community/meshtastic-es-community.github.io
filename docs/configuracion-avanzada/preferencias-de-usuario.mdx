@@ -74,6 +74,13 @@ Para personalizar la configuración, abre el archivo con tu editor preferido (co
 Copia solo los valores que necesites y cambia los nombres, coordenadas y claves por los tuyos. Este ejemplo fija región
 EU 868, preset Long Fast, posición estática y zona horaria peninsular:
 
+:::warning
+La mayor parte de España **no usa un _preset_ de fábrica**, sino la configuración personalizada de la comunidad
+(**SFNarrow**), que no se puede fijar desde `userPrefs.jsonc` (ver [limitaciones](#limitaciones)). El `LONG_FAST` del
+ejemplo es solo un valor de partida: tendrás que ajustar el ancho de banda, el _spreading factor_ y la frecuencia
+después, siguiendo la [configuración inicial](../guias-basicas/configuracion-inicial.mdx#region-preset).
+:::
+
 ```json
 {
   // Identidad
@@ -226,7 +233,7 @@ Antes de depender de este fichero, ten claras estas limitaciones:
 | Parámetro                           | Descripción                                                          |
 |:------------------------------------|:---------------------------------------------------------------------|
 | `USERPREFS_CONFIG_OWNER_LONG_NAME`  | Nombre largo del nodo, el que aparece en la lista de nodos.          |
-| `USERPREFS_CONFIG_OWNER_SHORT_NAME` | Nombre corto, de 3 a 4 caracteres (ej. `"NCM1"`).                    |
+| `USERPREFS_CONFIG_OWNER_SHORT_NAME` | Nombre corto / acrónimo, máximo 4 caracteres (ej. `"NCM1"`).         |
 | `USERPREFS_CONFIG_DEVICE_ROLE`      | Rol del nodo. Por defecto es `CLIENT` (ver tabla de roles abajo).    |
 | `USERPREFS_FIXED_BLUETOOTH`         | PIN numérico fijo para el emparejamiento Bluetooth (ej. `"914257"`). |
 
@@ -267,8 +274,8 @@ Antes de depender de este fichero, ten claras estas limitaciones:
 | Short Fast                | `meshtastic_Config_LoRaConfig_ModemPreset_SHORT_FAST`    |
 | Short Slow                | `meshtastic_Config_LoRaConfig_ModemPreset_SHORT_SLOW`    |
 | Short Turbo               | `meshtastic_Config_LoRaConfig_ModemPreset_SHORT_TURBO`   |
-| Lite Fast _(EU 866MHz)_   | `meshtastic_Config_LoRaConfig_ModemPreset_LITE_FAST`     |
-| Lite Slow _(EU 866MHz)_   | `meshtastic_Config_LoRaConfig_ModemPreset_LITE_SLOW`     |
+| Lite Fast _(EU 868MHz)_   | `meshtastic_Config_LoRaConfig_ModemPreset_LITE_FAST`     |
+| Lite Slow _(EU 868MHz)_   | `meshtastic_Config_LoRaConfig_ModemPreset_LITE_SLOW`     |
 | Narrow Fast _(EU 868MHz)_ | `meshtastic_Config_LoRaConfig_ModemPreset_NARROW_FAST`   |
 | Narrow Slow _(EU 868MHz)_ | `meshtastic_Config_LoRaConfig_ModemPreset_NARROW_SLOW`   |
 
