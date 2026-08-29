@@ -43,6 +43,12 @@ function HomepageHeader() {
             style={{ margin: '10px' }}>
             Mapa de Nodos
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/visit"
+            style={{ margin: '10px' }}>
+            🧳 Visiting Spain? · Turistas
+          </Link>
         </div>
       </div>
     </header>
