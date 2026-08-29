@@ -18,15 +18,21 @@ Si el nodo es fijo, por ejemplo un nodo en la azotea o en el campo, que no se va
 
 | Campo                         | Valor                                               |
 |-------------------------------|-----------------------------------------------------|
-| _Position broadcast interval_ | **43200** (12 horas)                                |
+| _Position broadcast interval_ | **259200** (72 horas)                               |
 | _Smart position enabled_      | **NO** (no se mueve, no es necesario)               |
 | _Use fixed position_          | **SÍ** (para introducir la posición manualmente)    |
 | _Latitude_                    | Latitud del nodo, por ejemplo **40.4168** (Madrid)  |
 | _Longitude_                   | Longitud del nodo, por ejemplo **-3.7038** (Madrid) |
-| _Altitude_                    | Altitud del nodo, por ejemplo **667** (Madrid)      |
+| _Altitude_                    | Altitud del nodo, por ejemplo **657** (Madrid)      |
 
 Ya que la posición no cambia, no es necesario que se envíe con frecuencia.
 Pero hay que enviarlo de vez en cuando para que los nodos nuevos reciban esa información.
+
+:::info
+Estos valores son los mismos que recomendamos en las
+[buenas prácticas de intervalos de posición](../buenas-practicas.md#posición). Son **mínimos**: puedes subirlos todavía
+más si quieres aligerar la malla de tu zona.
+:::
 
 ## Nodos móviles 📟 {#nodos-moviles}
 
@@ -40,9 +46,16 @@ El resto de configuración es prácticamente igual que para [Nodos con GPS integ
 
 | Campo                              | Valor                                                                |
 |------------------------------------|----------------------------------------------------------------------|
-| _Position broadcast interval_      | **1800** (30 minutos) o más                                          |
-| _Smart position enabled_           | **SÍ** (para enviar la posición si nos movemos)                      |
-| _Smart broadcast minimum distance_ | **500** (distancia mínima para enviar una nueva posición)            |
-| _Smart broadcast minimum interval_ | Igual que _Position broadcast interval_ (1800 o más)                 |
+| _Position broadcast interval_      | **3600** (1 hora) o más                                              |
+| _Smart position enabled_           | **NO** (genera mucho tráfico extra en la malla)                      |
 | _GPS mode_                         | **ENABLED** si el nodo tiene GPS<br/>**NOT_PRESENT** si no tiene GPS |
 | _GPS update interval_              | **120** (2 minutos) o más, al gusto                                  |
+
+:::warning
+No bajes de **1 hora** en nodos móviles y deja la _posición inteligente_ (_Smart position_) **desactivada**: es una de
+las mayores fuentes de tráfico innecesario en la malla. Tienes el detalle en las
+[buenas prácticas de posición](../buenas-practicas.md#posición).
+:::
+
+También recomendamos **desactivar todas** las marcas de posición (_Position flags_) para reducir el tamaño de cada
+paquete que emitimos.

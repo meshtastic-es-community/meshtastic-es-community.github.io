@@ -97,6 +97,9 @@ SFNarrow divide la banda EU_868 en **4 subcanales de 62,5 kHz** cada uno:
 | Slot 3 | 869.5563 MHz       |
 | Slot 4 | 869.6188 MHz       |
 
+> Ojo: esas son las frecuencias centrales teóricas. En la app y en todos nuestros QRs el _frequency override_ del
+> Slot 4 se escribe como **869.618**, que es el valor que debes poner.
+
 La prueba activa usa el **Slot 4 (869.618 MHz)** con SF7 y CR5.
 
 Las ventajas técnicas concretas:
@@ -155,7 +158,7 @@ Es decir hacemos un uso mucho mas eficiente y respetuoso de la banda que estamos
   la región EU_868 no incluye guardbands, lo que en casos particulares puede generar
   cruces de paquetes entre slots adyacentes con señal suficientemente fuerte.
 - **SF5/SF6 no en firmware estable**: en 62,5 kHz sería ideal usar SF5 o SF6, pero no
-  están en el firmware oficial. La Prueba 7 (desde el 6 de junio) probará SF6 con la
+  están en el firmware oficial. La Prueba 7 (todavía sin fecha, requiere la 2.7.23) probará SF6 con la
   alfa 2.7.23 o la build custom. SF6 promete más bitrate y más alcance que MediumFast
   simultáneamente, lo que sería un salto muy significativo.
 - **NARROW_868 en el horizonte**: Meshtastic está desarrollando una región oficial
@@ -181,7 +184,7 @@ Parámetros de la **Prueba 6**
 
 **Opción A — Enlace de configuración automática (recomendado):**
 
-[🔗 Generador de configuración SFNarrow - Prueba 1](https://meshtastic.es/docs/generador-configuracion?preset=SFNarrow+-+Prueba+1)
+[🔗 Generador de configuración SFNarrow](https://meshtastic.es/docs/generador-configuracion?preset=SFNarrow)
 
 **Opción B — Configuración manual:**
 

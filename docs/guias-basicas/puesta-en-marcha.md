@@ -48,7 +48,7 @@ El RP2040 es un chip ARM de doble núcleo desarrollado por Raspberry Pi. Disposi
 
 :::info
 
-Si tu dispositivo no está en la lista anterior, consulta nuestros [dispositivos compatibles](https://meshtastic.org/docs/hardware/devices/) para saber qué MCU tiene, o contáctanos por [Discord](https://discord.gg/ktMAKGBnBs) si tienes dudas.
+Si tu dispositivo no está en la lista anterior, consulta nuestros [dispositivos compatibles](https://meshtastic.org/docs/hardware/devices/) para saber qué MCU tiene, o pregúntanos por [Telegram](https://t.me/meshtastic_esp) si tienes dudas.
 
 :::
 

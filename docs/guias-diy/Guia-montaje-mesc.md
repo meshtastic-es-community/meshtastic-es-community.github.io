@@ -88,8 +88,11 @@ Recomiendo leer primero el documento antes de iniciar el montaje, para comprende
 
 ## 📐 Características de la PCB MESC Ver. 3.1
 
-La PCB **MESC 3.1** (Meshtastic Equipo Solar Completo) reduce el cableado del Nodo Solar, pensado como **nodo de cobertura** con perfil **ROUTER** o **CLIENTE “G”** para no saturar la red mesh.  
-La “G” es por **NRF52840** (sin WiFi). Un ESP32 podría ir como **Cliente GW**, pero consume más.
+La PCB **MESC 3.1** (Meshtastic Equipo Solar Completo) reduce el cableado del Nodo Solar, pensado como **nodo de
+cobertura**. El rol adecuado es normalmente **CLIENT** (nodo exterior bien ubicado que ayuda a reenviar) o
+**CLIENT_MUTE** si no tiene buenas conexiones. El rol **ROUTER** requiere planificarlo antes con la comunidad: consulta
+[cómo utilizar el rol adecuado](../buenas-practicas.md#utilizar-el-rol-adecuado) antes de decidir.  
+El montaje usa **NRF52840** (sin WiFi) por consumo; un ESP32 valdría igual pero gasta bastante más.
 
 Dimensiones: **78 mm × 70 mm**.  
 Dispone de **5** agujeros de métrica 4 (fijación a caja) y **4** de métrica 2 (para fijar la Faketec).
