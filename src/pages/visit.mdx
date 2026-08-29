@@ -1,6 +1,6 @@
 ---
 title: Meshtastic for visitors — España
-description: Quick LoRa settings for Meshtastic users visiting Spain — region, preset and channel in 30 seconds.
+description: Quick LoRa settings for Meshtastic users visiting Spain — region, radio config and channel in 30 seconds.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,10 +16,14 @@ Welcome! Here is everything you need to join the Spanish mesh, in 30 seconds.
 ## Quick setup
 
 1. **Region:** `EU_868` — legally required in Spain (868 MHz).
-2. **Modem preset:** `LongFast` — the firmware default, used in most of the country.
-3. **Channel:** keep the **default public channel**. Nothing else to change.
+2. **Radio config:** most of Spain uses **SFNarrow**, a community custom config — it is **not** in the preset dropdown.
+   The easy way: open the [config generator](/docs/generador-configuracion), pick *SFNarrow* and scan the QR code.
+   Manually: untick *Use preset* and set bandwidth **62.5 kHz**, spread factor **7**, coding rate **4/5**, frequency override **869.618 MHz**.
+3. **Channel:** primary channel named `SFNarrow` with the **default key** (`AQ==`). The QR above sets it for you.
 
-If your node already works in another EU country on 868 MHz, it will work here as is.
+:::info Regional exceptions
+**Galicia** and the **Canary Islands** use plain **LongFast** (the firmware default), and **Aragón** uses **MediumFast**. Check the [preset map](/docs/mapas#mapa-presets) for your destination.
+:::
 
 :::warning Coming from the Americas or Oceania?
 `US_915`, `ANZ` and other 915 MHz regions are **not legal in Spain**. Switch your region to `EU_868` — and make sure your device and antenna support 868 MHz.
@@ -27,7 +31,6 @@ If your node already works in another EU country on 868 MHz, it will work here a
 
 ## Good to know
 
-- Some provinces (**Madrid, Valencia, Murcia**, among others) mostly use **MediumFast** instead of LongFast — check the [preset map](/docs/mapas#mapa-presets).
 - Keep the defaults: role **CLIENT**, **3 hops**, standard telemetry intervals. Please don't enable *Range Test*.
 - Live network map: [mapa.meshtastic.es](https://mapa.meshtastic.es) · Community chat (in Spanish): [Telegram @meshtastic_esp](https://t.me/meshtastic_esp)
 
@@ -39,10 +42,14 @@ If your node already works in another EU country on 868 MHz, it will work here a
 ## Configuración rápida
 
 1. **Región:** `EU_868` — obligatoria por ley en España (868 MHz).
-2. **Preset del módem:** `LongFast` — el predeterminado del firmware, usado en la mayor parte del país.
-3. **Canal:** mantén el **canal público por defecto**. No hay que cambiar nada más.
+2. **Configuración de radio:** la mayor parte de España usa **SFNarrow**, una configuración personalizada de la comunidad — **no** aparece en el desplegable de presets.
+   Lo fácil: abre el [generador de configuración](/docs/generador-configuracion), elige *SFNarrow* y escanea el código QR.
+   A mano: desmarca *Usar predefinido* y pon ancho de banda **62,5 kHz**, spread factor **7**, coding rate **4/5**, frecuencia manual **869,618 MHz**.
+3. **Canal:** canal primario llamado `SFNarrow` con la **clave por defecto** (`AQ==`). El QR anterior te lo configura solo.
 
-Si tu nodo ya funciona en otro país de la UE a 868 MHz, aquí funcionará tal cual.
+:::info Excepciones regionales
+**Galicia** y **Canarias** usan **LongFast** (el predeterminado del firmware), y **Aragón** usa **MediumFast**. Consulta el [mapa de presets](/docs/mapas#mapa-presets) según tu destino.
+:::
 
 :::warning ¿Vienes de América u Oceanía?
 `US_915`, `ANZ` y otras regiones de 915 MHz **no son legales en España**. Cambia la región a `EU_868` — y comprueba que tu dispositivo y antena soportan 868 MHz.
@@ -50,7 +57,6 @@ Si tu nodo ya funciona en otro país de la UE a 868 MHz, aquí funcionará tal c
 
 ## Conviene saber
 
-- Algunas provincias (**Madrid, Valencia, Murcia**, entre otras) usan mayoritariamente **MediumFast** en lugar de LongFast — consulta el [mapa de presets](/docs/mapas#mapa-presets).
 - Mantén los valores por defecto: rol **CLIENT**, **3 saltos**, intervalos de telemetría estándar. Por favor, no actives el *Range Test*.
 - Mapa de la red en vivo: [mapa.meshtastic.es](https://mapa.meshtastic.es) · Chat de la comunidad: [Telegram @meshtastic_esp](https://t.me/meshtastic_esp)
 
@@ -62,10 +68,14 @@ Bienvenue ! Voici tout ce qu'il faut pour rejoindre le réseau maillé espagnol,
 ## Configuration rapide
 
 1. **Région :** `EU_868` — obligatoire en Espagne (868 MHz).
-2. **Preset du modem :** `LongFast` — celui par défaut du firmware, utilisé dans la majeure partie du pays.
-3. **Canal :** gardez le **canal public par défaut**. Rien d'autre à changer.
+2. **Config radio :** la majeure partie de l'Espagne utilise **SFNarrow**, une configuration personnalisée de la communauté — elle n'est **pas** dans la liste des presets.
+   Le plus simple : ouvrez le [générateur de configuration](/docs/generador-configuracion), choisissez *SFNarrow* et scannez le QR code.
+   Manuellement : décochez *Use preset* et réglez bande passante **62,5 kHz**, spread factor **7**, coding rate **4/5**, fréquence manuelle **869,618 MHz**.
+3. **Canal :** canal primaire nommé `SFNarrow` avec la **clé par défaut** (`AQ==`). Le QR ci-dessus le configure pour vous.
 
-Si votre nœud fonctionne déjà dans un autre pays de l'UE en 868 MHz, il fonctionnera ici tel quel.
+:::info Exceptions régionales
+La **Galice** et les **îles Canaries** utilisent **LongFast** (le réglage d'usine du firmware), et l'**Aragon** utilise **MediumFast**. Consultez la [carte des presets](/docs/mapas#mapa-presets) selon votre destination.
+:::
 
 :::warning Vous venez des Amériques ou d'Océanie ?
 `US_915`, `ANZ` et les autres régions 915 MHz **ne sont pas légales en Espagne**. Passez la région sur `EU_868` — et vérifiez que votre appareil et votre antenne supportent le 868 MHz.
@@ -73,7 +83,6 @@ Si votre nœud fonctionne déjà dans un autre pays de l'UE en 868 MHz, il fonct
 
 ## Bon à savoir
 
-- Certaines provinces (**Madrid, Valence, Murcie**, entre autres) utilisent surtout **MediumFast** au lieu de LongFast — consultez la [carte des presets](/docs/mapas#mapa-presets).
 - Gardez les valeurs par défaut : rôle **CLIENT**, **3 sauts**, intervalles de télémétrie standard. Merci de ne pas activer le *Range Test*.
 - Carte du réseau en direct : [mapa.meshtastic.es](https://mapa.meshtastic.es) · Chat de la communauté (en espagnol) : [Telegram @meshtastic_esp](https://t.me/meshtastic_esp)
 
@@ -85,10 +94,14 @@ Bem-vindo! Aqui está tudo o que precisas para entrar na malha espanhola, em 30 
 ## Configuração rápida
 
 1. **Região:** `EU_868` — obrigatória por lei em Espanha (868 MHz).
-2. **Preset do modem:** `LongFast` — o predefinido do firmware, usado na maior parte do país.
-3. **Canal:** mantém o **canal público predefinido**. Não é preciso mudar mais nada.
+2. **Configuração de rádio:** a maior parte de Espanha usa **SFNarrow**, uma configuração personalizada da comunidade — **não** aparece na lista de presets.
+   O caminho fácil: abre o [gerador de configuração](/docs/generador-configuracion), escolhe *SFNarrow* e lê o código QR.
+   Manualmente: desmarca *Use preset* e define largura de banda **62,5 kHz**, spread factor **7**, coding rate **4/5**, frequência manual **869,618 MHz**.
+3. **Canal:** canal primário chamado `SFNarrow` com a **chave predefinida** (`AQ==`). O QR acima configura-o por ti.
 
-Se o teu nó já funciona noutro país da UE em 868 MHz, aqui funcionará tal como está.
+:::info Exceções regionais
+A **Galiza** e as **Canárias** usam **LongFast** (o predefinido do firmware), e **Aragão** usa **MediumFast**. Consulta o [mapa de presets](/docs/mapas#mapa-presets) conforme o teu destino.
+:::
 
 :::warning Vens das Américas ou da Oceânia?
 `US_915`, `ANZ` e outras regiões de 915 MHz **não são legais em Espanha**. Muda a região para `EU_868` — e confirma que o teu dispositivo e antena suportam 868 MHz.
@@ -96,7 +109,6 @@ Se o teu nó já funciona noutro país da UE em 868 MHz, aqui funcionará tal co
 
 ## Convém saber
 
-- Algumas províncias (**Madrid, Valência, Múrcia**, entre outras) usam sobretudo **MediumFast** em vez de LongFast — consulta o [mapa de presets](/docs/mapas#mapa-presets).
 - Mantém os valores predefinidos: papel **CLIENT**, **3 saltos**, intervalos de telemetria padrão. Por favor, não atives o *Range Test*.
 - Mapa da rede em direto: [mapa.meshtastic.es](https://mapa.meshtastic.es) · Chat da comunidade (em espanhol): [Telegram @meshtastic_esp](https://t.me/meshtastic_esp)
 
@@ -108,10 +120,14 @@ Willkommen! Hier ist alles, was du brauchst, um dem spanischen Mesh beizutreten 
 ## Schnellkonfiguration
 
 1. **Region:** `EU_868` — in Spanien gesetzlich vorgeschrieben (868 MHz).
-2. **Modem-Preset:** `LongFast` — der Firmware-Standard, im größten Teil des Landes verwendet.
-3. **Kanal:** behalte den **öffentlichen Standardkanal**. Sonst nichts zu ändern.
+2. **Funkkonfiguration:** der größte Teil Spaniens nutzt **SFNarrow**, eine Custom-Konfiguration der Community — sie steht **nicht** im Preset-Dropdown.
+   Der einfache Weg: öffne den [Konfigurations-Generator](/docs/generador-configuracion), wähle *SFNarrow* und scanne den QR-Code.
+   Manuell: *Use preset* abwählen und Bandbreite **62,5 kHz**, Spread Factor **7**, Coding Rate **4/5**, Frequenz-Override **869,618 MHz** setzen.
+3. **Kanal:** Primärkanal namens `SFNarrow` mit dem **Standard-Schlüssel** (`AQ==`). Der QR-Code oben stellt ihn automatisch ein.
 
-Wenn dein Node bereits in einem anderen EU-Land auf 868 MHz funktioniert, funktioniert er hier unverändert.
+:::info Regionale Ausnahmen
+**Galicien** und die **Kanarischen Inseln** nutzen **LongFast** (den Firmware-Standard), **Aragonien** nutzt **MediumFast**. Prüfe die [Preset-Karte](/docs/mapas#mapa-presets) für dein Reiseziel.
+:::
 
 :::warning Kommst du aus Amerika oder Ozeanien?
 `US_915`, `ANZ` und andere 915-MHz-Regionen sind **in Spanien nicht legal**. Stelle die Region auf `EU_868` um — und prüfe, ob Gerät und Antenne 868 MHz unterstützen.
@@ -119,7 +135,6 @@ Wenn dein Node bereits in einem anderen EU-Land auf 868 MHz funktioniert, funkti
 
 ## Gut zu wissen
 
-- Einige Provinzen (**Madrid, Valencia, Murcia**, u. a.) nutzen überwiegend **MediumFast** statt LongFast — siehe die [Preset-Karte](/docs/mapas#mapa-presets).
 - Behalte die Standardwerte: Rolle **CLIENT**, **3 Hops**, normale Telemetrie-Intervalle. Bitte keinen *Range Test* aktivieren.
 - Live-Netzkarte: [mapa.meshtastic.es](https://mapa.meshtastic.es) · Community-Chat (auf Spanisch): [Telegram @meshtastic_esp](https://t.me/meshtastic_esp)
 
