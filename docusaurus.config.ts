@@ -12,7 +12,16 @@ const config: Config = {
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: true,
+      siteStorageNamespacing: true,
+      fasterByDefault: true,
+      // docs/ and blog/ still use MDX v1 syntax that v4 drops: `<!-- -->`
+      // comments and `{#anchor}` heading ids. Enabling this requires rewriting
+      // both across all the content, so it stays off until a dedicated pass.
+      mdx1CompatDisabledByDefault: false,
+    },
   },
 
   // Set the production url of your site here
