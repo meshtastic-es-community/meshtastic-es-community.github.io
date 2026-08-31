@@ -5,7 +5,7 @@ slug: guia-wifiota-esp32
 tags: [ESP32, WiFi, OTA]
 ---
 
-# Guía para actualizar mediante OTA WiFi nodos ESP332
+# Guía para actualizar mediante OTA WiFi nodos ESP32
 
 ## WiFi OTA en nodos ESP32 con firmware 2.7.18 o superior
 

@@ -7,7 +7,7 @@
 
 🌐 Sitio web disponible en: **[https://meshtastic.es/](https://meshtastic.es/)**
 
-Este repositorio contiene el código fuente de la página web oficial de la comunidad Meshtastic en español, construida con [Docusaurus 3](https://docusaurus.io/).
+Este repositorio contiene el código fuente de la web de la comunidad Meshtastic en español, construida con [Docusaurus 3](https://docusaurus.io/). No es un sitio oficial del proyecto Meshtastic.
 
 El objetivo es ofrecer documentación, guías y recursos accesibles en nuestro idioma para ayudar a nuevos y veteranos usuarios de Meshtastic.
 
