@@ -146,15 +146,15 @@ Los roles no son definitivos, se pueden cambiar en cualquier momento. Quizás un
 
 </details>
 
-## Cantidad de saltos máxima **(RECOMENDACION SOLO PARA LONGFAST)**
+## Cantidad de saltos máxima **(RECOMENDACIÓN SOLO PARA LONGFAST)**
 ::warning
-En versiones 2.8.0 y superiores el funcionamiento de los hops cambia, en estas versiones se recomienda poner el numero de hops maximo segun a donde quieras que alcancen tus mensajes, y el resto de paquetes el firmware ajusta solo. No hace falta ajustar los hops maximos a un numero inferior como pasa en versiones anteriores.
+En versiones 2.8.0 y superiores el funcionamiento de los hops cambia, en estas versiones se recomienda poner el número de hops máximo segun a donde quieras que alcancen tus mensajes, y el resto de paquetes el firmware ajusta solo. No hace falta ajustar los hops máximo a un numero inferior como pasa en versiones anteriores.
 :::
 
 Para evitar saturar la malla, es importante **no sobrepasar** el número de saltos máximo recomendado.
 Este ajuste viene en **3 saltos** por defecto, que es más que suficiente según la [documentación oficial](https://meshtastic.org/docs/configuration/tips/#hop-count). Dejarlo en **3** es ideal.
 :::note
-Con 3 o 4 hops se deberia llegar bien a todas las partes de la malla. Siempre y cuando los favoritos de los routers esten bien configurados
+Con 3 o 4 hops se debería llegar bien a todas las partes de la malla. Siempre y cuando los favoritos de los routers estén bien configurados
 :::
 
 Si **realmente** necesitas subirlos, este ajuste se encuentra en `Configuración -> LoRa -> Número de saltos`
