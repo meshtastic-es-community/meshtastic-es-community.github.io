@@ -148,7 +148,7 @@ Los roles no son definitivos, se pueden cambiar en cualquier momento. Quizás un
 
 ## Cantidad de saltos máxima **(RECOMENDACIÓN SOLO PARA LONGFAST)**
 ::warning
-En versiones 2.8.0 y superiores el funcionamiento de los hops cambia, en estas versiones se recomienda poner el número de hops máximo segun a donde quieras que alcancen tus mensajes, y el resto de paquetes el firmware ajusta solo. No hace falta ajustar los hops máximo a un numero inferior como pasa en versiones anteriores.
+En versiones 2.8.0 y superiores el funcionamiento de los hops cambia, en estas versiones se recomienda poner el número de hops máximo según hasta donde quieras que alcancen tus mensajes, y el resto de paquetes el firmware ajusta solo. No hace falta ajustar los hops máximo a un numero inferior como pasa en versiones anteriores.
 :::
 
 Para evitar saturar la malla, es importante **no sobrepasar** el número de saltos máximo recomendado.
