@@ -50,9 +50,9 @@ export const PRESETS: Presets = {
       overrideFrequency: 869.525, //Al venir de las pruebas lo incluyo por si alguien lo tiene mal
     },
   },
-  'SFNarrow - Prueba SF6': {
+  'NarrowPlus': {
     label: 'BW 62, SF 6, CR 5, 869.618 MHz',
-    overrideChannelName: 'SFNarrow',
+    overrideChannelName: 'NarrowPlus',
     loraConfig: {
       usePreset: false,
       bandwidth: 62,
