@@ -65,7 +65,7 @@ Para esta estrategia, dividimos el espectro en las siguientes frecuencias centra
 *   **Slot 1:** 869.4313 MHz
 *   **Slot 2:** 869.4938 MHz
 *   **Slot 3:** 869.5563 MHz 👈 **(El que usaremos en este Test)**
-*   **Slot 4:** 869.6188 MHz
+*   **Slot 4:** 869.6188 MHz (en la app se escribe como **869.618**, que es el valor que usan nuestros QRs)
 
 ### Configuración del Test
 

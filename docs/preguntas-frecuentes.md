@@ -133,8 +133,12 @@ mantenerlo bajo para no saturar el canal de radio y para no consumir tu [_duty c
 ### Qué es el _duty cycle_ y por qué es importante {#duty-cycle}
 
 El _duty cycle_ es el porcentaje de tiempo que un dispositivo puede transmitir en un canal de radio. Es importante porque
-está regulado por normativa. En España, el _duty cycle_ máximo permitido es del **10% por hora** en las bandas europeas
-de 433 MHZ y 868 MHz. Si un nodo supera ese límite, el _firmware_ lo detectará y dejará de transmitir paquetes hasta que
+está regulado por normativa, y el límite **depende de la sub-banda** que se use, no de la banda entera:
+
+- **869,4 – 869,65 MHz**: **10%** por hora. Es donde opera la malla española (SFNarrow está en 869,618 MHz).
+- **868,0 – 868,6 MHz**: **1%** por hora.
+
+Si un nodo supera el límite que le corresponde, el _firmware_ lo detectará y dejará de transmitir paquetes hasta que
 pase esa hora.
 
 Más información en la [documentación oficial](https://meshtastic.org/docs/configuration/radio/lora/#region).

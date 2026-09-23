@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import paths from "./provinciasPaths.json";
 import "./MapaEspana.css"; 
 
-// --- Se elimina la importación local de mesh_presets.json --- 
-// import localPresetsData from './mesh_presets.json'; 
-
-const PRESETS_URL = "https://datos.meshtastic.es/provincias"; 
+// Los presets por provincia se obtienen en vivo del backend de la comunidad.
+const PRESETS_URL = "https://datos.meshtastic.es/provincias";
 
 const presetColors = {
   //"ShortTurbo": "#f71ec0ff",   

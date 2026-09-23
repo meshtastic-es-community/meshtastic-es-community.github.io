@@ -88,7 +88,7 @@ poner el panel solar en ángulo y aprovechar mejor el sol como para sujetar todo
 cualquier superficie.
 
 ### Hay muchas versiones de Faketec, ¿Por qué la v4?
-Para este nodo se van a emplear los FETs por lo que se puede usar una v1, una v2 o una v3, o la v4 sin soldar los
+Para este nodo **no** se van a emplear los FETs, por lo que se puede usar una v1, una v2 o una v3, o la v4 sin soldar los
 FETs. Yo he usado la v4 y las imágenes que se ven más abajo de montaje corresponden a la v4.
 Tambien las hay más modernas, ¿Por qué no emplear una v5 o una v6?
 Por simplicidad del diseño y adquisición de componentes, el BMS irá integrado en la batería, descartando la
@@ -99,7 +99,7 @@ En mi opinión ver los amperios mediante un SHUNT no aporta información útil, 
 económico del sensor y el gasto energético del mismo. Con ver el ‘porcentaje’ de batería basándose en el divisor
 de tensión incorporado en el Faketec v4 es suficiente para hacerse una idea del consumo y recarga de la batería.
 ### La batería parece pequeña. ¿Y si ponemos una más grande?
-La MCU NRF52 consume poco. Realmente poco. 5mA en standby/recepción y unos 64mA en emisión. 1500mA
+La MCU NRF52 consume poco. Realmente poco. 5mA en standby/recepción y unos 64mA en emisión. 1500mAh
 en caso de oscuridad total es más que suficiente para 5 a 8 días, en función de la carga de transmisión. Sin
 embargo el MPPT hace milagros cargando en condiciones de luz pobres por lo que no espero que llegue a
 apagarse el nodo.
@@ -124,7 +124,7 @@ solar bien configurado y actualizado y reemplazar en el sitio el viejo por el ac
 - [Pigtails J-Pole](https://es.aliexpress.com/item/1005006962068226.html)  
 - [Soporte 3D](https://www.printables.com/model/1316317-meshtastic-solar-tube-node-diy-pvc-od325mm)  
 - Tubo PVC 32mm OD + 10 tapones (~7€, Leroy Merlin)  
-- PCB Faketec (30 unidades por 10€ en [JLCPCB](https://jlcpcb.com/es/))  
+- PCB Faketec (10 unidades por unos 10€ en [JLCPCB](https://jlcpcb.com/es/))  
 - Cable de cobre rígido
 
 :::info
@@ -336,7 +336,8 @@ ya que también estaremos empujando la antena por el interior del tubo.
 Por último conectaremos la batería al MPPT y cerraremos ambos extremos con los tapones. Es conveniente
 sellar el tapón inferior también con silicona.
 
-Ahora ya podemos conectar por bluetooth y pasar a la **[Configuración inicial](../guias-basicas/puesta-en-marcha.md)**
+Ahora ya podemos conectar por bluetooth y pasar a la **[Puesta en marcha](../guias-basicas/puesta-en-marcha.md)** y,
+después, a la **[Configuración inicial](../guias-basicas/configuracion-inicial.mdx)**
 
 ***Resumen:***
 
