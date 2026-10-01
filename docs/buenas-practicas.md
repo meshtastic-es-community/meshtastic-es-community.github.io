@@ -116,7 +116,6 @@ Solo algunos nodos reportan esta información avanzada de su consumo eléctrico.
 
 Antes de decidir qué rol tendrá tu nodo, es importante que entiendas los mismos. Nada como la [documentación oficial](https://meshtastic.org/docs/configuration/radio/device/#roles) y esta [entrada del blog](https://meshtastic.org/blog/choosing-the-right-device-role/) para ello. En líneas generales, esta es nuestra recomendación:
 
-![Meshtastic Roles](../static/img/Meshtastic_Roles.png)
 
 **CLIENT_MUTE** para la mayoría de nodos. Permite enviar y recibir mensajes, sin reenviar los mensajes de otros (y sin saturar la malla). Ideal para nodos personales, en movimiento, que están en interiores, o que no tienen buena conexión con otros nodos.
 
