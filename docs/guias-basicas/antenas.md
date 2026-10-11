@@ -76,7 +76,8 @@ La mayoría de antenas para estación fija llevan conector de tipo N. Revisa si 
 
 
 - **Gizont 40 CM** Tiene el mismo problema que la Ziisor.
-  [Ver en AliExpress](https://es.aliexpress.com/item/1005006359246399.html)
+  Se vende en el [mismo anuncio que la Gizont 20 CM](https://es.aliexpress.com/item/1005006359246399.html) recomendada
+  más arriba: ojo al elegir la variante de longitud, que la de 40 cm no la recomendamos.
 
 
 - **fakeAlpha**

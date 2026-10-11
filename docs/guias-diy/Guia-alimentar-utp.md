@@ -12,7 +12,7 @@ En esta guía aprenderás una forma sencilla y útil para alimentar placas **Hel
   <img src={require("../../static/img/guias-diy/utp/utp-adapter.jpg").default} alt="Imagen PCB Faketec" width="300" />
 </div>
 
-Este método es práctico cuando necesitas llevar alimentación a distancias mayores que las de un cable USB típico, ya que el cable Ethernet es más económico, robusto y puede superar fácilmente los 10 metros.
+Este método es práctico cuando necesitas llevar alimentación a distancias mayores que las de un cable USB típico, ya que el cable Ethernet es más económico, robusto y llega sin problema a los 10-15 metros.
 
 ---
 

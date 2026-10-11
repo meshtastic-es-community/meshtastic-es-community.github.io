@@ -10,7 +10,7 @@ tags: [meshtastic, solar, sensores, diy, bricolabs]
 
 Quien se acerca a Meshtastic suele encontrarse con lo mismo: **tutoriales llenos de cables**, **soldaduras minúsculas** y **placas pensadas para gente con experiencia**. Eso frena a cualquiera que quiera empezar, especialmente si el objetivo es tener un **nodo solar estable en exteriores**.
 
-En A Coruña, varios entusiastas empezamos a reunirnos en [**Bricolabs**](https://www.bricolabs.cc) para montar nodos con diseños económicos como **fakeTek** y los vídeos de [**EA3GRN**](https://www.youtube.com/@ea3grn). Aunque fue divertido, quedó claro que el montaje clásico era **demasiado complejo para principiantes**.
+En A Coruña, varios entusiastas empezamos a reunirnos en [**Bricolabs**](https://www.bricolabs.cc) para montar nodos con diseños económicos como **fakeTec** y los vídeos de [**EA3GRN**](https://www.youtube.com/@ea3grn). Aunque fue divertido, quedó claro que el montaje clásico era **demasiado complejo para principiantes**.
 
 Así nació **MASN** (*Meshtastic Autonomous Solar Node*): una **PCB diseñada para que cualquiera pueda montar un nodo solar autónomo en menos de una hora**, sin microscopios ni líos de cables.  
 La idea no es solo que funcione, sino que **aprendas durante el proceso**. Montarlo tú mismo te conecta con el ecosistema Meshtastic y te permite **aprovecharlo al máximo**.
@@ -146,7 +146,9 @@ Una vez montado, toca configurar el firmware Meshtastic:
 2. Ajusta la región: `EU 868`.  
 3. Cambia el PIN por seguridad.  
 4. Asigna un nombre corto al nodo (ej. `CHR3`).  
-5. Activa la telemetría: `Power` y `Environment`.  
+5. Telemetría: al ser un nodo solar, deja la del **dispositivo** con un intervalo de **4 h o más** y las **medidas del
+   entorno y eléctricas desactivadas** (o por encima de 4 h) salvo que sepas que las necesitas. Detalle en las
+   [buenas prácticas de telemetría](../buenas-practicas.md#telemetría).  
 6. Desde el menú de administración puedes añadir claves o permisos para habilitar la administración remota vía malla.
 
 ---
